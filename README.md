@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with [Eleventy (11ty)](https://www.
 
 ## 🚀 Live Site
 
-Visit the live portfolio at: [https://mertbiricik.github.io/mertbiricik/](https://mertbiricik.github.io/mertbiricik/)
+Visit the live portfolio at: [https://mertbiricik.github.io/](https://mertbiricik.github.io/)
 
 ## 🛠️ Technologies Used
 
@@ -19,7 +19,7 @@ Visit the live portfolio at: [https://mertbiricik.github.io/mertbiricik/](https:
 ## 📁 Project Structure
 
 ```
-mertbiricik/
+mertbiricik.github.io/
 ├── src/
 │   ├── _layouts/           # Page layouts
 │   ├── _includes/          # Reusable components
@@ -32,6 +32,7 @@ mertbiricik/
 │   ├── publications.njk   # Publications page
 │   └── contact.njk        # Contact page
 ├── .eleventy.js           # Eleventy configuration
+├── .nojekyll              # Prevents Jekyll processing
 ├── package.json           # Node.js dependencies
 └── .github/workflows/     # GitHub Actions deployment
 ```
@@ -47,8 +48,8 @@ mertbiricik/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/mertbiricik/mertbiricik.git
-cd mertbiricik
+git clone https://github.com/mertbiricik/mertbiricik.github.io.git
+cd mertbiricik.github.io
 ```
 
 2. Install dependencies:
@@ -87,8 +88,9 @@ npm run build
 
 1. Go to your repository settings
 2. Navigate to "Pages" section
-3. Set source to "GitHub Actions"
-4. The site will be available at `https://mertbiricik.github.io/mertbiricik/`
+3. Set source to "Deploy from a branch"
+4. Select `gh-pages` branch as the source
+5. The site will be available at `https://mertbiricik.github.io/`
 
 ## 🎨 Customization
 
@@ -107,8 +109,8 @@ npm run build
 
 ### Configuration
 
-- **Site URL**: Update `pathPrefix` in `.eleventy.js`
 - **Navigation**: Modify navigation links in `src/_layouts/base.njk`
+- **Site Config**: Update settings in `.eleventy.js`
 
 ## 📱 Features
 
@@ -127,14 +129,6 @@ npm run build
 - **Projects**: Featured projects with live demos and source code
 - **Publications**: Academic research and papers
 - **Contact**: Professional contact information
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## 📄 License
 
