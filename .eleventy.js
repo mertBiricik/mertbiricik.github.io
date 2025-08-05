@@ -37,7 +37,7 @@ module.exports = function(eleventyConfig) {
     },
     templateFormats: ["md", "njk", "html"],
     markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
-    pathPrefix: "/mertbiricik/"
+    htmlTemplateEngine: "njk"
+    // No pathPrefix needed for user GitHub Pages site
   };
 }; 
