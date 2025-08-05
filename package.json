@@ -1,0 +1,26 @@
+{
+  "name": "mertbiricik",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Mert Biricik - Full Stack Developer & Data Scientist",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
+  },
+  "keywords": [
+    "portfolio",
+    "fullstack",
+    "data-science",
+    "11ty",
+    "eleventy"
+  ],
+  "author": "Mert Biricik",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-navigation": "^0.3.5"
+  }
+} 
