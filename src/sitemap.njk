@@ -1,0 +1,25 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for page in collections.all %}
+  {%- if not page.data.eleventyExcludeFromCollections %}
+  <url>
+    <loc>https://mert.biricik.de{{ page.url | url }}</loc>
+    {%- if page.date %}
+    <lastmod>{{ page.date | dateISO }}</lastmod>
+    {%- endif %}
+    {%- set priority = page.data.priority or 0.5 %}
+    {%- if page.url == '/' %}
+      {%- set priority = 1.0 %}
+    {%- elif page.url == '/about/' or page.url == '/projects/' or page.url == '/publications/' or page.url == '/contact/' %}
+      {%- set priority = 0.8 %}
+    {%- endif %}
+    <priority>{{ priority }}</priority>
+    <changefreq>{{ page.data.changefreq or 'monthly' }}</changefreq>
+  </url>
+  {%- endif %}
+{%- endfor %}
+</urlset> 
