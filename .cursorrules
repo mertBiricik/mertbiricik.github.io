@@ -1,0 +1,221 @@
+# Cursor Rules for Mert Biricik Portfolio Website
+
+## Project Overview
+This is a professional portfolio website built with Eleventy (11ty) static site generator, showcasing full stack development and data science expertise. The site is deployed on GitHub Pages with a custom domain (mert.biricik.de).
+
+## Technology Stack
+- **Static Site Generator**: Eleventy (11ty) v2.0.1
+- **Templating**: Nunjucks (.njk files)
+- **Styling**: Modern CSS with CSS Variables, Grid, Flexbox
+- **JavaScript**: Vanilla ES6+ for interactions
+- **Deployment**: GitHub Pages via GitHub Actions
+- **Domain**: Custom domain (mert.biricik.de) with DNS configuration
+
+## File Structure & Conventions
+
+### Directory Structure
+```
+mertbiricik.github.io/
+├── src/                    # Source files
+│   ├── _layouts/          # Page layouts (base.njk)
+│   ├── _includes/         # Reusable components
+│   ├── css/              # Stylesheets
+│   ├── js/               # JavaScript files
+│   ├── assets/           # Images, fonts, static files
+│   ├── *.njk             # Page templates (index, about, projects, etc.)
+├── _site/                # Generated site (ignored)
+├── .eleventy.js          # Eleventy configuration
+├── CNAME                 # Custom domain for GitHub Pages
+├── package.json          # Dependencies and scripts
+└── .github/workflows/    # GitHub Actions deployment
+```
+
+### Naming Conventions
+- **Files**: Use kebab-case for all files (e.g., `contact.njk`, `main.js`)
+- **CSS Classes**: Use BEM methodology or semantic naming
+- **Variables**: Use camelCase in JavaScript, kebab-case in CSS custom properties
+- **Components**: Descriptive names for reusable elements
+
+## Development Guidelines
+
+### HTML/Nunjucks Templates
+- Use semantic HTML5 elements (`<section>`, `<article>`, `<nav>`, etc.)
+- Include proper meta tags for SEO and social sharing
+- Maintain consistent indentation (2 spaces)
+- Use Nunjucks filters and functions for data processing
+- Keep templates clean and readable with proper commenting
+
+### CSS Styling
+- Use CSS custom properties (variables) defined in `:root`
+- Follow mobile-first responsive design principles
+- Implement CSS Grid and Flexbox for layouts
+- Maintain consistent spacing using defined variables
+- Use relative units (rem, em, %) over absolute pixels
+- Include proper focus states for accessibility
+- Group related styles and comment sections
+
+### JavaScript
+- Write modern ES6+ JavaScript
+- Use const/let instead of var
+- Implement proper error handling
+- Keep functions pure and reusable where possible
+- Comment complex logic and algorithms
+- Use descriptive variable and function names
+
+### Performance Guidelines
+- Optimize images before adding to assets
+- Minimize and compress CSS/JS when possible
+- Use proper image formats (WebP with fallbacks)
+- Implement lazy loading for images when appropriate
+- Keep bundle sizes reasonable for fast loading
+
+## Content Guidelines
+
+### Professional Tone
+- Maintain professional, confident language throughout
+- Use active voice and strong action verbs
+- Keep technical descriptions accessible
+- Include specific technologies and achievements
+- Quantify accomplishments where possible
+
+### SEO & Accessibility
+- Include descriptive page titles and meta descriptions
+- Use proper heading hierarchy (h1 → h2 → h3)
+- Add alt text for all images
+- Ensure proper color contrast ratios
+- Include ARIA labels where necessary
+- Test with screen readers when possible
+
+### Data Privacy
+- **NEVER include personal phone numbers** in any content
+- Keep email addresses as the primary contact method
+- Be mindful of personal information in commit messages
+- Use environment variables for sensitive configuration
+
+## Eleventy-Specific Rules
+
+### Configuration (.eleventy.js)
+- Keep configuration clean and well-commented
+- Use passthrough copy for static assets
+- Define useful filters and shortcodes
+- Set up proper directory structure
+- Configure markdown processing appropriately
+
+### Frontmatter
+- Include title and description for all pages
+- Use consistent frontmatter structure
+- Add relevant metadata for social sharing
+- Include layout specification
+
+### Data Processing
+- Use Eleventy's data cascade effectively
+- Keep data files in appropriate formats (JSON, JS, YAML)
+- Process and transform data in computed data files
+- Cache expensive operations when possible
+
+## Deployment & GitHub Pages
+
+### GitHub Actions
+- Maintain the deployment workflow in `.github/workflows/`
+- Test builds locally before pushing
+- Monitor deployment status and fix failures promptly
+- Keep workflow simple and efficient
+
+### Domain Configuration
+- Maintain CNAME file for custom domain
+- Never commit sensitive DNS information
+- Test domain configuration after changes
+- Monitor SSL certificate status
+
+### Version Control
+- Write clear, descriptive commit messages
+- Use conventional commit format when appropriate
+- Keep commits atomic and focused
+- Don't commit generated files (_site directory)
+
+## Code Quality
+
+### Before Committing
+1. Test site builds successfully (`npm run build`)
+2. Check all links work properly
+3. Validate HTML structure
+4. Test responsive design on multiple screen sizes
+5. Verify accessibility features
+6. Proofread all content changes
+
+### Code Review Guidelines
+- Check for consistent styling and formatting
+- Verify responsive design implementation
+- Test performance implications of changes
+- Ensure accessibility standards are met
+- Review content for professional tone and accuracy
+
+## Content Updates
+
+### Adding New Projects
+- Include live demo links when available
+- Add relevant technology tags
+- Provide clear project descriptions
+- Include screenshots or preview images
+- Link to source code repositories
+
+### Publications & Research
+- Keep academic formatting consistent
+- Include proper citations and author attribution
+- Add abstracts and key contributions
+- Link to official publication sources
+- Update research interests accordingly
+
+### Professional Information
+- Keep experience descriptions current
+- Update skills and technologies regularly
+- Maintain consistent date formatting
+- Focus on achievements and impact
+- Use action-oriented language
+
+## Future Enhancement Guidelines
+
+### Interactive Elements
+- Plan for embedded project demos
+- Consider performance impact of interactive content
+- Maintain fallbacks for non-JavaScript users
+- Test interactive elements across devices
+
+### Analytics & Monitoring
+- Consider privacy-friendly analytics solutions
+- Monitor site performance metrics
+- Track user engagement appropriately
+- Respect user privacy and data protection
+
+### Internationalization
+- Structure content for potential multi-language support
+- Use semantic markup for language detection
+- Consider cultural differences in design
+- Plan URL structure for international expansion
+
+## Emergency Procedures
+
+### Site Down/Issues
+1. Check GitHub Actions deployment status
+2. Verify DNS configuration
+3. Test local build process
+4. Check GitHub Pages settings
+5. Monitor GitHub status for service issues
+
+### Quick Fixes
+- Use GitHub web editor for minor content updates
+- Test changes in preview before merging
+- Keep backup of working configurations
+- Document any emergency changes made
+
+## Notes for AI Assistants
+
+When working on this project:
+- Always maintain the established code style and structure
+- Prioritize performance and accessibility
+- Keep content professional and accurate
+- Test changes thoroughly before implementation
+- Respect privacy guidelines (no phone numbers)
+- Follow Eleventy best practices and conventions
+- Maintain responsive design principles
+- Consider SEO implications of changes 
