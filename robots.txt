@@ -1,2 +1,5 @@
 User-agent: *
-Disallow: / 
+Allow: /
+
+# Sitemap location (when available)
+Sitemap: https://mert.biricik.de/sitemap.xml 
