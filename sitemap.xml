@@ -19,6 +19,12 @@
     <changefreq>yearly</changefreq>
   </url>
   <url>
+    <loc>https://mert.biricik.de/demos/enerdata-primary-energy/</loc>
+    <lastmod>2025-08-09</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://mert.biricik.de/</loc>
     <lastmod>2025-08-09</lastmod>
     <priority>1</priority>
