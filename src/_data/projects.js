@@ -1,4 +1,3 @@
-
 // A list of all projects, parsed from GEMINI.md
 
 // Helper function to format the title
@@ -45,6 +44,14 @@ const projects = [
     overview: 'A command-line YouTube comment analysis tool with multi-language support, spam filtering, sentiment analysis, and topic extraction.',
     tech: ['Python', 'PyTorch', 'Transformers', 'Pandas', 'Scikit-learn'],
     sourceLink: 'https://github.com/mertBiricik/youtube_cleanser',
+    featured: false,
+  },
+  {
+    id: 'silk_spectre',
+    title: 'Sequential Polling System',
+    overview: 'A PHP-based polling application that supports sequential polls with branching logic and timed transitions. It allows administrators to create complex polling sequences, manage polls, and view results.',
+    tech: ['PHP', 'MySQL', 'Tailwind CSS', 'Alpine.js'],
+    sourceLink: 'https://github.com/mertBiricik/silk_spectre.git',
     featured: false,
   }
 ];
