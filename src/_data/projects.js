@@ -1,4 +1,3 @@
-
 // A list of all projects, parsed from GEMINI.md
 
 // Helper function to format the title
@@ -24,50 +23,10 @@ const projects = [
     featured: true,
   },
   {
-    id: 'fabrikerp',
-    title: 'FabrikERP',
-    overview: 'An Enterprise Resource Planning (ERP) system for a manufacturing studio, built on the MERN stack.',
-    tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'MERN'],
-    sourceLink: null,
-    featured: true,
-  },
-  {
-    id: 'dog_tinder',
-    title: 'Dog Tinder',
-    overview: 'A mobile application for finding playdates for dogs, built with Flutter.',
-    tech: ['Flutter', 'Dart', 'Mobile App'],
-    sourceLink: null,
-    featured: false,
-  },
-  {
     id: 'enerdata',
     title: 'Energy Data Visualization',
     overview: 'A data analysis and visualization project focused on energy data. It includes scripts to process data from CSV files and display it in interactive HTML dashboards.',
     tech: ['Python', 'HTML', 'JavaScript', 'Data Visualization'],
-    sourceLink: null,
-    featured: false,
-  },
-  {
-    id: 'fiba-acquire',
-    title: 'FIBA Basketball Data Scraper',
-    overview: 'A web scraping tool designed to acquire and parse basketball game data from the FIBA website using various automation libraries.',
-    tech: ['Node.js', 'Puppeteer', 'Playwright', 'Selenium'],
-    sourceLink: null,
-    featured: false,
-  },
-  {
-    id: 'n8n',
-    title: 'n8n Workflow Automation',
-    overview: 'A self-hosted instance of n8n, a powerful workflow automation tool, containerized with Docker.',
-    tech: ['n8n', 'Docker', 'Docker Compose', 'Workflow Automation'],
-    sourceLink: null,
-    featured: false,
-  },
-  {
-    id: 'netgrid',
-    title: 'NetGrid Power Grid Simulator',
-    overview: 'A framework for simulating and analyzing power grids using a suite of specialized co-simulation and data analysis tools.',
-    tech: ['HELICS', 'Mosaik', 'OpenDSS', 'Scikit-learn', 'SQLAlchemy', 'MongoDB', 'Scapy', 'Plotly', 'NetworkX'],
     sourceLink: null,
     featured: false,
   },
