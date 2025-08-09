@@ -1,3 +1,4 @@
+
 // A list of all projects, parsed from GEMINI.md
 
 // Helper function to format the title
@@ -43,6 +44,14 @@ const projects = [
     title: 'Tune2Travel',
     overview: 'An AI-powered travel planning application that leverages various NLP libraries to process and understand user travel requests.',
     tech: ['NLTK', 'spaCy', 'Gensim', 'TextBlob', 'Google Cloud Translate', 'Selenium'],
+    sourceLink: null,
+    featured: false,
+  },
+  {
+    id: 'you-tune',
+    title: 'You-Tune: YouTube Comment Analyzer',
+    overview: 'A command-line YouTube comment analysis tool with multi-language support, spam filtering, sentiment analysis, and topic extraction.',
+    tech: ['Python', 'PyTorch', 'Transformers', 'Pandas', 'Scikit-learn'],
     sourceLink: null,
     featured: false,
   }
