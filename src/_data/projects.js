@@ -48,7 +48,8 @@ const projects = [
   },
   {
     id: 'silk_spectre',
-    title: 'Sequential Polling System',
+    title: 'Silk Spectre',
+    subtitle: 'Sequential Polling System',
     overview: 'A PHP-based polling application that supports sequential polls with branching logic and timed transitions. It allows administrators to create complex polling sequences, manage polls, and view results.',
     tech: ['PHP', 'MySQL', 'Tailwind CSS', 'Alpine.js'],
     sourceLink: 'https://github.com/mertBiricik/silk_spectre.git',

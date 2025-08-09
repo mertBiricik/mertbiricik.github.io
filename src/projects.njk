@@ -16,6 +16,9 @@ changefreq: monthly
       <div class="project-card">
         <div class="project-header">
           <h3 class="project-title">{{ project.title }}</h3>
+          {% if project.subtitle %}
+          <p class="project-subtitle">{{ project.subtitle }}</p>
+          {% endif %}
         </div>
         <div class="project-content">
           <p class="project-description">
