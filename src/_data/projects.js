@@ -40,7 +40,8 @@ const projects = [
   },
   {
     id: 'you-tune',
-    title: 'You-Tune: YouTube Comment Analyzer',
+    title: 'You-Tune',
+    subtitle: 'YouTube Comment Analyzer',
     overview: 'A command-line YouTube comment analysis tool with multi-language support, spam filtering, sentiment analysis, and topic extraction.',
     tech: ['Python', 'PyTorch', 'Transformers', 'Pandas', 'Scikit-learn'],
     sourceLink: 'https://github.com/mertBiricik/youtube_cleanser',
