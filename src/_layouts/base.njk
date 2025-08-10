@@ -47,9 +47,9 @@
       <div class="nav-container">
         <a href="/" class="nav-logo">Mert Biricik</a>
         <ul class="nav-menu">
-          {% for item in collections.all | eleventyNavigation %}
+          {% for item in navigation %}
           <li class="nav-item">
-            <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+            <a href="{{ item.url }}" class="nav-link">{{ item.text }}</a>
           </li>
           {% endfor %}
         </ul>
