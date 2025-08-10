@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Mert Biricik | Full Stack Developer & Data Scientist</title>
+  <meta name="description" content="Explore Mert Biricik&#39;s portfolio of full stack development, data science, and system engineering projects, including demos and data visualizations.">
+  
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="0b64d5c9758fafd9">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mert.biricik.de/">
+  <meta property="og:title" content="Portfolio - Mert Biricik">
+  <meta property="og:description" content="Explore Mert Biricik&#39;s portfolio of full stack development, data science, and system engineering projects, including demos and data visualizations.">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Portfolio - Mert Biricik">
+  <meta property="twitter:description" content="Explore Mert Biricik&#39;s portfolio of full stack development, data science, and system engineering projects, including demos and data visualizations.">
+  
+  <!-- Favicons and Icons -->
+  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/icon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
+  
+  <!-- Android/Chrome -->
+  <link rel="manifest" href="/assets/icons/site.webmanifest">
+  <meta name="theme-color" content="#2b2b2b">
+  <link rel="alternate" href="/rss.xml" type="application/atom+xml" title="Mert Biricik's Blog Feed">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">Mert Biricik</a>
+        <ul class="nav-menu">
+          
+          <li class="nav-item">
+            <a href="/" class="nav-link">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="/about/" class="nav-link">About</a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="/projects/" class="nav-link">Portfolio</a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="/blog/" class="nav-link">Blog</a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="/publications/" class="nav-link">Publications</a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="/contact/" class="nav-link">Contact</a>
+          </li>
+          
+        </ul>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-sun sun-icon"></i>
+          <i class="fas fa-moon moon-icon"></i>
+        </button>
+        <div class="language-switcher">
+          <a href="/en/projects/" class="language-link active">EN</a>
+          <a href="/tr/projects/" class="language-link ">TR</a>
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    
+<section class="section">
+  <div class="section-container">
+    <h1 class="section-title">My Portfolio</h1>
+    <p class="section-subtitle">A showcase of my work in full stack development, data science, and system engineering, including demos and data visualizations.</p>
+
+    <div class="projects-grid"><div class="project-card">
+        <div class="project-header">
+          <h3 class="project-title">Silk Spectre: Sequential Polling System</h3>
+          
+          <p class="project-subtitle">Dynamic Polls with Branching Logic</p>
+          
+        </div>
+        <div class="project-content">
+          <div class="project-description">
+            <p><strong>Problem:</strong> Standard polling tools lack the ability to create dynamic, branching logic or timed transitions between questions.</p>
+            <p><strong>Solution:</strong> I built a full-stack polling application using PHP and MySQL that allows administrators to create complex, sequential polls with conditional logic. The frontend is built with Tailwind CSS and Alpine.js for a modern, responsive user experience.</p>
+            <p><strong>Outcome:</strong> The application provides a flexible and powerful platform for creating sophisticated, interactive polls that go beyond the capabilities of standard tools.</p>
+          </div>
+          
+          <div class="project-tech"><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">Alpine.js</span><span class="tech-tag">Full-Stack</span></div>
+          
+          <div class="project-links">
+            
+              <a href="https://github.com/mertBiricik/silk_spectre.git" class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;"><i class="fab fa-github"></i> View Code</a>
+            
+            
+            
+          </div>
+        </div>
+      </div><div class="project-card">
+        <div class="project-header">
+          <h3 class="project-title">Tune2Travel: AI Travel Planner</h3>
+          
+          <p class="project-subtitle">NLP-Powered Travel Recommendations</p>
+          
+        </div>
+        <div class="project-content">
+          <div class="project-description">
+            <p><strong>Problem:</strong> Planning travel requires understanding nuanced, natural language requests from users.</p>
+            <p><strong>Solution:</strong> I contributed to an AI-powered travel planning application that uses a suite of NLP libraries (NLTK, spaCy, Gensim) to process and understand user travel queries, providing intelligent recommendations.</p>
+            <p><strong>Outcome:</strong> The application successfully translates complex user requests into actionable travel plans, showcasing the power of NLP in a real-world product.</p>
+          </div>
+          
+          <div class="project-tech"><span class="tech-tag">NLTK</span><span class="tech-tag">spaCy</span><span class="tech-tag">Gensim</span><span class="tech-tag">TextBlob</span><span class="tech-tag">Google Cloud Translate</span><span class="tech-tag">Selenium</span></div>
+          
+          <div class="project-links">
+            
+              <a href="https://github.com/mertBiricik/tune2travel.git" class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;"><i class="fab fa-github"></i> View Code</a>
+            
+            
+              <a href="https://listenandtravelwithme.khas.edu.tr/" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;">
+                <i class="fas fa-external-link-alt"></i> Visit Site
+              </a>
+            
+            
+          </div>
+        </div>
+      </div><div class="project-card">
+        <div class="project-header">
+          <h3 class="project-title">Interactive Energy Data Visualization</h3>
+          
+          <p class="project-subtitle">From Raw Data to Interactive Dashboards</p>
+          
+        </div>
+        <div class="project-content">
+          <div class="project-description">
+            <p><strong>Problem:</strong> Raw energy consumption and production data in CSV files is difficult to interpret and provides no immediate insights.</p>
+            <p><strong>Solution:</strong> I created a data analysis pipeline using Python to process raw energy data. The processed data is then displayed in an interactive HTML dashboard, allowing for easy exploration and visualization.</p>
+            <p><strong>Outcome:</strong> The project transforms complex datasets into an intuitive tool for analysis, making energy trends accessible to a broader audience.</p>
+          </div>
+          
+          <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">Pandas</span><span class="tech-tag">HTML</span><span class="tech-tag">JavaScript</span><span class="tech-tag">Data Visualization</span></div>
+          
+          <div class="project-links">
+            
+              <a href="https://github.com/mertBiricik/enerdata.git" class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;"><i class="fab fa-github"></i> View Code</a>
+            
+            
+            
+              <a href="/demos/enerdata-primary-energy/" class="btn btn-primary">
+                <i class="fas fa-chart-bar"></i> View Demo
+              </a>
+            
+          </div>
+        </div>
+      </div><div class="project-card">
+        <div class="project-header">
+          <h3 class="project-title">You-Tune: YouTube Comment Analyzer</h3>
+          
+          <p class="project-subtitle">Sentiment Analysis and Topic Modeling</p>
+          
+        </div>
+        <div class="project-content">
+          <div class="project-description">
+            <p><strong>Problem:</strong> YouTube comment sections are often filled with spam and noise, making it difficult to gauge genuine audience sentiment.</p>
+            <p><strong>Solution:</strong> I built a command-line tool that uses a transformer-based model for sentiment analysis, topic extraction, and spam filtering on YouTube comments. It supports multiple languages and provides clear, actionable insights.</p>
+            <p><strong>Outcome:</strong> The tool effectively cuts through the noise to provide a clear summary of audience feedback, achieving high accuracy in spam detection and sentiment classification.</p>
+          </div>
+          
+          <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">PyTorch</span><span class="tech-tag">Transformers</span><span class="tech-tag">Pandas</span><span class="tech-tag">Scikit-learn</span></div>
+          
+          <div class="project-links">
+            
+              <a href="https://github.com/mertBiricik/youtube_cleanser" class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;"><i class="fab fa-github"></i> View Code</a>
+            
+            
+            
+          </div>
+        </div>
+      </div><div class="project-card">
+        <div class="project-header">
+          <h3 class="project-title">Basketball RAG Agent</h3>
+          
+          <p class="project-subtitle">Conversational AI for Sports Analytics</p>
+          
+        </div>
+        <div class="project-content">
+          <div class="project-description">
+            <p><strong>Problem:</strong> Standard search tools cannot answer complex, semantic questions about specific domains like basketball history and player statistics.</p>
+            <p><strong>Solution:</strong> I developed a Retrieval-Augmented Generation (RAG) agent using LangChain and a local LLM (Ollama). The system leverages a specialized knowledge base to understand and answer nuanced, conversational questions about basketball.</p>
+            <p><strong>Outcome:</strong> The agent can successfully answer complex queries that traditional search engines cannot, demonstrating a practical application of domain-specific LLMs.</p>
+          </div>
+          
+          <div class="project-tech"><span class="tech-tag">LangChain</span><span class="tech-tag">Ollama</span><span class="tech-tag">Transformers</span><span class="tech-tag">Gradio</span><span class="tech-tag">RAG</span><span class="tech-tag">Python</span></div>
+          
+          <div class="project-links">
+            
+              <a href="https://github.com/mertBiricik/tbf_mhk_rag.git" class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;"><i class="fab fa-github"></i> View Code</a>
+            
+            
+            
+          </div>
+        </div>
+      </div><div class="project-card">
+        <div class="project-header">
+          <h3 class="project-title">C/C++ Systems Benchmarking Suite</h3>
+          
+          <p class="project-subtitle">A Deep Dive into System Performance</p>
+          
+        </div>
+        <div class="project-content">
+          <div class="project-description">
+            <p><strong>Problem:</strong> Evaluating the performance of fundamental computer systems concepts (like memory allocation and process scheduling) requires standardized and robust testing environments.</p>
+            <p><strong>Solution:</strong> I engineered a comprehensive suite of C/C++ projects to benchmark and demonstrate advanced systems concepts. This included building a custom memory allocator, a process scheduler, a UNIX shell, and a web server.</p>
+            <p><strong>Outcome:</strong> The suite provides a reliable framework for performance analysis and serves as a practical demonstration of core OS and server concepts.</p>
+          </div>
+          
+          <div class="project-tech"><span class="tech-tag">C</span><span class="tech-tag">C++</span><span class="tech-tag">Makefile</span><span class="tech-tag">Benchmarking</span><span class="tech-tag">System Programming</span></div>
+          
+          <div class="project-links">
+            
+              <a href="https://github.com/mertBiricik/c_benchmark.git" class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;"><i class="fab fa-github"></i> View Code</a>
+            
+            
+            
+          </div>
+        </div>
+      </div></div>
+
+    <div class="text-center" style="margin-top: 3rem;">
+      <h2>Interested in Collaboration?</h2>
+      <p>I'm always looking for exciting projects and opportunities to work with innovative teams. Let's discuss how we can work together.</p>
+      <div class="hero-cta">
+        <a href="/contact/" class="btn btn-primary">
+          <i class="fas fa-envelope"></i>
+          Get In Touch
+        </a>
+        <a href="https://github.com/mertbiricik" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+          View GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Mert Biricik</h3>
+          <p>Full Stack Developer & Data Scientist</p>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/mertbiricik" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="mailto:mert@biricik.de">
+              <i class="fas fa-envelope"></i> Email
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mert Biricik. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
