@@ -566,3 +566,48 @@ a:hover {
 .mb-2 { margin-bottom: 0.5rem; }
 .mb-3 { margin-bottom: 1rem; }
 .mb-4 { margin-bottom: 1.5rem; } 
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: var(--transition);
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  color: var(--primary-color);
+  background-color: var(--bg-secondary);
+}
+
+.theme-toggle .sun-icon,
+.theme-toggle .moon-icon {
+  display: none; /* Hidden by default */
+}
+
+/* Show sun icon in light mode */
+html:not([data-theme="dark"]) .theme-toggle .sun-icon {
+  display: block;
+}
+
+/* Show moon icon in dark mode */
+html[data-theme="dark"] .theme-toggle .moon-icon {
+  display: block;
+}
+
+/* Adjust hamburger position if needed for spacing */
+@media (max-width: 768px) {
+  .nav-container {
+    justify-content: space-between; /* Ensure space between logo, menu, toggle, hamburger */
+  }
+  .theme-toggle {
+    margin-right: 1rem; /* Space between toggle and hamburger */
+  }
+}

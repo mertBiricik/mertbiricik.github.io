@@ -80,6 +80,11 @@ const observer = new IntersectionObserver((entries) => {
 document.addEventListener('DOMContentLoaded', () => {
   const animateElements = document.querySelectorAll('.card, .project-card, .publication-item, .skill-category');
   animateElements.forEach(el => observer.observe(el));
+
+  const themeToggleButton = document.getElementById('theme-toggle');
+  if (themeToggleButton) {
+    themeToggleButton.addEventListener('click', toggleTheme);
+  }
 });
 
 // Typing animation for hero subtitle
