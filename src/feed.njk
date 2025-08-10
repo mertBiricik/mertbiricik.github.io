@@ -1,12 +1,12 @@
 ---
 permalink: /rss.xml
 eleventyExcludeFromCollections: true
-title: Mert Biricik's Blog Feed
-description: The latest posts from Mert Biricik's personal blog on full stack development, data science, and cybersecurity.
 ---<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.url }}">
-  <title>{{ page.data.title }}</title>
-  <subtitle>{{ page.data.description }}</subtitle>
+  {% set feedTitle = "Mert Biricik's Blog Feed" %}
+  {% set feedDescription = "The latest posts from Mert Biricik's personal blog on full stack development, data science, and cybersecurity." %}
+  <title>{{ feedTitle }}</title>
+  <subtitle>{{ feedDescription }}</subtitle>
   <link href="{{ metadata.url }}/rss.xml" rel="self"/>
   <link href="{{ metadata.url }}/"/>
   <updated>{{ collections.blog | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
