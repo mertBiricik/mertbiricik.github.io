@@ -3,10 +3,8 @@ permalink: /rss.xml
 eleventyExcludeFromCollections: true
 ---<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.url }}">
-  {% set feedTitle = "Mert Biricik's Blog Feed" %}
-  {% set feedDescription = "The latest posts from Mert Biricik's personal blog on full stack development, data science, and cybersecurity." %}
-  <title>{{ feedTitle }}</title>
-  <subtitle>{{ feedDescription }}</subtitle>
+  <title>Mert Biricik's Blog Feed</title>
+  <subtitle>The latest posts from Mert Biricik's personal blog on full stack development, data science, and cybersecurity.</subtitle>
   <link href="{{ metadata.url }}/rss.xml" rel="self"/>
   <link href="{{ metadata.url }}/"/>
   <updated>{{ collections.blog | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
@@ -18,11 +16,11 @@ eleventyExcludeFromCollections: true
   {%- for post in collections.blog | reverse %}
   {%- set absolutePostUrl = post.url | url | absoluteUrl(metadata.url) %}
   <entry>
-    <title>{{ post.data.title }}</title>
+    <title>{{ post.data.title | escape }}</title>
     <link href="{{ absolutePostUrl }}"/>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | escape }}</content>
     <author>
       <name>{{ post.data.author or metadata.author.name }}</name>
     </author>
