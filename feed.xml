@@ -9,7 +9,7 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog - Mert Biricik | Full Stack Developer & Data Scientist</title>
+  <title>Mert Biricik | Full Stack Developer & Data Scientist</title>
   <meta name="description" content="Mert Biricik - Full Stack Developer, Data Scientist, and ML Engineer with expertise in web applications and machine learning solutions.">
   
   <!-- Google Site Verification -->
@@ -18,12 +18,12 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mert.biricik.de/">
-  <meta property="og:title" content="Blog - Mert Biricik">
+  <meta property="og:title" content="Mert Biricik">
   <meta property="og:description" content="Full Stack Developer & Data Scientist">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Blog - Mert Biricik">
+  <meta property="twitter:title" content="Mert Biricik">
   <meta property="twitter:description" content="Full Stack Developer & Data Scientist">
   
   <!-- Favicons and Icons -->
@@ -95,35 +95,49 @@
     
 <section class="section">
   <div class="section-container">
-    <h1 class="section-title">My Blog</h1>
-    <p class="section-subtitle">Thoughts, insights, and updates on full stack development, data science, and cybersecurity.</p>
-
-    <div class="blog-list">
-      
-      <div class="blog-list-item card">
-        <h2 class="blog-list-title"><a href="/blog/hello_world/">Hello World!</a></h2>
-        <div class="blog-list-meta">
-          <span class="post-date"><i class="far fa-calendar-alt"></i> August 10, 2025</span>
-          
-          <span class="post-author"><i class="fas fa-user"></i> Mert Biricik</span>
-          
-          
-          <div class="post-tags">
-            
-            <span class="tag">eleventy</span>
-            
-            <span class="tag">blogging</span>
-            
-            <span class="tag">webdev</span>
-            
-          </div>
-          
-        </div>
-        <p class="blog-list-description">A shoutout to the web!</p>
-        <a href="/blog/hello_world/" class="btn btn-outline btn-sm">Read More <i class="fas fa-arrow-right"></i></a>
+    <article class="blog-post">
+      <h1 class="blog-post-title"></h1>
+      <div class="blog-post-meta">
+        <span class="post-date"><i class="far fa-calendar-alt"></i> Invalid Date</span>
+        
+        
       </div>
-      
-    </div>
+      <div class="blog-post-content">
+        <?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://mert.biricik.de/">
+  <title>Mert Biricik&#39;s Blog</title>
+  <subtitle>The latest posts from Mert Biricik&#39;s personal blog on full stack development, data science, and cybersecurity.</subtitle>
+  <link href="https://mert.biricik.de//feed.xml" rel="self"/>
+  <link href="https://mert.biricik.de//"/>
+  <updated>2025-08-10T00:00:00Z</updated>
+  <id>https://mert.biricik.de//</id>
+  <author>
+    <name>Mert Biricik</name>
+    <email>mert@biricik.de</email>
+  </author>
+  <entry>
+    <title>Hello World!</title>
+    <link href="https://mert.biricik.de/blog/hello_world/"/>
+    <updated>2025-08-10T00:00:00Z</updated>
+    <id>https://mert.biricik.de/blog/hello_world/</id>
+    <content type="html">&lt;p&gt;Welcome to my new blog!&lt;/p&gt;
+&lt;p&gt;This is the first post, demonstrating how easy it is to add content using Markdown files with Eleventy. I&#39;m excited to share my thoughts on full-stack development, data science, and cybersecurity here.&lt;/p&gt;
+&lt;p&gt;I am planning to update here at least bi-weekly.&lt;/p&gt;
+&lt;h2&gt;What&#39;s Next?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;More technical deep-dives&lt;/li&gt;
+&lt;li&gt;Project showcases&lt;/li&gt;
+&lt;li&gt;Thoughts on industry trends&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thanks for reading.&lt;/p&gt;
+</content>
+    <author>
+      <name>Mert Biricik</name>
+    </author>
+  </entry>
+</feed>
+      </div>
+    </article>
   </div>
 </section>
 
