@@ -4,6 +4,14 @@ module.exports = function(eleventyConfig) {
   // Add navigation plugin
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
+  // Blog posts collection
+  eleventyConfig.addCollection("blog", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/blog/*.md");
+  });
+
+  // Set default layout for blog posts
+  eleventyConfig.addGlobalData("layout", "post");
+
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/css");

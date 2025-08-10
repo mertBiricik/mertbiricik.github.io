@@ -1,0 +1,37 @@
+---
+layout: base
+title: Blog
+eleventyNavigation:
+  key: Blog
+  order: 4
+---
+
+<section class="section">
+  <div class="section-container">
+    <h1 class="section-title">My Blog</h1>
+    <p class="section-subtitle">Thoughts, insights, and updates on full stack development, data science, and cybersecurity.</p>
+
+    <div class="blog-list">
+      {% for post in collections.blog | reverse %}
+      <div class="blog-list-item card">
+        <h2 class="blog-list-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+        <div class="blog-list-meta">
+          <span class="post-date"><i class="far fa-calendar-alt"></i> {{ post.data.date | dateFormat }}</span>
+          {% if post.data.author %}
+          <span class="post-author"><i class="fas fa-user"></i> {{ post.data.author }}</span>
+          {% endif %}
+          {% if post.data.tags %}
+          <div class="post-tags">
+            {% for tag in post.data.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        <p class="blog-list-description">{{ post.data.description }}</p>
+        <a href="{{ post.url }}" class="btn btn-outline btn-sm">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
