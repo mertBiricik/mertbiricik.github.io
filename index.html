@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - Mert Biricik | Full Stack Developer & Data Scientist</title>
@@ -85,10 +91,7 @@
   </header>
 
   <main class="main">
-    description: Mert Biricik - Full Stack Developer, Data Scientist, and ML Engineer with expertise in web applications and machine learning solutions.
-priority: 1.0
-changefreq: weekly
----
+    
 
 <section class="hero">
   <div class="hero-container">
