@@ -36,8 +36,8 @@ changefreq: monthly
             {% if project.sourceLink %}
               <a href="{{ project.sourceLink }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;"><i class="fab fa-github"></i> View Code</a>
             {% endif %}
-            {% if project.demoLink %}
-              <a href="{{ project.demoLink }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            {% if project.id == 'enerdata' %}
+              <a href="/demos/enerdata-primary-energy/" class="btn btn-primary">
                 <i class="fas fa-chart-bar"></i> View Demo
               </a>
             {% endif %}

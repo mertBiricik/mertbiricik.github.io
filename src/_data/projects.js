@@ -36,7 +36,6 @@ const projects = [
     overview: 'An AI-powered travel planning application that leverages various NLP libraries to process and understand user travel requests.',
     tech: ['NLTK', 'spaCy', 'Gensim', 'TextBlob', 'Google Cloud Translate', 'Selenium'],
     sourceLink: 'https://github.com/mertBiricik/tune2travel.git',
-    demoLink: 'https://listenandtravelwithme.khas.edu.tr/',
     featured: false,
   },
   {
