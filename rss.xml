@@ -105,10 +105,8 @@
       <div class="blog-post-content">
         <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://mert.biricik.de/">
-  
-  
-  <title>Mert Biricik&#39;s Blog Feed</title>
-  <subtitle>The latest posts from Mert Biricik&#39;s personal blog on full stack development, data science, and cybersecurity.</subtitle>
+  <title>Mert Biricik's Blog Feed</title>
+  <subtitle>The latest posts from Mert Biricik's personal blog on full stack development, data science, and cybersecurity.</subtitle>
   <link href="https://mert.biricik.de//rss.xml" rel="self"/>
   <link href="https://mert.biricik.de//"/>
   <updated>2025-08-10T00:00:00Z</updated>
