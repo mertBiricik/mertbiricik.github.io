@@ -1,0 +1,27 @@
+---
+layout: base
+---
+
+<section class="section">
+  <div class="section-container">
+    <article class="blog-post">
+      <h1 class="blog-post-title">{{ title }}</h1>
+      <div class="blog-post-meta">
+        <span class="post-date"><i class="far fa-calendar-alt"></i> {{ date | dateFormat }}</span>
+        {% if author %}
+        <span class="post-author"><i class="fas fa-user"></i> {{ author }}</span>
+        {% endif %}
+        {% if tags %}
+        <div class="post-tags">
+          {% for tag in tags %}
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      <div class="blog-post-content">
+        {{ content | safe }}
+      </div>
+    </article>
+  </div>
+</section>
