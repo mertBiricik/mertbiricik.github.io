@@ -1,7 +1,7 @@
 /* CSS Variables for theming */
 :root {
   --primary-color: #bd93f9;
-  --secondary-color: #805ad5;
+  --secondary-color: #6272A4;
   --accent-color: #8be9fd;
   --text-primary: #111827;
   --text-secondary: #6b7280;
@@ -19,13 +19,13 @@
 
 /* Dark theme */
 [data-theme="dark"] {
-  --text-primary: #f9fafb;
-  --text-secondary: #d1d5db;
+  --text-primary: #f8f8f2;
+  --text-secondary: #bd93f9;
   --text-light: #9ca3af;
-  --bg-primary: #111827;
-  --bg-secondary: #1f2937;
+  --bg-primary: #282a36;
+  --bg-secondary: #44475a;
   --bg-tertiary: #374151;
-  --border-color: #374151;
+  --border-color: #44475a;
 }
 
 /* Reset and base styles */
