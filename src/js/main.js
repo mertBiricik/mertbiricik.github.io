@@ -53,11 +53,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Header background on scroll
 function handleHeaderScroll() {
   const header = document.querySelector('.header');
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+
   if (window.scrollY > 100) {
-    header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+    if (currentTheme === 'dark') {
+      header.style.backgroundColor = 'rgba(17, 24, 39, 0.95)'; // A dark color with transparency, matching --bg-primary in dark mode
+    } else {
+      header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)'; // White with transparency for light mode
+    }
     header.style.backdropFilter = 'blur(10px)';
   } else {
-    header.style.backgroundColor = 'var(--bg-primary)';
+    header.style.backgroundColor = 'var(--bg-primary)'; // Use CSS variable for non-scrolled state
     header.style.backdropFilter = 'none';
   }
 }
