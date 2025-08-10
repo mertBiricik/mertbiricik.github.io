@@ -60,4 +60,16 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://mert.biricik.de/case-studies/basketball-rag-agent/</loc>
+    <lastmod>2025-08-10</lastmod>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://mert.biricik.de/uses/</loc>
+    <lastmod>2025-08-10</lastmod>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset> 
