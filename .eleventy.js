@@ -22,6 +22,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy("google0b64d5c9758fafd9.html");
   eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy(".nojekyll");
 
   // Watch for changes in CSS and JS
   eleventyConfig.addWatchTarget("./src/css/");
