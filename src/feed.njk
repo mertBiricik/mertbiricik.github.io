@@ -5,9 +5,9 @@ title: Mert Biricik's Blog Feed
 description: The latest posts from Mert Biricik's personal blog on full stack development, data science, and cybersecurity.
 ---<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.url }}">
-  <title>{{ title }}</title>
-  <subtitle>{{ description }}</subtitle>
-  <link href="{{ metadata.url }}/feed.xml" rel="self"/>
+  <title>{{ page.data.title }}</title>
+  <subtitle>{{ page.data.description }}</subtitle>
+  <link href="{{ metadata.url }}/rss.xml" rel="self"/>
   <link href="{{ metadata.url }}/"/>
   <updated>{{ collections.blog | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ metadata.url }}/</id>
