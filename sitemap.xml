@@ -31,6 +31,12 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://mert.biricik.de/blog/comptia-security-plus-fundamentals/</loc>
+    <lastmod>2025-08-10</lastmod>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://mert.biricik.de/blog/hello_world/</loc>
     <lastmod>2025-08-10</lastmod>
     <priority>0.5</priority>

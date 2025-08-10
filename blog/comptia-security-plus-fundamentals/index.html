@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demystifying Cybersecurity: A Deep Dive into CompTIA Security+ Fundamentals - Mert Biricik | Full Stack Developer & Data Scientist</title>
+  <meta name="description" content="Mert Biricik - Full Stack Developer, Data Scientist, and ML Engineer with expertise in web applications and machine learning solutions.">
+  
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="0b64d5c9758fafd9">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mert.biricik.de/">
+  <meta property="og:title" content="Demystifying Cybersecurity: A Deep Dive into CompTIA Security+ Fundamentals - Mert Biricik">
+  <meta property="og:description" content="Full Stack Developer & Data Scientist">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Demystifying Cybersecurity: A Deep Dive into CompTIA Security+ Fundamentals - Mert Biricik">
+  <meta property="twitter:description" content="Full Stack Developer & Data Scientist">
+  
+  <!-- Favicons and Icons -->
+  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/icon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
+  
+  <!-- Android/Chrome -->
+  <link rel="manifest" href="/assets/icons/site.webmanifest">
+  <meta name="theme-color" content="#2b2b2b">
+  <link rel="alternate" href="/rss.xml" type="application/atom+xml" title="Mert Biricik's Blog Feed">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">Mert Biricik</a>
+        <ul class="nav-menu">
+          
+          <li class="nav-item">
+            <a href="/" class="nav-link">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="/about/" class="nav-link">About</a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="/projects/" class="nav-link">Portfolio</a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="/blog/" class="nav-link">Blog</a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="/publications/" class="nav-link">Publications</a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="/contact/" class="nav-link">Contact</a>
+          </li>
+          
+        </ul>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-sun sun-icon"></i>
+          <i class="fas fa-moon moon-icon"></i>
+        </button>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    
+<section class="section">
+  <div class="section-container">
+    <article class="blog-post">
+      <h1 class="blog-post-title">Demystifying Cybersecurity: A Deep Dive into CompTIA Security+ Fundamentals</h1>
+      <div class="blog-post-meta">
+        <span class="post-date"><i class="far fa-calendar-alt"></i> August 10, 2025</span>
+        
+        
+        <div class="post-tags">
+          
+          <span class="tag">cybersecurity</span>
+          
+          <span class="tag">comptia</span>
+          
+          <span class="tag">security+</span>
+          
+        </div>
+        
+      </div>
+      <div class="blog-post-content">
+        <h2>Demystifying Cybersecurity: A Deep Dive into CompTIA Security+ Fundamentals</h2>
+<p>Cybersecurity is a dynamic and critical field, constantly evolving to combat new threats. For anyone looking to establish a strong foundation in this domain, the CompTIA Security+ certification is an excellent starting point. This post will break down key concepts from the Security+ curriculum, covering essential controls, core security principles, threat actors, common vulnerabilities, and more.</p>
+<p>Let's dive in!</p>
+<h3>1.1 Understanding Cybersecurity Controls</h3>
+<p>Cybersecurity controls are safeguards or countermeasures to avoid, detect, counteract, or minimize security risks to physical property, information, or any other asset. They can be categorized in several ways:</p>
+<ul>
+<li><strong>Technical Controls:</strong> These are implemented using systems and technology. Examples include operating system controls, firewalls that filter network traffic, and antivirus software designed to detect and remove malicious programs.</li>
+<li><strong>Managerial Controls (Administrative Controls):</strong> These are policies and procedures established by management to govern security. This includes creating clear security policies and defining standard operating procedures (SOPs) that employees must follow.</li>
+<li><strong>Operational Controls:</strong> These controls are implemented by people and focus on the day-to-day security activities. Examples include the presence of security guards, regular security awareness training programs for employees, and incident response procedures.</li>
+<li><strong>Physical Controls:</strong> These controls limit physical access to facilities and assets. This can involve guard shacks at entry points, fences, locks on doors, and badge readers to control entry to restricted areas.</li>
+</ul>
+<hr>
+<h3>Control Types: How Controls Function</h3>
+<p>Beyond their category, controls also have different functions in how they mitigate risk:</p>
+<ul>
+<li><strong>Preventive:</strong> These controls aim to stop an incident from happening in the first place. Think of a strong firewall preventing unauthorized access – it's the &quot;you shall not pass&quot; of cybersecurity.</li>
+<li><strong>Deterrent:</strong> Designed to discourage an intrusion attempt. The threat of consequences, like demotion for policy violations, or visible warning signs (e.g., &quot;CCTV in operation&quot;), serve as deterrents.</li>
+<li><strong>Detective:</strong> These controls identify and log an attempt or an ongoing incident. Intrusion detection systems (IDS) or security logs are prime examples, alerting you to suspicious activity.</li>
+<li><strong>Corrective:</strong> Applied after an event has occurred to minimize damage or restore systems. The goal is minimal downtime, such as restoring data from backups after a ransomware attack.</li>
+<li><strong>Compensating:</strong> Used when a primary control cannot be implemented or is impractical. It's a control that achieves the same security objective through alternative means.</li>
+<li><strong>Directive:</strong> These controls guide a subject towards security compliance. While often considered &quot;weak&quot; on their own, they direct users to follow security best practices.</li>
+</ul>
+<hr>
+<h3>1.2 The CIA Triad: The Pillars of Information Security</h3>
+<p>The CIA Triad (sometimes called the AIC Triad) represents the three fundamental principles of information security:</p>
+<p><img src=":/ad8fb157c2696d2ca3892b1aadc16cc7.png" alt="CIA Triad Diagram"></p>
+<ol>
+<li>
+<p><strong>Confidentiality:</strong> Ensuring that information is accessible only to those authorized to have access.</p>
+<ul>
+<li><strong>Access Controls:</strong> Restricting who can view or modify data.</li>
+<li><strong>Encryption:</strong> Transforming data into a coded format to prevent unauthorized reading.</li>
+</ul>
+</li>
+<li>
+<p><strong>Integrity:</strong> Maintaining the accuracy and completeness of data, ensuring it has not been altered or destroyed in an unauthorized manner.</p>
+<ul>
+<li><strong>Hashing:</strong> Creating a unique, fixed-size digital fingerprint of data. If the data changes, the hash changes.</li>
+<li><strong>Digital Signatures:</strong> When a hash is encrypted with a private key, it becomes a digital signature, providing both integrity and authenticity.</li>
+<li><strong>Certificates:</strong> Digital documents that bind a public key to an identity, used to verify integrity and authenticity.</li>
+<li><strong>Non-Repudiation:</strong> The inability to deny having performed an action or made a statement.</li>
+</ul>
+</li>
+<li>
+<p><strong>Availability:</strong> Ensuring that authorized users have timely and uninterrupted access to information and resources.</p>
+<ul>
+<li><strong>Redundancy:</strong> Duplicating critical components or systems to ensure continued operation if one fails.</li>
+<li><strong>Fault Tolerance:</strong> The ability of a system to continue operating without interruption when one or more of its components fail.</li>
+<li><strong>Patching:</strong> Applying updates to software to fix bugs and security vulnerabilities, ensuring system stability and availability.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3>1.2.1 Non-Repudiation: Proving What Was Said</h3>
+<p>Non-repudiation means you cannot deny what you have said or done. It provides undeniable proof of origin and integrity.</p>
+<ul>
+<li><strong>Proof of Integrity:</strong> Verifies that data has not been changed since it was created or sent. Data remains accurate and consistent. Hashes are crucial here, acting as a data fingerprint. However, a hash only validates the data's integrity, not its origin.</li>
+<li><strong>Proof of Origin:</strong> Proves the source of a message or data. This is achieved through authentication mechanisms.</li>
+</ul>
+<p>To ensure a signature is not fake (non-repudiation), digital signatures are used. A digital signature is essentially the encrypted hash of a message using a private key, which can then be decrypted with the corresponding public key to verify authenticity and integrity.</p>
+<hr>
+<h3>1.2.2 AAA Framework: Identity and Access Management</h3>
+<p>The AAA framework is a cornerstone of identity and access management:</p>
+<ul>
+<li><strong>Identification:</strong> The process by which a user claims an identity (e.g., by providing a username).</li>
+<li><strong>Authentication:</strong> The process of verifying that the claimed identity is genuine (e.g., by providing a password, biometric, or token). Certificate Authorities (CAs) play a role in issuing and managing digital certificates used for authentication.</li>
+<li><strong>Authorization:</strong> Determining what an authenticated user is permitted to do or access. Abstraction (like using groups) is often used to streamline administration of permissions.</li>
+<li><strong>Accounting:</strong> Tracking user activities, including what resources they accessed, when, and for how long. This provides an audit trail.</li>
+</ul>
+<hr>
+<h3>1.2.3 Gap Analysis: Finding the Gaps in Security</h3>
+<p><img src=":/8cbb34c5f4a3cc0a43c60f3b15b8998c.png" alt="Gap Analysis Diagram"></p>
+<p>Gap analysis is a process used to compare the current state of an organization's security posture against a desired state or a recognized standard (like ISO/IEC 27001). It involves:</p>
+<ul>
+<li><strong>Evaluating People and Processes:</strong> Assessing the human and procedural elements of security.</li>
+<li><strong>Comparing Weaknesses and Solutions:</strong> Identifying security weaknesses and proposing solutions to compensate for them.</li>
+<li><strong>Analysis and Report:</strong> The outcome is a detailed analysis and report outlining the identified gaps and recommendations for improvement.</li>
+</ul>
+<hr>
+<h3>1.2.4 Zero Trust: Never Trust, Always Verify</h3>
+<p>Zero Trust is a security model based on the principle of &quot;never trust, always verify.&quot; It assumes that no user or device, whether inside or outside the network perimeter, should be trusted by default.</p>
+<ul>
+<li><strong>Different Functional Planes of Network:</strong> Zero Trust often conceptualizes networks in terms of a data plane (where data flows) and a control plane (where policies are enforced).</li>
+<li><strong>Adaptive Identity:</strong> Identity verification is continuous and adaptive, considering context like device health, location, and behavior.</li>
+<li><strong>Threat Scope Reduction:</strong> By segmenting networks and enforcing granular access, the potential scope of a breach is significantly reduced.</li>
+<li><strong>Policy-Driven Access Control:</strong> Access decisions are strictly based on policies, not network location.</li>
+<li><strong>Security Zones:</strong> Networks are divided into micro-segments or security zones.</li>
+<li><strong>Policy Enforcement Point (PEP):</strong> The point where access policies are enforced, often at the individual resource level.</li>
+</ul>
+<hr>
+<h3>1.2.5 Physical Security: Protecting the Perimeter</h3>
+<p>Physical security measures are crucial for protecting physical assets and limiting unauthorized access to facilities.</p>
+<ul>
+<li><strong>Access Control Vestibules (Man Traps):</strong> Small rooms with two doors, where the first must close before the second opens, trapping an unauthorized individual.</li>
+<li><strong>CCTV (Closed-Circuit Television):</strong> Surveillance cameras for monitoring and recording activity.</li>
+<li><strong>Security Guards:</strong> Human presence for monitoring, patrolling, and responding to incidents.</li>
+<li><strong>Sensors:</strong> Various types of sensors (e.g., motion, door/window, vibration) to detect intrusions.</li>
+<li><strong>Infrared Cameras:</strong> Used for night vision and detecting heat signatures.</li>
+</ul>
+<hr>
+<h3>1.2.7 Deception and Disruption: Trapping Attackers</h3>
+<p>These techniques are used to mislead or disrupt attackers, gathering intelligence on their methods.</p>
+<ul>
+<li><strong>Honeypot:</strong> A decoy system designed to attract and trap attackers, making them believe it's a legitimate target. It's often assumed the attacker is a machine (automated attack).</li>
+<li><strong>Honeynet:</strong> A network of honeypots, providing a more realistic and complex target for attackers.</li>
+<li><strong>Honey Files:</strong> Decoy files placed on systems to detect unauthorized access.</li>
+<li><strong>Virtual Bear Trap:</strong> A metaphorical term for a honeypot, designed to ensnare attackers.</li>
+<li><strong>Honeytoken:</strong> A fake credential (e.g., API key, database entry) placed in a system to detect when it's accessed by an unauthorized party.</li>
+</ul>
+<hr>
+<h3>1.3 Change Management: Controlling the Flow of Change</h3>
+<p>Change management is a formal process for managing any alteration to an IT system or environment. Its goal is to avoid downtime, confusion, and mistakes.</p>
+<ul>
+<li><strong>Formal Process:</strong> Any change needs to follow a defined, formal process.</li>
+<li><strong>Rollback Procedures:</strong> Plans for reverting a change if it causes unforeseen problems.</li>
+<li><strong>Clear Policies:</strong> Well-documented guidelines for how changes are initiated, approved, and implemented.</li>
+<li><strong>Change Request Form:</strong> A standardized form to document the details of a proposed change, including:
+<ul>
+<li><strong>Purpose:</strong> Why the change is needed.</li>
+<li><strong>Scope:</strong> What systems or areas will be affected.</li>
+<li><strong>Schedule:</strong> When the change will occur.</li>
+<li><strong>Systems and Impact:</strong> Detailed analysis of affected systems and potential consequences.</li>
+<li><strong>Risk Associated with the Change:</strong> Identification and assessment of potential risks.</li>
+</ul>
+</li>
+<li><strong>Approval:</strong> Changes require formal approval from relevant stakeholders.</li>
+<li><strong>End-User Acceptance:</strong> Ensuring that the change is acceptable to the end-users who will be affected.</li>
+<li><strong>Ownership:</strong> Clearly defined responsibilities for the change.</li>
+<li><strong>Managers/Stakeholders:</strong> Individuals who will be impacted by the change or have a vested interest in its outcome.</li>
+<li><strong>Impact Analysis:</strong> Assessing the potential effects of a change across the organization.</li>
+<li><strong>Risk Value:</strong> Quantifying the risk associated with the change.</li>
+<li><strong>Lihon on Far Reaching:</strong> (Likely a typo, possibly &quot;Likelihood of far-reaching impact&quot;) Assessing how widely the change might affect systems or users.</li>
+<li><strong>Sandbox Testing:</strong> Testing the change in an isolated, non-production environment.</li>
+<li><strong>Backout Plan:</strong> A detailed plan for reversing a change if it fails or causes issues.</li>
+<li><strong>Standard Operating Procedure (SOP):</strong> Detailed, written instructions to achieve uniformity of the performance of a specific function.</li>
+</ul>
+<hr>
+<h3>1.3.1 Technical Change Management</h3>
+<p>This focuses on the technical aspects of managing changes.</p>
+<ul>
+<li><strong>Allow/Deny List:</strong> Managing access based on explicit permissions or restrictions.</li>
+<li><strong>Downtime:</strong> Minimizing service interruptions during changes.</li>
+<li><strong>Legacy Applications:</strong> Special considerations for older systems that may be fragile or difficult to modify.</li>
+<li><strong>Documentation:</strong> Thoroughly documenting all changes.</li>
+<li><strong>Change Management Protocol:</strong> The established set of rules and procedures for managing changes.</li>
+</ul>
+<hr>
+<h3>1.4 Public Key Infrastructure (PKI)</h3>
+<p>PKI is a framework that enables the secure exchange of information using public key cryptography. It involves:</p>
+<ul>
+<li><strong>Policies, Procedures, Hardware, Software, People:</strong> A comprehensive system encompassing all these elements.</li>
+<li><strong>Digital Certificates:</strong> Used to create, distribute, manage, store, and revoke digital certificates.</li>
+</ul>
+<h4>Symmetric Encryption</h4>
+<ul>
+<li>Uses a single, shared secret key for both encryption and decryption. It's fast but key distribution can be a challenge.</li>
+</ul>
+<h4>Asymmetric Encryption (Public Key Cryptography)</h4>
+<ul>
+<li>Uses two mathematically related keys: a public key and a private key.</li>
+<li>Data encrypted with the public key can only be decrypted with the corresponding private key, and vice-versa.</li>
+<li>Relies on complex mathematical problems involving large prime numbers and randomization.</li>
+<li><strong>Key Escrow:</strong> A system where a copy of a private key is held by a third party, often for recovery purposes.</li>
+</ul>
+<hr>
+<h3>1.4.1 Encryption: Protecting Data at Rest and in Transit</h3>
+<p>Encryption is the process of converting information or data into a code to prevent unauthorized access.</p>
+<ul>
+<li><strong>Disk Encryption:</strong> Tools like BitLocker and VeraCrypt encrypt entire disk drives.</li>
+<li><strong>Key Stretching/Key Strengthening:</strong> Techniques that make a weak key stronger by increasing the computational cost of brute-force attacks, adding additional overhead for attackers.</li>
+</ul>
+<hr>
+<h3>1.4.2 Key Exchange</h3>
+<p>The process by which cryptographic keys are securely exchanged between two parties.</p>
+<hr>
+<h3>1.4.3 Encryption Technologies</h3>
+<p>Various hardware and software solutions support encryption:</p>
+<ul>
+<li><strong>Trusted Platform Module (TPM):</strong> A secure cryptoprocessor that stores cryptographic keys and protects them from malicious software.</li>
+<li><strong>Hardware Security Module (HSM):</strong> A physical computing device that safeguards and manages digital keys for strong authentication and provides cryptoprocessing.</li>
+<li>**<strong>Key Management System (KMS):</strong> A system for managing cryptographic keys throughout their lifecycle.</li>
+<li><strong>Secure Enclave:</strong> A separate, isolated processor within a device (e.g., a smartphone) that has its own boot ROM and monitors the boot process. It provides real-time memory encryption and often includes a true random number generator for strong cryptographic operations.</li>
+</ul>
+<hr>
+<h3>1.4.4 Obfuscation: Hiding Information</h3>
+<p>Obfuscation techniques aim to make information difficult to understand or interpret, but it's not true security.</p>
+<ul>
+<li><strong>Steganography:</strong> Hiding information in plain sight, often by embedding it within another file, such as an image (the &quot;covertext&quot;).</li>
+<li><strong>Concealed Writing:</strong> A general term for hidden messages.</li>
+<li><strong>Tokenization:</strong> Replacing sensitive data with a non-sensitive placeholder (a &quot;token&quot;).</li>
+<li><strong>Near-Field Communication (NFC):</strong> A short-range wireless technology that can be used for data transfer, but also has security implications if not properly secured.</li>
+<li><strong>Data Masking:</strong> Obscuring specific data elements within a dataset to protect sensitive information while maintaining its usability for testing or analysis.</li>
+</ul>
+<hr>
+<h3>1.4.5 Hashing &amp; Digital Signatures: Integrity and Authenticity</h3>
+<ul>
+<li><strong>Hashing:</strong> Creates a one-way function where data cannot be recovered from its hash. Good hash functions should not have collisions (different inputs producing the same output). MD5 is an example of a hash function that is now deprecated due to collision vulnerabilities.</li>
+<li><strong>Salted Hashes:</strong> Adding a random string (salt) to a password before hashing it, making rainbow table attacks (precomputed hash tables) ineffective.</li>
+</ul>
+<hr>
+<h3>1.4.6 Blockchain Technology: Distributed Trust</h3>
+<ul>
+<li><strong>Distributed Ledger:</strong> A decentralized database shared and synchronized across multiple sites, institutions, or geographies.</li>
+<li><strong>Everyone Has It:</strong> Each participant in the network has a copy of the entire ledger, ensuring transparency and immutability.</li>
+</ul>
+<hr>
+<h3>1.4.7 Certificates: Root of Trust</h3>
+<ul>
+<li><strong>Root of Trust:</strong> A highly trusted authority (often a Certificate Authority) that serves as the foundation for trust in a PKI.</li>
+<li><strong>Certificate Authorities (CAs):</strong> Trusted third parties that issue and manage digital certificates.</li>
+<li><strong>Key Revocation:</strong> The process of invalidating a digital certificate before its expiration date.</li>
+<li><strong>Online Certificate Status Protocol (OCSP):</strong> A protocol used to obtain the revocation status of a digital certificate in real-time.</li>
+</ul>
+<hr>
+<h3>2.1 Threat Actors: Who Are They and What Do They Want?</h3>
+<p>Understanding threat actors involves identifying who they are, their motivations, and their capabilities.</p>
+<ul>
+<li><strong>Internal/External:</strong> Threat actors can originate from within an organization (insiders) or from outside.</li>
+<li><strong>Motivation:</strong>
+<ul>
+<li><strong>Data Exfiltration:</strong> Stealing sensitive data.</li>
+<li><strong>Espionage:</strong> Gaining secret information, often for state or corporate advantage.</li>
+<li><strong>Service Disruption:</strong> Causing outages or hindering operations.</li>
+<li><strong>Blackmail:</strong> Extorting money or favors.</li>
+<li><strong>Financial Gain:</strong> Direct monetary profit (e.g., ransomware).</li>
+<li><strong>Beliefs/Ethical:</strong> Driven by ideological or ethical convictions (e.g., hacktivists).</li>
+<li><strong>Revenge:</strong> Seeking retribution.</li>
+<li><strong>Disruption and Chaos:</strong> Causing general disorder.</li>
+<li><strong>War:</strong> State-sponsored cyber warfare.</li>
+</ul>
+</li>
+</ul>
+<h4>Types of Threat Actors:</h4>
+<ul>
+<li><strong>External Entities:</strong>
+<ul>
+<li><strong>National States:</strong> Nation-states engage in constant attacks with massive resources, often associated with Advanced Persistent Threats (APTs).</li>
+<li><strong>Unskilled Attackers:</strong> Individuals with limited technical knowledge, often using readily available tools. They can be both internal and external.</li>
+</ul>
+</li>
+<li><strong>Hacktivist:</strong> Motivated by philosophical or political beliefs. They can also be internal. Their actions often include DoS attacks, website defacement, or releasing private documents. Funding may be limited.</li>
+<li><strong>Insider Entities:</strong> Individuals within an organization. They have access to internal resources and often possess medium-level sophistication.</li>
+<li><strong>Organized Crime:</strong> Almost always external, driven by financial gain. They are highly sophisticated, often employing tactics like ransomware.</li>
+<li><strong>Shadow IT:</strong> Employees or departments working around official IT policies, building their own infrastructure, which can create security vulnerabilities.</li>
+<li><strong>Going Rogue:</strong> An individual acting independently against organizational policies or norms.</li>
+</ul>
+<hr>
+<h3>2.2 Common Threat Vectors: How Attacks Happen</h3>
+<p>Threat vectors are the paths or methods attackers use to gain unauthorized access to systems or networks.</p>
+<ul>
+<li><strong>Message-Based Vectors:</strong>
+<ul>
+<li><strong>Phishing:</strong> Deceptive emails or messages designed to trick recipients into revealing sensitive information or performing actions.</li>
+<li><strong>SMS (Short Message Service):</strong> Used for smishing attacks.</li>
+</ul>
+</li>
+<li><strong>File-Based Vectors:</strong> Malicious code embedded in files.</li>
+<li><strong>Voice Call Vectors:</strong>
+<ul>
+<li><strong>Vishing:</strong> Phishing conducted over the phone.</li>
+<li><strong>War Dialing:</strong> Automatically dialing phone numbers to find open modems or systems.</li>
+<li><strong>Call Tampering:</strong> Intercepting or altering phone calls.</li>
+<li><strong>Spam over IP:</strong> Unsolicited messages sent over Voice over IP (VoIP) systems.</li>
+</ul>
+</li>
+<li><strong>Removable Device Vectors:</strong> Malware spread via USB drives or other portable media.</li>
+<li><strong>Vulnerable Software Vectors:</strong> Exploiting weaknesses in software.
+<ul>
+<li><strong>Client-Based:</strong> Exploiting vulnerabilities in client-side applications.</li>
+<li><strong>Agentless:</strong> Attacks that don't require installing an agent on the target system.</li>
+</ul>
+</li>
+<li><strong>Unsupported Systems Vectors:</strong> Exploiting vulnerabilities in outdated or unpatched operating systems and applications.</li>
+<li><strong>Unsecure Network Vectors:</strong>
+<ul>
+<li><strong>Open Service Ports:</strong> Unnecessary open ports that can be exploited.</li>
+<li><strong>Firewall Rules:</strong> Misconfigured or weak firewall rules.</li>
+<li><strong>Default Credentials:</strong> Using default usernames and passwords that are easily guessed.</li>
+</ul>
+</li>
+<li><strong>Supply Chain Vectors:</strong> Attacks targeting vulnerabilities in the supply chain, often through third-party vendors like Managed Service Providers (MSPs).</li>
+</ul>
+<hr>
+<h3>2.2.1 Phishing: The Art of Deception</h3>
+<p>Phishing is a common social engineering technique that uses tricks and misdirection to manipulate individuals.</p>
+<ul>
+<li><strong>Email Phishing:</strong> The most common form, using deceptive emails.</li>
+<li><strong>Typosquatting:</strong> Registering domain names that are slight misspellings of legitimate ones to trick users.</li>
+<li><strong>Pretexting:</strong> Creating a fabricated scenario (pretext) to gain trust and obtain information.</li>
+<li><strong>Vishing:</strong> Phishing conducted over voice calls (phone).</li>
+<li><strong>Smishing:</strong> Phishing conducted via SMS messages.</li>
+</ul>
+<hr>
+<h3>2.2.2 Impersonation</h3>
+<ul>
+<li><strong>Pretext:</strong> A fabricated scenario used to gain trust and obtain information, often a key component of impersonation.</li>
+</ul>
+<hr>
+<h3>2.2.3 Watering Hole Attack</h3>
+<ul>
+<li>An attack where a cyberattacker compromises a website frequently visited by a target group, hoping to infect members of that group. Often countered by a layered defense strategy.</li>
+</ul>
+<hr>
+<h3>2.2.4 Other Social Engineering Techniques</h3>
+<ul>
+<li><strong>Misinformation/Disinformation:</strong> Spreading false or misleading information to manipulate individuals.</li>
+</ul>
+<hr>
+<h3>2.3 Memory Injections: Exploiting System Memory</h3>
+<p>Memory injection attacks involve injecting malicious code directly into a process's memory space.</p>
+<ul>
+<li><strong>Malware Runs in Memory:</strong> Malware often operates directly in memory to evade detection.</li>
+<li><strong>Memory Forensics:</strong> Analyzing memory dumps to detect and investigate malicious activity.</li>
+<li><strong>DLLs (Dynamic Link Libraries):</strong> Malware can inject itself into legitimate DLLs or load malicious ones.</li>
+<li><strong>Threads:</strong> Malware can create or hijack threads within a process.</li>
+<li><strong>Buffers:</strong> Memory buffers can be exploited.</li>
+<li><strong>Management Functions:</strong> Malware can interfere with memory management functions.</li>
+<li><strong>Malware Hiding:</strong> Malware can either hide itself within an existing process or create a new, malicious process.</li>
+</ul>
+<hr>
+<h3>2.3.1 Buffer Overflows</h3>
+<ul>
+<li><strong>Overwriting Buffer of Memory:</strong> Occurs when a program attempts to write more data into a fixed-size memory buffer than it can hold, overflowing into adjacent memory locations.</li>
+<li><strong>Bounds Checking:</strong> A defense mechanism that checks if data being written to a buffer will exceed its allocated size.</li>
+<li><strong>Repeatable:</strong> Buffer overflows are often repeatable, meaning they can be reliably exploited.</li>
+</ul>
+<hr>
+<h3>2.3.2 Race Conditions</h3>
+<ul>
+<li><strong>When Two Events Happen at the Same Time:</strong> Occur when the outcome of a process depends on the sequence or timing of other uncontrollable events.</li>
+<li><strong>Time-of-Check to Time-of-Use (TOCTOU) Attack:</strong> A type of race condition where a system's state changes between the time it is checked and the time it is used, leading to a vulnerability.</li>
+</ul>
+<hr>
+<h3>2.3.3 Malicious Update</h3>
+<ul>
+<li><strong>Trusted Sources:</strong> Attackers can compromise trusted update mechanisms to deliver malicious updates.</li>
+<li><strong>Backups:</strong> Regular backups are crucial for recovery from malicious updates.</li>
+</ul>
+<hr>
+<h3>2.3.4 Operating Systems Security</h3>
+<ul>
+<li><strong>Regular Updates:</strong> Operating systems should be updated regularly to patch vulnerabilities.</li>
+<li><strong>Patch Tuesday:</strong> Microsoft's monthly release of security updates.</li>
+</ul>
+<hr>
+<h3>2.3.5 SQL Injection</h3>
+<ul>
+<li><strong>Bad Programming:</strong> A common web vulnerability caused by insecure coding practices.</li>
+<li><strong>SQL Injection:</strong> Occurs when an attacker inserts malicious SQL code into input fields, which is then executed by the database.</li>
+</ul>
+<hr>
+<h3>2.3.6 Cross-Site Scripting (XSS)</h3>
+<ul>
+<li><strong>Takes Advantage of Trust:</strong> XSS attacks exploit the trust a user has in a legitimate website.</li>
+<li><strong>Complex:</strong> XSS attacks can be complex and difficult to detect.</li>
+<li><strong>JavaScript-Based:</strong> Mostly relies on injecting malicious JavaScript code into web pages.</li>
+<li><strong>Non-Persistent (Reflected) XSS:</strong> The malicious script is reflected off the web server and executed in the user's browser. It's not stored on the server.</li>
+<li><strong>Persistent (Stored) XSS:</strong> The malicious script is permanently stored on the target servers (e.g., in a database) and delivered to users when they access the vulnerable page.</li>
+</ul>
+<hr>
+<h3>2.3.7 Hardware Vulnerabilities</h3>
+<p>Hardware can have vulnerabilities that are difficult to detect and patch.</p>
+<ul>
+<li><strong>OS Access:</strong> Some hardware may have an operating system but no direct user access, making them perfect entry points for attackers.</li>
+<li><strong>IoT (Internet of Things):</strong> IoT devices are often vulnerable due to weak security, default credentials, and lack of updates.</li>
+<li><strong>Firmware:</strong> Software embedded in hardware. Often, only the vendor can modify it.</li>
+<li><strong>End of Life (EOL)/End of Service Life (EOSL):</strong> When hardware or software reaches its EOL/EOSL, it no longer receives security updates, making it vulnerable.</li>
+<li><strong>Legacy Platforms:</strong> Older systems that are no longer supported or updated.</li>
+</ul>
+<hr>
+<h3>2.3.8 Virtualization Security</h3>
+<ul>
+<li><strong>VM Escape Protection:</strong> Measures to prevent a virtual machine (VM) from breaking out of its virtualized environment and accessing the host system.</li>
+<li><strong>Resource Reuse:</strong> Securely managing the reuse of virtualized resources to prevent data leakage.</li>
+</ul>
+<hr>
+<h3>2.3.9 Cloud-Specific Vulnerabilities</h3>
+<p>Cloud environments introduce unique security challenges.</p>
+<ul>
+<li><strong>Authentication Bypass:</strong> Bypassing authentication mechanisms to gain unauthorized access.</li>
+<li><strong>Directory Traversal:</strong> Exploiting vulnerabilities to access files and directories outside of the intended web root.</li>
+<li><strong>Remote Code Execution:</strong> Executing arbitrary code on a remote server.</li>
+<li><strong>Out of Bounds Write:</strong> Writing data beyond the allocated memory buffer, potentially leading to code execution.</li>
+</ul>
+<hr>
+<h3>2.3.10 Supply Chain Vulnerabilities</h3>
+<ul>
+<li><strong>Many Parts:</strong> Modern systems rely on many components from various suppliers, each introducing potential vulnerabilities.</li>
+<li><strong>Service Providers:</strong> Compromised service providers can introduce vulnerabilities into your systems.</li>
+<li><strong>Hardware Providers:</strong> Vulnerabilities in hardware components.</li>
+<li><strong>Software Providers:</strong> Vulnerabilities in third-party software.</li>
+</ul>
+<hr>
+<h3>2.3.11 Misconfiguration Vulnerabilities</h3>
+<ul>
+<li><strong>Open Permissions:</strong> Files or directories with overly permissive access rights.</li>
+<li><strong>Unsecured Admin Accounts:</strong> Administrator accounts with weak passwords or no multi-factor authentication.</li>
+<li><strong>Insecure Protocols:</strong> Using outdated or unencrypted protocols (e.g., Telnet instead of SSH).</li>
+<li><strong>Default Settings:</strong> Leaving default configurations unchanged, which are often insecure.</li>
+<li><strong>Open Ports and Services:</strong> Unnecessary open ports or running services that can be exploited.</li>
+</ul>
+<hr>
+<h3>2.3.12 Mobile Device Vulnerabilities</h3>
+<ul>
+<li><strong>Jailbreaking/Rooting:</strong> Modifying a mobile device's operating system to remove vendor restrictions, which can introduce security risks.</li>
+<li><strong>Sideloading:</strong> Installing applications from sources other than official app stores, increasing the risk of malware.</li>
+</ul>
+<hr>
+<h3>2.3.13 Zero-Day Vulnerabilities</h3>
+<ul>
+<li><strong>Not Found Yet:</strong> A vulnerability that is unknown to the vendor and has no patch available. Attackers can exploit these before defenses are in place.</li>
+</ul>
+<hr>
+<h3>2.4 Malware: Malicious Software</h3>
+<p>Malware is a broad term for any software designed to cause damage, disrupt systems, or gain unauthorized access.</p>
+<ul>
+<li><strong>Ransomware:</strong> Malware that encrypts a victim's files and demands a ransom payment for decryption.</li>
+</ul>
+<hr>
+<h3>2.4.1 Viruses and Worms</h3>
+<ul>
+<li><strong>Virus:</strong> Malicious code that attaches itself to legitimate programs and requires user interaction to spread. It can replicate and move between systems.</li>
+<li><strong>Fileless Virus:</strong> A type of malware that operates entirely in memory, leaving no traces on the hard drive.</li>
+<li><strong>Worm:</strong> Self-replicating malware that doesn't need user interaction to spread. It uses network vulnerabilities to propagate rapidly, often bypassing firewalls.</li>
+</ul>
+<hr>
+<h3>2.4.2 Spyware and Bloatware</h3>
+<ul>
+<li><strong>Spyware:</strong> Malware designed to secretly gather information about a user's activities.</li>
+<li><strong>Bloatware:</strong> Unwanted software pre-installed on devices, often consuming resources and potentially posing security risks.</li>
+</ul>
+<hr>
+<h3>2.4.3 Other Malware Types</h3>
+<ul>
+<li><strong>Keylogger:</strong> Records keystrokes to capture sensitive information like passwords.</li>
+<li><strong>Logic Bomb:</strong> Malicious code that lies dormant until a specific condition is met (e.g., a date, a user action).</li>
+<li><strong>Rootkit:</strong> A stealthy type of malware designed to hide its presence and other malicious processes on a system, often by modifying core operating system components.</li>
+</ul>
+<hr>
+<h3>2.4.4 Physical Attacks</h3>
+<ul>
+<li><strong>Brute-Force:</strong> Repeatedly trying different combinations to guess passwords or unlock systems.</li>
+<li><strong>RFID Cloning:</strong> Copying the data from RFID (Radio-Frequency Identification) cards to create duplicates.</li>
+<li><strong>Environmental Attacks:</strong> Attacks that exploit environmental factors.
+<ul>
+<li><strong>Turning Off Power:</strong> Causing a power outage to disrupt services.</li>
+<li><strong>HVAC (Heating, Ventilation, and Air Conditioning):</strong> Manipulating HVAC systems to damage equipment or disrupt operations.</li>
+<li><strong>Fire Suppression:</strong> Disabling fire suppression systems to cause damage.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3>2.4.5 Denial of Service (DoS)</h3>
+<ul>
+<li><strong>Force Service to Fail:</strong> An attack designed to make a machine or network resource unavailable to its intended users.</li>
+<li><strong>Sometimes Friendly:</strong> Can sometimes be unintentional (e.g., a legitimate surge in traffic).</li>
+<li><strong>Distributed Denial of Service (DDoS):</strong> A DoS attack launched from multiple compromised computer systems (a &quot;botnet&quot;) to overwhelm a target. Can be reflected and amplified using vulnerable servers.</li>
+</ul>
+<hr>
+<h3>2.4.6 DNS Attacks</h3>
+<ul>
+<li><strong>DNS Spoofing/Poisoning:</strong> Injecting false DNS (Domain Name System) records into a DNS resolver's cache, redirecting users to malicious websites.</li>
+<li><strong>Domain Hijacking:</strong> Gaining unauthorized control over a domain name.</li>
+<li><strong>URL Hijacking:</strong> Redirecting users from a legitimate URL to a malicious one.</li>
+<li><strong>Typosquatting/Brandjacking:</strong> Registering domain names that are common misspellings or variations of legitimate brands to trick users.</li>
+</ul>
+<hr>
+<h3>2.4.7 Wireless Attacks</h3>
+<ul>
+<li><strong>Wireless Deauthentication:</strong> Sending deauthentication frames to disconnect clients from a Wi-Fi network (802.11 standard).</li>
+<li><strong>802.11ac:</strong> A Wi-Fi standard.</li>
+<li><strong>RF (Radio Frequency) Jamming:</strong> Deliberately interfering with radio signals to disrupt wireless communication.</li>
+<li><strong>Wireless Jamming:</strong> A general term for disrupting wireless signals, often by broadcasting random data.</li>
+<li><strong>Fox Hunting:</strong> The process of locating a hidden radio transmitter, often used in wireless security to find rogue access points.</li>
+</ul>
+<hr>
+<h3>2.4.8 On-Path Attack (Man-in-the-Middle)</h3>
+<ul>
+<li><strong>ARP Spoofing/Poisoning:</strong> Manipulating ARP (Address Resolution Protocol) tables to redirect network traffic through an attacker's machine.</li>
+<li><strong>On-Path Browser/Man-in-the-Browser Attack:</strong> Malware that intercepts and modifies web traffic within the user's web browser.</li>
+</ul>
+<hr>
+<h3>2.4.9 Replay Attacks</h3>
+<ul>
+<li><strong>Need Raw Network Data:</strong> Involve capturing legitimate data transmission and retransmitting it to impersonate a legitimate user or system.</li>
+<li><strong>Pass the Hash:</strong> An attack where an attacker steals a password hash and uses it to authenticate to a system without cracking the hash.</li>
+<li><strong>Session Hijacking (Sidejacking):</strong> Stealing a user's session ID to take over their active session.</li>
+<li><strong>E2E (End-to-End) Encryption:</strong> Crucial for preventing replay attacks by encrypting data from the source to the destination.</li>
+</ul>
+<hr>
+<h3>2.4.10 Malicious Code</h3>
+<ul>
+<li>General term for any code designed to perform unauthorized or harmful actions.</li>
+</ul>
+<hr>
+<h3>2.4.11 Application Attacks</h3>
+<ul>
+<li><strong>Injection:</strong> Inserting malicious code into an application (e.g., SQL injection, command injection).</li>
+<li><strong>Replay:</strong> Replaying captured data to gain unauthorized access.</li>
+<li><strong>Privilege Escalation:</strong> Gaining higher-level permissions than initially authorized.</li>
+<li><strong>Cross-Site Request Forgery (CSRF):</strong> Tricking a web browser into executing an unwanted action on a trusted site where the user is authenticated.</li>
+<li><strong>Client-Server Codes:</strong> Exploiting vulnerabilities in the interaction between client and server applications.</li>
+<li><strong>Directory Traversal:</strong> Accessing files and directories outside of the intended web root.</li>
+</ul>
+<hr>
+<h3>2.4.12 Cryptographic Attacks</h3>
+<ul>
+<li><strong>Hash Collision:</strong> Finding two different inputs that produce the same hash output.</li>
+<li><strong>Birthday Attack:</strong> A type of cryptographic attack that exploits the mathematics behind the birthday problem to find hash collisions.</li>
+<li><strong>Downgrade Attack:</strong> Forcing a system to use a weaker, less secure version of a protocol or algorithm.</li>
+<li><strong>SSL Stripping:</strong> An attack that downgrades an HTTPS connection to HTTP, allowing the attacker to intercept traffic.</li>
+</ul>
+<hr>
+<h3>2.4.13 Password Attacks</h3>
+<ul>
+<li><strong>Should Be Hashed:</strong> Passwords should always be stored as hashes, not in plain text.</li>
+<li><strong>Spraying Attack:</strong> Attempting a single password against many accounts to avoid account lockouts.</li>
+<li><strong>Brute-Force:</strong> Systematically trying every possible combination of characters until the correct password is found.</li>
+</ul>
+<hr>
+<h3>2.4.14 Indicators of Compromise (IoC)</h3>
+<ul>
+<li><strong>Any Event that Indicates an Intrusion:</strong> Evidence that a system or network has been compromised.</li>
+<li><strong>Account Lockout:</strong> Repeated failed login attempts leading to an account being locked.</li>
+<li><strong>Concurrent Session Usage:</strong> A single user account being logged in from multiple locations simultaneously.</li>
+</ul>
+<hr>
+<h3>Conclusion</h3>
+<p>This overview provides a foundational understanding of key cybersecurity concepts essential for the CompTIA Security+ exam and for anyone entering the field. From implementing robust controls and understanding the CIA Triad to identifying various threat actors and their attack vectors, a comprehensive approach to security is paramount in today's digital landscape. Continuous learning and vigilance are key to staying ahead of evolving threats.</p>
+<hr>
+
+      </div>
+    </article>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Mert Biricik</h3>
+          <p>Full Stack Developer & Data Scientist</p>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/mertbiricik" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="mailto:mert@biricik.de">
+              <i class="fas fa-envelope"></i> Email
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mert Biricik. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
