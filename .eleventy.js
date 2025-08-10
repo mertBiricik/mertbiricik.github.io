@@ -1,8 +1,11 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
   // Add navigation plugin
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+  eleventyConfig.addPlugin(pluginRss);
 
   // Blog posts collection
   eleventyConfig.addCollection("blog", function(collectionApi) {
