@@ -1,15 +1,16 @@
 /* CSS Variables for theming */
 :root {
-  --primary-color: #bd93f9;
-  --secondary-color: #6272A4;
-  --accent-color: #8be9fd;
-  --text-primary: #111827;
-  --text-secondary: #6b7280;
-  --text-light: #9ca3af;
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
-  --bg-tertiary: #f1f5f9;
-  --border-color: #e5e7eb;
+  --primary-color: #bd93f9; /* Dracula Purple */
+  --secondary-color: #6272A4; /* Dracula Comment */
+  --accent-color: #8be9fd; /* Dracula Cyan */
+
+  --text-primary: #f8f8f2; /* Dracula Foreground */
+  --text-secondary: #bd93f9; /* Dracula Purple for secondary text */
+  --text-light: #9ca3af; /* Keep existing, close to Dracula's light gray */
+  --bg-primary: #282a36; /* Dracula Background */
+  --bg-secondary: #44475a; /* Dracula Current Line/Selection */
+  --bg-tertiary: #374151; /* Keep existing, close to Dracula's darker shades */
+  --border-color: #44475a; /* Dracula Current Line/Selection */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -19,13 +20,13 @@
 
 /* Dark theme */
 [data-theme="dark"] {
-  --text-primary: #f8f8f2;
-  --text-secondary: #bd93f9;
-  --text-light: #9ca3af;
-  --bg-primary: #282a36;
-  --bg-secondary: #44475a;
-  --bg-tertiary: #374151;
-  --border-color: #44475a;
+  --text-primary: #111827; /* Original dark text */
+  --text-secondary: #6b7280; /* Original medium text */
+  --text-light: #9ca3af; /* Original light text */
+  --bg-primary: #ffffff; /* Original white background */
+  --bg-secondary: #f8fafc; /* Original light gray background */
+  --bg-tertiary: #f1f5f9; /* Original light gray background */
+  --border-color: #e5e7eb; /* Original light gray border */
 }
 
 /* Reset and base styles */
