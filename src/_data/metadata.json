@@ -1,0 +1,9 @@
+{
+  "title": "Mert Biricik's Blog",
+  "url": "https://mert.biricik.de/",
+  "description": "The latest posts from Mert Biricik's personal blog on full stack development, data science, and cybersecurity.",
+  "author": {
+    "name": "Mert Biricik",
+    "email": "mert@biricik.de"
+  }
+}
