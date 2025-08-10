@@ -9,8 +9,8 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mert Biricik | Full Stack Developer & Data Scientist</title>
-  <meta name="description" content="Mert Biricik - Full Stack Developer, Data Scientist, and ML Engineer with expertise in web applications and machine learning solutions.">
+  <title>Mert Biricik&#39;s Blog Feed - Mert Biricik | Full Stack Developer & Data Scientist</title>
+  <meta name="description" content="The latest posts from Mert Biricik&#39;s personal blog on full stack development, data science, and cybersecurity.">
   
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="0b64d5c9758fafd9">
@@ -18,13 +18,13 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mert.biricik.de/">
-  <meta property="og:title" content="Mert Biricik">
-  <meta property="og:description" content="Full Stack Developer & Data Scientist">
+  <meta property="og:title" content="Mert Biricik&#39;s Blog Feed - Mert Biricik">
+  <meta property="og:description" content="The latest posts from Mert Biricik&#39;s personal blog on full stack development, data science, and cybersecurity.">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Mert Biricik">
-  <meta property="twitter:description" content="Full Stack Developer & Data Scientist">
+  <meta property="twitter:title" content="Mert Biricik&#39;s Blog Feed - Mert Biricik">
+  <meta property="twitter:description" content="The latest posts from Mert Biricik&#39;s personal blog on full stack development, data science, and cybersecurity.">
   
   <!-- Favicons and Icons -->
   <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
@@ -96,7 +96,7 @@
 <section class="section">
   <div class="section-container">
     <article class="blog-post">
-      <h1 class="blog-post-title"></h1>
+      <h1 class="blog-post-title">Mert Biricik&#39;s Blog Feed</h1>
       <div class="blog-post-meta">
         <span class="post-date"><i class="far fa-calendar-alt"></i> Invalid Date</span>
         
@@ -105,7 +105,7 @@
       <div class="blog-post-content">
         <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://mert.biricik.de/">
-  <title>Mert Biricik&#39;s Blog</title>
+  <title>Mert Biricik&#39;s Blog Feed</title>
   <subtitle>The latest posts from Mert Biricik&#39;s personal blog on full stack development, data science, and cybersecurity.</subtitle>
   <link href="https://mert.biricik.de//feed.xml" rel="self"/>
   <link href="https://mert.biricik.de//"/>
