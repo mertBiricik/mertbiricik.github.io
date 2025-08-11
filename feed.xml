@@ -9,8 +9,8 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enerdata Demo - Mert Biricik | Full Stack Developer & Data Scientist</title>
-  <meta name="description" content="Interactive data visualization. Enerdata project.">
+  <title>Mert Biricik&#39;s Blog Feed - Mert Biricik | Full Stack Developer & Data Scientist</title>
+  <meta name="description" content="The latest posts from Mert Biricik&#39;s personal blog on full stack development, data science, and cybersecurity.">
   
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="0b64d5c9758fafd9">
@@ -18,13 +18,13 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mert.biricik.de/">
-  <meta property="og:title" content="Enerdata Demo - Mert Biricik">
-  <meta property="og:description" content="Interactive data visualization. Enerdata project.">
+  <meta property="og:title" content="Mert Biricik&#39;s Blog Feed - Mert Biricik">
+  <meta property="og:description" content="The latest posts from Mert Biricik&#39;s personal blog on full stack development, data science, and cybersecurity.">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Enerdata Demo - Mert Biricik">
-  <meta property="twitter:description" content="Interactive data visualization. Enerdata project.">
+  <meta property="twitter:title" content="Mert Biricik&#39;s Blog Feed - Mert Biricik">
+  <meta property="twitter:description" content="The latest posts from Mert Biricik&#39;s personal blog on full stack development, data science, and cybersecurity.">
   
   <!-- Favicons and Icons -->
   <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
@@ -36,7 +36,7 @@
   <!-- Android/Chrome -->
   <link rel="manifest" href="/assets/icons/site.webmanifest">
   <meta name="theme-color" content="#2b2b2b">
-  <link rel="alternate" href="/rss.xml" type="application/atom+xml" title="Mert Biricik's Blog Feed">
+  <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="Mert Biricik's Blog Feed">
   
   <link rel="stylesheet" href="/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -66,6 +66,10 @@
           </li>
           
           <li class="nav-item">
+            <a href="/demos/enerdata-primary-energy/" class="nav-link">Demo</a>
+          </li>
+          
+          <li class="nav-item">
             <a href="/publications/" class="nav-link">Publications</a>
           </li>
           
@@ -89,19 +93,54 @@
 
   <main class="main">
     
-<div class="main-content-area" style="width: 100%; height: calc(100vh - 120px); display: flex; flex-direction: column;">
-  <h1 class="section-title" style="text-align: center; margin-top: 20px;">Enerdata Demo</h1>
-
-  <div class="demo-container" style="flex-grow: 1; width: 100%; padding: 20px;">
-    <iframe src="https://enerjiveri.khas.edu.tr/birincil-enerjinin-kaynaklara-gore-uretimi-ve-tuketimi/" style="width: 100%; height: 100%; border: none;"></iframe>
+<section class="section">
+  <div class="section-container">
+    <article class="blog-post">
+      <h1 class="blog-post-title">Mert Biricik&#39;s Blog Feed</h1>
+      <div class="blog-post-meta">
+        <span class="post-date"><i class="far fa-calendar-alt"></i> Invalid Date</span>
+        
+        
+      </div>
+      <div class="blog-post-content">
+        <?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://mert.biricik.de/">
+  <title>Mert Biricik&#39;s Blog Feed</title>
+  <subtitle>The latest posts from Mert Biricik&#39;s personal blog on full stack development, data science, and cybersecurity.</subtitle>
+  <link href="https://mert.biricik.de//feed.xml" rel="self"/>
+  <link href="https://mert.biricik.de//"/>
+  <updated>2025-08-10T00:00:00Z</updated>
+  <id>https://mert.biricik.de//</id>
+  <author>
+    <name>Mert Biricik</name>
+    <email>mert@biricik.de</email>
+  </author>
+  <entry>
+    <title>Hello World!</title>
+    <link href="https://mert.biricik.de/blog/hello_world/"/>
+    <updated>2025-08-10T00:00:00Z</updated>
+    <id>https://mert.biricik.de/blog/hello_world/</id>
+    <content type="html">&lt;p&gt;Welcome to my new blog!&lt;/p&gt;
+&lt;p&gt;This is the first post, demonstrating how easy it is to add content using Markdown files with Eleventy. I&#39;m excited to share my thoughts on full-stack development, data science, and cybersecurity here.&lt;/p&gt;
+&lt;p&gt;I am planning to update here at least bi-weekly.&lt;/p&gt;
+&lt;h2&gt;What&#39;s Next?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;More technical deep-dives&lt;/li&gt;
+&lt;li&gt;Project showcases&lt;/li&gt;
+&lt;li&gt;Thoughts on industry trends&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thanks for reading.&lt;/p&gt;
+</content>
+    <author>
+      <name>Mert Biricik</name>
+    </author>
+  </entry>
+</feed>
+      </div>
+    </article>
   </div>
+</section>
 
-  <div style="text-align: center; margin-bottom: 20px;">
-    <a href="https://enerjiveri.khas.edu.tr/birincil-enerjinin-kaynaklara-gore-uretimi-ve-tuketimi/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-      View Original Site <i class="fas fa-external-link-alt"></i>
-    </a>
-  </div>
-</div>
   </main>
 
   <footer class="footer">
@@ -114,13 +153,13 @@
         <div class="footer-section">
           <h4>Connect</h4>
           <div class="social-links">
-            <a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" aria-label="View my LinkedIn profile">
+            <a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-linkedin"></i> LinkedIn
             </a>
-            <a href="https://github.com/mertbiricik" target="_blank" rel="noopener noreferrer" aria-label="View my GitHub profile">
+            <a href="https://github.com/mertbiricik" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-github"></i> GitHub
             </a>
-            <a href="mailto:mert@biricik.de" aria-label="Send me an email">
+            <a href="mailto:mert@biricik.de">
               <i class="fas fa-envelope"></i> Email
             </a>
           </div>
