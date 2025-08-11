@@ -3,7 +3,6 @@
   --primary-color: #2563eb;
   --secondary-color: #1e40af;
   --accent-color: #0ea5e9;
-
   --text-primary: #111827;
   --text-secondary: #6b7280;
   --text-light: #9ca3af;
@@ -65,7 +64,6 @@ h6 { font-size: 1.125rem; }
 p {
   margin-bottom: 1rem;
   color: var(--text-secondary);
-  text-align: justify;
 }
 
 a {

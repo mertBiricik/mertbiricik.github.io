@@ -4,502 +4,364 @@
   <subtitle>The latest posts from Mert Biricik's personal blog on full stack development, data science, and cybersecurity.</subtitle>
   <link href="https://mert.biricik.de//rss.xml" rel="self"/>
   <link href="https://mert.biricik.de//"/>
-  <updated>2025-08-10T00:00:00Z</updated>
+  <updated>2025-08-11T00:00:00Z</updated>
   <id>https://mert.biricik.de//</id>
   <author>
     <name>Mert Biricik</name>
     <email>mert@biricik.de</email>
   </author>
   <entry>
-    <title>Hello World!</title>
-    <link href="https://mert.biricik.de/blog/hello_world/"/>
-    <updated>2025-08-10T00:00:00Z</updated>
-    <id>https://mert.biricik.de/blog/hello_world/</id>
-    <content type="html">&lt;p&gt;First post. Demonstrates content addition via Markdown with Eleventy. Thoughts: full-stack development, data science, cybersecurity. Updates: bi-weekly minimum.&lt;/p&gt;
-&lt;h2&gt;Next Steps&lt;/h2&gt;
+    <title>Building a Production RAG System: Turkish Basketball Federation AI Assistant</title>
+    <link href="https://mert.biricik.de/blog/basketball-rag-system-tutorial/"/>
+    <updated>2025-08-11T00:00:00Z</updated>
+    <id>https://mert.biricik.de/blog/basketball-rag-system-tutorial/</id>
+    <content type="html">&lt;h2&gt;Building a Production RAG System: Turkish Basketball Federation AI Assistant&lt;/h2&gt;
+&lt;p&gt;Complete tutorial for deploying a multilingual Retrieval-Augmented Generation system combining basketball rules with live statistics on any Linux system.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;System Overview&lt;/h3&gt;
+&lt;p&gt;Production-ready Basketball RAG system with dual-component architecture:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Technical deep-dives.&lt;/li&gt;
-&lt;li&gt;Project showcases.&lt;/li&gt;
-&lt;li&gt;Industry trend analysis.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rules Component:&lt;/strong&gt; ChromaDB vector database (873 documents)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Statistics Component:&lt;/strong&gt; FastAPI server (17,261+ games)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Smart Router:&lt;/strong&gt; Query classification and routing&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web Interface:&lt;/strong&gt; Gradio production frontend&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Key Features:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bilingual Turkish/English support&lt;/li&gt;
+&lt;li&gt;GPU-accelerated embeddings (BGE-M3)&lt;/li&gt;
+&lt;li&gt;Llama 3.1 8B integration via Ollama&lt;/li&gt;
+&lt;li&gt;External access via localtunnel&lt;/li&gt;
+&lt;li&gt;Production error handling and logging&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Prerequisites&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;System Requirements:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# Ubuntu/Debian systems
+sudo apt update
+sudo apt install python3.8+ python3-pip git curl build-essential
+
+# GPU acceleration (recommended)
+# CUDA-capable GPU with 8GB+ VRAM
+# RTX 3060/4060 or better
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Core Dependencies:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pip install torch transformers sentence-transformers
+pip install chromadb fastapi uvicorn gradio
+pip install pandas numpy requests pyyaml tqdm
+pip install langchain-community ollama python-docx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Ollama Setup:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# Install Ollama
+curl -fsSL https://ollama.ai/install.sh | sh
+
+# Pull required model
+ollama pull llama3.1:8b-instruct-q4_K_M
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Project Structure&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;tbf_mhk_rag_mcp/
+├── data/                    # CSV game statistics (76 files)
+├── documents/              # PDF basketball rules
+├── scripts/
+│   ├── setup_database.py   # Vector DB initialization  
+│   ├── build_stats_db.py   # Statistics DB builder
+│   └── gradio_app.py       # Development interface
+├── servers/
+│   └── stats_api.py        # FastAPI statistics server
+├── src/
+│   └── utils/
+│       ├── config.py       # Hardware detection
+│       └── query_router.py # Query classification
+├── production_app.py       # Production system
+└── Basketball_RAG_Setup_Instructions.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Step 1: Database Initialization&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Vector Database (Rules):&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# Create vector database from PDF documents
+python scripts/setup_database.py
+
+# Verify database
+# Should output: &amp;quot;✅ Connected to vector database: 873 documents&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Statistics Database (Games):&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# Build SQLite database from CSV files
+python scripts/build_stats_db.py
+
+# Output: &amp;quot;✅ Database built: 17,261 games processed&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Step 2: Query Router Implementation&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Core Router Logic:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;class QueryRouter:
+    def __init__(self, stats_api_url=&amp;quot;http://localhost:8001&amp;quot;):
+        self.stats_keywords = {
+            # Turkish: maç, takım, sezon, sonuç, istatistik
+            # English: game, team, season, result, statistics
+        }
+        
+        self.team_patterns = [
+            r&#39;&#92;b(tofaş|fenerbahçe|galatasaray)&#92;b&#39;,
+            r&#39;&#92;b(efes|beşiktaş|trabzonspor)&#92;b&#39;
+        ]
+    
+    def classify_query(self, query: str) -&amp;gt; str:
+        # Smart classification logic
+        # Returns &#39;stats&#39; or &#39;rules&#39;
+        
+    def query_stats_api(self, query: str) -&amp;gt; dict:
+        # Extract parameters and query API
+        # Turkish character encoding handled
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Turkish Character Encoding:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;# Critical for Turkish team names
+params = {&#39;team_name&#39;: &#39;TOFAŞ&#39;}
+url = f&amp;quot;{api_url}?{urlencode(params, safe=&#39;&#39;, encoding=&#39;utf-8&#39;)}&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Step 3: Production System Setup&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Launch Production System:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# Single command deployment
+python production_app.py
+
+# System startup sequence:
+# 🚀 Initializing Production Basketball RAG System...
+# 📊 Loading BAAI/bge-m3 on cuda...
+# ✅ Vector database: 873 documents
+# ✅ Stats API started successfully
+# 🎉 Production system ready!
+# 🌐 Access at: http://localhost:7860
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Key Production Features:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Automatic service startup&lt;/li&gt;
+&lt;li&gt;Port detection and binding&lt;/li&gt;
+&lt;li&gt;Error recovery and fallbacks&lt;/li&gt;
+&lt;li&gt;Comprehensive logging&lt;/li&gt;
+&lt;li&gt;GPU optimization with CPU fallback&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Step 4: External Access Configuration&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Localtunnel Setup:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# Install localtunnel globally
+npm install -g localtunnel
+
+# Create tunnel to production system
+lt --port 7860
+
+# Example output:
+# your url is: https://all-spies-hunt.loca.lt
+# Password: 31.223.4.21 (your public IP)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Alternative Tunneling:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# Using ngrok
+ngrok http 7860
+
+# Using serveo
+ssh -R 80:localhost:7860 serveo.net
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Step 5: Query Examples and Testing&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Rules Queries (Turkish):&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;5 faul yapan oyuncuya ne olur?&amp;quot;
+&amp;quot;Basketbol sahasının boyutları nelerdir?&amp;quot;
+&amp;quot;Şut saati kuralı nasıl işler?&amp;quot;
+&amp;quot;2024 yılında hangi kurallar değişti?&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Rules Queries (English):&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;What happens when a player gets 5 fouls?&amp;quot;
+&amp;quot;What are basketball court dimensions?&amp;quot;
+&amp;quot;How does the shot clock rule work?&amp;quot;
+&amp;quot;Which rules changed in 2024?&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Statistics Queries (Turkish):&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;TOFAŞ maçları 2023-2024 sezonunda&amp;quot;
+&amp;quot;Fenerbahçe vs Galatasaray maçları&amp;quot;
+&amp;quot;BSL 2024-2025 sezon sonuçları&amp;quot;
+&amp;quot;Kadın basketbol lig sonuçları&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Statistics Queries (English):&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;TOFAŞ games in 2023-2024 season&amp;quot;
+&amp;quot;Show me games from BSL league&amp;quot;
+&amp;quot;Basketball league standings&amp;quot;
+&amp;quot;Women&#39;s basketball results&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Step 6: API Integration and Testing&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Direct Statistics API Testing:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# Test API endpoints directly
+curl &amp;quot;http://localhost:8001/games/?team_name=TOFAŞ&amp;amp;limit=5&amp;quot;
+
+# Expected response:
+# [{&amp;quot;tarih&amp;quot;: &amp;quot;12.05.2024&amp;quot;, &amp;quot;team_a&amp;quot;: &amp;quot;TOFAŞ&amp;quot;, &amp;quot;team_b&amp;quot;: &amp;quot;GALATASARAY&amp;quot;, ...}]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;API Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;team_name&lt;/code&gt;: Turkish team name (TOFAŞ, FENERBAHÇE, GALATASARAY)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;season&lt;/code&gt;: Format &amp;quot;2023-2024&amp;quot;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;date&lt;/code&gt;: Format &amp;quot;DD.MM.YYYY&amp;quot;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;limit&lt;/code&gt;: Maximum results (default 50)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Step 7: MCP Server Integration (Optional)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Model Context Protocol Setup:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;# Configure MCP for Claude integration
+# Enables direct API access from Claude Code
+
+class MCPServer:
+    def handle_basketball_query(self, query: str):
+        # Route query through production system
+        return self.rag_system.process_query(query)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;MCP Configuration:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{
+  &amp;quot;mcpServers&amp;quot;: {
+    &amp;quot;basketball-rag&amp;quot;: {
+      &amp;quot;command&amp;quot;: &amp;quot;python&amp;quot;,
+      &amp;quot;args&amp;quot;: [&amp;quot;mcp_server.py&amp;quot;],
+      &amp;quot;env&amp;quot;: {
+        &amp;quot;STATS_API_URL&amp;quot;: &amp;quot;http://localhost:8001&amp;quot;
+      }
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Step 8: Performance Optimization&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Hardware Detection:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def detect_hardware():
+    if torch.cuda.is_available():
+        gpu_name = torch.cuda.get_device_name(0)
+        vram_gb = torch.cuda.get_device_properties(0).total_memory / 1e9
+        # Optimize model selection based on VRAM
+        return select_optimal_models(vram_gb)
+    return default_models()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Model Selection Logic:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;8GB+ VRAM:&lt;/strong&gt; BGE-M3 embeddings + Llama 3.1 8B&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;4-8GB VRAM:&lt;/strong&gt; BGE-M3 embeddings + Llama 3.1 8B Q4&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&amp;lt;4GB VRAM:&lt;/strong&gt; MiniLM embeddings + Llama 3.1 8B Q2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Step 9: Troubleshooting Common Issues&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Vector Database Empty:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# Check database status
+python -c &amp;quot;import chromadb; print(chromadb.PersistentClient(&#39;./vector_db/chroma_db&#39;).get_collection(&#39;basketball_rules&#39;).count())&amp;quot;
+
+# If 0 documents, rebuild:
+python scripts/setup_database.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Turkish Character Issues:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;# Ensure proper encoding in all API calls
+import urllib.parse
+team_name = &amp;quot;TOFAŞ&amp;quot;
+encoded = urllib.parse.quote(team_name, encoding=&#39;utf-8&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;GPU Memory Issues:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# Monitor GPU usage
+nvidia-smi -l 1
+
+# Clear GPU cache in Python
+torch.cuda.empty_cache()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Port Conflicts:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# Find and kill processes using required ports
+lsof -ti:8001 | xargs kill -9
+lsof -ti:7860 | xargs kill -9
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Step 10: Production Deployment Checklist&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Pre-deployment:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[ ] Vector database populated (873 documents)&lt;/li&gt;
+&lt;li&gt;[ ] Statistics database built (17,261+ games)&lt;/li&gt;
+&lt;li&gt;[ ] Ollama running with Llama 3.1 8B model&lt;/li&gt;
+&lt;li&gt;[ ] All dependencies installed&lt;/li&gt;
+&lt;li&gt;[ ] GPU drivers configured (if applicable)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Deployment:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[ ] Production system launches successfully&lt;/li&gt;
+&lt;li&gt;[ ] Both rules and stats queries working&lt;/li&gt;
+&lt;li&gt;[ ] External tunnel configured&lt;/li&gt;
+&lt;li&gt;[ ] Error logging active&lt;/li&gt;
+&lt;li&gt;[ ] Performance monitoring enabled&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Post-deployment:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[ ] Test all query types&lt;/li&gt;
+&lt;li&gt;[ ] Verify Turkish character handling&lt;/li&gt;
+&lt;li&gt;[ ] Check response times (&amp;lt;3s typical)&lt;/li&gt;
+&lt;li&gt;[ ] Monitor system resources&lt;/li&gt;
+&lt;li&gt;[ ] Document access credentials&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3&gt;System Architecture Benefits&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Scalability:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Microservice architecture (RAG + Stats API)&lt;/li&gt;
+&lt;li&gt;Horizontal scaling via load balancing&lt;/li&gt;
+&lt;li&gt;Database sharding for large datasets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Reliability:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Automatic failover between components&lt;/li&gt;
+&lt;li&gt;Graceful degradation when services unavailable&lt;/li&gt;
+&lt;li&gt;Comprehensive error handling and logging&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Multilingual Support:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Language detection and routing&lt;/li&gt;
+&lt;li&gt;Turkish/English response formatting&lt;/li&gt;
+&lt;li&gt;Character encoding optimization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Next Steps&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;System Enhancements:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add more sports leagues and data sources&lt;/li&gt;
+&lt;li&gt;Implement user authentication and sessions&lt;/li&gt;
+&lt;li&gt;Create mobile application interface&lt;/li&gt;
+&lt;li&gt;Add real-time statistics streaming&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Technical Improvements:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fine-tune embedding models for domain-specific queries&lt;/li&gt;
+&lt;li&gt;Implement advanced caching strategies&lt;/li&gt;
+&lt;li&gt;Add A/B testing for query routing algorithms&lt;/li&gt;
+&lt;li&gt;Integrate with official federation APIs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Production Monitoring:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set up Prometheus/Grafana dashboards&lt;/li&gt;
+&lt;li&gt;Implement alerting for system failures&lt;/li&gt;
+&lt;li&gt;Add performance analytics and user tracking&lt;/li&gt;
+&lt;li&gt;Create automated backup procedures&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;Complete production system providing intelligent basketball assistance through advanced AI integration. Deployable on any Linux system with comprehensive documentation and error handling.&lt;/p&gt;
 </content>
     <author>
       <name>Mert Biricik</name>
     </author>
   </entry>
   <entry>
-    <title>CompTIA Security+ Fundamentals: Core Concepts</title>
-    <link href="https://mert.biricik.de/blog/comptia-security-plus-fundamentals/"/>
-    <updated>2025-07-29T00:00:00Z</updated>
-    <id>https://mert.biricik.de/blog/comptia-security-plus-fundamentals/</id>
-    <content type="html">&lt;h2&gt;CompTIA Security+ Fundamentals: Core Concepts&lt;/h2&gt;
-&lt;h3&gt;1.1 Controls&lt;/h3&gt;
-&lt;p&gt;Cybersecurity controls are safeguards. They prevent, detect, or mitigate security risks.&lt;/p&gt;
+    <title>Hello World!</title>
+    <link href="https://mert.biricik.de/blog/hello_world/"/>
+    <updated>2025-08-10T00:00:00Z</updated>
+    <id>https://mert.biricik.de/blog/hello_world/</id>
+    <content type="html">&lt;p&gt;Welcome to my new blog!&lt;/p&gt;
+&lt;p&gt;This is the first post, demonstrating how easy it is to add content using Markdown files with Eleventy. I&#39;m excited to share my thoughts on full-stack development, data science, and cybersecurity here.&lt;/p&gt;
+&lt;p&gt;I am planning to update here at least bi-weekly.&lt;/p&gt;
+&lt;h2&gt;What&#39;s Next?&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Technical Controls:&lt;/strong&gt; System-based. Examples: OS controls, firewalls, antivirus.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Managerial Controls (Administrative):&lt;/strong&gt; Policy-based. Examples: Security policies, standard operating procedures.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Operational Controls:&lt;/strong&gt; People-implemented. Examples: Security guards, awareness programs.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Physical Controls:&lt;/strong&gt; Access limitation. Examples: Fences, locks, badge readers.&lt;/li&gt;
+&lt;li&gt;More technical deep-dives&lt;/li&gt;
+&lt;li&gt;Project showcases&lt;/li&gt;
+&lt;li&gt;Thoughts on industry trends&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Control Types&lt;/h3&gt;
-&lt;p&gt;Controls function in specific ways:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Preventive:&lt;/strong&gt; Blocks incidents. Example: Firewall.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Deterrent:&lt;/strong&gt; Discourages intrusion. Example: Warning signs.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Detective:&lt;/strong&gt; Identifies and logs attempts. Example: IDS.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Corrective:&lt;/strong&gt; Applies after an event. Goal: Minimal downtime.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Compensating:&lt;/strong&gt; Alternative control. Used when primary control is absent.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Directive:&lt;/strong&gt; Guides compliance.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;1.2 CIA Triad&lt;/h3&gt;
-&lt;p&gt;Also known as AIC Triad. Core security principles.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Confidentiality:&lt;/strong&gt; Authorized access only.
-&lt;ul&gt;
-&lt;li&gt;Access controls.&lt;/li&gt;
-&lt;li&gt;Encryption.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Integrity:&lt;/strong&gt; Data accuracy and completeness.
-&lt;ul&gt;
-&lt;li&gt;Hashing.&lt;/li&gt;
-&lt;li&gt;Digital signatures (encrypted hashes).&lt;/li&gt;
-&lt;li&gt;Certificates.&lt;/li&gt;
-&lt;li&gt;Non-repudiation.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Availability:&lt;/strong&gt; Timely access to resources.
-&lt;ul&gt;
-&lt;li&gt;Redundancy.&lt;/li&gt;
-&lt;li&gt;Fault tolerance.&lt;/li&gt;
-&lt;li&gt;Patching.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;h3&gt;1.2.1 Non-Repudiation&lt;/h3&gt;
-&lt;p&gt;Proof of action. Denial is impossible.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Proof of Integrity:&lt;/strong&gt; Data verification. Data remains accurate. Hashes validate data, not origin.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Proof of Origin:&lt;/strong&gt; Message source verification. Authentication.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Digital Signature:&lt;/strong&gt; Encrypted hash using a private key. Decrypts with a public key.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;1.2.2 AAA Framework&lt;/h3&gt;
-&lt;p&gt;Identity and access management.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Identification:&lt;/strong&gt; User claims identity.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Authentication:&lt;/strong&gt; Identity verification. CA (Certificate Authority) involved.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Authorization:&lt;/strong&gt; Permitted actions. Abstraction (groups) streamlines administration.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Accounting:&lt;/strong&gt; User activity tracking.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;1.2.3 Gap Analysis&lt;/h3&gt;
-&lt;p&gt;Evaluates security posture. Compares current state to desired state.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ISO/IEC 27001 standard.&lt;/li&gt;
-&lt;li&gt;Assesses people and processes.&lt;/li&gt;
-&lt;li&gt;Identifies weaknesses. Proposes solutions.&lt;/li&gt;
-&lt;li&gt;Generates analysis and report.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;1.2.4 Zero Trust&lt;/h3&gt;
-&lt;p&gt;&amp;quot;Never trust, always verify&amp;quot; model. Assumes no inherent trust.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Network planes: Data plane, control plane.&lt;/li&gt;
-&lt;li&gt;Adaptive identity.&lt;/li&gt;
-&lt;li&gt;Threat scope reduction.&lt;/li&gt;
-&lt;li&gt;Policy-driven access control.&lt;/li&gt;
-&lt;li&gt;Security zones.&lt;/li&gt;
-&lt;li&gt;Policy Enforcement Point (PEP).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;1.2.5 Physical Security&lt;/h3&gt;
-&lt;p&gt;Limits physical access.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Access control vestibules.&lt;/li&gt;
-&lt;li&gt;CCTV.&lt;/li&gt;
-&lt;li&gt;Security guards.&lt;/li&gt;
-&lt;li&gt;Sensors.&lt;/li&gt;
-&lt;li&gt;Infrared cameras.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;1.2.7 Deception and Disruption&lt;/h3&gt;
-&lt;p&gt;Misleads or disrupts attackers. Gathers intelligence.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Honeypot:&lt;/strong&gt; Decoy system. Attracts and traps. Assumed attacker is machine.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Honeynet:&lt;/strong&gt; Network of honeypots.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Honey Files:&lt;/strong&gt; Decoy files. Detects unauthorized access.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Honeytoken:&lt;/strong&gt; Fake credential. Detects unauthorized access.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;1.3 Change Management&lt;/h3&gt;
-&lt;p&gt;Formal process for IT system alterations. Avoids downtime, confusion, errors.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Formal process required.&lt;/li&gt;
-&lt;li&gt;Rollback procedures.&lt;/li&gt;
-&lt;li&gt;Clear policies.&lt;/li&gt;
-&lt;li&gt;Change request form: Purpose, scope, schedule, systems/impact, risk.&lt;/li&gt;
-&lt;li&gt;Approval required.&lt;/li&gt;
-&lt;li&gt;End-user acceptance.&lt;/li&gt;
-&lt;li&gt;Ownership defined.&lt;/li&gt;
-&lt;li&gt;Managers/stakeholders impacted.&lt;/li&gt;
-&lt;li&gt;Impact analysis.&lt;/li&gt;
-&lt;li&gt;Risk value.&lt;/li&gt;
-&lt;li&gt;Likelihood of far-reaching impact.&lt;/li&gt;
-&lt;li&gt;Sandbox testing.&lt;/li&gt;
-&lt;li&gt;Backout plan.&lt;/li&gt;
-&lt;li&gt;Maintenance window.&lt;/li&gt;
-&lt;li&gt;Standard Operating Procedure (SOP).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;1.3.1 Technical Change Management&lt;/h3&gt;
-&lt;p&gt;Focuses on technical aspects of change.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Allow/deny list.&lt;/li&gt;
-&lt;li&gt;Downtime management.&lt;/li&gt;
-&lt;li&gt;Legacy application considerations.&lt;/li&gt;
-&lt;li&gt;Documentation.&lt;/li&gt;
-&lt;li&gt;Change management protocol.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;1.4 Public Key Infrastructure (PKI)&lt;/h3&gt;
-&lt;p&gt;Framework for secure information exchange via public key cryptography.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Includes policies, procedures, hardware, software, people.&lt;/li&gt;
-&lt;li&gt;Manages digital certificates: creation, distribution, management, storage, revocation.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;Symmetric Encryption&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Single shared key.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;Asymmetric Encryption&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Two mathematically related keys: private and public.&lt;/li&gt;
-&lt;li&gt;Encrypt with public, decrypt with private.&lt;/li&gt;
-&lt;li&gt;Relies on large prime numbers and randomization.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Key Escrow:&lt;/strong&gt; Private key copy held by third party.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;1.4.1 Encryption&lt;/h3&gt;
-&lt;p&gt;Converts data to code. Prevents unauthorized access.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Disk encryption: BitLocker, VeraCrypt.&lt;/li&gt;
-&lt;li&gt;Key stretching/strengthening: Increases brute-force cost.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;1.4.2 Key Exchange&lt;/h3&gt;
-&lt;p&gt;Secure cryptographic key exchange.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;1.4.3 Encryption Technologies&lt;/h3&gt;
-&lt;p&gt;Hardware and software support for encryption.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Trusted Platform Module (TPM):&lt;/strong&gt; Secure cryptoprocessor.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Hardware Security Module (HSM):&lt;/strong&gt; Physical key management.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Key Management System (KMS):&lt;/strong&gt; Manages key lifecycle.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Secure Enclave:&lt;/strong&gt; Isolated processor. Own boot ROM. Monitors boot. Real-time memory encryption. True random number generator.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;1.4.4 Obfuscation&lt;/h3&gt;
-&lt;p&gt;Hides information. Not true security.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Steganography:&lt;/strong&gt; Hides in plain sight (e.g., image covertext).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Concealed Writing:&lt;/strong&gt; Hidden messages.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Tokenization:&lt;/strong&gt; Replaces sensitive data with non-sensitive token.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Near-Field Communication (NFC):&lt;/strong&gt; Short-range data transfer.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Data Masking:&lt;/strong&gt; Obscures data elements.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;1.4.5 Hashing &amp;amp; Digital Signatures&lt;/h3&gt;
-&lt;p&gt;Ensures integrity and authenticity.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Hashing:&lt;/strong&gt; One-way function. Data cannot be recovered. No collisions. MD5 deprecated.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Salted Hashes:&lt;/strong&gt; Random string added before hashing. Defeats rainbow tables.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;1.4.6 Blockchain Technology&lt;/h3&gt;
-&lt;p&gt;Distributed ledger.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Decentralized database.&lt;/li&gt;
-&lt;li&gt;Shared and synchronized.&lt;/li&gt;
-&lt;li&gt;Each participant has a copy. Ensures transparency and immutability.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;1.4.7 Certificates&lt;/h3&gt;
-&lt;p&gt;Root of trust.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Root of Trust:&lt;/strong&gt; Highly trusted authority.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Certificate Authorities (CAs):&lt;/strong&gt; Issue and manage certificates.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Key Revocation:&lt;/strong&gt; Invalidates certificate before expiration.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Online Certificate Status Protocol (OCSP):&lt;/strong&gt; Real-time revocation status.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.1 Threat Actors&lt;/h3&gt;
-&lt;p&gt;Identifies who, motivation, capabilities.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Internal/External:&lt;/strong&gt; Origin.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Motivation:&lt;/strong&gt; Data exfiltration, espionage, service disruption, blackmail, financial gain, beliefs, revenge, disruption, war.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;Types of Threat Actors:&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;National States:&lt;/strong&gt; External. Massive resources. APTs.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Unskilled Attackers:&lt;/strong&gt; Limited knowledge. Internal/external.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Hacktivist:&lt;/strong&gt; Philosophical/political motivation. Internal/external. DoS, defacement. Limited funding.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Insider Entities:&lt;/strong&gt; Internal. Access to resources. Medium sophistication.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Organized Crime:&lt;/strong&gt; External. Financial gain. Highly sophisticated. Ransomware.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Shadow IT:&lt;/strong&gt; Works around internal IT. Builds own infrastructure.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Going Rogue:&lt;/strong&gt; Acts independently against policy.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.2 Common Threat Vectors&lt;/h3&gt;
-&lt;p&gt;Paths for unauthorized access.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Message-Based:&lt;/strong&gt; Phishing, SMS (smishing).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;File-Based:&lt;/strong&gt; Malicious code in files.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Voice Call:&lt;/strong&gt; Vishing, war dialing, call tampering, spam over IP.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Removable Device:&lt;/strong&gt; Malware via USB.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vulnerable Software:&lt;/strong&gt; Exploits software weaknesses. Client-based, agentless.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Unsupported Systems:&lt;/strong&gt; Exploits outdated OS/apps.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Unsecure Network:&lt;/strong&gt; Open ports, weak firewall rules, default credentials.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Supply Chain:&lt;/strong&gt; Attacks via third-party vendors (MSPs).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.2.1 Phishing&lt;/h3&gt;
-&lt;p&gt;Deceptive social engineering.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Email phishing.&lt;/li&gt;
-&lt;li&gt;Typosquatting.&lt;/li&gt;
-&lt;li&gt;Pretexting.&lt;/li&gt;
-&lt;li&gt;Vishing (voice).&lt;/li&gt;
-&lt;li&gt;Smishing (SMS).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.2.2 Impersonation&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Pretext:&lt;/strong&gt; Fabricated scenario.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.2.3 Watering Hole Attack&lt;/h3&gt;
-&lt;p&gt;Compromises frequently visited website. Infects target group. Layered defense.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.2.4 Other Social Engineering Techniques&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Misinformation/Disinformation.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.3 Memory Injections&lt;/h3&gt;
-&lt;p&gt;Injects malicious code into process memory.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Malware runs in memory.&lt;/li&gt;
-&lt;li&gt;Memory forensics.&lt;/li&gt;
-&lt;li&gt;DLLs (Dynamic Link Libraries).&lt;/li&gt;
-&lt;li&gt;Threads.&lt;/li&gt;
-&lt;li&gt;Buffers.&lt;/li&gt;
-&lt;li&gt;Management functions.&lt;/li&gt;
-&lt;li&gt;Malware hides in process or becomes new process.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.3.1 Buffer Overflows&lt;/h3&gt;
-&lt;p&gt;Writes excess data to fixed-size buffer. Overflows into adjacent memory.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Bounds checking.&lt;/li&gt;
-&lt;li&gt;Repeatable.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.3.2 Race Conditions&lt;/h3&gt;
-&lt;p&gt;Outcome depends on event timing.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Time-of-Check to Time-of-Use (TOCTOU):&lt;/strong&gt; System state changes between check and use.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.3.3 Malicious Update&lt;/h3&gt;
-&lt;p&gt;Compromises trusted update mechanisms.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Trusted sources.&lt;/li&gt;
-&lt;li&gt;Backups for recovery.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.3.4 Operating Systems Security&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Regular updates.&lt;/li&gt;
-&lt;li&gt;Patch Tuesday (Windows).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.3.5 SQL Injection&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Bad programming.&lt;/li&gt;
-&lt;li&gt;Inserts malicious SQL code into input fields. Executed by database.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.3.6 Cross-Site Scripting (XSS)&lt;/h3&gt;
-&lt;p&gt;Exploits trust in legitimate websites.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Complex.&lt;/li&gt;
-&lt;li&gt;JavaScript-based.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Non-Persistent (Reflected) XSS:&lt;/strong&gt; Script reflected from server. Executed in browser. Not stored.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Persistent (Stored) XSS:&lt;/strong&gt; Script stored on server. Delivered to users.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.3.7 Hardware Vulnerabilities&lt;/h3&gt;
-&lt;p&gt;Hardware can have vulnerabilities that are difficult to detect/patch.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;OS access without user access.&lt;/li&gt;
-&lt;li&gt;IoT devices: Weak security, default credentials.&lt;/li&gt;
-&lt;li&gt;Firmware: Vendor-modifiable only.&lt;/li&gt;
-&lt;li&gt;End of Life (EOL)/End of Service Life (EOSL): No security updates.&lt;/li&gt;
-&lt;li&gt;Legacy platforms: Unsupported.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.3.8 Virtualization Security&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;VM Escape Protection:&lt;/strong&gt; Prevents VM breakout to host.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Resource Reuse:&lt;/strong&gt; Secure management of virtualized resource reuse.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.3.9 Cloud-Specific Vulnerabilities&lt;/h3&gt;
-&lt;p&gt;Unique cloud challenges.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Authentication bypass.&lt;/li&gt;
-&lt;li&gt;Directory traversal.&lt;/li&gt;
-&lt;li&gt;Remote code execution.&lt;/li&gt;
-&lt;li&gt;Out of bounds write.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.3.10 Supply Chain Vulnerabilities&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Many components from various suppliers.&lt;/li&gt;
-&lt;li&gt;Service providers.&lt;/li&gt;
-&lt;li&gt;Hardware providers.&lt;/li&gt;
-&lt;li&gt;Software providers.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.3.11 Misconfiguration Vulnerabilities&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Open permissions.&lt;/li&gt;
-&lt;li&gt;Unsecured admin accounts.&lt;/li&gt;
-&lt;li&gt;Insecure protocols.&lt;/li&gt;
-&lt;li&gt;Default settings.&lt;/li&gt;
-&lt;li&gt;Open ports and services.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.3.12 Mobile Device Vulnerabilities&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Jailbreaking/rooting: Removes vendor restrictions.&lt;/li&gt;
-&lt;li&gt;Sideloading: Installs apps from unofficial sources.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.3.13 Zero-Day Vulnerabilities&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Unknown to vendor. No patch. Exploitable.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.4 Malware&lt;/h3&gt;
-&lt;p&gt;Malicious software. Damages, disrupts, gains unauthorized access.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Ransomware:&lt;/strong&gt; Encrypts files. Demands ransom.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.4.1 Viruses and Worms&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Virus:&lt;/strong&gt; Replicates. Moves. Requires user interaction. Fileless virus.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Worm:&lt;/strong&gt; Self-replicates. Uses network. No user interaction. Bypasses firewalls.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.4.2 Spyware and Bloatware&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Spyware:&lt;/strong&gt; Secretly gathers user info.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Bloatware:&lt;/strong&gt; Unwanted pre-installed software.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.4.3 Other Malware Types&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Keylogger:&lt;/strong&gt; Records keystrokes.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Logic Bomb:&lt;/strong&gt; Dormant until condition met.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rootkit:&lt;/strong&gt; Hides presence. Modifies OS components.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.4.4 Physical Attacks&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Brute-force.&lt;/li&gt;
-&lt;li&gt;RFID cloning.&lt;/li&gt;
-&lt;li&gt;Environmental: Power off, HVAC manipulation, fire suppression.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.4.5 Denial of Service (DoS)&lt;/h3&gt;
-&lt;p&gt;Forces service failure.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;DoS:&lt;/strong&gt; Makes resource unavailable. Can be unintentional.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Distributed Denial of Service (DDoS):&lt;/strong&gt; Multiple compromised systems (botnet). Overwhelms target. Reflected and amplified.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.4.6 DNS Attacks&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;DNS Spoofing/Poisoning:&lt;/strong&gt; Injects false DNS records. Redirects users.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Domain Hijacking:&lt;/strong&gt; Unauthorized domain control.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;URL Hijacking:&lt;/strong&gt; Redirects to malicious URL.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Typosquatting/Brandjacking:&lt;/strong&gt; Misspelled domains.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.4.7 Wireless Attacks&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Wireless deauthentication (802.11).&lt;/li&gt;
-&lt;li&gt;RF (Radio Frequency) jamming.&lt;/li&gt;
-&lt;li&gt;Wireless jamming.&lt;/li&gt;
-&lt;li&gt;Fox hunting.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.4.8 On-Path Attack (Man-in-the-Middle)&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;ARP Spoofing/Poisoning:&lt;/strong&gt; Redirects network traffic.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;On-Path Browser/Man-in-the-Browser:&lt;/strong&gt; Intercepts/modifies web traffic in browser.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.4.9 Replay Attacks&lt;/h3&gt;
-&lt;p&gt;Captures and retransmits data. Impersonates user/system.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Needs raw network data.&lt;/li&gt;
-&lt;li&gt;Pass the hash.&lt;/li&gt;
-&lt;li&gt;Session hijacking (sidejacking).&lt;/li&gt;
-&lt;li&gt;E2E (End-to-End) Encryption: Prevents replay.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.4.10 Malicious Code&lt;/h3&gt;
-&lt;p&gt;Performs unauthorized/harmful actions.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.4.11 Application Attacks&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Injection.&lt;/li&gt;
-&lt;li&gt;Replay.&lt;/li&gt;
-&lt;li&gt;Privilege escalation.&lt;/li&gt;
-&lt;li&gt;Cross-Site Request Forgery (CSRF).&lt;/li&gt;
-&lt;li&gt;Client-server codes.&lt;/li&gt;
-&lt;li&gt;Directory traversal.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.4.12 Cryptographic Attacks&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Hash Collision:&lt;/strong&gt; Different inputs, same hash.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Birthday Attack:&lt;/strong&gt; Finds hash collisions.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Downgrade Attack:&lt;/strong&gt; Forces weaker protocol/algorithm.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SSL Stripping:&lt;/strong&gt; Downgrades HTTPS to HTTP.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.4.13 Password Attacks&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Passwords hashed.&lt;/li&gt;
-&lt;li&gt;Spraying attack.&lt;/li&gt;
-&lt;li&gt;Brute-force.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;2.4.14 Indicators of Compromise (IoC)&lt;/h3&gt;
-&lt;p&gt;Event indicating intrusion.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Account lockout.&lt;/li&gt;
-&lt;li&gt;Concurrent session usage.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
+&lt;p&gt;Thanks for reading.&lt;/p&gt;
 </content>
     <author>
       <name>Mert Biricik</name>
