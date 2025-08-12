@@ -8,15 +8,15 @@ title: Home
 <section class="hero">
   <div class="hero-container">
     <h1 class="hero-title">Mert Biricik</h1>
-    <p class="hero-subtitle">Full Stack Developer & Data Scientist building innovative solutions at the intersection of web technology and artificial intelligence</p>
+    <p class="hero-subtitle">Full Stack Developer & Data Scientist. Builds solutions: web technology, AI intersection.</p>
     <div class="hero-cta">
       <a href="/projects/" class="btn btn-primary">
         <i class="fas fa-code"></i>
-        View My Work
+        View Work
       </a>
       <a href="/contact/" class="btn btn-outline">
         <i class="fas fa-envelope"></i>
-        Get In Touch
+        Contact
       </a>
     </div>
   </div>
@@ -24,18 +24,18 @@ title: Home
 
 <section class="section" id="about">
   <div class="section-container">
-    <h2 class="section-title">About Me</h2>
+    <h2 class="section-title">About</h2>
     <div class="grid grid-2">
       <div class="card">
         <h3 class="card-title">Full Stack Development</h3>
         <div class="card-content">
-          <p>I specialize in building scalable web applications using modern technologies like React, Next.js, Node.js, and TypeScript. My experience includes developing real-time applications, implementing RESTful APIs, and deploying cloud-native solutions.</p>
+          <p>Specializes: scalable web applications. Technologies: React, Next.js, Node.js, TypeScript. Experience: real-time applications, RESTful APIs, cloud-native solutions deployment.</p>
         </div>
       </div>
       <div class="card">
         <h3 class="card-title">Data Science & AI</h3>
         <div class="card-content">
-          <p>With published research in IEEE conferences, I develop machine learning models for critical infrastructure, anomaly detection, and predictive analytics. I work with TensorFlow, PyTorch, and advanced statistical methods.</p>
+          <p>Published research: IEEE conferences. Develops machine learning models: critical infrastructure, anomaly detection, predictive analytics. Works with TensorFlow, PyTorch, advanced statistical methods.</p>
         </div>
       </div>
     </div>
@@ -106,80 +106,45 @@ title: Home
   <div class="section-container">
     <h2 class="section-title">Featured Projects</h2>
     <div class="projects-grid">
+      {%- for project in projects.featured | reverse -%}
       <div class="project-card">
         <div class="project-header">
-          <h3 class="project-title">Energy Data Visualization Platform</h3>
-          <p class="project-subtitle">TÜBİTAK 1001 Research Project</p>
+          <h3 class="project-title">{{ project.title }}</h3>
+          {% if project.subtitle %}
+          <p class="project-subtitle">{{ project.subtitle }}</p>
+          {% endif %}
         </div>
         <div class="project-content">
-          <p class="project-description">
-            Architected and developed a public-facing data visualization platform for Turkey's national energy research initiative. Built with modern web technologies and deployed on scalable cloud infrastructure.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">D3.js</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">AWS</span>
+          <div class="project-description">
+            <p><strong>Problem:</strong> {{ project.problem }}</p>
+            <p><strong>Solution:</strong> {{ project.solution }}</p>
+            <p><strong>Outcome:</strong> {{ project.outcome }}</p>
           </div>
+          {% if project.tech and project.tech.length > 0 %}
+          <div class="project-tech">
+            {%- for tag in project.tech -%}
+              <span class="tech-tag">{{ tag }}</span>
+            {%- endfor -%}
+          </div>
+          {% endif %}
           <div class="project-links">
-            <a href="https://enerjiveri.khas.edu.tr/birincil-enerjinin-kaynaklara-gore-uretimi-ve-tuketimi/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
-              <i class="fas fa-external-link-alt"></i>
-              Live Demo
-            </a>
+            {% if project.sourceLink %}
+              <a href="{{ project.sourceLink }}" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
+            {% endif %}
+            {% if project.visitSiteLink %}
+              <a href="{{ project.visitSiteLink }}" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt"></i> Visit Site
+              </a>
+            {% endif %}
+            {% if project.id == 'enerdata' %}
+              <a href="/demos/enerdata-primary-energy/" class="btn btn-primary btn-sm">
+                <i class="fas fa-chart-bar"></i> View Demo
+              </a>
+            {% endif %}
           </div>
         </div>
       </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <h3 class="project-title">AI-Based Cybersecurity System</h3>
-          <p class="project-subtitle">IEEE UPEC 2025 Publication</p>
-        </div>
-        <div class="project-content">
-          <p class="project-description">
-            Developed AI-driven analysis tools for critical infrastructure assessment, implementing machine learning models for pattern recognition and anomaly detection in power distribution systems.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">TensorFlow</span>
-            <span class="tech-tag">OSINT</span>
-            <span class="tech-tag">Cybersecurity</span>
-            <span class="tech-tag">ML</span>
-          </div>
-          <div class="project-links">
-            <a href="/publications/" class="btn btn-outline btn-sm">
-              <i class="fas fa-file-alt"></i>
-              Read Paper
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <h3 class="project-title">Silk-Spectre Real-Time Polling</h3>
-          <p class="project-subtitle">Interactive Theatre Application</p>
-        </div>
-        <div class="project-content">
-          <p class="project-description">
-            Built a real-time polling web application enabling live audience interaction with theatre performances. Features WebSocket integration for real-time updates and AWS deployment with load balancing.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">PHP</span>
-            <span class="tech-tag">MySQL</span>
-            <span class="tech-tag">WebSocket</span>
-            <span class="tech-tag">AWS</span>
-            <span class="tech-tag">Load Balancing</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/mertBiricik/silk_spectre" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-github"></i>
-              View Code
-            </a>
-          </div>
-        </div>
-      </div>
+      {%- endfor -%}
     </div>
     <div class="text-center mt-4">
       <a href="/projects/" class="btn btn-primary">
@@ -193,7 +158,7 @@ title: Home
 <section class="section" style="background-color: var(--bg-secondary);">
   <div class="section-container">
     <h2 class="section-title">Research & Publications</h2>
-    <p class="section-subtitle">Published research in IEEE conferences focusing on AI applications in critical infrastructure and data science methodologies.</p>
+    <p class="section-subtitle">Published research: IEEE conferences. Focus: AI applications in critical infrastructure, data science methodologies.</p>
     <div class="grid grid-2">
       <div class="publication-item">
         <h4 class="publication-title">From OSINT Insights to AI-based Protection: Enhancing Cybersecurity Resilience in Power Distribution Systems</h4>
@@ -218,12 +183,12 @@ title: Home
 <section class="section" id="cta">
   <div class="section-container">
     <div class="text-center">
-      <h2>Ready to Work Together?</h2>
-      <p class="section-subtitle">I'm always interested in new opportunities and exciting projects. Let's discuss how we can collaborate.</p>
+      <h2>Work Together?</h2>
+      <p class="section-subtitle">Interested in new opportunities. Exciting projects. Discuss collaboration.</p>
       <div class="hero-cta">
         <a href="/contact/" class="btn btn-primary">
           <i class="fas fa-paper-plane"></i>
-          Start a Conversation
+          Let's Build Something
         </a>
         <a href="https://linkedin.com/in/mertbiricik" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-linkedin"></i>
@@ -232,4 +197,4 @@ title: Home
       </div>
     </div>
   </div>
-</section> 
+</section>

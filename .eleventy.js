@@ -61,4 +61,4 @@ module.exports = function(eleventyConfig) {
     htmlTemplateEngine: "njk"
     // No pathPrefix needed for user GitHub Pages site
   };
-}; 
+};
