@@ -1,21 +1,15 @@
 ---
-title: Hello World!
+title: "Hello World!"
 author: Mert Biricik
 date: 2025-08-10
 tags: ["eleventy", "blogging", "webdev"]
-description: A shoutout to the web!
+description: Web introduction.
 ---
 
-Welcome to my new blog!
+First post. Demonstrates content addition via Markdown with Eleventy. Thoughts: full-stack development, data science, cybersecurity. Updates: bi-weekly minimum.
 
-This is the first post, demonstrating how easy it is to add content using Markdown files with Eleventy. I'm excited to share my thoughts on full-stack development, data science, and cybersecurity here.
+## Next Steps
 
-I am planning to update here at least bi-weekly.
-
-## What's Next?
-
-*   More technical deep-dives
-*   Project showcases
-*   Thoughts on industry trends
-
-Thanks for reading.
+*   Technical deep-dives.
+*   Project showcases.
+*   Industry trend analysis.
