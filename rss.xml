@@ -26,7 +26,7 @@
 &lt;h2&gt;What I Built (And Why It&#39;s Different)&lt;/h2&gt;
 &lt;p&gt;Instead of building another generic chatbot, I created a &lt;strong&gt;dual-intelligence system&lt;/strong&gt; that handles both basketball rules and live Turkish league statistics through a single interface.&lt;/p&gt;
 &lt;h3&gt;The Architecture That Actually Works&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Rules Engine:&lt;/strong&gt; A vector database containing 873 official basketball documents, regulations, and rule explanations. This isn&#39;t just scraped Wikipedia content - it&#39;s comprehensive, multilingual documentation that covers everything from basic fouls to complex international regulation differences.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Rules Engine:&lt;/strong&gt; A vector database containing 873 official basketball documents, regulations, and rule explanations. This isn&#39;t just scraped Wikipedia content. It&#39;s comprehensive, multilingual documentation that covers everything from basic fouls to complex international regulation differences.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Statistics Server:&lt;/strong&gt; A FastAPI backend managing over 17,000 Turkish basketball games with real-time querying capabilities. Every match result, team performance metric, and seasonal statistic from major Turkish leagues.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Smart Query Router:&lt;/strong&gt; The secret sauce that determines whether you&#39;re asking about rules or stats, then routes your question to the appropriate system. This seemingly simple component took the longest to get right.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Web Interface:&lt;/strong&gt; A Gradio-powered frontend that doesn&#39;t assume you speak computer science.&lt;/p&gt;
@@ -88,8 +88,8 @@ ollama pull llama3.1:8b-instruct-q4_K_M
 &lt;p&gt;First, the rules database. I scraped every basketball PDF I could find and turned them into searchable vectors:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;python scripts/setup_database.py
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;When it works, you&#39;ll see something like &amp;quot;✅ Connected to vector database: 873 documents&amp;quot;. If you see errors, don&#39;t panic - the most common issue is corrupted PDFs or encoding problems.&lt;/p&gt;
-&lt;p&gt;Next, the statistics database. This was the fun part - I had 76 CSV files with game data that needed to be cleaned and structured:&lt;/p&gt;
+&lt;p&gt;When it works, you&#39;ll see something like &amp;quot;✅ Connected to vector database: 873 documents&amp;quot;. If you see errors, don&#39;t panic. The most common issue is corrupted PDFs or encoding problems.&lt;/p&gt;
+&lt;p&gt;Next, the statistics database. This was the fun part. I had 76 CSV files with game data that needed to be cleaned and structured:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;python scripts/build_stats_db.py
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This one takes a while. Grab some coffee. When it&#39;s done, you should see &amp;quot;✅ Database built: 17,261 games processed&amp;quot; or similar.&lt;/p&gt;
@@ -105,7 +105,7 @@ ollama pull llama3.1:8b-instruct-q4_K_M
             # And: game, team, season, result, statistics
         }
         
-        # Team name patterns - this was tricky with Turkish characters
+        # Team name patterns. This was tricky with Turkish characters
         self.team_patterns = [
             r&#39;&#92;b(tofaş|fenerbahçe|galatasaray)&#92;b&#39;,
             r&#39;&#92;b(efes|beşiktaş|trabzonspor)&#92;b&#39;
@@ -130,7 +130,7 @@ url = f&amp;quot;{api_url}?{urlencode(params, safe=&#39;&#39;, encoding=&#39;utf
 🎉 Production system ready!
 🌐 Access at: http://localhost:7860
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I built it so everything starts automatically - no need to remember to launch five different services. The system detects if your GPU is available and adjusts accordingly. If something breaks, it tries to recover gracefully instead of just crashing.&lt;/p&gt;
+&lt;p&gt;I built it so everything starts automatically. No need to remember to launch five different services. The system detects if your GPU is available and adjusts accordingly. If something breaks, it tries to recover gracefully instead of just crashing.&lt;/p&gt;
 &lt;p&gt;The logging was crucial during development. When something went wrong (and it did, frequently), I could actually figure out what happened.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h3&gt;Step 4: External Access Configuration&lt;/h3&gt;

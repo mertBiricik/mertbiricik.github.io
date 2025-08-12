@@ -126,7 +126,7 @@
 <h2>What I Built (And Why It's Different)</h2>
 <p>Instead of building another generic chatbot, I created a <strong>dual-intelligence system</strong> that handles both basketball rules and live Turkish league statistics through a single interface.</p>
 <h3>The Architecture That Actually Works</h3>
-<p><strong>Rules Engine:</strong> A vector database containing 873 official basketball documents, regulations, and rule explanations. This isn't just scraped Wikipedia content - it's comprehensive, multilingual documentation that covers everything from basic fouls to complex international regulation differences.</p>
+<p><strong>Rules Engine:</strong> A vector database containing 873 official basketball documents, regulations, and rule explanations. This isn't just scraped Wikipedia content. It's comprehensive, multilingual documentation that covers everything from basic fouls to complex international regulation differences.</p>
 <p><strong>Statistics Server:</strong> A FastAPI backend managing over 17,000 Turkish basketball games with real-time querying capabilities. Every match result, team performance metric, and seasonal statistic from major Turkish leagues.</p>
 <p><strong>Smart Query Router:</strong> The secret sauce that determines whether you're asking about rules or stats, then routes your question to the appropriate system. This seemingly simple component took the longest to get right.</p>
 <p><strong>Web Interface:</strong> A Gradio-powered frontend that doesn't assume you speak computer science.</p>
@@ -188,8 +188,8 @@ ollama pull llama3.1:8b-instruct-q4_K_M
 <p>First, the rules database. I scraped every basketball PDF I could find and turned them into searchable vectors:</p>
 <pre><code class="language-bash">python scripts/setup_database.py
 </code></pre>
-<p>When it works, you'll see something like &quot;✅ Connected to vector database: 873 documents&quot;. If you see errors, don't panic - the most common issue is corrupted PDFs or encoding problems.</p>
-<p>Next, the statistics database. This was the fun part - I had 76 CSV files with game data that needed to be cleaned and structured:</p>
+<p>When it works, you'll see something like &quot;✅ Connected to vector database: 873 documents&quot;. If you see errors, don't panic. The most common issue is corrupted PDFs or encoding problems.</p>
+<p>Next, the statistics database. This was the fun part. I had 76 CSV files with game data that needed to be cleaned and structured:</p>
 <pre><code class="language-bash">python scripts/build_stats_db.py
 </code></pre>
 <p>This one takes a while. Grab some coffee. When it's done, you should see &quot;✅ Database built: 17,261 games processed&quot; or similar.</p>
@@ -205,7 +205,7 @@ ollama pull llama3.1:8b-instruct-q4_K_M
             # And: game, team, season, result, statistics
         }
         
-        # Team name patterns - this was tricky with Turkish characters
+        # Team name patterns. This was tricky with Turkish characters
         self.team_patterns = [
             r'\b(tofaş|fenerbahçe|galatasaray)\b',
             r'\b(efes|beşiktaş|trabzonspor)\b'
@@ -230,7 +230,7 @@ url = f&quot;{api_url}?{urlencode(params, safe='', encoding='utf-8')}&quot;
 🎉 Production system ready!
 🌐 Access at: http://localhost:7860
 </code></pre>
-<p>I built it so everything starts automatically - no need to remember to launch five different services. The system detects if your GPU is available and adjusts accordingly. If something breaks, it tries to recover gracefully instead of just crashing.</p>
+<p>I built it so everything starts automatically. No need to remember to launch five different services. The system detects if your GPU is available and adjusts accordingly. If something breaks, it tries to recover gracefully instead of just crashing.</p>
 <p>The logging was crucial during development. When something went wrong (and it did, frequently), I could actually figure out what happened.</p>
 <hr>
 <h3>Step 4: External Access Configuration</h3>
