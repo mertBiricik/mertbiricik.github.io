@@ -33,7 +33,7 @@ Instead of building another generic chatbot, I created a **dual-intelligence sys
 
 ### The Architecture That Actually Works
 
-**Rules Engine:** A vector database containing 873 official basketball documents, regulations, and rule explanations. This isn't just scraped Wikipedia content - it's comprehensive, multilingual documentation that covers everything from basic fouls to complex international regulation differences.
+**Rules Engine:** A vector database containing 873 official basketball documents, regulations, and rule explanations. This isn't just scraped Wikipedia content. It's comprehensive, multilingual documentation that covers everything from basic fouls to complex international regulation differences.
 
 **Statistics Server:** A FastAPI backend managing over 17,000 Turkish basketball games with real-time querying capabilities. Every match result, team performance metric, and seasonal statistic from major Turkish leagues.
 
@@ -118,9 +118,9 @@ First, the rules database. I scraped every basketball PDF I could find and turne
 python scripts/setup_database.py
 ```
 
-When it works, you'll see something like "✅ Connected to vector database: 873 documents". If you see errors, don't panic - the most common issue is corrupted PDFs or encoding problems.
+When it works, you'll see something like "✅ Connected to vector database: 873 documents". If you see errors, don't panic. The most common issue is corrupted PDFs or encoding problems.
 
-Next, the statistics database. This was the fun part - I had 76 CSV files with game data that needed to be cleaned and structured:
+Next, the statistics database. This was the fun part. I had 76 CSV files with game data that needed to be cleaned and structured:
 
 ```bash
 python scripts/build_stats_db.py
@@ -145,7 +145,7 @@ class QueryRouter:
             # And: game, team, season, result, statistics
         }
         
-        # Team name patterns - this was tricky with Turkish characters
+        # Team name patterns. This was tricky with Turkish characters
         self.team_patterns = [
             r'\b(tofaş|fenerbahçe|galatasaray)\b',
             r'\b(efes|beşiktaş|trabzonspor)\b'
@@ -182,7 +182,7 @@ When it works, you'll see something like this parade of success messages:
 🌐 Access at: http://localhost:7860
 ```
 
-I built it so everything starts automatically - no need to remember to launch five different services. The system detects if your GPU is available and adjusts accordingly. If something breaks, it tries to recover gracefully instead of just crashing.
+I built it so everything starts automatically. No need to remember to launch five different services. The system detects if your GPU is available and adjusts accordingly. If something breaks, it tries to recover gracefully instead of just crashing.
 
 The logging was crucial during development. When something went wrong (and it did, frequently), I could actually figure out what happened.
 
