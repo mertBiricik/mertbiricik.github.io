@@ -6,57 +6,48 @@ changefreq: weekly
 ---
 
 {# ============= LEDE ============= #}
-<section class="container-wide py-10 sm:py-14">
-
-  <div class="masthead">
-    <span class="eyebrow">No. {{ site.buildVersion }}</span>
-    <span class="eyebrow">Folio I</span>
-    <span class="eyebrow">An editorial portfolio</span>
-  </div>
-
-  <div class="grid lg:grid-cols-12 gap-10 mt-10">
-    {# Lede / opening manifesto #}
+<section class="container-wide pt-12 sm:pt-16 lg:pt-20 pb-10">
+  <div class="grid lg:grid-cols-12 gap-10">
     <div class="lg:col-span-8 lg:pr-10 lg:border-r-2 lg:border-ink-900 dark:lg:border-bone-100">
-      <span class="section-marker">Salutation</span>
-      <h2 class="display-1 mt-5 text-ink-900 dark:text-bone-50 text-balance">
-        Cybersecurity research,<br>
-        <span class="italic font-display text-blood-700 dark:text-blood-400">conducted with rigour.</span>
-      </h2>
+      <p class="eyebrow-blood">Cybersecurity researcher · CyberMACS scholar</p>
 
-      <p class="dropcap mt-8 font-serif text-xl leading-relaxed text-ink-700 dark:text-bone-200 max-w-prose">
+      <h1 class="display-1 mt-5 text-ink-900 dark:text-bone-50 text-balance">
+        I build and defend systems that don't fail quietly.
+      </h1>
+
+      <p class="mt-8 font-sans text-lg sm:text-xl leading-relaxed text-ink-700 dark:text-bone-200 max-w-2xl">
         {{ profile.summary }}
       </p>
 
       <div class="mt-10 flex flex-wrap gap-3">
-        <a href="/projects/" class="btn-solid">Read the work →</a>
-        <a href="/publications/" class="btn-ghost">View publications</a>
-        <a href="{{ metadata.social.github }}" target="_blank" rel="noopener noreferrer" class="btn-ghost">Source code ↗</a>
+        <a href="/projects/" class="btn-solid">→ View work</a>
+        <a href="/publications/" class="btn-ghost">Publications</a>
+        <a href="{{ metadata.social.github }}" target="_blank" rel="noopener noreferrer" class="btn-ghost">↗ GitHub</a>
       </div>
     </div>
 
-    {# Sidebar: standing data #}
     <aside class="lg:col-span-4">
-      <span class="section-marker">Subject</span>
-      <dl class="mt-5">
+      <p class="eyebrow">Profile</p>
+      <dl class="mt-4">
         <div class="def-row">
-          <dt class="def-key">Designation</dt>
-          <dd class="font-display text-lg text-ink-900 dark:text-bone-50">{{ profile.title }}</dd>
+          <dt class="def-key">Role</dt>
+          <dd class="font-display font-semibold text-base text-ink-900 dark:text-bone-50">{{ profile.title }}</dd>
         </div>
         <div class="def-row">
-          <dt class="def-key">Domicile</dt>
-          <dd class="font-serif text-base text-ink-700 dark:text-bone-200">{{ profile.location }}</dd>
+          <dt class="def-key">Based</dt>
+          <dd class="font-sans text-base text-ink-700 dark:text-bone-200">{{ profile.location }}</dd>
         </div>
         <div class="def-row">
           <dt class="def-key">Citizenship</dt>
-          <dd class="font-serif text-base text-ink-700 dark:text-bone-200">{{ profile.citizenship }}</dd>
+          <dd class="font-sans text-base text-ink-700 dark:text-bone-200">{{ profile.citizenship }}</dd>
         </div>
         <div class="def-row">
           <dt class="def-key">Status</dt>
-          <dd class="font-serif text-base text-ink-700 dark:text-bone-200">Incoming Erasmus Mundus Scholar (CyberMACS, 2026)</dd>
+          <dd class="font-sans text-base text-ink-700 dark:text-bone-200">Incoming Erasmus Mundus Scholar (CyberMACS, 2026)</dd>
         </div>
         <div class="def-row">
-          <dt class="def-key">Tongues</dt>
-          <dd class="font-mono text-xs uppercase tracking-[0.16em] text-ink-700 dark:text-bone-200">
+          <dt class="def-key">Languages</dt>
+          <dd class="font-mono text-xs uppercase tracking-[0.14em] text-ink-700 dark:text-bone-200">
             {% for l in profile.languages %}{{ l.name }} · {{ l.level }}{% if not loop.last %}<br>{% endif %}{% endfor %}
           </dd>
         </div>
@@ -65,49 +56,45 @@ changefreq: weekly
   </div>
 </section>
 
-<div class="fleuron"><span class="font-blackletter text-2xl">✠</span></div>
-
-{# ============= SECTION I — DOCTRINE / FOCUS ============= #}
+{# ============= 01 — FOCUS ============= #}
 <section class="container-wide section-tight">
   <div class="masthead">
-    <span class="eyebrow-blood">§ I</span>
-    <span class="eyebrow">Doctrine</span>
+    <span class="eyebrow-blood">01 — Focus</span>
+    <span class="eyebrow hidden sm:inline">What I work on</span>
   </div>
-  <h2 class="display-2 mt-6 text-ink-900 dark:text-bone-50">What I work on.</h2>
 
   <ol class="mt-10 grid md:grid-cols-3 gap-0 border-2 border-ink-900 dark:border-bone-100">
     <li class="p-7 border-b-2 md:border-b-0 md:border-r-2 border-ink-900 dark:border-bone-100">
-      <span class="font-mono text-xs uppercase tracking-[0.22em] text-blood-700 dark:text-blood-400">i.</span>
-      <h3 class="font-display text-2xl mt-2 text-ink-900 dark:text-bone-50">Threat hunting & forensics</h3>
-      <p class="mt-3 font-serif text-ink-700 dark:text-bone-200 leading-relaxed">Memory forensics on Volatility3, OSINT-driven threat discovery, anomaly detection on SCADA testbeds and power distribution networks.</p>
+      <span class="font-mono text-xs uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">01</span>
+      <h3 class="font-display text-2xl mt-3 text-ink-900 dark:text-bone-50">Threat hunting & forensics</h3>
+      <p class="mt-3 font-sans text-ink-700 dark:text-bone-200 leading-relaxed">Memory forensics on Volatility3, OSINT-driven threat discovery, anomaly detection on SCADA testbeds and power distribution networks.</p>
     </li>
     <li class="p-7 border-b-2 md:border-b-0 md:border-r-2 border-ink-900 dark:border-bone-100">
-      <span class="font-mono text-xs uppercase tracking-[0.22em] text-blood-700 dark:text-blood-400">ii.</span>
-      <h3 class="font-display text-2xl mt-2 text-ink-900 dark:text-bone-50">Applied AI & agents</h3>
-      <p class="mt-3 font-serif text-ink-700 dark:text-bone-200 leading-relaxed">Agentic AI, Retrieval-Augmented Generation, ETL and time-series pipelines for energy, sports analytics, and BCI signal processing.</p>
+      <span class="font-mono text-xs uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">02</span>
+      <h3 class="font-display text-2xl mt-3 text-ink-900 dark:text-bone-50">Applied AI & agents</h3>
+      <p class="mt-3 font-sans text-ink-700 dark:text-bone-200 leading-relaxed">Agentic AI, retrieval-augmented generation, ETL and time-series pipelines for energy, sports analytics, and BCI signal processing.</p>
     </li>
     <li class="p-7">
-      <span class="font-mono text-xs uppercase tracking-[0.22em] text-blood-700 dark:text-blood-400">iii.</span>
-      <h3 class="font-display text-2xl mt-2 text-ink-900 dark:text-bone-50">Infrastructure</h3>
-      <p class="mt-3 font-serif text-ink-700 dark:text-bone-200 leading-relaxed">Linux administration on Debian and Red Hat, Docker and Kubernetes, QEMU+KVM virtualization, GPU-accelerated research clusters.</p>
+      <span class="font-mono text-xs uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">03</span>
+      <h3 class="font-display text-2xl mt-3 text-ink-900 dark:text-bone-50">Infrastructure</h3>
+      <p class="mt-3 font-sans text-ink-700 dark:text-bone-200 leading-relaxed">Linux administration on Debian and Red Hat, Docker and Kubernetes, QEMU+KVM virtualization, GPU-accelerated research clusters.</p>
     </li>
   </ol>
 </section>
 
-{# ============= SECTION II — INSTRUMENTS / SKILLS ============= #}
+{# ============= 02 — STACK ============= #}
 <section class="container-wide section-tight">
   <div class="masthead">
-    <span class="eyebrow-blood">§ II</span>
-    <span class="eyebrow">Instruments</span>
+    <span class="eyebrow-blood">02 — Stack</span>
+    <span class="eyebrow hidden sm:inline">Tools I use</span>
   </div>
-  <h2 class="display-2 mt-6 text-ink-900 dark:text-bone-50">Tools of trade.</h2>
 
   <div class="mt-10 grid md:grid-cols-2 gap-0 border-2 border-ink-900 dark:border-bone-100">
     {% for group in profile.skills %}
-    <div class="p-7 {% if loop.index % 2 == 1 %}md:border-r-2{% endif %} {% if not loop.last and not loop.revindex0 == 1 %}border-b-2{% elif loop.revindex0 == 1 and not loop.last %}border-b-2 md:border-b-0{% endif %} border-ink-900 dark:border-bone-100">
+    <div class="p-7 {% if loop.index0 % 2 == 0 %}md:border-r-2{% endif %} {% if loop.index0 < (profile.skills | length) - 2 %}border-b-2{% else %}border-b-2 md:border-b-0{% endif %} border-ink-900 dark:border-bone-100">
       <div class="flex items-baseline justify-between">
         <h3 class="font-display text-xl text-ink-900 dark:text-bone-50">{{ group.group }}</h3>
-        <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-500 dark:text-bone-300">{{ group.items | length }} entries</span>
+        <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-500 dark:text-bone-300">{{ group.items | length }} items</span>
       </div>
       <ul class="mt-4 flex flex-wrap gap-1.5">
         {% for item in group.items %}<li class="tag">{{ item }}</li>{% endfor %}
@@ -117,39 +104,37 @@ changefreq: weekly
   </div>
 </section>
 
-{# ============= SECTION III — DOSSIERS / PROJECTS ============= #}
+{# ============= 03 — FEATURED PROJECTS ============= #}
 <section class="container-wide section-tight">
   <div class="masthead">
-    <span class="eyebrow-blood">§ III</span>
-    <span class="eyebrow">Dossiers — featured</span>
-  </div>
-  <div class="flex items-end justify-between mt-6">
-    <h2 class="display-2 text-ink-900 dark:text-bone-50">Selected works.</h2>
-    <a href="/projects/" class="hidden sm:inline font-mono text-[11px] uppercase tracking-[0.22em] no-underline hover:underline text-ink-700 dark:text-bone-300">→ Full register</a>
+    <span class="eyebrow-blood">03 — Selected work</span>
+    <a href="/projects/" class="hidden sm:inline eyebrow no-underline hover:underline">→ All projects</a>
   </div>
 
-  <div class="mt-10 space-y-0 border-t-2 border-ink-900 dark:border-bone-100">
+  <div class="mt-10 border-t-2 border-ink-900 dark:border-bone-100">
     {% for project in projects.featured %}
-    <article class="grid md:grid-cols-12 gap-6 py-8 border-b-2 border-ink-900 dark:border-bone-100">
+    <article class="grid md:grid-cols-12 gap-6 py-10 border-b-2 border-ink-900 dark:border-bone-100">
       <div class="md:col-span-2">
-        <span class="font-mono text-[11px] uppercase tracking-[0.22em] text-blood-700 dark:text-blood-400">№ {{ loop.index | pad }}</span>
-        {% if project.period %}<p class="mt-2 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-500 dark:text-bone-300">{{ project.period }}</p>{% endif %}
+        <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">№ {{ loop.index | pad }}</span>
+        {% if project.period %}<p class="mt-2 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-500 dark:text-bone-300">{{ project.period }}</p>{% endif %}
       </div>
       <div class="md:col-span-7 md:pr-6 md:border-r-2 md:border-ink-900 dark:md:border-bone-100">
         <h3 class="font-display text-3xl leading-tight text-ink-900 dark:text-bone-50">{{ project.title }}</h3>
-        {% if project.subtitle %}<p class="mt-1 font-serif italic text-ink-500 dark:text-bone-300">{{ project.subtitle }}</p>{% endif %}
-        <p class="mt-4 font-serif text-ink-700 dark:text-bone-200 leading-relaxed"><span class="font-semibold text-ink-900 dark:text-bone-50">Subject.</span> {{ project.problem }}</p>
-        <p class="mt-2 font-serif text-ink-700 dark:text-bone-200 leading-relaxed"><span class="font-semibold text-ink-900 dark:text-bone-50">Method.</span> {{ project.solution }}</p>
-        <p class="mt-2 font-serif text-ink-700 dark:text-bone-200 leading-relaxed"><span class="font-semibold text-ink-900 dark:text-bone-50">Verdict.</span> {{ project.outcome }}</p>
+        {% if project.subtitle %}<p class="mt-2 font-sans text-ink-500 dark:text-bone-300">{{ project.subtitle }}</p>{% endif %}
+        <div class="mt-5 space-y-3 font-sans text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Problem.</span>{{ project.problem }}</p>
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Approach.</span>{{ project.solution }}</p>
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Result.</span>{{ project.outcome }}</p>
+        </div>
       </div>
       <div class="md:col-span-3">
         {% if project.tech %}
-        <p class="eyebrow mb-2">Apparatus</p>
+        <p class="eyebrow mb-2">Stack</p>
         <ul class="flex flex-wrap gap-1.5">
           {% for t in project.tech %}<li class="tag">{{ t }}</li>{% endfor %}
         </ul>
         {% endif %}
-        <div class="mt-5 flex flex-col gap-1.5 font-mono text-[11px] uppercase tracking-[0.2em]">
+        <div class="mt-5 flex flex-col gap-1.5 font-mono text-[11px] uppercase tracking-[0.18em]">
           {% if project.sourceLink %}<a href="{{ project.sourceLink }}" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Source</a>{% endif %}
           {% if project.visitSiteLink %}<a href="{{ project.visitSiteLink }}" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Live site</a>{% endif %}
           {% if project.demoLink %}<a href="{{ project.demoLink }}" class="no-underline hover:underline">→ Embedded demo</a>{% endif %}
@@ -161,26 +146,22 @@ changefreq: weekly
   </div>
 </section>
 
-{# ============= SECTION IV — REGISTER OF PUBLICATIONS ============= #}
+{# ============= 04 — RECENT PUBLICATIONS ============= #}
 <section class="container-wide section-tight">
   <div class="masthead">
-    <span class="eyebrow-blood">§ IV</span>
-    <span class="eyebrow">Register of publications</span>
-  </div>
-  <div class="flex items-end justify-between mt-6">
-    <h2 class="display-2 text-ink-900 dark:text-bone-50">Recent papers.</h2>
-    <a href="/publications/" class="hidden sm:inline font-mono text-[11px] uppercase tracking-[0.22em] no-underline hover:underline text-ink-700 dark:text-bone-300">→ Full register</a>
+    <span class="eyebrow-blood">04 — Recent papers</span>
+    <a href="/publications/" class="hidden sm:inline eyebrow no-underline hover:underline">→ All publications</a>
   </div>
 
   <ol class="mt-10 border-t-2 border-ink-900 dark:border-bone-100">
     {% for pub in publications.slice(0, 4) %}
     <li class="grid md:grid-cols-12 gap-4 py-5 border-b border-ink-900 dark:border-bone-200">
-      <div class="md:col-span-1 font-mono text-[11px] uppercase tracking-[0.22em] text-blood-700 dark:text-blood-400">{{ pub.year }}</div>
+      <div class="md:col-span-1 font-mono text-[11px] uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">{{ pub.year }}</div>
       <div class="md:col-span-8">
         <h3 class="font-display text-lg sm:text-xl text-ink-900 dark:text-bone-50">
           {% if pub.link %}<a href="{{ pub.link }}" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
         </h3>
-        <p class="mt-1 font-serif italic text-sm text-ink-500 dark:text-bone-300">{{ pub.authors | join(', ') }}</p>
+        <p class="mt-1 font-sans text-sm text-ink-500 dark:text-bone-300">{{ pub.authors | join(', ') }}</p>
       </div>
       <div class="md:col-span-3 flex md:justify-end items-start">
         {% if pub.status == 'published' %}<span class="status-published">Published · {{ pub.venue }}</span>
@@ -194,23 +175,20 @@ changefreq: weekly
   </ol>
 </section>
 
-{# ============= COLOPHON / CALL ============= #}
+{# ============= CTA ============= #}
 <section class="border-t-2 border-ink-900 dark:border-bone-100 mt-12 bg-ink-900 dark:bg-bone-50 text-bone-50 dark:text-ink-900">
-  <div class="container-wide section">
-    <div class="text-center">
-      <p class="font-blackletter text-5xl sm:text-6xl text-blood-400 dark:text-blood-700">Verbi gratia.</p>
-      <h2 class="display-2 mt-4 text-bone-50 dark:text-ink-900 text-balance">Should our work coincide, send word.</h2>
-      <p class="mt-4 font-serif text-lg italic text-bone-200 dark:text-ink-700 max-w-xl mx-auto">
-        Open to collaborations, internships, and applied cybersecurity roles aligned with the CyberMACS programme.
-      </p>
-      <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-        <a href="/contact/" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 font-mono text-xs uppercase tracking-[0.18em] border-2 border-bone-50 dark:border-ink-900 bg-bone-50 dark:bg-ink-900 text-ink-900 dark:text-bone-50 no-underline hover:bg-blood-700 hover:text-bone-50 hover:border-blood-700 transition-colors">
-          → Send word
-        </a>
-        <a href="{{ metadata.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 font-mono text-xs uppercase tracking-[0.18em] border-2 border-bone-50 dark:border-ink-900 text-bone-50 dark:text-ink-900 no-underline hover:bg-bone-50 hover:text-ink-900 dark:hover:bg-ink-900 dark:hover:text-bone-50 transition-colors">
-          ↗ LinkedIn
-        </a>
-      </div>
+  <div class="container-wide section text-center">
+    <p class="eyebrow text-blood-400 dark:text-blood-700">Get in touch</p>
+    <h2 class="display-2 mt-4 text-bone-50 dark:text-ink-900 text-balance max-w-3xl mx-auto">
+      Open to collaboration on cybersecurity, applied AI, and edge defence.
+    </h2>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+      <a href="/contact/" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 font-mono text-xs uppercase tracking-[0.15em] border-2 border-bone-50 dark:border-ink-900 bg-bone-50 dark:bg-ink-900 text-ink-900 dark:text-bone-50 no-underline hover:bg-blood-700 hover:text-bone-50 hover:border-blood-700 transition-colors">
+        → Contact
+      </a>
+      <a href="{{ metadata.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 font-mono text-xs uppercase tracking-[0.15em] border-2 border-bone-50 dark:border-ink-900 text-bone-50 dark:text-ink-900 no-underline hover:bg-bone-50 hover:text-ink-900 dark:hover:bg-ink-900 dark:hover:text-bone-50 transition-colors">
+        ↗ LinkedIn
+      </a>
     </div>
   </div>
 </section>
