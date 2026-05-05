@@ -2,33 +2,26 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
-  // Add navigation plugin
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-
   eleventyConfig.addPlugin(pluginRss);
 
-  // Blog posts collection
   eleventyConfig.addCollection("blog", function(collectionApi) {
     return collectionApi.getFilteredByGlob("src/blog/*.md");
   });
 
-  // Set default layout for blog posts
   eleventyConfig.addGlobalData("layout", "post");
 
-  // Copy static assets
   eleventyConfig.addPassthroughCopy("src/assets");
-  eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy("google0b64d5c9758fafd9.html");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy(".nojekyll");
 
-  // Watch for changes in CSS and JS
   eleventyConfig.addWatchTarget("./src/css/");
   eleventyConfig.addWatchTarget("./src/js/");
+  eleventyConfig.addWatchTarget("./tailwind.config.js");
 
-  // Date filter for publications
   eleventyConfig.addFilter("dateFormat", function(date) {
     return new Date(date).toLocaleDateString('en-US', {
       year: 'numeric',
@@ -37,12 +30,14 @@ module.exports = function(eleventyConfig) {
     });
   });
 
-  // ISO date filter for sitemap
   eleventyConfig.addFilter("dateISO", function(date) {
     return new Date(date).toISOString().split('T')[0];
   });
 
-  // Markdown configuration
+  eleventyConfig.addFilter("year", function(date) {
+    return new Date(date).getFullYear();
+  });
+
   eleventyConfig.setLibrary("md", require("markdown-it")({
     html: true,
     breaks: true,
@@ -59,6 +54,5 @@ module.exports = function(eleventyConfig) {
     templateFormats: ["md", "njk", "html"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk"
-    // No pathPrefix needed for user GitHub Pages site
   };
 };

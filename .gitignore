@@ -4,6 +4,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+cv.tex
+
 # Build output
 _site/
 dist/

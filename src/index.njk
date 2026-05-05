@@ -1,198 +1,239 @@
 ---
 layout: base
 title: Home
-
+priority: 1.0
+changefreq: weekly
 ---
 
+<section class="relative overflow-hidden grid-bg">
+  <div class="container-wide section pt-20 sm:pt-24 lg:pt-32 pb-16 sm:pb-20">
+    <div class="grid items-center gap-14 lg:grid-cols-12">
+      <div class="lg:col-span-7">
+        <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white/70 px-3 py-1 text-xs font-medium text-brand-700 shadow-sm backdrop-blur dark:border-brand-800/60 dark:bg-ink-900/60 dark:text-brand-200">
+          <span class="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          Open to research collaborations & cybersecurity roles
+        </span>
+        <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+          <span class="text-ink-900 dark:text-white">Cybersecurity Researcher</span><br>
+          <span class="heading-gradient">& CyberMACS Scholar</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg text-ink-600 dark:text-ink-300">
+          {{ profile.summary }}
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="/projects/" class="btn-primary">
+            <i class="fa-solid fa-code"></i> View Work
+          </a>
+          <a href="/publications/" class="btn-outline">
+            <i class="fa-solid fa-book"></i> Publications
+          </a>
+          <a href="{{ metadata.social.github }}" target="_blank" rel="noopener noreferrer" class="btn-ghost">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+        <dl class="mt-10 grid grid-cols-3 gap-6 max-w-lg">
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-ink-500 dark:text-ink-400">Publications</dt>
+            <dd class="mt-1 text-2xl font-semibold text-ink-900 dark:text-white">5</dd>
+          </div>
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-ink-500 dark:text-ink-400">IEEE papers</dt>
+            <dd class="mt-1 text-2xl font-semibold text-ink-900 dark:text-white">2</dd>
+          </div>
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-ink-500 dark:text-ink-400">Years researching</dt>
+            <dd class="mt-1 text-2xl font-semibold text-ink-900 dark:text-white">3+</dd>
+          </div>
+        </dl>
+      </div>
 
-<section class="hero">
-  <div class="hero-container">
-    <h1 class="hero-title">Mert Biricik</h1>
-    <p class="hero-subtitle">Cyber-Security Researcher & Data Scientist. Builds solutions: AI-driven security, critical infrastructure protection.</p>
-    <div class="hero-cta">
-      <a href="/projects/" class="btn btn-primary">
-        <i class="fas fa-code"></i>
-        View Work
-      </a>
-      <a href="/contact/" class="btn btn-outline">
-        <i class="fas fa-envelope"></i>
-        Contact
-      </a>
+      <div class="lg:col-span-5">
+        <div class="relative">
+          <div class="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-brand-500/30 to-accent-500/30 blur-2xl"></div>
+          <div class="card-flat shadow-xl">
+            <div class="flex items-center justify-between mb-5">
+              <div class="flex items-center gap-2">
+                <span class="h-3 w-3 rounded-full bg-red-400"></span>
+                <span class="h-3 w-3 rounded-full bg-yellow-400"></span>
+                <span class="h-3 w-3 rounded-full bg-green-400"></span>
+              </div>
+              <span class="font-mono text-xs text-ink-500 dark:text-ink-400">~/profile.json</span>
+            </div>
+            <pre class="overflow-x-auto rounded-lg bg-ink-950 p-4 text-xs leading-relaxed text-ink-100 font-mono"><code><span class="text-pink-400">const</span> <span class="text-cyan-300">profile</span> = {
+  <span class="text-emerald-300">name</span>: <span class="text-amber-200">"Mert Biricik"</span>,
+  <span class="text-emerald-300">role</span>: <span class="text-amber-200">"Cybersecurity Researcher"</span>,
+  <span class="text-emerald-300">scholar</span>: <span class="text-amber-200">"CyberMACS / Erasmus Mundus"</span>,
+  <span class="text-emerald-300">based</span>: <span class="text-amber-200">"Istanbul, TR"</span>,
+  <span class="text-emerald-300">focus</span>: [
+    <span class="text-amber-200">"Threat hunting"</span>,
+    <span class="text-amber-200">"Memory forensics"</span>,
+    <span class="text-amber-200">"OSINT analysis"</span>,
+    <span class="text-amber-200">"Anomaly detection"</span>,
+    <span class="text-amber-200">"Agentic AI / RAG"</span>
+  ],
+  <span class="text-emerald-300">stack</span>: [<span class="text-amber-200">"Python"</span>, <span class="text-amber-200">"Linux"</span>, <span class="text-amber-200">"Docker"</span>, <span class="text-amber-200">"K8s"</span>],
+  <span class="text-emerald-300">status</span>: <span class="text-amber-200">"available"</span>
+};</code></pre>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="about">
-  <div class="section-container">
-    <h2 class="section-title">About</h2>
-    <div class="grid grid-2">
+<section class="section">
+  <div class="container-wide">
+    <div class="flex items-end justify-between mb-10">
+      <div>
+        <p class="section-eyebrow">Focus</p>
+        <h2 class="mt-2 text-3xl font-bold text-ink-900 dark:text-white">What I work on</h2>
+      </div>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       <div class="card">
-        <h3 class="card-title">Cybersecurity Research</h3>
-        <div class="card-content">
-          <p>Specializes: AI-driven cybersecurity solutions. Focus: critical infrastructure protection, anomaly detection, power grid security. Published research: IEEE conferences on OSINT and threat detection.</p>
-        </div>
+        <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand-700 dark:bg-brand-900/40 dark:text-brand-300"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3 class="mt-4 text-lg font-semibold">Cybersecurity research</h3>
+        <p class="mt-2 text-sm text-ink-600 dark:text-ink-400">Threat hunting, memory forensics, OSINT-driven discovery and AI-based protection for critical infrastructure (SCADA, power distribution).</p>
       </div>
       <div class="card">
-        <h3 class="card-title">Data Science & AI</h3>
-        <div class="card-content">
-          <p>Published research: IEEE conferences. Develops machine learning models: critical infrastructure, anomaly detection, predictive analytics. Works with TensorFlow, PyTorch, advanced statistical methods.</p>
-        </div>
+        <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand-700 dark:bg-brand-900/40 dark:text-brand-300"><i class="fa-solid fa-brain"></i></div>
+        <h3 class="mt-4 text-lg font-semibold">Applied ML & AI agents</h3>
+        <p class="mt-2 text-sm text-ink-600 dark:text-ink-400">Agentic AI, RAG systems, anomaly detection, time-series and NLP pipelines for sports, energy, and BCI domains.</p>
+      </div>
+      <div class="card">
+        <div class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand-700 dark:bg-brand-900/40 dark:text-brand-300"><i class="fa-solid fa-server"></i></div>
+        <h3 class="mt-4 text-lg font-semibold">Infrastructure & systems</h3>
+        <p class="mt-2 text-sm text-ink-600 dark:text-ink-400">Linux administration, Docker / Kubernetes, virtualization (QEMU+KVM), GPU-accelerated research clusters.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="skills">
-  <div class="section-container">
-    <h2 class="section-title">Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-category">
-        <h3><i class="fas fa-code"></i> Frontend Development</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">Next.js</span>
-          <span class="skill-tag">TypeScript</span>
-          <span class="skill-tag">Vue.js</span>
-          <span class="skill-tag">HTML5</span>
-          <span class="skill-tag">CSS3</span>
-          <span class="skill-tag">Tailwind CSS</span>
-          <span class="skill-tag">D3.js</span>
-        </div>
+<section class="section bg-ink-50 dark:bg-ink-900/40">
+  <div class="container-wide">
+    <div class="flex items-end justify-between mb-10">
+      <div>
+        <p class="section-eyebrow">Stack</p>
+        <h2 class="mt-2 text-3xl font-bold text-ink-900 dark:text-white">Technical skills</h2>
       </div>
-      <div class="skill-category">
-        <h3><i class="fas fa-server"></i> Backend Development</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Node.js</span>
-          <span class="skill-tag">Express.js</span>
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">Django</span>
-          <span class="skill-tag">Flask</span>
-          <span class="skill-tag">REST APIs</span>
-          <span class="skill-tag">GraphQL</span>
-          <span class="skill-tag">Microservices</span>
-        </div>
+      <a href="/about/" class="hidden sm:inline-flex text-sm text-brand-700 hover:text-brand-800 dark:text-brand-300">More about me <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {% for group in profile.skills %}
+      <div class="card-flat">
+        <h3 class="flex items-center gap-2 text-base font-semibold text-brand-700 dark:text-brand-300">
+          <i class="fa-solid {{ group.icon }}"></i> {{ group.group }}
+        </h3>
+        <ul class="mt-4 flex flex-wrap gap-2">
+          {% for item in group.items %}
+          <li class="chip">{{ item }}</li>
+          {% endfor %}
+        </ul>
       </div>
-      <div class="skill-category">
-        <h3><i class="fas fa-database"></i> Databases & Cloud</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag">MySQL</span>
-          <span class="skill-tag">MongoDB</span>
-          <span class="skill-tag">Redis</span>
-          <span class="skill-tag">AWS</span>
-          <span class="skill-tag">Azure</span>
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">CI/CD</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h3><i class="fas fa-brain"></i> Data Science & ML</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">TensorFlow</span>
-          <span class="skill-tag">PyTorch</span>
-          <span class="skill-tag">Scikit-learn</span>
-          <span class="skill-tag">Pandas</span>
-          <span class="skill-tag">NumPy</span>
-          <span class="skill-tag">Apache Spark</span>
-          <span class="skill-tag">Statistical Analysis</span>
-          <span class="skill-tag">Deep Learning</span>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="section" id="featured-projects">
-  <div class="section-container">
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="projects-grid">
-      {%- for project in projects.featured | reverse -%}
-      <div class="project-card">
-        <div class="project-header">
-          <h3 class="project-title">{{ project.title }}</h3>
-          {% if project.subtitle %}
-          <p class="project-subtitle">{{ project.subtitle }}</p>
-          {% endif %}
-        </div>
-        <div class="project-content">
-          <div class="project-description">
-            <p><strong>Problem:</strong> {{ project.problem }}</p>
-            <p><strong>Solution:</strong> {{ project.solution }}</p>
-            <p><strong>Outcome:</strong> {{ project.outcome }}</p>
+<section class="section">
+  <div class="container-wide">
+    <div class="flex items-end justify-between mb-10">
+      <div>
+        <p class="section-eyebrow">Selected work</p>
+        <h2 class="mt-2 text-3xl font-bold text-ink-900 dark:text-white">Featured projects</h2>
+      </div>
+      <a href="/projects/" class="text-sm text-brand-700 hover:text-brand-800 dark:text-brand-300">All projects <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      {% for project in projects.featured %}
+      <article class="card flex flex-col h-full">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-semibold text-ink-900 dark:text-white">{{ project.title }}</h3>
+            {% if project.subtitle %}<p class="mt-1 text-sm text-ink-500 dark:text-ink-400">{{ project.subtitle }}</p>{% endif %}
           </div>
-          {% if project.tech and project.tech.length > 0 %}
-          <div class="project-tech">
-            {%- for tag in project.tech -%}
-              <span class="tech-tag">{{ tag }}</span>
-            {%- endfor -%}
-          </div>
-          {% endif %}
-          <div class="project-links">
-            {% if project.sourceLink %}
-              <a href="{{ project.sourceLink }}" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View Code</a>
-            {% endif %}
-            {% if project.visitSiteLink %}
-              <a href="{{ project.visitSiteLink }}" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
-                <i class="fas fa-external-link-alt"></i> Visit Site
-              </a>
-            {% endif %}
-            {% if project.id == 'enerdata' %}
-              <a href="/demos/enerdata-primary-energy/" class="btn btn-primary btn-sm">
-                <i class="fas fa-chart-bar"></i> View Demo
-              </a>
-            {% endif %}
-          </div>
+          {% if project.period %}<span class="chip shrink-0">{{ project.period }}</span>{% endif %}
         </div>
-      </div>
-      {%- endfor -%}
-    </div>
-    <div class="text-center mt-4">
-      <a href="/projects/" class="btn btn-primary">
-        <i class="fas fa-folder-open"></i>
-        View All Projects
-      </a>
+
+        <dl class="mt-5 space-y-3 text-sm">
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Problem</dt>
+            <dd class="text-ink-600 dark:text-ink-400">{{ project.problem }}</dd>
+          </div>
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Solution</dt>
+            <dd class="text-ink-600 dark:text-ink-400">{{ project.solution }}</dd>
+          </div>
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Outcome</dt>
+            <dd class="text-ink-600 dark:text-ink-400">{{ project.outcome }}</dd>
+          </div>
+        </dl>
+
+        {% if project.tech %}
+        <ul class="mt-5 flex flex-wrap gap-2">
+          {% for t in project.tech %}<li class="chip-brand">{{ t }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+
+        <div class="mt-6 flex flex-wrap gap-2 pt-5 border-t border-ink-200 dark:border-ink-800">
+          {% if project.sourceLink %}<a href="{{ project.sourceLink }}" target="_blank" rel="noopener noreferrer" class="btn-outline btn-sm"><i class="fa-brands fa-github"></i> Code</a>{% endif %}
+          {% if project.visitSiteLink %}<a href="{{ project.visitSiteLink }}" target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm"><i class="fa-solid fa-up-right-from-square"></i> Live</a>{% endif %}
+          {% if project.demoLink %}<a href="{{ project.demoLink }}" class="btn-outline btn-sm"><i class="fa-solid fa-chart-bar"></i> Demo</a>{% endif %}
+          {% if project.publicationLink %}<a href="{{ project.publicationLink }}" target="_blank" rel="noopener noreferrer" class="btn-outline btn-sm"><i class="fa-solid fa-file-lines"></i> Paper</a>{% endif %}
+        </div>
+      </article>
+      {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="section" style="background-color: var(--bg-secondary);">
-  <div class="section-container">
-    <h2 class="section-title">Research & Publications</h2>
-    <p class="section-subtitle">Published research: IEEE conferences. Focus: AI applications in critical infrastructure, data science methodologies.</p>
-    <div class="grid grid-2">
-      <div class="publication-item">
-        <h4 class="publication-title">From OSINT Insights to AI-based Protection: Enhancing Cybersecurity Resilience in Power Distribution Systems</h4>
-        <p class="publication-authors">M. I. Ecevit, <strong>M. Biricik</strong>, T. A. Uğurlu, A. Özdemir, O. Ceylan, H. Dağ, C. Rodio, R. Lazzari</p>
-        <p class="publication-venue">IEEE UPEC 2025 Conference</p>
+<section class="section bg-ink-50 dark:bg-ink-900/40">
+  <div class="container-wide">
+    <div class="flex items-end justify-between mb-10">
+      <div>
+        <p class="section-eyebrow">Research</p>
+        <h2 class="mt-2 text-3xl font-bold text-ink-900 dark:text-white">Recent publications</h2>
       </div>
-      <div class="publication-item">
-        <h4 class="publication-title">Customer-Level Aggregation: The Imperative for Reliable Non-Technical Loss Detection</h4>
-        <p class="publication-authors">M. Küçük, H. Coşkun, <strong>M. Biricik</strong>, B. E. Bülbül</p>
-        <p class="publication-venue">IEEE UPEC 2025 Conference</p>
-      </div>
+      <a href="/publications/" class="text-sm text-brand-700 hover:text-brand-800 dark:text-brand-300">All publications <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
     </div>
-    <div class="text-center mt-4">
-      <a href="/publications/" class="btn btn-primary">
-        <i class="fas fa-graduation-cap"></i>
-        View All Publications
-      </a>
-    </div>
-  </div>
-</section>
 
-<section class="section" id="cta">
-  <div class="section-container">
-    <div class="text-center">
-      <h2>Work Together?</h2>
-      <p class="section-subtitle">Interested in new opportunities. Exciting projects. Discuss collaboration.</p>
-      <div class="hero-cta">
-        <a href="/contact/" class="btn btn-primary">
-          <i class="fas fa-paper-plane"></i>
-          Let's Build Something
+    <div class="grid gap-5 md:grid-cols-2">
+      {% for pub in publications.slice(0, 4) %}
+      <article class="card-flat border-l-4 border-l-brand-500">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold uppercase tracking-wider text-ink-500 dark:text-ink-400">{{ pub.year }} · {{ pub.venue }}</span>
+          {% if pub.status == 'published' %}<span class="chip-brand">Published</span>{% endif %}
+          {% if pub.status == 'under-review' %}<span class="chip">Under review</span>{% endif %}
+          {% if pub.status == 'ready' %}<span class="chip">Ready for submission</span>{% endif %}
+          {% if pub.status == 'in-preparation' %}<span class="chip">In preparation</span>{% endif %}
+        </div>
+        <h3 class="mt-3 text-lg font-semibold text-ink-900 dark:text-white">{{ pub.title }}</h3>
+        <p class="mt-2 text-sm italic text-ink-500 dark:text-ink-400">{{ pub.authors | join(', ') }}</p>
+        <p class="mt-3 text-sm text-ink-600 dark:text-ink-400">{{ pub.summary }}</p>
+        {% if pub.link %}
+        <a href="{{ pub.link }}" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-brand-700 hover:text-brand-800 dark:text-brand-300">
+          DOI <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
         </a>
-        <a href="https://linkedin.com/in/mertbiricik" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-linkedin"></i>
-          Connect on LinkedIn
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container-narrow">
+    <div class="rounded-3xl bg-gradient-to-br from-brand-600 to-accent-600 p-10 sm:p-14 text-center shadow-xl">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white">Let's build something secure.</h2>
+      <p class="mt-4 text-brand-100 max-w-xl mx-auto">Open to research collaborations, applied cybersecurity roles, and hard problems involving Zero Trust, cloud security, or AI-driven defence.</p>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <a href="/contact/" class="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-brand-700 hover:bg-brand-50 transition">
+          <i class="fa-solid fa-paper-plane"></i> Get in touch
+        </a>
+        <a href="{{ metadata.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg border border-white/30 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/20 transition">
+          <i class="fa-brands fa-linkedin"></i> Connect on LinkedIn
         </a>
       </div>
     </div>

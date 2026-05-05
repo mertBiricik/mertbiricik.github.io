@@ -1,104 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <script>
     (function() {
-      const savedTheme = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', savedTheme);
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+        if (theme === 'dark') document.documentElement.classList.add('dark');
+      } catch (e) {}
     })();
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if title %}{{ title }} - {% endif %}Mert Biricik | Cyber-Security Researcher & Data Scientist</title>
-  <meta name="description" content="{% if description %}{{ description }}{% else %}Mert Biricik - Cyber-Security Researcher, Data Scientist, and ML Engineer with expertise in AI-driven security and critical infrastructure protection.{% endif %}">
-  
-  <!-- Google Site Verification -->
+  <title>{% if title %}{{ title }} — {% endif %}{{ metadata.title }} | {{ metadata.tagline }}</title>
+  <meta name="description" content="{{ description or metadata.description }}">
+
   <meta name="google-site-verification" content="0b64d5c9758fafd9">
-  
-  <!-- Open Graph / Facebook -->
+
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mert.biricik.de/">
-  <meta property="og:title" content="{% if title %}{{ title }} - {% endif %}Mert Biricik">
-  <meta property="og:description" content="{% if description %}{{ description }}{% else %}Cyber-Security Researcher & Data Scientist{% endif %}">
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="{% if title %}{{ title }} - {% endif %}Mert Biricik">
-  <meta property="twitter:description" content="{% if description %}{{ description }}{% else %}Cyber-Security Researcher & Data Scientist{% endif %}">
-  
-  <!-- Favicons and Icons -->
-  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/icon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+  <meta property="og:title" content="{% if title %}{{ title }} — {% endif %}{{ metadata.title }}">
+  <meta property="og:description" content="{{ description or metadata.description }}">
+  <meta property="og:site_name" content="{{ metadata.title }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if title %}{{ title }} — {% endif %}{{ metadata.title }}">
+  <meta name="twitter:description" content="{{ description or metadata.description }}">
+
+  <link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
+
   <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
-  
-  <!-- Android/Chrome -->
   <link rel="manifest" href="/assets/icons/site.webmanifest">
-  <meta name="theme-color" content="#2b2b2b">
-  <link rel="alternate" href="/rss.xml" type="application/atom+xml" title="Mert Biricik's Blog Feed">
-  
+  <meta name="theme-color" content="#0f172a">
+  <link rel="alternate" href="/rss.xml" type="application/atom+xml" title="{{ metadata.title }} — Feed">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <header class="header">
-    <nav class="nav">
-      <div class="nav-container">
-        <a href="/" class="nav-logo">Mert Biricik</a>
-        <ul class="nav-menu">
-          {% for item in navigation %}
-          <li class="nav-item">
-            <a href="{{ item.url }}" class="nav-link">{{ item.text }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-          <i class="fas fa-sun sun-icon"></i>
-          <i class="fas fa-moon moon-icon"></i>
+<body class="min-h-screen flex flex-col">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-brand-600 focus:text-white focus:px-3 focus:py-2 focus:rounded-md">Skip to content</a>
+
+  <header id="site-header" class="sticky top-0 z-40 border-b border-ink-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:border-ink-800/70 dark:bg-ink-950/70 dark:supports-[backdrop-filter]:bg-ink-950/60 transition-colors">
+    <nav class="container-wide flex h-16 items-center justify-between gap-4">
+      <a href="/" class="flex items-center gap-2 text-base font-semibold text-ink-900 dark:text-white">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-600 to-accent-500 text-white shadow-sm">
+          <i class="fa-solid fa-shield-halved text-sm"></i>
+        </span>
+        <span class="hidden sm:inline">Mert Biricik</span>
+      </a>
+
+      <ul id="nav-menu" class="hidden md:flex items-center gap-6">
+        {% for item in navigation %}
+        <li>
+          <a href="{{ item.url }}" class="nav-link {% if page.url == item.url %}active{% endif %}">{{ item.text }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <div class="flex items-center gap-2">
+        <a href="{{ metadata.social.github }}" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-lg text-ink-600 hover:text-brand-700 hover:bg-ink-100 dark:text-ink-300 dark:hover:text-brand-300 dark:hover:bg-ink-800 transition" aria-label="GitHub profile">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <button id="theme-toggle" class="inline-flex h-9 w-9 items-center justify-center rounded-lg text-ink-600 hover:text-brand-700 hover:bg-ink-100 dark:text-ink-300 dark:hover:text-brand-300 dark:hover:bg-ink-800 transition" aria-label="Toggle color theme">
+          <i class="fa-solid fa-sun sun-icon"></i>
+          <i class="fa-solid fa-moon moon-icon"></i>
         </button>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
+        <button id="menu-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-ink-700 hover:bg-ink-100 dark:text-ink-200 dark:hover:bg-ink-800 transition" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </nav>
+
+    <div id="mobile-menu" class="md:hidden hidden border-t border-ink-200 dark:border-ink-800 bg-white dark:bg-ink-950">
+      <ul class="container-wide flex flex-col py-3">
+        {% for item in navigation %}
+        <li>
+          <a href="{{ item.url }}" class="block py-2 nav-link {% if page.url == item.url %}active{% endif %}">{{ item.text }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
   </header>
 
-  <main class="main">
+  <main id="main" class="flex-1">
     {{ content | safe }}
   </main>
 
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Mert Biricik</h3>
-          <p>Cyber-Security Researcher & Data Scientist</p>
+  <footer class="mt-auto border-t border-ink-200 bg-ink-50 dark:border-ink-800 dark:bg-ink-950">
+    <div class="container-wide py-12">
+      <div class="grid gap-10 md:grid-cols-3">
+        <div>
+          <a href="/" class="flex items-center gap-2 text-lg font-semibold text-ink-900 dark:text-white">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-brand-600 to-accent-500 text-white shadow-sm">
+              <i class="fa-solid fa-shield-halved"></i>
+            </span>
+            Mert Biricik
+          </a>
+          <p class="mt-3 text-sm text-ink-600 dark:text-ink-400 max-w-sm">{{ metadata.tagline }}. Erasmus Mundus CyberMACS Scholar based in Istanbul.</p>
         </div>
-        <div class="footer-section">
-          <h4>Connect</h4>
-          <div class="social-links">
-            <a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" aria-label="View my LinkedIn profile">
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/mertbiricik" target="_blank" rel="noopener noreferrer" aria-label="View my GitHub profile">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="mailto:mert@biricik.de" aria-label="Send me an email">
-              <i class="fas fa-envelope"></i> Email
-            </a>
-          </div>
+
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-500 dark:text-ink-400 mb-4">Connect</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="{{ metadata.social.email }}" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-solid fa-envelope w-4"></i> mert@biricik.de</a></li>
+            <li><a href="{{ metadata.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-brands fa-linkedin w-4"></i> linkedin.com/in/mertbiricik</a></li>
+            <li><a href="{{ metadata.social.github }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-brands fa-github w-4"></i> github.com/mertBiricik</a></li>
+            <li><a href="{{ metadata.social.scholar }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-solid fa-graduation-cap w-4"></i> Google Scholar</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-500 dark:text-ink-400 mb-4">Site</h4>
+          <ul class="space-y-2 text-sm">
+            {% for item in navigation %}
+            <li><a href="{{ item.url }}" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">{{ item.text }}</a></li>
+            {% endfor %}
+            <li><a href="/rss.xml" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-solid fa-rss w-4"></i> RSS</a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Mert Biricik. All rights reserved.</p>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-ink-200 pt-6 text-xs text-ink-500 dark:border-ink-800 dark:text-ink-400">
+        <p>&copy; {{ site.buildYear }} Mert Biricik. All rights reserved.</p>
+        <p>Built with Eleventy + Tailwind. Deployed on GitHub Pages.</p>
       </div>
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>
