@@ -1,32 +1,8 @@
 [
-  {
-    "text": "Home",
-    "url": "/",
-    "order": 1
-  },
-  {
-    "text": "About",
-    "url": "/about/",
-    "order": 2
-  },
-  {
-    "text": "Portfolio",
-    "url": "/projects/",
-    "order": 3
-  },
-  {
-    "text": "Blog",
-    "url": "/blog/",
-    "order": 4
-  },
-  {
-    "text": "Publications",
-    "url": "/publications/",
-    "order": 6
-  },
-  {
-    "text": "Contact",
-    "url": "/contact/",
-    "order": 7
-  }
+  { "text": "Home",         "url": "/",              "order": 1 },
+  { "text": "About",        "url": "/about/",        "order": 2 },
+  { "text": "Projects",     "url": "/projects/",     "order": 3 },
+  { "text": "Publications", "url": "/publications/", "order": 4 },
+  { "text": "Blog",         "url": "/blog/",         "order": 5 },
+  { "text": "Contact",      "url": "/contact/",      "order": 6 }
 ]

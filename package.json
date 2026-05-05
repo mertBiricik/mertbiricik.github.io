@@ -1,29 +1,40 @@
 {
   "name": "mertbiricik",
-  "version": "1.0.0",
-  "description": "Personal portfolio website for Mert Biricik - Full Stack Developer & Data Scientist",
+  "version": "2.0.0",
+  "description": "Personal portfolio website for Mert Biricik - Cybersecurity Researcher & CyberMACS Scholar",
   "scripts": {
-    "build": "eleventy",
-    "serve": "eleventy --serve",
-    "start": "eleventy --serve",
-    "debug": "DEBUG=* eleventy",
+    "css:build": "tailwindcss -i ./src/css/tailwind.css -o ./_site/css/style.css --minify",
+    "css:watch": "tailwindcss -i ./src/css/tailwind.css -o ./_site/css/style.css --watch",
+    "eleventy:build": "eleventy",
+    "eleventy:watch": "eleventy --serve",
+    "build": "run-s css:build eleventy:build",
+    "serve": "run-p css:watch eleventy:watch",
+    "start": "npm run serve",
+    "debug": "DEBUG=Eleventy* eleventy",
     "deploy": "gh-pages -d _site"
   },
   "keywords": [
     "portfolio",
-    "fullstack",
+    "cybersecurity",
     "data-science",
     "11ty",
-    "eleventy"
+    "eleventy",
+    "tailwindcss"
   ],
   "author": "Mert Biricik",
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "gh-pages": "^6.3.0"
+    "@tailwindcss/typography": "^0.5.16",
+    "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.3.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
   },
   "dependencies": {
-    "@11ty/eleventy-navigation": "^0.3.5"
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "markdown-it": "^14.1.1"
   }
 }

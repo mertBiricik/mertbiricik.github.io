@@ -1,34 +1,43 @@
 ---
 layout: base
 title: Blog
-
+description: Long-form notes on cybersecurity research, applied AI, RAG systems, and infrastructure work.
+priority: 0.7
+changefreq: monthly
 ---
 
-<section class="section">
-  <div class="section-container">
-    <h1 class="section-title">Blog</h1>
-    <p class="section-subtitle">Thoughts, insights, updates: full stack development, data science, cybersecurity.</p>
+<section class="section pt-16 lg:pt-20">
+  <div class="container-narrow">
+    <p class="section-eyebrow">Writing</p>
+    <h1 class="mt-2 text-4xl sm:text-5xl font-bold text-ink-900 dark:text-white">Blog</h1>
+    <p class="mt-3 text-lg text-ink-600 dark:text-ink-300">
+      Notes from the lab on cybersecurity, RAG and agentic AI, infrastructure, and the messy bits in between.
+    </p>
 
-    <div class="blog-list">
+    <div class="mt-12 space-y-6">
       {% for post in collections.blog | reverse %}
-      <div class="blog-list-item card">
-        <h2 class="blog-list-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-        <div class="blog-list-meta">
-          <span class="post-date"><i class="far fa-calendar-alt"></i> {{ post.data.date | dateFormat }}</span>
-          {% if post.data.author %}
-          <span class="post-author"><i class="fas fa-user"></i> {{ post.data.author }}</span>
-          {% endif %}
+      <article class="card flex flex-col">
+        <div class="flex flex-wrap items-center gap-3 text-xs text-ink-500 dark:text-ink-400">
+          <span class="inline-flex items-center gap-2"><i class="fa-regular fa-calendar"></i> {{ post.date | dateFormat }}</span>
           {% if post.data.tags %}
-          <div class="post-tags">
-            {% for tag in post.data.tags %}
-            <span class="tag">{{ tag }}</span>
-            {% endfor %}
-          </div>
+          <span class="text-ink-300 dark:text-ink-600">·</span>
+          <ul class="flex flex-wrap gap-1.5">
+            {% for tag in post.data.tags %}<li class="chip">{{ tag }}</li>{% endfor %}
+          </ul>
           {% endif %}
         </div>
-        <p class="blog-list-description">{{ post.data.description }}</p>
-        <a href="{{ post.url }}" class="btn btn-outline btn-sm">Read More <i class="fas fa-arrow-right"></i></a>
-      </div>
+        <h2 class="mt-4 text-2xl font-semibold text-ink-900 dark:text-white">
+          <a href="{{ post.url }}" class="hover:text-brand-700 dark:hover:text-brand-300">{{ post.data.title }}</a>
+        </h2>
+        {% if post.data.description %}
+        <p class="mt-3 text-ink-600 dark:text-ink-300">{{ post.data.description }}</p>
+        {% endif %}
+        <div class="mt-5 pt-5 border-t border-ink-200 dark:border-ink-800">
+          <a href="{{ post.url }}" class="inline-flex items-center gap-2 text-sm font-medium text-brand-700 hover:text-brand-800 dark:text-brand-300">
+            Read post <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </article>
       {% endfor %}
     </div>
   </div>

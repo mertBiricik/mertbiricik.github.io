@@ -1,149 +1,146 @@
 ---
 layout: base
 title: About
-description: Mert Biricik's background, experience, and journey in full stack development and data science.
+description: Mert Biricik — cybersecurity researcher, CyberMACS scholar, AFAD search & rescue operator. Education, experience, languages, and interests.
 priority: 0.8
 changefreq: monthly
-
 ---
 
+<section class="section pt-16 lg:pt-20">
+  <div class="container-narrow">
+    <p class="section-eyebrow">About</p>
+    <h1 class="mt-2 text-4xl sm:text-5xl font-bold text-ink-900 dark:text-white">Mert Biricik</h1>
+    <p class="mt-3 text-lg text-ink-600 dark:text-ink-300">{{ profile.title }} — based in {{ profile.location }}.</p>
+
+    <div class="mt-10 grid gap-10 lg:grid-cols-3">
+      <div class="lg:col-span-2 space-y-5 text-base leading-relaxed text-ink-700 dark:text-ink-300">
+        <p>{{ profile.summary }}</p>
+        <p>I work at the seam between systems engineering and applied AI: building research tools that survive production loads, hardening the infrastructure that hosts them, and turning sensor data — power grids, EEG signals, sports telemetry — into signals defenders can act on.</p>
+      </div>
+      <aside class="card-flat space-y-4 text-sm">
+        <div>
+          <p class="text-xs uppercase tracking-wider text-ink-500 dark:text-ink-400">Status</p>
+          <p class="mt-1 font-medium text-ink-900 dark:text-white">Incoming Erasmus Mundus Scholar (CyberMACS, 2026)</p>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-wider text-ink-500 dark:text-ink-400">Citizenship</p>
+          <p class="mt-1 text-ink-700 dark:text-ink-300">{{ profile.citizenship }}</p>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-wider text-ink-500 dark:text-ink-400">Languages</p>
+          <ul class="mt-1 space-y-1 text-ink-700 dark:text-ink-300">
+            {% for lang in profile.languages %}
+            <li><span class="font-medium">{{ lang.name }}:</span> {{ lang.level }}{% if lang.note %} <span class="text-ink-500 dark:text-ink-400">({{ lang.note }})</span>{% endif %}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-wider text-ink-500 dark:text-ink-400">Interests</p>
+          <ul class="mt-1 flex flex-wrap gap-2">
+            {% for i in profile.interests %}<li class="chip">{{ i }}</li>{% endfor %}
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-ink-50 dark:bg-ink-900/40">
+  <div class="container-wide">
+    <p class="section-eyebrow">Focus areas</p>
+    <h2 class="mt-2 text-3xl font-bold text-ink-900 dark:text-white">Where I'm pushing</h2>
+    <ul class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {% for f in profile.focus %}
+      <li class="card-flat flex items-center gap-3">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-50 text-brand-700 dark:bg-brand-900/40 dark:text-brand-300"><i class="fa-solid fa-check text-xs"></i></span>
+        <span class="text-sm font-medium text-ink-800 dark:text-ink-100">{{ f }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
 <section class="section">
-  <div class="section-container">
-    <h1 class="section-title">About</h1>
-    
-    <div class="grid grid-2" style="margin-bottom: 3rem;">
-      <div>
-        <h2>Journey: Code to Data Insights</h2>
-        <p>Technology: convergence of passions. Web development logic. Data and AI possibilities. Future: intelligent applications. This drives work. Architect full-stack. Develop ML for critical infrastructure. Goal: build robust, data-driven solutions. Solve real-world problems. Portfolio: mission in action.</p>
-        
-        <h3>Current Focus</h3>
-        <ul>
-          <li>Build scalable web applications.</li>
-          <li>Develop AI-driven cybersecurity solutions.</li>
-          <li>Contribute to open-source projects and research.</li>
-          <li>Explore web technologies and machine learning intersection.</li>
+  <div class="container-wide">
+    <p class="section-eyebrow">Skills</p>
+    <h2 class="mt-2 text-3xl font-bold text-ink-900 dark:text-white">Technical stack</h2>
+    <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {% for group in profile.skills %}
+      <div class="card-flat">
+        <h3 class="flex items-center gap-2 text-base font-semibold text-brand-700 dark:text-brand-300">
+          <i class="fa-solid {{ group.icon }}"></i> {{ group.group }}
+        </h3>
+        <ul class="mt-4 flex flex-wrap gap-2">
+          {% for item in group.items %}<li class="chip">{{ item }}</li>{% endfor %}
         </ul>
       </div>
-      
-      <div>
-        <h2>Skills & Expertise</h2>
-        <p>Technical expertise: frontend and backend development. Strong data science and machine learning foundations. Proficient in modern web technologies. Hands-on experience: cloud platforms, DevOps practices.</p>
-        
-        <h3>Key Competencies</h3>
-        <ul>
-          <li><strong>Web Development:</strong> React, Next.js, Node.js, TypeScript</li>
-          <li><strong>Data Science:</strong> Python, TensorFlow, PyTorch, Statistical Analysis</li>
-          <li><strong>Databases:</strong> PostgreSQL, MySQL, MongoDB</li>
-          <li><strong>Cloud & DevOps:</strong> AWS, Azure, Docker, CI/CD</li>
-          <li><strong>Research:</strong> Academic writing, IEEE publications, OSINT</li>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-ink-50 dark:bg-ink-900/40">
+  <div class="container-wide">
+    <p class="section-eyebrow">Experience</p>
+    <h2 class="mt-2 text-3xl font-bold text-ink-900 dark:text-white">Where I've worked</h2>
+
+    <ol class="mt-10 relative space-y-8 border-l border-ink-200 dark:border-ink-800 pl-6 sm:pl-8">
+      {% for job in profile.experience %}
+      <li class="relative">
+        <span class="absolute -left-[33px] sm:-left-[41px] top-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand-600 ring-4 ring-white dark:ring-ink-950">
+          <span class="h-1.5 w-1.5 rounded-full bg-white"></span>
+        </span>
+        <div class="card-flat">
+          <div class="flex flex-wrap items-baseline justify-between gap-2">
+            <h3 class="text-lg font-semibold text-ink-900 dark:text-white">{{ job.role }}</h3>
+            <span class="chip">{{ job.period }}</span>
+          </div>
+          <p class="mt-1 text-sm text-ink-600 dark:text-ink-300">
+            {% if job.url %}<a href="{{ job.url }}" target="_blank" rel="noopener noreferrer" class="font-medium text-brand-700 hover:underline dark:text-brand-300">{{ job.org }}</a>{% else %}<span class="font-medium">{{ job.org }}</span>{% endif %}{% if job.location %} · {{ job.location }}{% endif %}
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-ink-700 dark:text-ink-300">
+            {% for b in job.bullets %}
+            <li class="flex gap-3"><i class="fa-solid fa-angle-right mt-1 text-xs text-brand-600 dark:text-brand-400"></i><span>{{ b }}</span></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container-wide">
+    <p class="section-eyebrow">Education</p>
+    <h2 class="mt-2 text-3xl font-bold text-ink-900 dark:text-white">Academic path</h2>
+
+    <div class="mt-10 grid gap-6 lg:grid-cols-3">
+      {% for ed in profile.education %}
+      <article class="card-flat flex flex-col h-full">
+        <span class="chip-brand self-start">{{ ed.period }}</span>
+        <h3 class="mt-4 text-lg font-semibold text-ink-900 dark:text-white">
+          {% if ed.url %}<a href="{{ ed.url }}" target="_blank" rel="noopener noreferrer" class="hover:text-brand-700 dark:hover:text-brand-300">{{ ed.degree }}</a>{% else %}{{ ed.degree }}{% endif %}
+        </h3>
+        <p class="mt-1 text-sm text-ink-600 dark:text-ink-300">{{ ed.institution }}</p>
+        <ul class="mt-4 space-y-2 text-sm text-ink-700 dark:text-ink-300">
+          {% for d in ed.details %}
+          <li class="flex gap-3"><i class="fa-solid fa-angle-right mt-1 text-xs text-brand-600 dark:text-brand-400"></i><span>{{ d }}</span></li>
+          {% endfor %}
         </ul>
-        
-        <h3>Languages</h3>
-        <ul>
-          <li><strong>Turkish:</strong> Native</li>
-          <li><strong>English:</strong> C1 (IELTS-A 7.5)</li>
-          <li><strong>German:</strong> A2</li>
-        </ul>
-      </div>
+      </article>
+      {% endfor %}
     </div>
+  </div>
+</section>
 
-    <h2>Professional Experience</h2>
-    
-    <div class="card" style="margin-bottom: 2rem;">
-      <h3>Video Operator & Data Analyst</h3>
-      <p><strong>FIBA - International Basketball Federation</strong> | July 2024 - June 2025</p>
-      <p>Operated Eric Software for live game recording. Managed real-time data input for sports analytics. Ensured data accuracy for live basketball game statistics. Supported analytics teams with video assets.</p>
-    </div>
-
-    <div class="card" style="margin-bottom: 2rem;">
-      <h3>Software Developer & Data Scientist</h3>
-      <p><strong>Kadir Has University Research Center on Cybersecurity and Critical Infrastructure Protection</strong> | October 2023 - June 2025</p>
-      <p>Developed machine learning models: anomaly detection, threat intelligence in critical infrastructure. Built data processing pipelines. Created interactive dashboards for security monitoring and analysis.</p>
-    </div>
-
-    <div class="card" style="margin-bottom: 2rem;">
-      <h3>Video Operator & Data Analyst</h3>
-      <p><strong>Turkish Basketball Federation</strong> | September 2022 - June 2025</p>
-      <p>Managed Eric Software deployment and operation for video recording across 12 distributed systems. Oversaw real-time video operations and data logging for Turkish Super League.</p>
-    </div>
-
-    <h2>Education & Certifications</h2>
-    
-    <div class="grid grid-2">
-      <div class="card">
-        <h3>Bachelor of Science</h3>
-        <p><strong>Management Information Systems</strong><br>
-        Kadir Has University | Expected June 2025<br>
-        GPA: 2.78/4.0</p>
-        
-        <p><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Database Management Systems, Software Engineering, Machine Learning, Web Development, Statistical Analysis</p>
-      </div>
-      
-      <div class="card">
-        <h3>Certifications</h3>
-        <ul>
-          <li>IELTS Academic (Overall: 7.5, C1) - December 2024</li>
-          <li>Cybersecurity School - Coderspace - January 2025</li>
-          <li>Introduction to Cybersecurity - Cisco - August 2024</li>
-          <li>Sports Law and Management - Kadir Has University - May 2025</li>
-        </ul>
-      </div>
-    </div>
-
-    <h2>Research & Publications</h2>
-    
-    <p>Active in academic research. Focus: AI application in critical infrastructure, cybersecurity. Work accepted at IEEE conferences.</p>
-    
-    <div class="publication-item">
-      <h4 class="publication-title">From OSINT Insights to AI-based Protection: Enhancing Cybersecurity Resilience in Power Distribution Systems</h4>
-      <p class="publication-authors">M. I. Ecevit, <strong>M. Biricik</strong>, T. A. Uğurlu, A. Özdemir, O. Ceylan, H. Dağ, C. Rodio, R. Lazzari</p>
-      <p class="publication-venue">Proceedings of the 60th International Universities Power Engineering Conference (UPEC), IEEE, 2025</p>
-    </div>
-
-    <div class="publication-item">
-      <h4 class="publication-title">Customer-Level Aggregation: The Imperative for Reliable Non-Technical Loss Detection Amidst Row-Level Analysis Pitfalls</h4>
-      <p class="publication-authors">M. Küçük, H. Coşkun, <strong>M. Biricik</strong>, B. E. Bülbül</p>
-      <p class="publication-venue">Proceedings of the 60th International Universities Power Engineering Conference (UPEC), IEEE, 2025</p>
-    </div>
-
-    <h2>Volunteer Experience</h2>
-    
-    <div class="grid grid-3">
-      <div class="card">
-        <h4>Audio Engineer & Social Media Manager</h4>
-        <p><strong>Kadir Has University Turkish Music Choir</strong><br>
-        August 2023 - May 2025</p>
-        <p>Developed/maintained social media. Implemented audio recording/mixing workflows.</p>
-      </div>
-      
-      <div class="card">
-        <h4>Technical Content Creator</h4>
-        <p><strong>Wikimedia Foundation</strong><br>
-        February 2022 - May 2022</p>
-        <p>Contributed to open-source documentation. Digital archiving of historical monuments.</p>
-      </div>
-      
-      <div class="card">
-        <h4>Educational Technology Volunteer</h4>
-        <p><strong>Istanbul Metropolitan Municipality</strong><br>
-        October 2022 - November 2022</p>
-        <p>Designed/facilitated technology-based educational workshops for children.</p>
-      </div>
-    </div>
-
-    <div class="text-center" style="margin-top: 3rem;">
-      <h2>Connect</h2>
-      <p>Interested in new opportunities. Project collaboration. Connect with developers/data scientists.</p>
-      <div class="hero-cta">
-        <a href="/contact/" class="btn btn-primary">
-          <i class="fas fa-envelope"></i>
-          Contact
-        </a>
-        <a href="/projects/" class="btn btn-outline">
-          <i class="fas fa-code"></i>
-          View Work
-        </a>
-      </div>
+<section class="section bg-ink-50 dark:bg-ink-900/40">
+  <div class="container-narrow text-center">
+    <h2 class="text-3xl font-bold text-ink-900 dark:text-white">Want to work together?</h2>
+    <p class="mt-3 text-ink-600 dark:text-ink-300 max-w-xl mx-auto">I'm open to research collaborations, internships, and applied cybersecurity roles in Europe.</p>
+    <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
+      <a href="/contact/" class="btn-primary"><i class="fa-solid fa-envelope"></i> Contact</a>
+      <a href="/projects/" class="btn-outline"><i class="fa-solid fa-folder-open"></i> See projects</a>
     </div>
   </div>
 </section>

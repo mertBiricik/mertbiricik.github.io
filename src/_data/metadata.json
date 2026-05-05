@@ -1,9 +1,16 @@
 {
-  "title": "Mert Biricik's Blog",
-  "url": "https://mert.biricik.de/",
-  "description": "The latest posts from Mert Biricik's personal blog on full stack development, data science, and cybersecurity.",
+  "title": "Mert Biricik",
+  "tagline": "Cybersecurity Researcher & CyberMACS Scholar",
+  "url": "https://mert.biricik.de",
+  "description": "Cybersecurity researcher and Erasmus Mundus CyberMACS Scholar specializing in threat hunting, memory forensics, anomaly detection, and AI-driven protection of critical infrastructure.",
   "author": {
     "name": "Mert Biricik",
     "email": "mert@biricik.de"
+  },
+  "social": {
+    "linkedin": "https://linkedin.com/in/mertbiricik",
+    "github": "https://github.com/mertBiricik",
+    "scholar": "https://scholar.google.com/citations?user=MgyR0RMAAAAJ",
+    "email": "mailto:mert@biricik.de"
   }
 }

@@ -1,270 +1,119 @@
-// Mobile Navigation Toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+(function () {
+  'use strict';
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navMenu.classList.toggle('active');
-});
+  const root = document.documentElement;
+  const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-  hamburger.classList.remove('active');
-  navMenu.classList.remove('active');
-}));
-
-// Active navigation link highlighting
-function setActiveNavLink() {
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
-  
-  let current = '';
-  
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (pageYOffset >= sectionTop - 200) {
-      current = section.getAttribute('id');
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active');
-    }
-  });
-}
-
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  });
-});
-
-// Header background on scroll
-function handleHeaderScroll() {
-  const header = document.querySelector('.header');
-  const currentTheme = document.documentElement.getAttribute('data-theme');
-
-  if (window.scrollY > 100) {
-    if (currentTheme === 'dark') {
-      header.style.backgroundColor = 'rgba(17, 24, 39, 0.95)'; // A dark color with transparency, matching --bg-primary in dark mode
-    } else {
-      header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)'; // White with transparency for light mode
-    }
-    header.style.backdropFilter = 'blur(10px)';
-  } else {
-    header.style.backgroundColor = 'var(--bg-primary)'; // Use CSS variable for non-scrolled state
-    header.style.backdropFilter = 'none';
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    root.classList.toggle('dark', theme === 'dark');
+    try { localStorage.setItem('theme', theme); } catch (e) { /* ignore */ }
   }
-}
 
-// Intersection Observer for animations
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in-up');
-    }
-  });
-}, observerOptions);
-
-// Observe elements for animation
-document.addEventListener('DOMContentLoaded', () => {
-  const animateElements = document.querySelectorAll('.card, .project-card, .publication-item, .skill-category');
-  animateElements.forEach(el => observer.observe(el));
-
-  const themeToggleButton = document.getElementById('theme-toggle');
-  if (themeToggleButton) {
-    themeToggleButton.addEventListener('click', toggleTheme);
-  }
-});
-
-// Typing animation for hero subtitle
-function typeWriter(element, text, speed = 50) {
-  let i = 0;
-  element.innerHTML = '';
-  
-  function type() {
-    if (i < text.length) {
-      element.innerHTML += text.charAt(i);
-      i++;
-      setTimeout(type, speed);
-    }
-  }
-  
-  type();
-}
-
-// Initialize typing animation when page loads
-window.addEventListener('load', () => {
-  const subtitle = document.querySelector('.hero-subtitle');
-  if (subtitle) {
-    const originalText = subtitle.textContent;
-    typeWriter(subtitle, originalText, 30);
-  }
-});
-
-// Contact form handling (if contact form exists)
-const contactForm = document.querySelector('#contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData);
-    
-    // Here you would typically send the data to a server
-    // For now, we'll just show a success message
-    showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-    
-    // Reset form
-    this.reset();
-  });
-}
-
-// Notification system
-function showNotification(message, type = 'info') {
-  const notification = document.createElement('div');
-  notification.className = `notification notification-${type}`;
-  notification.textContent = message;
-  
-  // Style the notification
-  Object.assign(notification.style, {
-    position: 'fixed',
-    top: '20px',
-    right: '20px',
-    padding: '1rem 1.5rem',
-    borderRadius: '0.5rem',
-    color: 'white',
-    fontWeight: '500',
-    zIndex: '9999',
-    opacity: '0',
-    transform: 'translateY(-20px)',
-    transition: 'all 0.3s ease'
-  });
-  
-  // Set background color based on type
-  switch(type) {
-    case 'success':
-      notification.style.backgroundColor = '#10b981';
-      break;
-    case 'error':
-      notification.style.backgroundColor = '#ef4444';
-      break;
-    default:
-      notification.style.backgroundColor = '#3b82f6';
-  }
-  
-  document.body.appendChild(notification);
-  
-  // Animate in
-  setTimeout(() => {
-    notification.style.opacity = '1';
-    notification.style.transform = 'translateY(0)';
-  }, 100);
-  
-  // Remove after 5 seconds
-  setTimeout(() => {
-    notification.style.opacity = '0';
-    notification.style.transform = 'translateY(-20px)';
-    setTimeout(() => {
-      document.body.removeChild(notification);
-    }, 300);
-  }, 5000);
-}
-
-// Event listeners
-window.addEventListener('scroll', () => {
-  setActiveNavLink();
-  handleHeaderScroll();
-});
-
-// Copy email to clipboard functionality
-function copyToClipboard(text) {
-  navigator.clipboard.writeText(text).then(() => {
-    showNotification('Email copied to clipboard!', 'success');
-  }).catch(() => {
-    showNotification('Failed to copy email', 'error');
-  });
-}
-
-// Add click handler for email links
-document.addEventListener('DOMContentLoaded', () => {
-  const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
-  emailLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const email = link.getAttribute('href').replace('mailto:', '');
-      copyToClipboard(email);
+  function setupThemeToggle() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
     });
-  });
-});
+  }
 
-// Skills animation on scroll
-function animateSkillBars() {
-  const skillBars = document.querySelectorAll('.skill-bar');
-  skillBars.forEach(bar => {
-    const rect = bar.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-      const fill = bar.querySelector('.skill-fill');
-      const percentage = bar.dataset.percentage;
-      if (fill && !fill.style.width) {
-        fill.style.width = percentage + '%';
-      }
+  function setupMobileMenu() {
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    if (!toggle || !menu) return;
+
+    function close() {
+      menu.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
     }
-  });
-}
+    function open() {
+      menu.classList.remove('hidden');
+      toggle.setAttribute('aria-expanded', 'true');
+    }
 
-window.addEventListener('scroll', animateSkillBars);
+    toggle.addEventListener('click', () => {
+      const isHidden = menu.classList.contains('hidden');
+      if (isHidden) open(); else close();
+    });
 
-// Theme toggle functionality (if implemented)
-function toggleTheme() {
-  const currentTheme = document.documentElement.getAttribute('data-theme');
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-  
-  document.documentElement.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
-}
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', close);
+    });
 
-// Load saved theme
-const savedTheme = localStorage.getItem('theme') || 'light';
-document.documentElement.setAttribute('data-theme', savedTheme);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') close();
+    });
+  }
 
-// Performance optimization: Debounce scroll events
-function debounce(func, wait = 10, immediate = true) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      timeout = null;
-      if (!immediate) func(...args);
+  function setupHeaderShadow() {
+    const header = document.getElementById('site-header');
+    if (!header) return;
+    const onScroll = () => {
+      if (window.scrollY > 8) {
+        header.classList.add('shadow-sm');
+      } else {
+        header.classList.remove('shadow-sm');
+      }
     };
-    const callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func(...args);
-  };
-}
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
 
-// Apply debouncing to scroll events
-const debouncedScrollHandler = debounce(() => {
-  setActiveNavLink();
-  handleHeaderScroll();
-  animateSkillBars();
-}, 10);
+  function setupSmoothAnchors() {
+    if (prefersReducedMotion) return;
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      const href = anchor.getAttribute('href');
+      if (!href || href === '#') return;
+      anchor.addEventListener('click', (e) => {
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  }
 
-window.addEventListener('scroll', debouncedScrollHandler); 
+  function setupRevealOnScroll() {
+    const items = document.querySelectorAll('.reveal-on-scroll');
+    if (!items.length) return;
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      items.forEach(el => el.classList.add('is-visible'));
+      return;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(el => observer.observe(el));
+  }
+
+  function setupExternalLinkSafety() {
+    document.querySelectorAll('a[target="_blank"]').forEach(a => {
+      const rel = (a.getAttribute('rel') || '').split(/\s+/);
+      if (!rel.includes('noopener')) rel.push('noopener');
+      if (!rel.includes('noreferrer')) rel.push('noreferrer');
+      a.setAttribute('rel', rel.filter(Boolean).join(' '));
+    });
+  }
+
+  function init() {
+    setupThemeToggle();
+    setupMobileMenu();
+    setupHeaderShadow();
+    setupSmoothAnchors();
+    setupRevealOnScroll();
+    setupExternalLinkSafety();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();

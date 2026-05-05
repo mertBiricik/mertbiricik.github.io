@@ -1,71 +1,67 @@
 ---
 layout: base
-title: Portfolio
-description: Explore Mert Biricik's portfolio of full stack development, data science, and system engineering projects, including demos and data visualizations.
+title: Projects
+description: Selected research and engineering projects in cybersecurity, applied AI, energy data, and systems programming.
 priority: 0.9
 changefreq: monthly
-
 ---
 
-<section class="section">
-  <div class="section-container">
-    <h1 class="section-title">Portfolio</h1>
-    <p class="section-subtitle">Showcase: full stack development, data science, system engineering projects. Includes demos, data visualizations.</p>
+<section class="section pt-16 lg:pt-20">
+  <div class="container-wide">
+    <p class="section-eyebrow">Portfolio</p>
+    <h1 class="mt-2 text-4xl sm:text-5xl font-bold text-ink-900 dark:text-white">Projects</h1>
+    <p class="mt-3 max-w-2xl text-lg text-ink-600 dark:text-ink-300">
+      Research-grade systems and tooling spanning cybersecurity, AI agents, energy data, BCI signal processing, and low-level systems programming.
+    </p>
 
-    <div class="projects-grid">
-      {%- for project in projects.all | reverse -%}
-      <div class="project-card">
-        <div class="project-header">
-          <h3 class="project-title">{{ project.title }}</h3>
-          {% if project.subtitle %}
-          <p class="project-subtitle">{{ project.subtitle }}</p>
-          {% endif %}
+    <div class="mt-12 grid gap-6 lg:grid-cols-2">
+      {% for project in projects.all %}
+      <article class="card flex flex-col h-full">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-semibold text-ink-900 dark:text-white">{{ project.title }}</h3>
+            {% if project.subtitle %}<p class="mt-1 text-sm text-ink-500 dark:text-ink-400">{{ project.subtitle }}</p>{% endif %}
+          </div>
+          {% if project.period %}<span class="chip shrink-0">{{ project.period }}</span>{% endif %}
         </div>
-        <div class="project-content">
-          <div class="project-description">
-            <p><strong>Problem:</strong> {{ project.problem }}</p>
-            <p><strong>Solution:</strong> {{ project.solution }}</p>
-            <p><strong>Outcome:</strong> {{ project.outcome }}</p>
+
+        <dl class="mt-5 space-y-3 text-sm">
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Problem</dt>
+            <dd class="text-ink-600 dark:text-ink-400">{{ project.problem }}</dd>
           </div>
-          {% if project.tech and project.tech.length > 0 %}
-          <div class="project-tech">
-            {%- for tag in project.tech -%}
-              <span class="tech-tag">{{ tag }}</span>
-            {%- endfor -%}
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Solution</dt>
+            <dd class="text-ink-600 dark:text-ink-400">{{ project.solution }}</dd>
           </div>
-          {% endif %}
-          <div class="project-links">
-            {% if project.sourceLink %}
-              <a href="{{ project.sourceLink }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;"><i class="fab fa-github"></i> View Code</a>
-            {% endif %}
-            {% if project.visitSiteLink %}
-              <a href="{{ project.visitSiteLink }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;">
-                <i class="fas fa-external-link-alt"></i> Visit Site
-              </a>
-            {% endif %}
-            {% if project.id == 'enerdata' %}
-              <a href="/demos/enerdata-primary-energy/" class="btn btn-primary">
-                <i class="fas fa-chart-bar"></i> View Demo
-              </a>
-            {% endif %}
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Outcome</dt>
+            <dd class="text-ink-600 dark:text-ink-400">{{ project.outcome }}</dd>
           </div>
+        </dl>
+
+        {% if project.tech %}
+        <ul class="mt-5 flex flex-wrap gap-2">
+          {% for t in project.tech %}<li class="chip-brand">{{ t }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+
+        <div class="mt-6 flex flex-wrap gap-2 pt-5 border-t border-ink-200 dark:border-ink-800">
+          {% if project.sourceLink %}<a href="{{ project.sourceLink }}" target="_blank" rel="noopener noreferrer" class="btn-outline btn-sm"><i class="fa-brands fa-github"></i> Code</a>{% endif %}
+          {% if project.visitSiteLink %}<a href="{{ project.visitSiteLink }}" target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm"><i class="fa-solid fa-up-right-from-square"></i> Live</a>{% endif %}
+          {% if project.demoLink %}<a href="{{ project.demoLink }}" class="btn-outline btn-sm"><i class="fa-solid fa-chart-bar"></i> Demo</a>{% endif %}
+          {% if project.publicationLink %}<a href="{{ project.publicationLink }}" target="_blank" rel="noopener noreferrer" class="btn-outline btn-sm"><i class="fa-solid fa-file-lines"></i> Paper</a>{% endif %}
         </div>
-      </div>
-      {%- endfor -%}
+      </article>
+      {% endfor %}
     </div>
 
-    <div class="text-center" style="margin-top: 3rem;">
-      <h2>Collaboration?</h2>
-      <p>Seeking exciting projects, innovative teams. Discuss collaboration.</p>
-      <div class="hero-cta">
-        <a href="/contact/" class="btn btn-primary">
-          <i class="fas fa-envelope"></i>
-          Contact
-        </a>
-        <a href="https://github.com/mertbiricik" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github"></i>
-          See my GitHub
-        </a>
+    <div class="mt-16 text-center">
+      <h2 class="text-2xl font-semibold text-ink-900 dark:text-white">Looking for a collaborator?</h2>
+      <p class="mt-2 text-ink-600 dark:text-ink-300">Open to research collaborations and applied cybersecurity / AI engineering roles.</p>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <a href="/contact/" class="btn-primary"><i class="fa-solid fa-envelope"></i> Contact</a>
+        <a href="{{ metadata.social.github }}" target="_blank" rel="noopener noreferrer" class="btn-outline"><i class="fa-brands fa-github"></i> See my GitHub</a>
       </div>
     </div>
   </div>
