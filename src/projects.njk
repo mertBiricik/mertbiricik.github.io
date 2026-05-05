@@ -6,17 +6,12 @@ priority: 0.9
 changefreq: monthly
 ---
 
-<section class="container-wide py-10 sm:py-14">
-  <div class="masthead">
-    <span class="eyebrow-blood">Folio III</span>
-    <span class="eyebrow">Register of works</span>
-  </div>
-
-  <div class="mt-10 max-w-3xl">
-    <span class="section-marker">Index</span>
-    <h2 class="display-1 mt-5 text-ink-900 dark:text-bone-50 text-balance">Dossiers.</h2>
-    <p class="mt-6 font-serif text-xl text-ink-700 dark:text-bone-200 leading-relaxed">
-      Research-grade systems and tooling spanning cybersecurity, AI agents, energy data, brain-computer interfaces, and low-level systems programming. Each entry is presented with its <em>subject</em>, <em>method</em>, and <em>verdict</em>.
+<section class="container-wide pt-12 sm:pt-16 lg:pt-20 pb-10">
+  <div class="max-w-3xl">
+    <p class="eyebrow-blood">Projects</p>
+    <h1 class="display-1 mt-5 text-ink-900 dark:text-bone-50 text-balance">Selected work.</h1>
+    <p class="mt-6 font-sans text-xl text-ink-700 dark:text-bone-200 leading-relaxed">
+      Research-grade systems and tooling spanning cybersecurity, AI agents, energy data, brain-computer interfaces, and low-level systems programming. Each entry breaks down the problem, approach, and result.
     </p>
   </div>
 </section>
@@ -26,32 +21,32 @@ changefreq: monthly
     {% for project in projects.all %}
     <article class="grid md:grid-cols-12 gap-6 py-10 border-b-2 border-ink-900 dark:border-bone-100">
       <div class="md:col-span-2">
-        <span class="font-blackletter text-5xl text-blood-700 dark:text-blood-400 leading-none">№{{ loop.index | pad }}</span>
-        {% if project.period %}<p class="mt-3 font-mono text-[11px] uppercase tracking-[0.22em] text-ink-500 dark:text-bone-300">{{ project.period }}</p>{% endif %}
+        <span class="font-display font-bold text-5xl text-blood-700 dark:text-blood-400 leading-none">{{ loop.index | pad }}</span>
+        {% if project.period %}<p class="mt-3 font-mono text-[11px] uppercase tracking-[0.2em] text-ink-500 dark:text-bone-300">{{ project.period }}</p>{% endif %}
       </div>
 
       <div class="md:col-span-7 md:pr-6 md:border-r-2 md:border-ink-900 dark:md:border-bone-100">
         <h3 class="font-display text-3xl sm:text-4xl leading-tight text-ink-900 dark:text-bone-50">{{ project.title }}</h3>
-        {% if project.subtitle %}<p class="mt-2 font-serif italic text-ink-500 dark:text-bone-300">{{ project.subtitle }}</p>{% endif %}
+        {% if project.subtitle %}<p class="mt-2 font-sans text-ink-500 dark:text-bone-300">{{ project.subtitle }}</p>{% endif %}
 
-        <div class="mt-6 space-y-3 font-serif text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Subject.</span>{{ project.problem }}</p>
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Method.</span>{{ project.solution }}</p>
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Verdict.</span>{{ project.outcome }}</p>
+        <div class="mt-6 space-y-3 font-sans text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Problem.</span>{{ project.problem }}</p>
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Approach.</span>{{ project.solution }}</p>
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Result.</span>{{ project.outcome }}</p>
         </div>
       </div>
 
       <div class="md:col-span-3">
         {% if project.tech %}
-        <p class="eyebrow mb-2">Apparatus</p>
+        <p class="eyebrow mb-2">Stack</p>
         <ul class="flex flex-wrap gap-1.5">
           {% for t in project.tech %}<li class="tag">{{ t }}</li>{% endfor %}
         </ul>
         {% endif %}
 
         <div class="mt-6">
-          <p class="eyebrow mb-2">References</p>
-          <ul class="space-y-1.5 font-mono text-[11px] uppercase tracking-[0.2em]">
+          <p class="eyebrow mb-2">Links</p>
+          <ul class="space-y-1.5 font-mono text-[11px] uppercase tracking-[0.18em]">
             {% if project.sourceLink %}<li><a href="{{ project.sourceLink }}" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Source</a></li>{% endif %}
             {% if project.visitSiteLink %}<li><a href="{{ project.visitSiteLink }}" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Live site</a></li>{% endif %}
             {% if project.demoLink %}<li><a href="{{ project.demoLink }}" class="no-underline hover:underline">→ Embedded demo</a></li>{% endif %}
@@ -63,13 +58,11 @@ changefreq: monthly
     {% endfor %}
   </ol>
 
-  <div class="fleuron"><span class="font-blackletter text-2xl">✠</span></div>
-
-  <div class="text-center">
+  <div class="text-center pt-12">
     <h2 class="display-3 text-ink-900 dark:text-bone-50">Looking for collaboration?</h2>
     <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
-      <a href="/contact/" class="btn-solid">→ Send word</a>
-      <a href="{{ metadata.social.github }}" target="_blank" rel="noopener noreferrer" class="btn-ghost">↗ Source code</a>
+      <a href="/contact/" class="btn-solid">→ Contact</a>
+      <a href="{{ metadata.social.github }}" target="_blank" rel="noopener noreferrer" class="btn-ghost">↗ GitHub</a>
     </div>
   </div>
 </section>

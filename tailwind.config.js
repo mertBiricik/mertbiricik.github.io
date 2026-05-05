@@ -6,7 +6,7 @@ module.exports = {
   ],
   darkMode: ['class', '[data-theme="dark"]'],
   theme: {
-    // Override defaults to match brutalist sensibility.
+    // Brutalist: no rounded corners, hard offset shadows.
     borderRadius: {
       none: '0',
       DEFAULT: '0',
@@ -24,21 +24,16 @@ module.exports = {
       lg: '10px 10px 0 0 #0a0a0a',
       brutal: '6px 6px 0 0 #0a0a0a',
       'brutal-lg': '10px 10px 0 0 #0a0a0a',
-      'brutal-blood': '6px 6px 0 0 #5b0e0e',
       inner: 'inset 0 2px 0 0 rgba(0,0,0,0.08)'
     },
     extend: {
       fontFamily: {
-        // Display: blackletter for ornaments, drop caps, hero accent
-        blackletter: ['"UnifrakturMaguntia"', 'serif'],
-        // Display serif: gothic-leaning high-contrast for h1/h2
-        display: ['"Cormorant Garamond"', '"EB Garamond"', 'Georgia', 'serif'],
-        // Body serif
-        serif: ['"EB Garamond"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+        // Display: geometric grotesk for headings — clean, technical, brutalist
+        display: ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        // Body sans
+        sans: ['"Inter"', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
         // Labels, eyebrows, code
-        mono: ['"JetBrains Mono"', '"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
-        // Fallback sans for utilities (rare)
-        sans: ['"Inter"', 'ui-sans-serif', 'system-ui', 'sans-serif']
+        mono: ['"JetBrains Mono"', '"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
       },
       colors: {
         bone: {
@@ -61,6 +56,7 @@ module.exports = {
           800: '#0a0a08',
           900: '#000000'
         },
+        // Single accent: muted oxblood — kept restrained
         blood: {
           400: '#a32424',
           500: '#841b1b',
@@ -74,9 +70,6 @@ module.exports = {
           200: '#13130f',
           300: '#0a0a08'
         }
-      },
-      letterspacing: {
-        widest: '0.25em'
       },
       typography: ({ theme }) => ({
         DEFAULT: {
@@ -93,27 +86,26 @@ module.exports = {
             '--tw-prose-code': theme('colors.blood.700'),
             '--tw-prose-pre-bg': theme('colors.ink.900'),
             '--tw-prose-pre-code': theme('colors.bone.100'),
-            fontFamily: theme('fontFamily.serif').join(','),
+            fontFamily: theme('fontFamily.sans').join(','),
             fontSize: '1.0625rem',
             lineHeight: '1.7',
             'h1, h2, h3, h4': {
               fontFamily: theme('fontFamily.display').join(','),
               fontWeight: '700',
-              letterSpacing: '-0.01em'
+              letterSpacing: '-0.02em'
             },
             a: {
               textDecoration: 'underline',
               textDecorationThickness: '1px',
               textUnderlineOffset: '3px',
-              fontWeight: '600'
+              fontWeight: '500'
             },
             blockquote: {
               borderLeftWidth: '4px',
-              fontStyle: 'italic'
-            },
-            code: {
+              fontStyle: 'normal',
               fontWeight: '500'
-            }
+            },
+            code: { fontWeight: '500' }
           }
         },
         invert: {

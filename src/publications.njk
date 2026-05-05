@@ -6,42 +6,37 @@ priority: 0.8
 changefreq: monthly
 ---
 
-<section class="container-wide py-10 sm:py-14">
-  <div class="masthead">
-    <span class="eyebrow-blood">Folio IV</span>
-    <span class="eyebrow">Register of publications</span>
-  </div>
-
-  <div class="grid lg:grid-cols-12 gap-10 mt-10">
+<section class="container-wide pt-12 sm:pt-16 lg:pt-20 pb-10">
+  <div class="grid lg:grid-cols-12 gap-10">
     <div class="lg:col-span-8 lg:pr-10 lg:border-r-2 lg:border-ink-900 dark:lg:border-bone-100">
-      <span class="section-marker">Acta</span>
-      <h2 class="display-1 mt-5 text-ink-900 dark:text-bone-50 text-balance">Publications.</h2>
-      <p class="mt-6 font-serif text-xl text-ink-700 dark:text-bone-200 leading-relaxed">
+      <p class="eyebrow-blood">Publications</p>
+      <h1 class="display-1 mt-5 text-ink-900 dark:text-bone-50 text-balance">Research output.</h1>
+      <p class="mt-6 font-sans text-xl text-ink-700 dark:text-bone-200 leading-relaxed">
         Peer-reviewed work and active manuscripts across cybersecurity, memory forensics, brain-computer interfaces, and AI-driven protection of critical infrastructure.
       </p>
-      <p class="mt-4 font-mono text-[11px] uppercase tracking-[0.22em]">
+      <p class="mt-4 font-mono text-[11px] uppercase tracking-[0.18em]">
         <a href="{{ metadata.social.scholar }}" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Indexed at Google Scholar</a>
       </p>
     </div>
 
     <aside class="lg:col-span-4">
-      <span class="section-marker">Tally</span>
-      <dl class="mt-5">
+      <p class="eyebrow">At a glance</p>
+      <dl class="mt-4">
         <div class="def-row">
-          <dt class="def-key">Total entries</dt>
-          <dd class="font-display text-2xl text-ink-900 dark:text-bone-50">{{ publications | length }}</dd>
+          <dt class="def-key">Total</dt>
+          <dd class="font-display font-bold text-2xl text-ink-900 dark:text-bone-50">{{ publications | length }}</dd>
         </div>
         <div class="def-row">
           <dt class="def-key">Published</dt>
-          <dd class="font-display text-2xl text-ink-900 dark:text-bone-50">{% set published = 0 %}{% for p in publications %}{% if p.status == 'published' %}{% set published = published + 1 %}{% endif %}{% endfor %}{{ published }}</dd>
+          <dd class="font-display font-bold text-2xl text-ink-900 dark:text-bone-50">{% set published = 0 %}{% for p in publications %}{% if p.status == 'published' %}{% set published = published + 1 %}{% endif %}{% endfor %}{{ published }}</dd>
         </div>
         <div class="def-row">
           <dt class="def-key">In review</dt>
-          <dd class="font-display text-2xl text-ink-900 dark:text-bone-50">{% set rev = 0 %}{% for p in publications %}{% if p.status == 'under-review' %}{% set rev = rev + 1 %}{% endif %}{% endfor %}{{ rev }}</dd>
+          <dd class="font-display font-bold text-2xl text-ink-900 dark:text-bone-50">{% set rev = 0 %}{% for p in publications %}{% if p.status == 'under-review' %}{% set rev = rev + 1 %}{% endif %}{% endfor %}{{ rev }}</dd>
         </div>
         <div class="def-row">
           <dt class="def-key">In preparation</dt>
-          <dd class="font-display text-2xl text-ink-900 dark:text-bone-50">{% set prep = 0 %}{% for p in publications %}{% if p.status == 'in-preparation' or p.status == 'ready' %}{% set prep = prep + 1 %}{% endif %}{% endfor %}{{ prep }}</dd>
+          <dd class="font-display font-bold text-2xl text-ink-900 dark:text-bone-50">{% set prep = 0 %}{% for p in publications %}{% if p.status == 'in-preparation' or p.status == 'ready' %}{% set prep = prep + 1 %}{% endif %}{% endfor %}{{ prep }}</dd>
         </div>
       </dl>
     </aside>
@@ -53,15 +48,15 @@ changefreq: monthly
     {% for pub in publications %}
     <article class="grid md:grid-cols-12 gap-6 py-10 border-b-2 border-ink-900 dark:border-bone-100">
       <div class="md:col-span-2">
-        <span class="font-blackletter text-5xl text-blood-700 dark:text-blood-400 leading-none">{{ pub.year }}</span>
+        <span class="font-display font-bold text-5xl text-blood-700 dark:text-blood-400 leading-none">{{ pub.year }}</span>
       </div>
 
       <div class="md:col-span-7 md:pr-6 md:border-r-2 md:border-ink-900 dark:md:border-bone-100">
         <h3 class="font-display text-2xl sm:text-3xl leading-tight text-ink-900 dark:text-bone-50">
           {% if pub.link %}<a href="{{ pub.link }}" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
         </h3>
-        <p class="mt-3 font-serif italic text-ink-500 dark:text-bone-300">{{ pub.authors | join(', ') }}</p>
-        <p class="mt-4 font-serif text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">{{ pub.summary }}</p>
+        <p class="mt-3 font-sans text-ink-500 dark:text-bone-300">{{ pub.authors | join(', ') }}</p>
+        <p class="mt-4 font-sans text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">{{ pub.summary }}</p>
 
         {% if pub.tags %}
         <ul class="mt-5 flex flex-wrap gap-1.5">
@@ -73,7 +68,7 @@ changefreq: monthly
       <div class="md:col-span-3 space-y-4">
         <div>
           <p class="eyebrow mb-2">Venue</p>
-          <p class="font-display text-base text-ink-900 dark:text-bone-50">{{ pub.venue }}</p>
+          <p class="font-display font-semibold text-base text-ink-900 dark:text-bone-50">{{ pub.venue }}</p>
         </div>
         <div>
           <p class="eyebrow mb-2">Status</p>
@@ -86,7 +81,7 @@ changefreq: monthly
         {% if pub.doi %}
         <div>
           <p class="eyebrow mb-2">DOI</p>
-          <a href="{{ pub.link }}" target="_blank" rel="noopener noreferrer" class="font-mono text-xs uppercase tracking-[0.16em] no-underline hover:underline break-all">{{ pub.doi }}</a>
+          <a href="{{ pub.link }}" target="_blank" rel="noopener noreferrer" class="font-mono text-xs uppercase tracking-[0.14em] no-underline hover:underline break-all">{{ pub.doi }}</a>
         </div>
         {% endif %}
       </div>
@@ -95,38 +90,35 @@ changefreq: monthly
   </ol>
 </section>
 
-<div class="container-wide section-tight">
+<section class="container-wide section-tight">
   <div class="masthead">
-    <span class="eyebrow-blood">§ Annexe</span>
-    <span class="eyebrow">Domains of inquiry</span>
+    <span class="eyebrow-blood">Research areas</span>
   </div>
 
   <div class="mt-8 grid md:grid-cols-3 gap-0 border-2 border-ink-900 dark:border-bone-100">
     <div class="p-7 border-b-2 md:border-b-0 md:border-r-2 border-ink-900 dark:border-bone-100">
-      <span class="font-blackletter text-3xl text-blood-700 dark:text-blood-400">I</span>
-      <h3 class="font-display text-xl mt-1 text-ink-900 dark:text-bone-50">Critical infrastructure security</h3>
-      <p class="mt-3 font-serif text-ink-700 dark:text-bone-200 leading-relaxed">SCADA threat discovery, OSINT-based assessments, anomaly detection in power distribution networks.</p>
+      <span class="font-mono text-xs uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">01</span>
+      <h3 class="font-display text-xl mt-3 text-ink-900 dark:text-bone-50">Critical infrastructure security</h3>
+      <p class="mt-3 font-sans text-ink-700 dark:text-bone-200 leading-relaxed">SCADA threat discovery, OSINT-based assessments, anomaly detection in power distribution networks.</p>
     </div>
     <div class="p-7 border-b-2 md:border-b-0 md:border-r-2 border-ink-900 dark:border-bone-100">
-      <span class="font-blackletter text-3xl text-blood-700 dark:text-blood-400">II</span>
-      <h3 class="font-display text-xl mt-1 text-ink-900 dark:text-bone-50">Memory forensics</h3>
-      <p class="mt-3 font-serif text-ink-700 dark:text-bone-200 leading-relaxed">Unsupervised triage on Volatility3 artefacts; behavioural and graph-theoretic features against fileless malware.</p>
+      <span class="font-mono text-xs uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">02</span>
+      <h3 class="font-display text-xl mt-3 text-ink-900 dark:text-bone-50">Memory forensics</h3>
+      <p class="mt-3 font-sans text-ink-700 dark:text-bone-200 leading-relaxed">Unsupervised triage on Volatility3 artefacts; behavioural and graph-theoretic features against fileless malware.</p>
     </div>
     <div class="p-7">
-      <span class="font-blackletter text-3xl text-blood-700 dark:text-blood-400">III</span>
-      <h3 class="font-display text-xl mt-1 text-ink-900 dark:text-bone-50">EEG / BCI signal processing</h3>
-      <p class="mt-3 font-serif text-ink-700 dark:text-bone-200 leading-relaxed">Real-time change-point detection (PELT) for asynchronous BCI on edge devices.</p>
+      <span class="font-mono text-xs uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">03</span>
+      <h3 class="font-display text-xl mt-3 text-ink-900 dark:text-bone-50">EEG / BCI signal processing</h3>
+      <p class="mt-3 font-sans text-ink-700 dark:text-bone-200 leading-relaxed">Real-time change-point detection (PELT) for asynchronous BCI on edge devices.</p>
     </div>
   </div>
 
-  <div class="fleuron"><span class="font-blackletter text-2xl">✠</span></div>
-
-  <div class="text-center">
-    <h2 class="display-3 text-ink-900 dark:text-bone-50">Joint inquiry?</h2>
-    <p class="mt-3 font-serif italic text-lg text-ink-700 dark:text-bone-200 max-w-xl mx-auto">Particularly interested in joint work bridging applied cybersecurity, anomaly detection, and edge AI.</p>
+  <div class="text-center mt-16">
+    <h2 class="display-3 text-ink-900 dark:text-bone-50">Want to collaborate?</h2>
+    <p class="mt-3 font-sans text-lg text-ink-700 dark:text-bone-200 max-w-xl mx-auto">Particularly interested in joint work bridging applied cybersecurity, anomaly detection, and edge AI.</p>
     <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
-      <a href="/contact/" class="btn-solid">→ Reach out</a>
+      <a href="/contact/" class="btn-solid">→ Contact</a>
       <a href="/projects/" class="btn-ghost">View related projects</a>
     </div>
   </div>
-</div>
+</section>

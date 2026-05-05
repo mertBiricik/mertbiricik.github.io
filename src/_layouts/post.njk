@@ -4,8 +4,8 @@ layout: base
 
 <article class="section">
   <div class="container-narrow">
-    <a href="/blog/" class="font-mono text-[11px] uppercase tracking-[0.22em] no-underline hover:underline text-ink-700 dark:text-bone-300">
-      ← Return to index
+    <a href="/blog/" class="font-mono text-[11px] uppercase tracking-[0.18em] no-underline hover:underline text-ink-700 dark:text-bone-300">
+      ← Back to blog
     </a>
 
     <header class="mt-8 border-b-2 border-ink-900 dark:border-bone-100 pb-8">
@@ -17,21 +17,20 @@ layout: base
 
       <h1 class="font-display font-bold leading-[1.05] text-ink-900 dark:text-bone-50 text-4xl sm:text-5xl lg:text-6xl tracking-tight text-balance">{{ title }}</h1>
 
-      <div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[11px] uppercase tracking-[0.22em] text-ink-500 dark:text-bone-300">
+      <div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-500 dark:text-bone-300">
         {% if date %}<span>{{ date | dateFormat }}</span>{% endif %}
         {% if author %}<span>· By {{ author }}</span>{% endif %}
-        <span>· Filed under blog</span>
       </div>
     </header>
 
-    <div class="prose prose-lg dark:prose-invert max-w-none mt-10 first-letter:font-blackletter">
+    <div class="prose prose-lg dark:prose-invert max-w-none mt-10">
       {{ content | safe }}
     </div>
 
-    <div class="fleuron"><span class="font-blackletter text-2xl">✠</span></div>
-
-    <div class="text-center font-mono text-[11px] uppercase tracking-[0.22em] text-ink-500 dark:text-bone-300">
-      <p>End of article</p>
+    <div class="mt-16 pt-8 border-t-2 border-ink-900 dark:border-bone-100">
+      <a href="/blog/" class="font-mono text-[11px] uppercase tracking-[0.18em] no-underline hover:underline text-ink-700 dark:text-bone-300">
+        ← Back to all posts
+      </a>
     </div>
   </div>
 </article>
