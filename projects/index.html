@@ -38,127 +38,89 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;700&family=UnifrakturMaguntia&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="min-h-screen flex flex-col">
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-ink-900 focus:text-bone-50 focus:px-3 focus:py-2 focus:no-underline">Skip to content</a>
 
-  
   <header id="site-header" class="border-b-2 border-ink-900 dark:border-bone-100">
     <div class="container-wide">
-      <div class="flex items-center justify-between py-3 text-[11px] font-mono uppercase tracking-[0.22em] text-ink-700 dark:text-bone-300 border-b border-ink-900 dark:border-bone-200">
-        <span>Vol. 2026 &nbsp;·&nbsp; No. 125</span>
-        <span class="hidden sm:inline">Istanbul, Turkey</span>
-        <span>Established <time datetime="2021">MMXXI</time></span>
-      </div>
-
-      <div class="py-6 sm:py-8 flex flex-col items-center text-center">
-        <a href="/" class="no-underline">
-          <h1 class="font-blackletter text-ink-900 dark:text-bone-50 leading-none text-5xl sm:text-7xl lg:text-8xl">Mert Biricik</h1>
+      <div class="flex items-center justify-between gap-4 py-4">
+        <a href="/" class="flex items-center gap-3 no-underline">
+          <span class="inline-flex h-9 w-9 items-center justify-center border-2 border-ink-900 dark:border-bone-100 bg-ink-900 text-bone-50 dark:bg-bone-50 dark:text-ink-900">
+            <span class="font-display font-bold text-base leading-none">MB</span>
+          </span>
+          <span class="font-display font-bold text-lg sm:text-xl text-ink-900 dark:text-bone-50 tracking-tight">Mert Biricik</span>
         </a>
-        <p class="mt-2 font-mono text-[10px] sm:text-xs uppercase tracking-[0.4em] text-blood-700 dark:text-blood-400">
-          ✠ &nbsp; Cybersecurity Researcher &amp; CyberMACS Scholar &nbsp; ✠
-        </p>
-      </div>
 
-      <nav class="border-t-2 border-ink-900 dark:border-bone-100">
-        <div class="flex items-center justify-between gap-4 py-3">
-          <ul id="nav-menu" class="hidden md:flex items-center gap-7">
-            
-            <li>
-              <a href="/" class="nav-link ">
-                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Home
-              </a>
-            </li>
-            
-            <li>
-              <a href="/about/" class="nav-link ">
-                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>About
-              </a>
-            </li>
-            
-            <li>
-              <a href="/projects/" class="nav-link active">
-                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Projects
-              </a>
-            </li>
-            
-            <li>
-              <a href="/publications/" class="nav-link ">
-                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Publications
-              </a>
-            </li>
-            
-            <li>
-              <a href="/blog/" class="nav-link ">
-                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Blog
-              </a>
-            </li>
-            
-            <li>
-              <a href="/contact/" class="nav-link ">
-                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Contact
-              </a>
-            </li>
-            
-          </ul>
+        <ul id="nav-menu" class="hidden md:flex items-center gap-6">
+          
+          <li>
+            <a href="/" class="nav-link ">Home</a>
+          </li>
+          
+          <li>
+            <a href="/about/" class="nav-link ">About</a>
+          </li>
+          
+          <li>
+            <a href="/projects/" class="nav-link active">Projects</a>
+          </li>
+          
+          <li>
+            <a href="/publications/" class="nav-link ">Publications</a>
+          </li>
+          
+          <li>
+            <a href="/blog/" class="nav-link ">Blog</a>
+          </li>
+          
+          <li>
+            <a href="/contact/" class="nav-link ">Contact</a>
+          </li>
+          
+        </ul>
 
-          <div class="flex items-center gap-2 ml-auto">
-            <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors no-underline" aria-label="GitHub">
-              <i class="fa-brands fa-github text-sm"></i>
-            </a>
-            <a href="https://scholar.google.com/citations?user=MgyR0RMAAAAJ" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors no-underline" aria-label="Google Scholar">
-              <i class="fa-solid fa-graduation-cap text-sm"></i>
-            </a>
-            <button id="theme-toggle" class="inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors" aria-label="Toggle theme">
-              <i class="fa-solid fa-sun sun-icon text-sm"></i>
-              <i class="fa-solid fa-moon moon-icon text-sm"></i>
-            </button>
-            <button id="menu-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-              <i class="fa-solid fa-bars text-sm"></i>
-            </button>
-          </div>
+        <div class="flex items-center gap-2">
+          <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors no-underline" aria-label="GitHub">
+            <i class="fa-brands fa-github text-sm"></i>
+          </a>
+          <button id="theme-toggle" class="inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors" aria-label="Toggle theme">
+            <i class="fa-solid fa-sun sun-icon text-sm"></i>
+            <i class="fa-solid fa-moon moon-icon text-sm"></i>
+          </button>
+          <button id="menu-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="fa-solid fa-bars text-sm"></i>
+          </button>
         </div>
-      </nav>
+      </div>
 
       <div id="mobile-menu" class="md:hidden hidden border-t-2 border-ink-900 dark:border-bone-100">
         <ul class="py-3 space-y-2">
           
           <li>
-            <a href="/" class="nav-link block py-1 ">
-              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Home
-            </a>
+            <a href="/" class="nav-link block py-1 ">Home</a>
           </li>
           
           <li>
-            <a href="/about/" class="nav-link block py-1 ">
-              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>About
-            </a>
+            <a href="/about/" class="nav-link block py-1 ">About</a>
           </li>
           
           <li>
-            <a href="/projects/" class="nav-link block py-1 active">
-              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Projects
-            </a>
+            <a href="/projects/" class="nav-link block py-1 active">Projects</a>
           </li>
           
           <li>
-            <a href="/publications/" class="nav-link block py-1 ">
-              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Publications
-            </a>
+            <a href="/publications/" class="nav-link block py-1 ">Publications</a>
           </li>
           
           <li>
-            <a href="/blog/" class="nav-link block py-1 ">
-              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Blog
-            </a>
+            <a href="/blog/" class="nav-link block py-1 ">Blog</a>
           </li>
           
           <li>
-            <a href="/contact/" class="nav-link block py-1 ">
-              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Contact
-            </a>
+            <a href="/contact/" class="nav-link block py-1 ">Contact</a>
           </li>
           
         </ul>
@@ -168,17 +130,12 @@
 
   <main id="main" class="flex-1">
     
-<section class="container-wide py-10 sm:py-14">
-  <div class="masthead">
-    <span class="eyebrow-blood">Folio III</span>
-    <span class="eyebrow">Register of works</span>
-  </div>
-
-  <div class="mt-10 max-w-3xl">
-    <span class="section-marker">Index</span>
-    <h2 class="display-1 mt-5 text-ink-900 dark:text-bone-50 text-balance">Dossiers.</h2>
-    <p class="mt-6 font-serif text-xl text-ink-700 dark:text-bone-200 leading-relaxed">
-      Research-grade systems and tooling spanning cybersecurity, AI agents, energy data, brain-computer interfaces, and low-level systems programming. Each entry is presented with its <em>subject</em>, <em>method</em>, and <em>verdict</em>.
+<section class="container-wide pt-12 sm:pt-16 lg:pt-20 pb-10">
+  <div class="max-w-3xl">
+    <p class="eyebrow-blood">Projects</p>
+    <h1 class="display-1 mt-5 text-ink-900 dark:text-bone-50 text-balance">Selected work.</h1>
+    <p class="mt-6 font-sans text-xl text-ink-700 dark:text-bone-200 leading-relaxed">
+      Research-grade systems and tooling spanning cybersecurity, AI agents, energy data, brain-computer interfaces, and low-level systems programming. Each entry breaks down the problem, approach, and result.
     </p>
   </div>
 </section>
@@ -188,32 +145,32 @@
     
     <article class="grid md:grid-cols-12 gap-6 py-10 border-b-2 border-ink-900 dark:border-bone-100">
       <div class="md:col-span-2">
-        <span class="font-blackletter text-5xl text-blood-700 dark:text-blood-400 leading-none">№01</span>
-        <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.22em] text-ink-500 dark:text-bone-300">09/2024 — Present</p>
+        <span class="font-display font-bold text-5xl text-blood-700 dark:text-blood-400 leading-none">01</span>
+        <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.2em] text-ink-500 dark:text-bone-300">09/2024 — Present</p>
       </div>
 
       <div class="md:col-span-7 md:pr-6 md:border-r-2 md:border-ink-900 dark:md:border-bone-100">
         <h3 class="font-display text-3xl sm:text-4xl leading-tight text-ink-900 dark:text-bone-50">EnerjiVeri — 100 Years of Turkish Energy Data</h3>
-        <p class="mt-2 font-serif italic text-ink-500 dark:text-bone-300">TUBITAK 1001 — Sole web developer for the national strategic project (No. 323K520)</p>
+        <p class="mt-2 font-sans text-ink-500 dark:text-bone-300">TUBITAK 1001 — Sole web developer for the national strategic project (No. 323K520)</p>
 
-        <div class="mt-6 space-y-3 font-serif text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Subject.</span>A century of national energy production, consumption, and policy data sat fragmented across CSVs and PDFs, unusable for evidence-based policy analysis.</p>
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Method.</span>Built a dynamic Turkish-language data portal consolidating 100 years of quantitative and qualitative energy data with time-series charts, sectoral distribution models, and interactive dashboards.</p>
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Verdict.</span>Live national portal used by researchers and policy stakeholders under the project &quot;Energy Strategies in the Second Century of the Republic&quot;.</p>
+        <div class="mt-6 space-y-3 font-sans text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Problem.</span>A century of national energy production, consumption, and policy data sat fragmented across CSVs and PDFs, unusable for evidence-based policy analysis.</p>
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Approach.</span>Built a dynamic Turkish-language data portal consolidating 100 years of quantitative and qualitative energy data with time-series charts, sectoral distribution models, and interactive dashboards.</p>
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Result.</span>Live national portal used by researchers and policy stakeholders under the project &quot;Energy Strategies in the Second Century of the Republic&quot;.</p>
         </div>
       </div>
 
       <div class="md:col-span-3">
         
-        <p class="eyebrow mb-2">Apparatus</p>
+        <p class="eyebrow mb-2">Stack</p>
         <ul class="flex flex-wrap gap-1.5">
           <li class="tag">Python</li><li class="tag">Data Visualization</li><li class="tag">Time-Series</li><li class="tag">Web Portal</li><li class="tag">ETL</li>
         </ul>
         
 
         <div class="mt-6">
-          <p class="eyebrow mb-2">References</p>
-          <ul class="space-y-1.5 font-mono text-[11px] uppercase tracking-[0.2em]">
+          <p class="eyebrow mb-2">Links</p>
+          <ul class="space-y-1.5 font-mono text-[11px] uppercase tracking-[0.18em]">
             <li><a href="https://github.com/mertBiricik/enerdata.git" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Source</a></li>
             <li><a href="https://enerjiveri.khas.edu.tr/" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Live site</a></li>
             <li><a href="/demos/enerdata-primary-energy/" class="no-underline hover:underline">→ Embedded demo</a></li>
@@ -225,32 +182,32 @@
     
     <article class="grid md:grid-cols-12 gap-6 py-10 border-b-2 border-ink-900 dark:border-bone-100">
       <div class="md:col-span-2">
-        <span class="font-blackletter text-5xl text-blood-700 dark:text-blood-400 leading-none">№02</span>
-        <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.22em] text-ink-500 dark:text-bone-300">2024 — 2025</p>
+        <span class="font-display font-bold text-5xl text-blood-700 dark:text-blood-400 leading-none">02</span>
+        <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.2em] text-ink-500 dark:text-bone-300">2024 — 2025</p>
       </div>
 
       <div class="md:col-span-7 md:pr-6 md:border-r-2 md:border-ink-900 dark:md:border-bone-100">
         <h3 class="font-display text-3xl sm:text-4xl leading-tight text-ink-900 dark:text-bone-50">Tune2Travel — Music Videos &amp; Destination Marketing</h3>
-        <p class="mt-2 font-serif italic text-ink-500 dark:text-bone-300">TUBITAK 1001 — Data infrastructure &amp; NLP pipeline</p>
+        <p class="mt-2 font-sans text-ink-500 dark:text-bone-300">TUBITAK 1001 — Data infrastructure &amp; NLP pipeline</p>
 
-        <div class="mt-6 space-y-3 font-serif text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Subject.</span>Quantifying how music videos shape tourism perception requires large-scale, multi-language social media data plus cultural NLP processing.</p>
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Method.</span>Engineered the data infrastructure: YouTube API ingestion, ETL pipelines, NLP and ML models surfacing cultural and sociological signals about destination marketing on social platforms.</p>
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Verdict.</span>National research project deliverable enabling marketing &amp; sociology researchers to query patterns across thousands of cross-language music videos.</p>
+        <div class="mt-6 space-y-3 font-sans text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Problem.</span>Quantifying how music videos shape tourism perception requires large-scale, multi-language social media data plus cultural NLP processing.</p>
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Approach.</span>Engineered the data infrastructure: YouTube API ingestion, ETL pipelines, NLP and ML models surfacing cultural and sociological signals about destination marketing on social platforms.</p>
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Result.</span>National research project deliverable enabling marketing &amp; sociology researchers to query patterns across thousands of cross-language music videos.</p>
         </div>
       </div>
 
       <div class="md:col-span-3">
         
-        <p class="eyebrow mb-2">Apparatus</p>
+        <p class="eyebrow mb-2">Stack</p>
         <ul class="flex flex-wrap gap-1.5">
           <li class="tag">Python</li><li class="tag">NLP</li><li class="tag">spaCy</li><li class="tag">Gensim</li><li class="tag">YouTube API</li><li class="tag">ETL</li><li class="tag">Selenium</li>
         </ul>
         
 
         <div class="mt-6">
-          <p class="eyebrow mb-2">References</p>
-          <ul class="space-y-1.5 font-mono text-[11px] uppercase tracking-[0.2em]">
+          <p class="eyebrow mb-2">Links</p>
+          <ul class="space-y-1.5 font-mono text-[11px] uppercase tracking-[0.18em]">
             <li><a href="https://github.com/mertBiricik/tune2travel.git" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Source</a></li>
             <li><a href="https://listenandtravelwithme.khas.edu.tr/" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Live site</a></li>
             
@@ -262,32 +219,32 @@
     
     <article class="grid md:grid-cols-12 gap-6 py-10 border-b-2 border-ink-900 dark:border-bone-100">
       <div class="md:col-span-2">
-        <span class="font-blackletter text-5xl text-blood-700 dark:text-blood-400 leading-none">№03</span>
-        <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.22em] text-ink-500 dark:text-bone-300">2025 — 2026</p>
+        <span class="font-display font-bold text-5xl text-blood-700 dark:text-blood-400 leading-none">03</span>
+        <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.2em] text-ink-500 dark:text-bone-300">2025 — 2026</p>
       </div>
 
       <div class="md:col-span-7 md:pr-6 md:border-r-2 md:border-ink-900 dark:md:border-bone-100">
         <h3 class="font-display text-3xl sm:text-4xl leading-tight text-ink-900 dark:text-bone-50">Unsupervised Memory Forensics Triage</h3>
-        <p class="mt-2 font-serif italic text-ink-500 dark:text-bone-300">Volatility3 + Isolation Forest for fileless malware</p>
+        <p class="mt-2 font-sans text-ink-500 dark:text-bone-300">Volatility3 + Isolation Forest for fileless malware</p>
 
-        <div class="mt-6 space-y-3 font-serif text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Subject.</span>Zero-day and fileless malware evade signature-based detection and overwhelm analysts with raw memory artefacts.</p>
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Method.</span>Designed an automated memory forensics triage system on top of Volatility3 with unsupervised ML (Isolation Forest) over behavioural and graph-theoretic features to surface anomalous processes.</p>
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Verdict.</span>Manuscript under review (Texas, USA). Co-authored with H. Coskun and R. Creutzburg.</p>
+        <div class="mt-6 space-y-3 font-sans text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Problem.</span>Zero-day and fileless malware evade signature-based detection and overwhelm analysts with raw memory artefacts.</p>
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Approach.</span>Designed an automated memory forensics triage system on top of Volatility3 with unsupervised ML (Isolation Forest) over behavioural and graph-theoretic features to surface anomalous processes.</p>
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Result.</span>Manuscript under review (Texas, USA). Co-authored with H. Coskun and R. Creutzburg.</p>
         </div>
       </div>
 
       <div class="md:col-span-3">
         
-        <p class="eyebrow mb-2">Apparatus</p>
+        <p class="eyebrow mb-2">Stack</p>
         <ul class="flex flex-wrap gap-1.5">
           <li class="tag">Volatility3</li><li class="tag">Memory Forensics</li><li class="tag">Isolation Forest</li><li class="tag">Graph Analysis</li><li class="tag">Python</li>
         </ul>
         
 
         <div class="mt-6">
-          <p class="eyebrow mb-2">References</p>
-          <ul class="space-y-1.5 font-mono text-[11px] uppercase tracking-[0.2em]">
+          <p class="eyebrow mb-2">Links</p>
+          <ul class="space-y-1.5 font-mono text-[11px] uppercase tracking-[0.18em]">
             
             
             
@@ -299,32 +256,32 @@
     
     <article class="grid md:grid-cols-12 gap-6 py-10 border-b-2 border-ink-900 dark:border-bone-100">
       <div class="md:col-span-2">
-        <span class="font-blackletter text-5xl text-blood-700 dark:text-blood-400 leading-none">№04</span>
-        <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.22em] text-ink-500 dark:text-bone-300">2025</p>
+        <span class="font-display font-bold text-5xl text-blood-700 dark:text-blood-400 leading-none">04</span>
+        <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.2em] text-ink-500 dark:text-bone-300">2025</p>
       </div>
 
       <div class="md:col-span-7 md:pr-6 md:border-r-2 md:border-ink-900 dark:md:border-bone-100">
         <h3 class="font-display text-3xl sm:text-4xl leading-tight text-ink-900 dark:text-bone-50">Basketball RAG Agent</h3>
-        <p class="mt-2 font-serif italic text-ink-500 dark:text-bone-300">Domain-specific Retrieval-Augmented Generation for Turkish basketball</p>
+        <p class="mt-2 font-sans text-ink-500 dark:text-bone-300">Domain-specific Retrieval-Augmented Generation for Turkish basketball</p>
 
-        <div class="mt-6 space-y-3 font-serif text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Subject.</span>Generic search tools fail at semantic, domain-specific basketball queries and break entirely on Turkish league data.</p>
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Method.</span>Built a dual-intelligence RAG system: a vector store of 873 official rule documents plus a FastAPI server over 17,000+ Turkish league games, routed by an intent classifier and exposed through a Gradio UI.</p>
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Verdict.</span>Answers complex bilingual queries about both rules and live league statistics via a single conversational interface.</p>
+        <div class="mt-6 space-y-3 font-sans text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Problem.</span>Generic search tools fail at semantic, domain-specific basketball queries and break entirely on Turkish league data.</p>
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Approach.</span>Built a dual-intelligence RAG system: a vector store of 873 official rule documents plus a FastAPI server over 17,000+ Turkish league games, routed by an intent classifier and exposed through a Gradio UI.</p>
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Result.</span>Answers complex bilingual queries about both rules and live league statistics via a single conversational interface.</p>
         </div>
       </div>
 
       <div class="md:col-span-3">
         
-        <p class="eyebrow mb-2">Apparatus</p>
+        <p class="eyebrow mb-2">Stack</p>
         <ul class="flex flex-wrap gap-1.5">
           <li class="tag">LangChain</li><li class="tag">Ollama</li><li class="tag">RAG</li><li class="tag">FastAPI</li><li class="tag">Gradio</li><li class="tag">Python</li>
         </ul>
         
 
         <div class="mt-6">
-          <p class="eyebrow mb-2">References</p>
-          <ul class="space-y-1.5 font-mono text-[11px] uppercase tracking-[0.2em]">
+          <p class="eyebrow mb-2">Links</p>
+          <ul class="space-y-1.5 font-mono text-[11px] uppercase tracking-[0.18em]">
             <li><a href="https://github.com/mertBiricik/tbf_mhk_rag.git" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Source</a></li>
             
             
@@ -336,32 +293,32 @@
     
     <article class="grid md:grid-cols-12 gap-6 py-10 border-b-2 border-ink-900 dark:border-bone-100">
       <div class="md:col-span-2">
-        <span class="font-blackletter text-5xl text-blood-700 dark:text-blood-400 leading-none">№05</span>
-        <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.22em] text-ink-500 dark:text-bone-300">2024 — 2025</p>
+        <span class="font-display font-bold text-5xl text-blood-700 dark:text-blood-400 leading-none">05</span>
+        <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.2em] text-ink-500 dark:text-bone-300">2024 — 2025</p>
       </div>
 
       <div class="md:col-span-7 md:pr-6 md:border-r-2 md:border-ink-900 dark:md:border-bone-100">
         <h3 class="font-display text-3xl sm:text-4xl leading-tight text-ink-900 dark:text-bone-50">OSINT-Driven SCADA Threat Discovery</h3>
-        <p class="mt-2 font-serif italic text-ink-500 dark:text-bone-300">Field assessment on a Milan SCADA testbed</p>
+        <p class="mt-2 font-sans text-ink-500 dark:text-bone-300">Field assessment on a Milan SCADA testbed</p>
 
-        <div class="mt-6 space-y-3 font-serif text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Subject.</span>Power distribution operators lack a structured pipeline that combines open-source intelligence with AI-based protection for SCADA assets.</p>
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Method.</span>Performed a hands-on OSINT vulnerability assessment on a SCADA testbed in Milan and contributed to a novel framework combining OSINT-driven threat discovery with AI-based protective controls.</p>
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Verdict.</span>Published at IEEE UPEC 2025 (DOI: 10.1109/UPEC65436.2025.11279773).</p>
+        <div class="mt-6 space-y-3 font-sans text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Problem.</span>Power distribution operators lack a structured pipeline that combines open-source intelligence with AI-based protection for SCADA assets.</p>
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Approach.</span>Performed a hands-on OSINT vulnerability assessment on a SCADA testbed in Milan and contributed to a novel framework combining OSINT-driven threat discovery with AI-based protective controls.</p>
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Result.</span>Published at IEEE UPEC 2025 (DOI: 10.1109/UPEC65436.2025.11279773).</p>
         </div>
       </div>
 
       <div class="md:col-span-3">
         
-        <p class="eyebrow mb-2">Apparatus</p>
+        <p class="eyebrow mb-2">Stack</p>
         <ul class="flex flex-wrap gap-1.5">
           <li class="tag">OSINT</li><li class="tag">SCADA</li><li class="tag">Threat Discovery</li><li class="tag">Network Security</li>
         </ul>
         
 
         <div class="mt-6">
-          <p class="eyebrow mb-2">References</p>
-          <ul class="space-y-1.5 font-mono text-[11px] uppercase tracking-[0.2em]">
+          <p class="eyebrow mb-2">Links</p>
+          <ul class="space-y-1.5 font-mono text-[11px] uppercase tracking-[0.18em]">
             
             
             
@@ -373,32 +330,32 @@
     
     <article class="grid md:grid-cols-12 gap-6 py-10 border-b-2 border-ink-900 dark:border-bone-100">
       <div class="md:col-span-2">
-        <span class="font-blackletter text-5xl text-blood-700 dark:text-blood-400 leading-none">№06</span>
-        <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.22em] text-ink-500 dark:text-bone-300">2023 — 2024</p>
+        <span class="font-display font-bold text-5xl text-blood-700 dark:text-blood-400 leading-none">06</span>
+        <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.2em] text-ink-500 dark:text-bone-300">2023 — 2024</p>
       </div>
 
       <div class="md:col-span-7 md:pr-6 md:border-r-2 md:border-ink-900 dark:md:border-bone-100">
         <h3 class="font-display text-3xl sm:text-4xl leading-tight text-ink-900 dark:text-bone-50">C/C++ Systems Benchmarking Suite</h3>
-        <p class="mt-2 font-serif italic text-ink-500 dark:text-bone-300">Custom allocator, scheduler, shell, and HTTP server</p>
+        <p class="mt-2 font-sans text-ink-500 dark:text-bone-300">Custom allocator, scheduler, shell, and HTTP server</p>
 
-        <div class="mt-6 space-y-3 font-serif text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Subject.</span>Coursework rarely connects OS theory (allocation, scheduling, IO) to measurable performance on a single rig.</p>
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Method.</span>Engineered a Makefile-driven suite implementing a custom memory allocator, process scheduler, UNIX shell, and minimal web server, each with reproducible benchmarks.</p>
-          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Verdict.</span>Reusable framework for systems performance experiments and a teaching reference.</p>
+        <div class="mt-6 space-y-3 font-sans text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Problem.</span>Coursework rarely connects OS theory (allocation, scheduling, IO) to measurable performance on a single rig.</p>
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Approach.</span>Engineered a Makefile-driven suite implementing a custom memory allocator, process scheduler, UNIX shell, and minimal web server, each with reproducible benchmarks.</p>
+          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Result.</span>Reusable framework for systems performance experiments and a teaching reference.</p>
         </div>
       </div>
 
       <div class="md:col-span-3">
         
-        <p class="eyebrow mb-2">Apparatus</p>
+        <p class="eyebrow mb-2">Stack</p>
         <ul class="flex flex-wrap gap-1.5">
           <li class="tag">C</li><li class="tag">C++</li><li class="tag">Makefile</li><li class="tag">Linux</li><li class="tag">System Programming</li>
         </ul>
         
 
         <div class="mt-6">
-          <p class="eyebrow mb-2">References</p>
-          <ul class="space-y-1.5 font-mono text-[11px] uppercase tracking-[0.2em]">
+          <p class="eyebrow mb-2">Links</p>
+          <ul class="space-y-1.5 font-mono text-[11px] uppercase tracking-[0.18em]">
             <li><a href="https://github.com/mertBiricik/c_benchmark.git" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Source</a></li>
             
             
@@ -410,33 +367,30 @@
     
   </ol>
 
-  <div class="fleuron"><span class="font-blackletter text-2xl">✠</span></div>
-
-  <div class="text-center">
+  <div class="text-center pt-12">
     <h2 class="display-3 text-ink-900 dark:text-bone-50">Looking for collaboration?</h2>
     <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
-      <a href="/contact/" class="btn-solid">→ Send word</a>
-      <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="btn-ghost">↗ Source code</a>
+      <a href="/contact/" class="btn-solid">→ Contact</a>
+      <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="btn-ghost">↗ GitHub</a>
     </div>
   </div>
 </section>
 
   </main>
 
-  
   <footer class="mt-auto border-t-2 border-ink-900 dark:border-bone-100">
     <div class="container-wide py-12">
       <div class="grid gap-10 md:grid-cols-12">
         <div class="md:col-span-5">
-          <p class="eyebrow-blood">Colophon</p>
-          <p class="mt-3 font-serif text-base leading-relaxed text-ink-700 dark:text-bone-200">
-            Set in <span class="font-display italic">Cormorant Garamond</span> and <span class="font-serif italic">EB Garamond</span>; ornaments in <span class="font-blackletter">UnifrakturMaguntia</span>; labels in <span class="font-mono">JetBrains Mono</span>. Composed in Eleventy, hand-set with Tailwind. Pressed at GitHub Pages, Berlin–Istanbul.
+          <p class="eyebrow-blood">About this site</p>
+          <p class="mt-3 font-sans text-base leading-relaxed text-ink-700 dark:text-bone-200 max-w-md">
+            Built with Eleventy and Tailwind CSS. Set in <span class="font-display font-semibold">Space Grotesk</span> for headings and <span class="font-sans font-semibold">Inter</span> for body, with <span class="font-mono">JetBrains Mono</span> for labels. Hosted on GitHub Pages.
           </p>
         </div>
 
         <div class="md:col-span-3">
-          <p class="eyebrow">Correspondence</p>
-          <ul class="mt-3 space-y-1.5 font-mono text-xs uppercase tracking-[0.16em]">
+          <p class="eyebrow">Contact</p>
+          <ul class="mt-3 space-y-1.5 font-mono text-xs uppercase tracking-[0.14em]">
             <li><a href="mailto:mert@biricik.de" class="no-underline hover:underline">mert@biricik.de</a></li>
             <li><a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">linkedin / mertbiricik</a></li>
             <li><a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">github / mertBiricik</a></li>
@@ -446,8 +400,8 @@
         </div>
 
         <div class="md:col-span-4">
-          <p class="eyebrow">Index</p>
-          <ul class="mt-3 grid grid-cols-2 gap-y-1.5 font-mono text-xs uppercase tracking-[0.16em]">
+          <p class="eyebrow">Site</p>
+          <ul class="mt-3 grid grid-cols-2 gap-y-1.5 font-mono text-xs uppercase tracking-[0.14em]">
             
             <li><a href="/" class="no-underline hover:underline">Home</a></li>
             
@@ -465,9 +419,9 @@
         </div>
       </div>
 
-      <div class="mt-10 pt-6 border-t-2 border-ink-900 dark:border-bone-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-500 dark:text-bone-300">
-        <p>© Anno Domini 2026 · Mert Biricik · All rights reserved</p>
-        <p>Memento mori &nbsp;✠&nbsp; Memento codere</p>
+      <div class="mt-10 pt-6 border-t-2 border-ink-900 dark:border-bone-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-500 dark:text-bone-300">
+        <p>© 2026 Mert Biricik</p>
+        <p>Source on <a href="https://github.com/mertBiricik/mertbiricik.github.io" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">GitHub</a></p>
       </div>
     </div>
   </footer>

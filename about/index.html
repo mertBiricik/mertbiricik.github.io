@@ -38,127 +38,89 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;700&family=UnifrakturMaguntia&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="min-h-screen flex flex-col">
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-ink-900 focus:text-bone-50 focus:px-3 focus:py-2 focus:no-underline">Skip to content</a>
 
-  
   <header id="site-header" class="border-b-2 border-ink-900 dark:border-bone-100">
     <div class="container-wide">
-      <div class="flex items-center justify-between py-3 text-[11px] font-mono uppercase tracking-[0.22em] text-ink-700 dark:text-bone-300 border-b border-ink-900 dark:border-bone-200">
-        <span>Vol. 2026 &nbsp;·&nbsp; No. 125</span>
-        <span class="hidden sm:inline">Istanbul, Turkey</span>
-        <span>Established <time datetime="2021">MMXXI</time></span>
-      </div>
-
-      <div class="py-6 sm:py-8 flex flex-col items-center text-center">
-        <a href="/" class="no-underline">
-          <h1 class="font-blackletter text-ink-900 dark:text-bone-50 leading-none text-5xl sm:text-7xl lg:text-8xl">Mert Biricik</h1>
+      <div class="flex items-center justify-between gap-4 py-4">
+        <a href="/" class="flex items-center gap-3 no-underline">
+          <span class="inline-flex h-9 w-9 items-center justify-center border-2 border-ink-900 dark:border-bone-100 bg-ink-900 text-bone-50 dark:bg-bone-50 dark:text-ink-900">
+            <span class="font-display font-bold text-base leading-none">MB</span>
+          </span>
+          <span class="font-display font-bold text-lg sm:text-xl text-ink-900 dark:text-bone-50 tracking-tight">Mert Biricik</span>
         </a>
-        <p class="mt-2 font-mono text-[10px] sm:text-xs uppercase tracking-[0.4em] text-blood-700 dark:text-blood-400">
-          ✠ &nbsp; Cybersecurity Researcher &amp; CyberMACS Scholar &nbsp; ✠
-        </p>
-      </div>
 
-      <nav class="border-t-2 border-ink-900 dark:border-bone-100">
-        <div class="flex items-center justify-between gap-4 py-3">
-          <ul id="nav-menu" class="hidden md:flex items-center gap-7">
-            
-            <li>
-              <a href="/" class="nav-link ">
-                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Home
-              </a>
-            </li>
-            
-            <li>
-              <a href="/about/" class="nav-link active">
-                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>About
-              </a>
-            </li>
-            
-            <li>
-              <a href="/projects/" class="nav-link ">
-                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Projects
-              </a>
-            </li>
-            
-            <li>
-              <a href="/publications/" class="nav-link ">
-                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Publications
-              </a>
-            </li>
-            
-            <li>
-              <a href="/blog/" class="nav-link ">
-                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Blog
-              </a>
-            </li>
-            
-            <li>
-              <a href="/contact/" class="nav-link ">
-                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Contact
-              </a>
-            </li>
-            
-          </ul>
+        <ul id="nav-menu" class="hidden md:flex items-center gap-6">
+          
+          <li>
+            <a href="/" class="nav-link ">Home</a>
+          </li>
+          
+          <li>
+            <a href="/about/" class="nav-link active">About</a>
+          </li>
+          
+          <li>
+            <a href="/projects/" class="nav-link ">Projects</a>
+          </li>
+          
+          <li>
+            <a href="/publications/" class="nav-link ">Publications</a>
+          </li>
+          
+          <li>
+            <a href="/blog/" class="nav-link ">Blog</a>
+          </li>
+          
+          <li>
+            <a href="/contact/" class="nav-link ">Contact</a>
+          </li>
+          
+        </ul>
 
-          <div class="flex items-center gap-2 ml-auto">
-            <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors no-underline" aria-label="GitHub">
-              <i class="fa-brands fa-github text-sm"></i>
-            </a>
-            <a href="https://scholar.google.com/citations?user=MgyR0RMAAAAJ" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors no-underline" aria-label="Google Scholar">
-              <i class="fa-solid fa-graduation-cap text-sm"></i>
-            </a>
-            <button id="theme-toggle" class="inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors" aria-label="Toggle theme">
-              <i class="fa-solid fa-sun sun-icon text-sm"></i>
-              <i class="fa-solid fa-moon moon-icon text-sm"></i>
-            </button>
-            <button id="menu-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-              <i class="fa-solid fa-bars text-sm"></i>
-            </button>
-          </div>
+        <div class="flex items-center gap-2">
+          <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors no-underline" aria-label="GitHub">
+            <i class="fa-brands fa-github text-sm"></i>
+          </a>
+          <button id="theme-toggle" class="inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors" aria-label="Toggle theme">
+            <i class="fa-solid fa-sun sun-icon text-sm"></i>
+            <i class="fa-solid fa-moon moon-icon text-sm"></i>
+          </button>
+          <button id="menu-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="fa-solid fa-bars text-sm"></i>
+          </button>
         </div>
-      </nav>
+      </div>
 
       <div id="mobile-menu" class="md:hidden hidden border-t-2 border-ink-900 dark:border-bone-100">
         <ul class="py-3 space-y-2">
           
           <li>
-            <a href="/" class="nav-link block py-1 ">
-              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Home
-            </a>
+            <a href="/" class="nav-link block py-1 ">Home</a>
           </li>
           
           <li>
-            <a href="/about/" class="nav-link block py-1 active">
-              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>About
-            </a>
+            <a href="/about/" class="nav-link block py-1 active">About</a>
           </li>
           
           <li>
-            <a href="/projects/" class="nav-link block py-1 ">
-              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Projects
-            </a>
+            <a href="/projects/" class="nav-link block py-1 ">Projects</a>
           </li>
           
           <li>
-            <a href="/publications/" class="nav-link block py-1 ">
-              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Publications
-            </a>
+            <a href="/publications/" class="nav-link block py-1 ">Publications</a>
           </li>
           
           <li>
-            <a href="/blog/" class="nav-link block py-1 ">
-              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Blog
-            </a>
+            <a href="/blog/" class="nav-link block py-1 ">Blog</a>
           </li>
           
           <li>
-            <a href="/contact/" class="nav-link block py-1 ">
-              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Contact
-            </a>
+            <a href="/contact/" class="nav-link block py-1 ">Contact</a>
           </li>
           
         </ul>
@@ -168,44 +130,37 @@
 
   <main id="main" class="flex-1">
     
-<section class="container-wide py-10 sm:py-14">
-  <div class="masthead">
-    <span class="eyebrow-blood">Folio II</span>
-    <span class="eyebrow">A self-portrait</span>
-  </div>
-
-  <div class="grid lg:grid-cols-12 gap-10 mt-10">
+<section class="container-wide pt-12 sm:pt-16 lg:pt-20 pb-10">
+  <div class="grid lg:grid-cols-12 gap-10">
     <div class="lg:col-span-8 lg:pr-10 lg:border-r-2 lg:border-ink-900 dark:lg:border-bone-100">
-      <span class="section-marker">De ipso</span>
-      <h2 class="display-1 mt-5 text-ink-900 dark:text-bone-50 text-balance">On the author.</h2>
-
-      <p class="dropcap mt-8 font-serif text-xl leading-relaxed text-ink-700 dark:text-bone-200 max-w-prose">Cybersecurity researcher and incoming Erasmus Mundus Scholar (MSc in Applied Cybersecurity) with hands-on experience in network administration, system deployment, and threat discovery. I run critical IT infrastructure and software rollouts under high-pressure conditions and focus on Zero Trust, Cloud Security, and SASE.</p>
-
-      <p class="mt-5 font-serif text-lg leading-relaxed text-ink-700 dark:text-bone-200 max-w-prose">
-        I work at the seam between systems engineering and applied AI: building research tools that survive production loads, hardening the infrastructure that hosts them, and turning sensor data — power grids, EEG signals, sports telemetry — into signals that defenders can act on.
+      <p class="eyebrow-blood">About</p>
+      <h1 class="display-1 mt-5 text-ink-900 dark:text-bone-50 text-balance">Mert Biricik.</h1>
+      <p class="mt-6 font-sans text-xl leading-relaxed text-ink-700 dark:text-bone-200 max-w-2xl">Cybersecurity researcher and incoming Erasmus Mundus Scholar (MSc in Applied Cybersecurity) with hands-on experience in network administration, system deployment, and threat discovery. I run critical IT infrastructure and software rollouts under high-pressure conditions and focus on Zero Trust, Cloud Security, and SASE.</p>
+      <p class="mt-5 font-sans text-lg leading-relaxed text-ink-700 dark:text-bone-200 max-w-2xl">
+        I work at the seam between systems engineering and applied AI: building research tools that survive production loads, hardening the infrastructure that hosts them, and turning sensor data — power grids, EEG signals, sports telemetry — into signals defenders can act on.
       </p>
 
       <div class="mt-10">
         <p class="eyebrow-blood">Particular interests</p>
         <ul class="mt-3 grid sm:grid-cols-2 gap-y-1.5">
           
-          <li class="flex gap-2 font-serif text-base text-ink-700 dark:text-bone-200">
+          <li class="flex gap-2 font-sans text-base text-ink-700 dark:text-bone-200">
             <span class="text-blood-700 dark:text-blood-400">·</span>Threat hunting &amp; memory forensics
           </li>
           
-          <li class="flex gap-2 font-serif text-base text-ink-700 dark:text-bone-200">
+          <li class="flex gap-2 font-sans text-base text-ink-700 dark:text-bone-200">
             <span class="text-blood-700 dark:text-blood-400">·</span>OSINT-driven threat discovery
           </li>
           
-          <li class="flex gap-2 font-serif text-base text-ink-700 dark:text-bone-200">
+          <li class="flex gap-2 font-sans text-base text-ink-700 dark:text-bone-200">
             <span class="text-blood-700 dark:text-blood-400">·</span>Anomaly detection in critical infrastructure
           </li>
           
-          <li class="flex gap-2 font-serif text-base text-ink-700 dark:text-bone-200">
+          <li class="flex gap-2 font-sans text-base text-ink-700 dark:text-bone-200">
             <span class="text-blood-700 dark:text-blood-400">·</span>Agentic AI &amp; RAG systems
           </li>
           
-          <li class="flex gap-2 font-serif text-base text-ink-700 dark:text-bone-200">
+          <li class="flex gap-2 font-sans text-base text-ink-700 dark:text-bone-200">
             <span class="text-blood-700 dark:text-blood-400">·</span>Zero Trust, Cloud Security, SASE
           </li>
           
@@ -214,55 +169,52 @@
     </div>
 
     <aside class="lg:col-span-4">
-      <span class="section-marker">Particulars</span>
-      <dl class="mt-5">
+      <p class="eyebrow">Particulars</p>
+      <dl class="mt-4">
         <div class="def-row">
-          <dt class="def-key">Born of</dt>
-          <dd class="font-serif text-base text-ink-700 dark:text-bone-200">Dual citizen (German / Turkish)</dd>
+          <dt class="def-key">Citizenship</dt>
+          <dd class="font-sans text-base text-ink-700 dark:text-bone-200">Dual citizen (German / Turkish)</dd>
         </div>
         <div class="def-row">
-          <dt class="def-key">Resides</dt>
-          <dd class="font-serif text-base text-ink-700 dark:text-bone-200">Istanbul, Turkey</dd>
+          <dt class="def-key">Based</dt>
+          <dd class="font-sans text-base text-ink-700 dark:text-bone-200">Istanbul, Turkey</dd>
         </div>
         <div class="def-row">
-          <dt class="def-key">Tongues</dt>
+          <dt class="def-key">Languages</dt>
           <dd>
             <ul class="space-y-0.5">
               
-              <li class="font-serif text-base text-ink-700 dark:text-bone-200"><span class="font-semibold">Turkish</span> — Native</li>
+              <li class="font-sans text-base text-ink-700 dark:text-bone-200"><span class="font-semibold">Turkish</span> — Native</li>
               
-              <li class="font-serif text-base text-ink-700 dark:text-bone-200"><span class="font-semibold">English</span> — C1 <span class="font-mono text-xs text-ink-500 dark:text-bone-300">(IELTS 7.5)</span></li>
+              <li class="font-sans text-base text-ink-700 dark:text-bone-200"><span class="font-semibold">English</span> — C1 <span class="font-mono text-xs text-ink-500 dark:text-bone-300">(IELTS 7.5)</span></li>
               
-              <li class="font-serif text-base text-ink-700 dark:text-bone-200"><span class="font-semibold">German</span> — A2 <span class="font-mono text-xs text-ink-500 dark:text-bone-300">(Dual citizen DE/TR)</span></li>
+              <li class="font-sans text-base text-ink-700 dark:text-bone-200"><span class="font-semibold">German</span> — A2 <span class="font-mono text-xs text-ink-500 dark:text-bone-300">(Dual citizen DE/TR)</span></li>
               
             </ul>
           </dd>
         </div>
         <div class="def-row">
-          <dt class="def-key">Pastimes</dt>
-          <dd class="font-serif text-base text-ink-700 dark:text-bone-200">Mountaineering · Rock Climbing · Search &amp; Rescue Operations</dd>
+          <dt class="def-key">Off the clock</dt>
+          <dd class="font-sans text-base text-ink-700 dark:text-bone-200">Mountaineering · Rock Climbing · Search &amp; Rescue Operations</dd>
         </div>
       </dl>
     </aside>
   </div>
 </section>
 
-<div class="fleuron"><span class="font-blackletter text-2xl">✠</span></div>
-
 
 <section class="container-wide section-tight">
   <div class="masthead">
-    <span class="eyebrow-blood">§ I</span>
-    <span class="eyebrow">Instruments</span>
+    <span class="eyebrow-blood">01 — Stack</span>
+    <span class="eyebrow hidden sm:inline">Tools I use</span>
   </div>
-  <h2 class="display-2 mt-6 text-ink-900 dark:text-bone-50">Tools of trade.</h2>
 
   <div class="mt-10 grid md:grid-cols-2 gap-0 border-2 border-ink-900 dark:border-bone-100">
     
     <div class="p-7 md:border-r-2 border-b-2 border-ink-900 dark:border-bone-100">
       <div class="flex items-baseline justify-between">
         <h3 class="font-display text-xl text-ink-900 dark:text-bone-50">Security</h3>
-        <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-500 dark:text-bone-300">5 entries</span>
+        <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-500 dark:text-bone-300">5 items</span>
       </div>
       <ul class="mt-4 flex flex-wrap gap-1.5">
         <li class="tag">Threat Hunting</li><li class="tag">Memory Forensics</li><li class="tag">OSINT Analysis</li><li class="tag">Anomaly Detection</li><li class="tag">Network Security</li>
@@ -272,7 +224,7 @@
     <div class="p-7  border-b-2 border-ink-900 dark:border-bone-100">
       <div class="flex items-baseline justify-between">
         <h3 class="font-display text-xl text-ink-900 dark:text-bone-50">AI &amp; Data</h3>
-        <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-500 dark:text-bone-300">6 entries</span>
+        <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-500 dark:text-bone-300">6 items</span>
       </div>
       <ul class="mt-4 flex flex-wrap gap-1.5">
         <li class="tag">Agentic AI</li><li class="tag">RAG</li><li class="tag">ETL Pipelines</li><li class="tag">Time-Series Analysis</li><li class="tag">NLP</li><li class="tag">Predictive Modeling</li>
@@ -282,7 +234,7 @@
     <div class="p-7 md:border-r-2 border-b-2 md:border-b-0 border-ink-900 dark:border-bone-100">
       <div class="flex items-baseline justify-between">
         <h3 class="font-display text-xl text-ink-900 dark:text-bone-50">Infrastructure</h3>
-        <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-500 dark:text-bone-300">5 entries</span>
+        <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-500 dark:text-bone-300">5 items</span>
       </div>
       <ul class="mt-4 flex flex-wrap gap-1.5">
         <li class="tag">Docker</li><li class="tag">Kubernetes</li><li class="tag">QEMU + KVM</li><li class="tag">Linux (Debian, Red Hat)</li><li class="tag">Network Administration</li>
@@ -292,7 +244,7 @@
     <div class="p-7  border-b-2 md:border-b-0 border-ink-900 dark:border-bone-100">
       <div class="flex items-baseline justify-between">
         <h3 class="font-display text-xl text-ink-900 dark:text-bone-50">Tooling</h3>
-        <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-500 dark:text-bone-300">5 entries</span>
+        <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-500 dark:text-bone-300">5 items</span>
       </div>
       <ul class="mt-4 flex flex-wrap gap-1.5">
         <li class="tag">Python</li><li class="tag">Shell Scripting</li><li class="tag">Git</li><li class="tag">LaTeX</li><li class="tag">Microsoft Office</li>
@@ -305,31 +257,30 @@
 
 <section class="container-wide section-tight">
   <div class="masthead">
-    <span class="eyebrow-blood">§ II</span>
-    <span class="eyebrow">Chronicle of work</span>
+    <span class="eyebrow-blood">02 — Experience</span>
+    <span class="eyebrow hidden sm:inline">Where I've worked</span>
   </div>
-  <h2 class="display-2 mt-6 text-ink-900 dark:text-bone-50">Where I have served.</h2>
 
   <ol class="mt-10 border-t-2 border-ink-900 dark:border-bone-100">
     
     <li class="grid md:grid-cols-12 gap-4 py-7 border-b-2 border-ink-900 dark:border-bone-100">
       <div class="md:col-span-3">
-        <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-blood-700 dark:text-blood-400">09/2025 — Present</p>
-        <p class="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-500 dark:text-bone-300">Istanbul</p>
+        <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">09/2025 — Present</p>
+        <p class="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-500 dark:text-bone-300">Istanbul</p>
       </div>
       <div class="md:col-span-9">
         <h3 class="font-display text-2xl text-ink-900 dark:text-bone-50">Graduate Researcher</h3>
-        <p class="mt-1 font-serif italic text-ink-500 dark:text-bone-300">
+        <p class="mt-1 font-sans text-ink-500 dark:text-bone-300">
           at <a href="https://sites.google.com/view/bci-feast" target="_blank" rel="noopener noreferrer">Kadir Has University BCI-Feast</a>
         </p>
         <ul class="mt-4 space-y-2">
           
-          <li class="flex gap-3 font-serif text-base text-ink-700 dark:text-bone-200 leading-relaxed">
+          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
             <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
             <span>Conducting research on Brain-Computer Interface (BCI) systems within the BCI-FEAST laboratory.</span>
           </li>
           
-          <li class="flex gap-3 font-serif text-base text-ink-700 dark:text-bone-200 leading-relaxed">
+          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
             <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
             <span>Delivering laboratory sessions for MIS undergraduates on algorithm design and operating systems.</span>
           </li>
@@ -340,22 +291,22 @@
     
     <li class="grid md:grid-cols-12 gap-4 py-7 border-b-2 border-ink-900 dark:border-bone-100">
       <div class="md:col-span-3">
-        <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-blood-700 dark:text-blood-400">10/2023 — 09/2025</p>
-        <p class="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-500 dark:text-bone-300">Istanbul</p>
+        <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">10/2023 — 09/2025</p>
+        <p class="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-500 dark:text-bone-300">Istanbul</p>
       </div>
       <div class="md:col-span-9">
         <h3 class="font-display text-2xl text-ink-900 dark:text-bone-50">Undergraduate Researcher</h3>
-        <p class="mt-1 font-serif italic text-ink-500 dark:text-bone-300">
+        <p class="mt-1 font-sans text-ink-500 dark:text-bone-300">
           at <a href="https://ccip.khas.edu.tr/en/center-for-cybersecurity-and-critical-infrastructure-protection-3/" target="_blank" rel="noopener noreferrer">Kadir Has University CCIP</a>
         </p>
         <ul class="mt-4 space-y-2">
           
-          <li class="flex gap-3 font-serif text-base text-ink-700 dark:text-bone-200 leading-relaxed">
+          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
             <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
             <span>Provided technical support for ML projects, specialising in GPU-accelerated systems.</span>
           </li>
           
-          <li class="flex gap-3 font-serif text-base text-ink-700 dark:text-bone-200 leading-relaxed">
+          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
             <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
             <span>Administered network and systems infrastructure for the Center on Cybersecurity and Critical Infrastructure Protection.</span>
           </li>
@@ -366,27 +317,27 @@
     
     <li class="grid md:grid-cols-12 gap-4 py-7 border-b-2 border-ink-900 dark:border-bone-100">
       <div class="md:col-span-3">
-        <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-blood-700 dark:text-blood-400">05/2025 — Present</p>
-        <p class="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-500 dark:text-bone-300">Istanbul</p>
+        <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">05/2025 — Present</p>
+        <p class="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-500 dark:text-bone-300">Istanbul</p>
       </div>
       <div class="md:col-span-9">
         <h3 class="font-display text-2xl text-ink-900 dark:text-bone-50">Search &amp; Rescue Operator &amp; Instructor</h3>
-        <p class="mt-1 font-serif italic text-ink-500 dark:text-bone-300">
+        <p class="mt-1 font-sans text-ink-500 dark:text-bone-300">
           at AFAD
         </p>
         <ul class="mt-4 space-y-2">
           
-          <li class="flex gap-3 font-serif text-base text-ink-700 dark:text-bone-200 leading-relaxed">
+          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
             <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
             <span>Conduct high-stakes urban and mountain search &amp; rescue operations under life-critical pressure.</span>
           </li>
           
-          <li class="flex gap-3 font-serif text-base text-ink-700 dark:text-bone-200 leading-relaxed">
+          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
             <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
             <span>Certified AFAD instructor delivering training on disaster preparedness and USAR protocols.</span>
           </li>
           
-          <li class="flex gap-3 font-serif text-base text-ink-700 dark:text-bone-200 leading-relaxed">
+          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
             <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
             <span>Operate specialised equipment under AFAD (TR) and INSARAG (UN) standards.</span>
           </li>
@@ -397,22 +348,22 @@
     
     <li class="grid md:grid-cols-12 gap-4 py-7 border-b-2 border-ink-900 dark:border-bone-100">
       <div class="md:col-span-3">
-        <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-blood-700 dark:text-blood-400">09/2022 — 07/2025</p>
+        <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">09/2022 — 07/2025</p>
         
       </div>
       <div class="md:col-span-9">
         <h3 class="font-display text-2xl text-ink-900 dark:text-bone-50">Video Operator &amp; Technical Support</h3>
-        <p class="mt-1 font-serif italic text-ink-500 dark:text-bone-300">
+        <p class="mt-1 font-sans text-ink-500 dark:text-bone-300">
           at FIBA &amp; Turkish Basketball Federation
         </p>
         <ul class="mt-4 space-y-2">
           
-          <li class="flex gap-3 font-serif text-base text-ink-700 dark:text-bone-200 leading-relaxed">
+          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
             <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
             <span>Provided technical setup and troubleshooting to 12 video operators during live, high-stress events to maintain 100% uptime.</span>
           </li>
           
-          <li class="flex gap-3 font-serif text-base text-ink-700 dark:text-bone-200 leading-relaxed">
+          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
             <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
             <span>Managed real-time referee data and video tagging using the ERIC software suite.</span>
           </li>
@@ -427,35 +378,34 @@
 
 <section class="container-wide section-tight">
   <div class="masthead">
-    <span class="eyebrow-blood">§ III</span>
-    <span class="eyebrow">Course of study</span>
+    <span class="eyebrow-blood">03 — Education</span>
+    <span class="eyebrow hidden sm:inline">Studies</span>
   </div>
-  <h2 class="display-2 mt-6 text-ink-900 dark:text-bone-50">Education.</h2>
 
   <ol class="mt-10 border-t-2 border-ink-900 dark:border-bone-100">
     
     <li class="grid md:grid-cols-12 gap-4 py-7 border-b-2 border-ink-900 dark:border-bone-100">
       <div class="md:col-span-3">
-        <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-blood-700 dark:text-blood-400">09/2026 — 07/2027</p>
+        <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">09/2026 — 07/2027</p>
       </div>
       <div class="md:col-span-9">
         <h3 class="font-display text-2xl text-ink-900 dark:text-bone-50">
           <a href="https://cybermacs.eu/" target="_blank" rel="noopener noreferrer">MSc in Applied Cybersecurity (CyberMACS)</a>
         </h3>
-        <p class="mt-1 font-serif italic text-ink-500 dark:text-bone-300">Erasmus Mundus Joint MSc</p>
+        <p class="mt-1 font-sans text-ink-500 dark:text-bone-300">Erasmus Mundus Joint MSc</p>
         <ul class="mt-4 space-y-2">
           
-          <li class="flex gap-3 font-serif text-base text-ink-700 dark:text-bone-200 leading-relaxed">
+          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
             <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
             <span>Awarded full EU scholarship (€1,400/month) on academic excellence.</span>
           </li>
           
-          <li class="flex gap-3 font-serif text-base text-ink-700 dark:text-bone-200 leading-relaxed">
+          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
             <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
             <span>Mobility: Year 1 — Kadir Has University (TR) &amp; SRH Berlin (DE); Year 2 — UKIM (MK).</span>
           </li>
           
-          <li class="flex gap-3 font-serif text-base text-ink-700 dark:text-bone-200 leading-relaxed">
+          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
             <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
             <span>Focus: Applied Cybersecurity, Cryptography, Network Security, Entrepreneurship.</span>
           </li>
@@ -466,21 +416,21 @@
     
     <li class="grid md:grid-cols-12 gap-4 py-7 border-b-2 border-ink-900 dark:border-bone-100">
       <div class="md:col-span-3">
-        <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-blood-700 dark:text-blood-400">09/2025 — 07/2026</p>
+        <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">09/2025 — 07/2026</p>
       </div>
       <div class="md:col-span-9">
         <h3 class="font-display text-2xl text-ink-900 dark:text-bone-50">
           MA in Administrative Sciences
         </h3>
-        <p class="mt-1 font-serif italic text-ink-500 dark:text-bone-300">Kadir Has University</p>
+        <p class="mt-1 font-sans text-ink-500 dark:text-bone-300">Kadir Has University</p>
         <ul class="mt-4 space-y-2">
           
-          <li class="flex gap-3 font-serif text-base text-ink-700 dark:text-bone-200 leading-relaxed">
+          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
             <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
             <span>Graduate researcher in the BCI-Feast lab on EEG-driven Brain Computer Interfaces.</span>
           </li>
           
-          <li class="flex gap-3 font-serif text-base text-ink-700 dark:text-bone-200 leading-relaxed">
+          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
             <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
             <span>Thesis under journal review.</span>
           </li>
@@ -491,21 +441,21 @@
     
     <li class="grid md:grid-cols-12 gap-4 py-7 border-b-2 border-ink-900 dark:border-bone-100">
       <div class="md:col-span-3">
-        <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-blood-700 dark:text-blood-400">09/2021 — 06/2025</p>
+        <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">09/2021 — 06/2025</p>
       </div>
       <div class="md:col-span-9">
         <h3 class="font-display text-2xl text-ink-900 dark:text-bone-50">
           BA in Management Information Systems
         </h3>
-        <p class="mt-1 font-serif italic text-ink-500 dark:text-bone-300">Kadir Has University, Istanbul</p>
+        <p class="mt-1 font-sans text-ink-500 dark:text-bone-300">Kadir Has University, Istanbul</p>
         <ul class="mt-4 space-y-2">
           
-          <li class="flex gap-3 font-serif text-base text-ink-700 dark:text-bone-200 leading-relaxed">
+          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
             <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
             <span>Thesis: Anomaly Detection in Electric Distribution Systems.</span>
           </li>
           
-          <li class="flex gap-3 font-serif text-base text-ink-700 dark:text-bone-200 leading-relaxed">
+          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
             <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
             <span>Collaborative work with BEDAS, published at IEEE UPEC 2025.</span>
           </li>
@@ -518,30 +468,28 @@
 </section>
 
 <section class="container-wide section-tight text-center">
-  <div class="fleuron"><span class="font-blackletter text-2xl">✠</span></div>
-  <h2 class="display-3 text-ink-900 dark:text-bone-50">Take leave by post.</h2>
+  <h2 class="display-3 text-ink-900 dark:text-bone-50">Get in touch.</h2>
   <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
-    <a href="/contact/" class="btn-solid">→ Correspondence</a>
-    <a href="/projects/" class="btn-ghost">View dossiers</a>
+    <a href="/contact/" class="btn-solid">→ Contact</a>
+    <a href="/projects/" class="btn-ghost">View projects</a>
   </div>
 </section>
 
   </main>
 
-  
   <footer class="mt-auto border-t-2 border-ink-900 dark:border-bone-100">
     <div class="container-wide py-12">
       <div class="grid gap-10 md:grid-cols-12">
         <div class="md:col-span-5">
-          <p class="eyebrow-blood">Colophon</p>
-          <p class="mt-3 font-serif text-base leading-relaxed text-ink-700 dark:text-bone-200">
-            Set in <span class="font-display italic">Cormorant Garamond</span> and <span class="font-serif italic">EB Garamond</span>; ornaments in <span class="font-blackletter">UnifrakturMaguntia</span>; labels in <span class="font-mono">JetBrains Mono</span>. Composed in Eleventy, hand-set with Tailwind. Pressed at GitHub Pages, Berlin–Istanbul.
+          <p class="eyebrow-blood">About this site</p>
+          <p class="mt-3 font-sans text-base leading-relaxed text-ink-700 dark:text-bone-200 max-w-md">
+            Built with Eleventy and Tailwind CSS. Set in <span class="font-display font-semibold">Space Grotesk</span> for headings and <span class="font-sans font-semibold">Inter</span> for body, with <span class="font-mono">JetBrains Mono</span> for labels. Hosted on GitHub Pages.
           </p>
         </div>
 
         <div class="md:col-span-3">
-          <p class="eyebrow">Correspondence</p>
-          <ul class="mt-3 space-y-1.5 font-mono text-xs uppercase tracking-[0.16em]">
+          <p class="eyebrow">Contact</p>
+          <ul class="mt-3 space-y-1.5 font-mono text-xs uppercase tracking-[0.14em]">
             <li><a href="mailto:mert@biricik.de" class="no-underline hover:underline">mert@biricik.de</a></li>
             <li><a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">linkedin / mertbiricik</a></li>
             <li><a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">github / mertBiricik</a></li>
@@ -551,8 +499,8 @@
         </div>
 
         <div class="md:col-span-4">
-          <p class="eyebrow">Index</p>
-          <ul class="mt-3 grid grid-cols-2 gap-y-1.5 font-mono text-xs uppercase tracking-[0.16em]">
+          <p class="eyebrow">Site</p>
+          <ul class="mt-3 grid grid-cols-2 gap-y-1.5 font-mono text-xs uppercase tracking-[0.14em]">
             
             <li><a href="/" class="no-underline hover:underline">Home</a></li>
             
@@ -570,9 +518,9 @@
         </div>
       </div>
 
-      <div class="mt-10 pt-6 border-t-2 border-ink-900 dark:border-bone-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-500 dark:text-bone-300">
-        <p>© Anno Domini 2026 · Mert Biricik · All rights reserved</p>
-        <p>Memento mori &nbsp;✠&nbsp; Memento codere</p>
+      <div class="mt-10 pt-6 border-t-2 border-ink-900 dark:border-bone-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-500 dark:text-bone-300">
+        <p>© 2026 Mert Biricik</p>
+        <p>Source on <a href="https://github.com/mertBiricik/mertbiricik.github.io" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">GitHub</a></p>
       </div>
     </div>
   </footer>
