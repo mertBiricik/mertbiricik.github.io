@@ -1,120 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <script>
     (function() {
-      const savedTheme = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', savedTheme);
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+        if (theme === 'dark') document.documentElement.classList.add('dark');
+      } catch (e) {}
     })();
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How I Built a Basketball AI That Actually Understands Turkish Sports (And Why Most Sports Chatbots Fail) - Mert Biricik | Cyber-Security Researcher & Data Scientist</title>
-  <meta name="description" content="Mert Biricik - Cyber-Security Researcher, Data Scientist, and ML Engineer with expertise in AI-driven security and critical infrastructure protection.">
-  
-  <!-- Google Site Verification -->
+  <title>How I Built a Basketball AI That Actually Understands Turkish Sports (And Why Most Sports Chatbots Fail) — Mert Biricik | Cybersecurity Researcher &amp; CyberMACS Scholar</title>
+  <meta name="description" content="Cybersecurity researcher and Erasmus Mundus CyberMACS Scholar specializing in threat hunting, memory forensics, anomaly detection, and AI-driven protection of critical infrastructure.">
+
   <meta name="google-site-verification" content="0b64d5c9758fafd9">
-  
-  <!-- Open Graph / Facebook -->
+
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mert.biricik.de/">
-  <meta property="og:title" content="How I Built a Basketball AI That Actually Understands Turkish Sports (And Why Most Sports Chatbots Fail) - Mert Biricik">
-  <meta property="og:description" content="Cyber-Security Researcher & Data Scientist">
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="How I Built a Basketball AI That Actually Understands Turkish Sports (And Why Most Sports Chatbots Fail) - Mert Biricik">
-  <meta property="twitter:description" content="Cyber-Security Researcher & Data Scientist">
-  
-  <!-- Favicons and Icons -->
-  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/icon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <meta property="og:url" content="https://mert.biricik.de/blog/basketball-rag-system-tutorial/">
+  <meta property="og:title" content="How I Built a Basketball AI That Actually Understands Turkish Sports (And Why Most Sports Chatbots Fail) — Mert Biricik">
+  <meta property="og:description" content="Cybersecurity researcher and Erasmus Mundus CyberMACS Scholar specializing in threat hunting, memory forensics, anomaly detection, and AI-driven protection of critical infrastructure.">
+  <meta property="og:site_name" content="Mert Biricik">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How I Built a Basketball AI That Actually Understands Turkish Sports (And Why Most Sports Chatbots Fail) — Mert Biricik">
+  <meta name="twitter:description" content="Cybersecurity researcher and Erasmus Mundus CyberMACS Scholar specializing in threat hunting, memory forensics, anomaly detection, and AI-driven protection of critical infrastructure.">
+
+  <link rel="canonical" href="https://mert.biricik.de/blog/basketball-rag-system-tutorial/">
+
   <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
-  
-  <!-- Android/Chrome -->
   <link rel="manifest" href="/assets/icons/site.webmanifest">
-  <meta name="theme-color" content="#2b2b2b">
-  <link rel="alternate" href="/rss.xml" type="application/atom+xml" title="Mert Biricik's Blog Feed">
-  
+  <meta name="theme-color" content="#0f172a">
+  <link rel="alternate" href="/rss.xml" type="application/atom+xml" title="Mert Biricik — Feed">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <header class="header">
-    <nav class="nav">
-      <div class="nav-container">
-        <a href="/" class="nav-logo">Mert Biricik</a>
-        <ul class="nav-menu">
-          
-          <li class="nav-item">
-            <a href="/" class="nav-link">Home</a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="/about/" class="nav-link">About</a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="/projects/" class="nav-link">Portfolio</a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="/blog/" class="nav-link">Blog</a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="/publications/" class="nav-link">Publications</a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="/contact/" class="nav-link">Contact</a>
-          </li>
-          
-        </ul>
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-          <i class="fas fa-sun sun-icon"></i>
-          <i class="fas fa-moon moon-icon"></i>
+<body class="min-h-screen flex flex-col">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-brand-600 focus:text-white focus:px-3 focus:py-2 focus:rounded-md">Skip to content</a>
+
+  <header id="site-header" class="sticky top-0 z-40 border-b border-ink-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:border-ink-800/70 dark:bg-ink-950/70 dark:supports-[backdrop-filter]:bg-ink-950/60 transition-colors">
+    <nav class="container-wide flex h-16 items-center justify-between gap-4">
+      <a href="/" class="flex items-center gap-2 text-base font-semibold text-ink-900 dark:text-white">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-600 to-accent-500 text-white shadow-sm">
+          <i class="fa-solid fa-shield-halved text-sm"></i>
+        </span>
+        <span class="hidden sm:inline">Mert Biricik</span>
+      </a>
+
+      <ul id="nav-menu" class="hidden md:flex items-center gap-6">
+        
+        <li>
+          <a href="/" class="nav-link ">Home</a>
+        </li>
+        
+        <li>
+          <a href="/about/" class="nav-link ">About</a>
+        </li>
+        
+        <li>
+          <a href="/projects/" class="nav-link ">Projects</a>
+        </li>
+        
+        <li>
+          <a href="/publications/" class="nav-link ">Publications</a>
+        </li>
+        
+        <li>
+          <a href="/blog/" class="nav-link ">Blog</a>
+        </li>
+        
+        <li>
+          <a href="/contact/" class="nav-link ">Contact</a>
+        </li>
+        
+      </ul>
+
+      <div class="flex items-center gap-2">
+        <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-lg text-ink-600 hover:text-brand-700 hover:bg-ink-100 dark:text-ink-300 dark:hover:text-brand-300 dark:hover:bg-ink-800 transition" aria-label="GitHub profile">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <button id="theme-toggle" class="inline-flex h-9 w-9 items-center justify-center rounded-lg text-ink-600 hover:text-brand-700 hover:bg-ink-100 dark:text-ink-300 dark:hover:text-brand-300 dark:hover:bg-ink-800 transition" aria-label="Toggle color theme">
+          <i class="fa-solid fa-sun sun-icon"></i>
+          <i class="fa-solid fa-moon moon-icon"></i>
         </button>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
+        <button id="menu-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-ink-700 hover:bg-ink-100 dark:text-ink-200 dark:hover:bg-ink-800 transition" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </nav>
+
+    <div id="mobile-menu" class="md:hidden hidden border-t border-ink-200 dark:border-ink-800 bg-white dark:bg-ink-950">
+      <ul class="container-wide flex flex-col py-3">
+        
+        <li>
+          <a href="/" class="block py-2 nav-link ">Home</a>
+        </li>
+        
+        <li>
+          <a href="/about/" class="block py-2 nav-link ">About</a>
+        </li>
+        
+        <li>
+          <a href="/projects/" class="block py-2 nav-link ">Projects</a>
+        </li>
+        
+        <li>
+          <a href="/publications/" class="block py-2 nav-link ">Publications</a>
+        </li>
+        
+        <li>
+          <a href="/blog/" class="block py-2 nav-link ">Blog</a>
+        </li>
+        
+        <li>
+          <a href="/contact/" class="block py-2 nav-link ">Contact</a>
+        </li>
+        
+      </ul>
+    </div>
   </header>
 
-  <main class="main">
+  <main id="main" class="flex-1">
     
 <section class="section">
-  <div class="section-container">
-    <article class="blog-post">
-      <h1 class="blog-post-title">How I Built a Basketball AI That Actually Understands Turkish Sports (And Why Most Sports Chatbots Fail)</h1>
-      <div class="blog-post-meta">
-        <span class="post-date"><i class="far fa-calendar-alt"></i> August 11, 2025</span>
-        
-        
-        <div class="post-tags">
+  <div class="container-narrow">
+    <a href="/blog/" class="inline-flex items-center gap-2 text-sm text-ink-500 hover:text-brand-700 dark:text-ink-400 dark:hover:text-brand-300 mb-8">
+      <i class="fa-solid fa-arrow-left text-xs"></i> Back to blog
+    </a>
+
+    <article>
+      <header class="mb-10 border-b border-ink-200 pb-8 dark:border-ink-800">
+        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-ink-900 dark:text-white">How I Built a Basketball AI That Actually Understands Turkish Sports (And Why Most Sports Chatbots Fail)</h1>
+        <div class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-ink-500 dark:text-ink-400">
           
-          <span class="tag">ai</span>
+          <span class="inline-flex items-center gap-2"><i class="fa-regular fa-calendar"></i> August 11, 2025</span>
           
-          <span class="tag">rag</span>
-          
-          <span class="tag">basketball</span>
-          
-          <span class="tag">python</span>
-          
-          <span class="tag">tutorial</span>
-          
-          <span class="tag">multilingual</span>
           
         </div>
         
-      </div>
-      <div class="blog-post-content">
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="chip-brand">ai</span><span class="chip-brand">rag</span><span class="chip-brand">basketball</span><span class="chip-brand">python</span><span class="chip-brand">tutorial</span><span class="chip-brand">multilingual</span>
+        </div>
+        
+      </header>
+
+      <div class="prose prose-lg dark:prose-invert max-w-none prose-headings:scroll-mt-24 prose-a:font-medium prose-pre:rounded-xl">
         <h2>How I Built a Basketball AI That Actually Understands Turkish Sports (And Why Most Sports Chatbots Fail)</h2>
 <p>Have you ever asked a sports app about a specific rule and gotten a generic answer that doesn't help? Or tried to find statistics for a Turkish basketball team and hit a wall of broken search results?</p>
 <p>I faced this exact frustration when working with Turkish Basketball Federation data. Every existing solution felt like it was built by people who never actually watched basketball or dealt with non-English sports data. So I spent three weeks building something better.</p>
@@ -402,34 +439,57 @@ lsof -ti:7860 | xargs kill -9
 
   </main>
 
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Mert Biricik</h3>
-          <p>Cyber-Security Researcher & Data Scientist</p>
+  <footer class="mt-auto border-t border-ink-200 bg-ink-50 dark:border-ink-800 dark:bg-ink-950">
+    <div class="container-wide py-12">
+      <div class="grid gap-10 md:grid-cols-3">
+        <div>
+          <a href="/" class="flex items-center gap-2 text-lg font-semibold text-ink-900 dark:text-white">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-brand-600 to-accent-500 text-white shadow-sm">
+              <i class="fa-solid fa-shield-halved"></i>
+            </span>
+            Mert Biricik
+          </a>
+          <p class="mt-3 text-sm text-ink-600 dark:text-ink-400 max-w-sm">Cybersecurity Researcher &amp; CyberMACS Scholar. Erasmus Mundus CyberMACS Scholar based in Istanbul.</p>
         </div>
-        <div class="footer-section">
-          <h4>Connect</h4>
-          <div class="social-links">
-            <a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" aria-label="View my LinkedIn profile">
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/mertbiricik" target="_blank" rel="noopener noreferrer" aria-label="View my GitHub profile">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="mailto:mert@biricik.de" aria-label="Send me an email">
-              <i class="fas fa-envelope"></i> Email
-            </a>
-          </div>
+
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-500 dark:text-ink-400 mb-4">Connect</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="mailto:mert@biricik.de" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-solid fa-envelope w-4"></i> mert@biricik.de</a></li>
+            <li><a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-brands fa-linkedin w-4"></i> linkedin.com/in/mertbiricik</a></li>
+            <li><a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-brands fa-github w-4"></i> github.com/mertBiricik</a></li>
+            <li><a href="https://scholar.google.com/citations?user=MgyR0RMAAAAJ" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-solid fa-graduation-cap w-4"></i> Google Scholar</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-500 dark:text-ink-400 mb-4">Site</h4>
+          <ul class="space-y-2 text-sm">
+            
+            <li><a href="/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Home</a></li>
+            
+            <li><a href="/about/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">About</a></li>
+            
+            <li><a href="/projects/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Projects</a></li>
+            
+            <li><a href="/publications/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Publications</a></li>
+            
+            <li><a href="/blog/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Blog</a></li>
+            
+            <li><a href="/contact/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Contact</a></li>
+            
+            <li><a href="/rss.xml" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-solid fa-rss w-4"></i> RSS</a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Mert Biricik. All rights reserved.</p>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-ink-200 pt-6 text-xs text-ink-500 dark:border-ink-800 dark:text-ink-400">
+        <p>&copy; 2026 Mert Biricik. All rights reserved.</p>
+        <p>Built with Eleventy + Tailwind. Deployed on GitHub Pages.</p>
       </div>
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>

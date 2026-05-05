@@ -1,299 +1,438 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <script>
     (function() {
-      const savedTheme = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', savedTheme);
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+        if (theme === 'dark') document.documentElement.classList.add('dark');
+      } catch (e) {}
     })();
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Mert Biricik | Cyber-Security Researcher & Data Scientist</title>
-  <meta name="description" content="Explore Mert Biricik&#39;s portfolio of full stack development, data science, and system engineering projects, including demos and data visualizations.">
-  
-  <!-- Google Site Verification -->
+  <title>Projects — Mert Biricik | Cybersecurity Researcher &amp; CyberMACS Scholar</title>
+  <meta name="description" content="Selected research and engineering projects in cybersecurity, applied AI, energy data, and systems programming.">
+
   <meta name="google-site-verification" content="0b64d5c9758fafd9">
-  
-  <!-- Open Graph / Facebook -->
+
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mert.biricik.de/">
-  <meta property="og:title" content="Portfolio - Mert Biricik">
-  <meta property="og:description" content="Explore Mert Biricik&#39;s portfolio of full stack development, data science, and system engineering projects, including demos and data visualizations.">
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Portfolio - Mert Biricik">
-  <meta property="twitter:description" content="Explore Mert Biricik&#39;s portfolio of full stack development, data science, and system engineering projects, including demos and data visualizations.">
-  
-  <!-- Favicons and Icons -->
-  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/icon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <meta property="og:url" content="https://mert.biricik.de/projects/">
+  <meta property="og:title" content="Projects — Mert Biricik">
+  <meta property="og:description" content="Selected research and engineering projects in cybersecurity, applied AI, energy data, and systems programming.">
+  <meta property="og:site_name" content="Mert Biricik">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects — Mert Biricik">
+  <meta name="twitter:description" content="Selected research and engineering projects in cybersecurity, applied AI, energy data, and systems programming.">
+
+  <link rel="canonical" href="https://mert.biricik.de/projects/">
+
   <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
-  
-  <!-- Android/Chrome -->
   <link rel="manifest" href="/assets/icons/site.webmanifest">
-  <meta name="theme-color" content="#2b2b2b">
-  <link rel="alternate" href="/rss.xml" type="application/atom+xml" title="Mert Biricik's Blog Feed">
-  
+  <meta name="theme-color" content="#0f172a">
+  <link rel="alternate" href="/rss.xml" type="application/atom+xml" title="Mert Biricik — Feed">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <header class="header">
-    <nav class="nav">
-      <div class="nav-container">
-        <a href="/" class="nav-logo">Mert Biricik</a>
-        <ul class="nav-menu">
-          
-          <li class="nav-item">
-            <a href="/" class="nav-link">Home</a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="/about/" class="nav-link">About</a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="/projects/" class="nav-link">Portfolio</a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="/blog/" class="nav-link">Blog</a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="/publications/" class="nav-link">Publications</a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="/contact/" class="nav-link">Contact</a>
-          </li>
-          
-        </ul>
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-          <i class="fas fa-sun sun-icon"></i>
-          <i class="fas fa-moon moon-icon"></i>
+<body class="min-h-screen flex flex-col">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-brand-600 focus:text-white focus:px-3 focus:py-2 focus:rounded-md">Skip to content</a>
+
+  <header id="site-header" class="sticky top-0 z-40 border-b border-ink-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:border-ink-800/70 dark:bg-ink-950/70 dark:supports-[backdrop-filter]:bg-ink-950/60 transition-colors">
+    <nav class="container-wide flex h-16 items-center justify-between gap-4">
+      <a href="/" class="flex items-center gap-2 text-base font-semibold text-ink-900 dark:text-white">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-600 to-accent-500 text-white shadow-sm">
+          <i class="fa-solid fa-shield-halved text-sm"></i>
+        </span>
+        <span class="hidden sm:inline">Mert Biricik</span>
+      </a>
+
+      <ul id="nav-menu" class="hidden md:flex items-center gap-6">
+        
+        <li>
+          <a href="/" class="nav-link ">Home</a>
+        </li>
+        
+        <li>
+          <a href="/about/" class="nav-link ">About</a>
+        </li>
+        
+        <li>
+          <a href="/projects/" class="nav-link active">Projects</a>
+        </li>
+        
+        <li>
+          <a href="/publications/" class="nav-link ">Publications</a>
+        </li>
+        
+        <li>
+          <a href="/blog/" class="nav-link ">Blog</a>
+        </li>
+        
+        <li>
+          <a href="/contact/" class="nav-link ">Contact</a>
+        </li>
+        
+      </ul>
+
+      <div class="flex items-center gap-2">
+        <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-lg text-ink-600 hover:text-brand-700 hover:bg-ink-100 dark:text-ink-300 dark:hover:text-brand-300 dark:hover:bg-ink-800 transition" aria-label="GitHub profile">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <button id="theme-toggle" class="inline-flex h-9 w-9 items-center justify-center rounded-lg text-ink-600 hover:text-brand-700 hover:bg-ink-100 dark:text-ink-300 dark:hover:text-brand-300 dark:hover:bg-ink-800 transition" aria-label="Toggle color theme">
+          <i class="fa-solid fa-sun sun-icon"></i>
+          <i class="fa-solid fa-moon moon-icon"></i>
         </button>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
+        <button id="menu-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-ink-700 hover:bg-ink-100 dark:text-ink-200 dark:hover:bg-ink-800 transition" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </nav>
+
+    <div id="mobile-menu" class="md:hidden hidden border-t border-ink-200 dark:border-ink-800 bg-white dark:bg-ink-950">
+      <ul class="container-wide flex flex-col py-3">
+        
+        <li>
+          <a href="/" class="block py-2 nav-link ">Home</a>
+        </li>
+        
+        <li>
+          <a href="/about/" class="block py-2 nav-link ">About</a>
+        </li>
+        
+        <li>
+          <a href="/projects/" class="block py-2 nav-link active">Projects</a>
+        </li>
+        
+        <li>
+          <a href="/publications/" class="block py-2 nav-link ">Publications</a>
+        </li>
+        
+        <li>
+          <a href="/blog/" class="block py-2 nav-link ">Blog</a>
+        </li>
+        
+        <li>
+          <a href="/contact/" class="block py-2 nav-link ">Contact</a>
+        </li>
+        
+      </ul>
+    </div>
   </header>
 
-  <main class="main">
+  <main id="main" class="flex-1">
     
-<section class="section">
-  <div class="section-container">
-    <h1 class="section-title">Portfolio</h1>
-    <p class="section-subtitle">Showcase: full stack development, data science, system engineering projects. Includes demos, data visualizations.</p>
+<section class="section pt-16 lg:pt-20">
+  <div class="container-wide">
+    <p class="section-eyebrow">Portfolio</p>
+    <h1 class="mt-2 text-4xl sm:text-5xl font-bold text-ink-900 dark:text-white">Projects</h1>
+    <p class="mt-3 max-w-2xl text-lg text-ink-600 dark:text-ink-300">
+      Research-grade systems and tooling spanning cybersecurity, AI agents, energy data, BCI signal processing, and low-level systems programming.
+    </p>
 
-    <div class="projects-grid"><div class="project-card">
-        <div class="project-header">
-          <h3 class="project-title">Silk Spectre: Sequential Polling System</h3>
-          
-          <p class="project-subtitle">Dynamic Polls with Branching Logic</p>
-          
-        </div>
-        <div class="project-content">
-          <div class="project-description">
-            <p><strong>Problem:</strong> Standard polling tools lack the ability to create dynamic, branching logic or timed transitions between questions.</p>
-            <p><strong>Solution:</strong> I built a full-stack polling application using PHP and MySQL that allows administrators to create complex, sequential polls with conditional logic. The frontend is built with Tailwind CSS and Alpine.js for a modern, responsive user experience.</p>
-            <p><strong>Outcome:</strong> The application provides a flexible and powerful platform for creating sophisticated, interactive polls that go beyond the capabilities of standard tools.</p>
+    <div class="mt-12 grid gap-6 lg:grid-cols-2">
+      
+      <article class="card flex flex-col h-full">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-semibold text-ink-900 dark:text-white">EnerjiVeri — 100 Years of Turkish Energy Data</h3>
+            <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">TUBITAK 1001 — Sole web developer for the national strategic project (No. 323K520)</p>
           </div>
-          
-          <div class="project-tech"><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">Alpine.js</span><span class="tech-tag">Full-Stack</span></div>
-          
-          <div class="project-links">
-            
-              <a href="https://github.com/mertBiricik/silk_spectre.git" class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;"><i class="fab fa-github"></i> View Code</a>
-            
-            
-            
-          </div>
+          <span class="chip shrink-0">09/2024 — Present</span>
         </div>
-      </div><div class="project-card">
-        <div class="project-header">
-          <h3 class="project-title">Tune2Travel: AI Travel Planner</h3>
-          
-          <p class="project-subtitle">NLP-Powered Travel Recommendations</p>
-          
-        </div>
-        <div class="project-content">
-          <div class="project-description">
-            <p><strong>Problem:</strong> Planning travel requires understanding nuanced, natural language requests from users.</p>
-            <p><strong>Solution:</strong> I contributed to an AI-powered travel planning application that uses a suite of NLP libraries (NLTK, spaCy, Gensim) to process and understand user travel queries, providing intelligent recommendations.</p>
-            <p><strong>Outcome:</strong> The application successfully translates complex user requests into actionable travel plans, showcasing the power of NLP in a real-world product.</p>
-          </div>
-          
-          <div class="project-tech"><span class="tech-tag">NLTK</span><span class="tech-tag">spaCy</span><span class="tech-tag">Gensim</span><span class="tech-tag">TextBlob</span><span class="tech-tag">Google Cloud Translate</span><span class="tech-tag">Selenium</span></div>
-          
-          <div class="project-links">
-            
-              <a href="https://github.com/mertBiricik/tune2travel.git" class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;"><i class="fab fa-github"></i> View Code</a>
-            
-            
-              <a href="https://listenandtravelwithme.khas.edu.tr/" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;">
-                <i class="fas fa-external-link-alt"></i> Visit Site
-              </a>
-            
-            
-          </div>
-        </div>
-      </div><div class="project-card">
-        <div class="project-header">
-          <h3 class="project-title">Interactive Energy Data Visualization</h3>
-          
-          <p class="project-subtitle">From Raw Data to Interactive Dashboards</p>
-          
-        </div>
-        <div class="project-content">
-          <div class="project-description">
-            <p><strong>Problem:</strong> Raw energy consumption and production data in CSV files is difficult to interpret and provides no immediate insights.</p>
-            <p><strong>Solution:</strong> I created a data analysis pipeline using Python to process raw energy data. The processed data is then displayed in an interactive HTML dashboard, allowing for easy exploration and visualization.</p>
-            <p><strong>Outcome:</strong> The project transforms complex datasets into an intuitive tool for analysis, making energy trends accessible to a broader audience.</p>
-          </div>
-          
-          <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">Pandas</span><span class="tech-tag">HTML</span><span class="tech-tag">JavaScript</span><span class="tech-tag">Data Visualization</span></div>
-          
-          <div class="project-links">
-            
-              <a href="https://github.com/mertBiricik/enerdata.git" class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;"><i class="fab fa-github"></i> View Code</a>
-            
-            
-            
-              <a href="/demos/enerdata-primary-energy/" class="btn btn-primary">
-                <i class="fas fa-chart-bar"></i> View Demo
-              </a>
-            
-          </div>
-        </div>
-      </div><div class="project-card">
-        <div class="project-header">
-          <h3 class="project-title">You-Tune: YouTube Comment Analyzer</h3>
-          
-          <p class="project-subtitle">Sentiment Analysis and Topic Modeling</p>
-          
-        </div>
-        <div class="project-content">
-          <div class="project-description">
-            <p><strong>Problem:</strong> YouTube comment sections are often filled with spam and noise, making it difficult to gauge genuine audience sentiment.</p>
-            <p><strong>Solution:</strong> I built a command-line tool that uses a transformer-based model for sentiment analysis, topic extraction, and spam filtering on YouTube comments. It supports multiple languages and provides clear, actionable insights.</p>
-            <p><strong>Outcome:</strong> The tool effectively cuts through the noise to provide a clear summary of audience feedback, achieving high accuracy in spam detection and sentiment classification.</p>
-          </div>
-          
-          <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">PyTorch</span><span class="tech-tag">Transformers</span><span class="tech-tag">Pandas</span><span class="tech-tag">Scikit-learn</span></div>
-          
-          <div class="project-links">
-            
-              <a href="https://github.com/mertBiricik/youtube_cleanser" class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;"><i class="fab fa-github"></i> View Code</a>
-            
-            
-            
-          </div>
-        </div>
-      </div><div class="project-card">
-        <div class="project-header">
-          <h3 class="project-title">Basketball RAG Agent</h3>
-          
-          <p class="project-subtitle">Conversational AI for Sports Analytics</p>
-          
-        </div>
-        <div class="project-content">
-          <div class="project-description">
-            <p><strong>Problem:</strong> Standard search tools cannot answer complex, semantic questions about specific domains like basketball history and player statistics.</p>
-            <p><strong>Solution:</strong> I developed a Retrieval-Augmented Generation (RAG) agent using LangChain and a local LLM (Ollama). The system leverages a specialized knowledge base to understand and answer nuanced, conversational questions about basketball.</p>
-            <p><strong>Outcome:</strong> The agent can successfully answer complex queries that traditional search engines cannot, demonstrating a practical application of domain-specific LLMs.</p>
-          </div>
-          
-          <div class="project-tech"><span class="tech-tag">LangChain</span><span class="tech-tag">Ollama</span><span class="tech-tag">Transformers</span><span class="tech-tag">Gradio</span><span class="tech-tag">RAG</span><span class="tech-tag">Python</span></div>
-          
-          <div class="project-links">
-            
-              <a href="https://github.com/mertBiricik/tbf_mhk_rag.git" class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;"><i class="fab fa-github"></i> View Code</a>
-            
-            
-            
-          </div>
-        </div>
-      </div><div class="project-card">
-        <div class="project-header">
-          <h3 class="project-title">C/C++ Systems Benchmarking Suite</h3>
-          
-          <p class="project-subtitle">A Deep Dive into System Performance</p>
-          
-        </div>
-        <div class="project-content">
-          <div class="project-description">
-            <p><strong>Problem:</strong> Evaluating the performance of fundamental computer systems concepts (like memory allocation and process scheduling) requires standardized and robust testing environments.</p>
-            <p><strong>Solution:</strong> I engineered a comprehensive suite of C/C++ projects to benchmark and demonstrate advanced systems concepts. This included building a custom memory allocator, a process scheduler, a UNIX shell, and a web server.</p>
-            <p><strong>Outcome:</strong> The suite provides a reliable framework for performance analysis and serves as a practical demonstration of core OS and server concepts.</p>
-          </div>
-          
-          <div class="project-tech"><span class="tech-tag">C</span><span class="tech-tag">C++</span><span class="tech-tag">Makefile</span><span class="tech-tag">Benchmarking</span><span class="tech-tag">System Programming</span></div>
-          
-          <div class="project-links">
-            
-              <a href="https://github.com/mertBiricik/c_benchmark.git" class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="margin-right: 10px;"><i class="fab fa-github"></i> View Code</a>
-            
-            
-            
-          </div>
-        </div>
-      </div></div>
 
-    <div class="text-center" style="margin-top: 3rem;">
-      <h2>Collaboration?</h2>
-      <p>Seeking exciting projects, innovative teams. Discuss collaboration.</p>
-      <div class="hero-cta">
-        <a href="/contact/" class="btn btn-primary">
-          <i class="fas fa-envelope"></i>
-          Contact
-        </a>
-        <a href="https://github.com/mertbiricik" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github"></i>
-          See my GitHub
-        </a>
+        <dl class="mt-5 space-y-3 text-sm">
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Problem</dt>
+            <dd class="text-ink-600 dark:text-ink-400">A century of national energy production, consumption, and policy data sat fragmented across CSVs and PDFs, unusable for evidence-based policy analysis.</dd>
+          </div>
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Solution</dt>
+            <dd class="text-ink-600 dark:text-ink-400">Built a dynamic Turkish-language data portal consolidating 100 years of quantitative and qualitative energy data with time-series charts, sectoral distribution models, and interactive dashboards.</dd>
+          </div>
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Outcome</dt>
+            <dd class="text-ink-600 dark:text-ink-400">Live national portal used by researchers and policy stakeholders under the project &quot;Energy Strategies in the Second Century of the Republic&quot;.</dd>
+          </div>
+        </dl>
+
+        
+        <ul class="mt-5 flex flex-wrap gap-2">
+          <li class="chip-brand">Python</li><li class="chip-brand">Data Visualization</li><li class="chip-brand">Time-Series</li><li class="chip-brand">Web Portal</li><li class="chip-brand">ETL</li>
+        </ul>
+        
+
+        <div class="mt-6 flex flex-wrap gap-2 pt-5 border-t border-ink-200 dark:border-ink-800">
+          <a href="https://github.com/mertBiricik/enerdata.git" target="_blank" rel="noopener noreferrer" class="btn-outline btn-sm"><i class="fa-brands fa-github"></i> Code</a>
+          <a href="https://enerjiveri.khas.edu.tr/" target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm"><i class="fa-solid fa-up-right-from-square"></i> Live</a>
+          <a href="/demos/enerdata-primary-energy/" class="btn-outline btn-sm"><i class="fa-solid fa-chart-bar"></i> Demo</a>
+          
+        </div>
+      </article>
+      
+      <article class="card flex flex-col h-full">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-semibold text-ink-900 dark:text-white">Tune2Travel — Music Videos &amp; Destination Marketing</h3>
+            <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">TUBITAK 1001 — Data infrastructure &amp; NLP pipeline</p>
+          </div>
+          <span class="chip shrink-0">2024 — 2025</span>
+        </div>
+
+        <dl class="mt-5 space-y-3 text-sm">
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Problem</dt>
+            <dd class="text-ink-600 dark:text-ink-400">Quantifying how music videos shape tourism perception requires large-scale, multi-language social media data plus cultural NLP processing.</dd>
+          </div>
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Solution</dt>
+            <dd class="text-ink-600 dark:text-ink-400">Engineered the data infrastructure: YouTube API ingestion, ETL pipelines, NLP and ML models surfacing cultural and sociological signals about destination marketing on social platforms.</dd>
+          </div>
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Outcome</dt>
+            <dd class="text-ink-600 dark:text-ink-400">National research project deliverable enabling marketing &amp; sociology researchers to query patterns across thousands of cross-language music videos.</dd>
+          </div>
+        </dl>
+
+        
+        <ul class="mt-5 flex flex-wrap gap-2">
+          <li class="chip-brand">Python</li><li class="chip-brand">NLP</li><li class="chip-brand">spaCy</li><li class="chip-brand">Gensim</li><li class="chip-brand">YouTube API</li><li class="chip-brand">ETL</li><li class="chip-brand">Selenium</li>
+        </ul>
+        
+
+        <div class="mt-6 flex flex-wrap gap-2 pt-5 border-t border-ink-200 dark:border-ink-800">
+          <a href="https://github.com/mertBiricik/tune2travel.git" target="_blank" rel="noopener noreferrer" class="btn-outline btn-sm"><i class="fa-brands fa-github"></i> Code</a>
+          <a href="https://listenandtravelwithme.khas.edu.tr/" target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm"><i class="fa-solid fa-up-right-from-square"></i> Live</a>
+          
+          
+        </div>
+      </article>
+      
+      <article class="card flex flex-col h-full">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-semibold text-ink-900 dark:text-white">Unsupervised Memory Forensics Triage</h3>
+            <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">Volatility3 + Isolation Forest for fileless malware</p>
+          </div>
+          <span class="chip shrink-0">2025 — 2026</span>
+        </div>
+
+        <dl class="mt-5 space-y-3 text-sm">
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Problem</dt>
+            <dd class="text-ink-600 dark:text-ink-400">Zero-day and fileless malware evade signature-based detection and overwhelm analysts with raw memory artefacts.</dd>
+          </div>
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Solution</dt>
+            <dd class="text-ink-600 dark:text-ink-400">Designed an automated memory forensics triage system on top of Volatility3 with unsupervised ML (Isolation Forest) over behavioural and graph-theoretic features to surface anomalous processes.</dd>
+          </div>
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Outcome</dt>
+            <dd class="text-ink-600 dark:text-ink-400">Manuscript under review (Texas, USA). Co-authored with H. Coskun and R. Creutzburg.</dd>
+          </div>
+        </dl>
+
+        
+        <ul class="mt-5 flex flex-wrap gap-2">
+          <li class="chip-brand">Volatility3</li><li class="chip-brand">Memory Forensics</li><li class="chip-brand">Isolation Forest</li><li class="chip-brand">Graph Analysis</li><li class="chip-brand">Python</li>
+        </ul>
+        
+
+        <div class="mt-6 flex flex-wrap gap-2 pt-5 border-t border-ink-200 dark:border-ink-800">
+          
+          
+          
+          
+        </div>
+      </article>
+      
+      <article class="card flex flex-col h-full">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-semibold text-ink-900 dark:text-white">Basketball RAG Agent</h3>
+            <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">Domain-specific Retrieval-Augmented Generation for Turkish basketball</p>
+          </div>
+          <span class="chip shrink-0">2025</span>
+        </div>
+
+        <dl class="mt-5 space-y-3 text-sm">
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Problem</dt>
+            <dd class="text-ink-600 dark:text-ink-400">Generic search tools fail at semantic, domain-specific basketball queries and break entirely on Turkish league data.</dd>
+          </div>
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Solution</dt>
+            <dd class="text-ink-600 dark:text-ink-400">Built a dual-intelligence RAG system: a vector store of 873 official rule documents plus a FastAPI server over 17,000+ Turkish league games, routed by an intent classifier and exposed through a Gradio UI.</dd>
+          </div>
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Outcome</dt>
+            <dd class="text-ink-600 dark:text-ink-400">Answers complex bilingual queries about both rules and live league statistics via a single conversational interface.</dd>
+          </div>
+        </dl>
+
+        
+        <ul class="mt-5 flex flex-wrap gap-2">
+          <li class="chip-brand">LangChain</li><li class="chip-brand">Ollama</li><li class="chip-brand">RAG</li><li class="chip-brand">FastAPI</li><li class="chip-brand">Gradio</li><li class="chip-brand">Python</li>
+        </ul>
+        
+
+        <div class="mt-6 flex flex-wrap gap-2 pt-5 border-t border-ink-200 dark:border-ink-800">
+          <a href="https://github.com/mertBiricik/tbf_mhk_rag.git" target="_blank" rel="noopener noreferrer" class="btn-outline btn-sm"><i class="fa-brands fa-github"></i> Code</a>
+          
+          
+          
+        </div>
+      </article>
+      
+      <article class="card flex flex-col h-full">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-semibold text-ink-900 dark:text-white">OSINT-Driven SCADA Threat Discovery</h3>
+            <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">Field assessment on a Milan SCADA testbed</p>
+          </div>
+          <span class="chip shrink-0">2024 — 2025</span>
+        </div>
+
+        <dl class="mt-5 space-y-3 text-sm">
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Problem</dt>
+            <dd class="text-ink-600 dark:text-ink-400">Power distribution operators lack a structured pipeline that combines open-source intelligence with AI-based protection for SCADA assets.</dd>
+          </div>
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Solution</dt>
+            <dd class="text-ink-600 dark:text-ink-400">Performed a hands-on OSINT vulnerability assessment on a SCADA testbed in Milan and contributed to a novel framework combining OSINT-driven threat discovery with AI-based protective controls.</dd>
+          </div>
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Outcome</dt>
+            <dd class="text-ink-600 dark:text-ink-400">Published at IEEE UPEC 2025 (DOI: 10.1109/UPEC65436.2025.11279773).</dd>
+          </div>
+        </dl>
+
+        
+        <ul class="mt-5 flex flex-wrap gap-2">
+          <li class="chip-brand">OSINT</li><li class="chip-brand">SCADA</li><li class="chip-brand">Threat Discovery</li><li class="chip-brand">Network Security</li>
+        </ul>
+        
+
+        <div class="mt-6 flex flex-wrap gap-2 pt-5 border-t border-ink-200 dark:border-ink-800">
+          
+          
+          
+          <a href="https://doi.org/10.1109/UPEC65436.2025.11279773" target="_blank" rel="noopener noreferrer" class="btn-outline btn-sm"><i class="fa-solid fa-file-lines"></i> Paper</a>
+        </div>
+      </article>
+      
+      <article class="card flex flex-col h-full">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-semibold text-ink-900 dark:text-white">C/C++ Systems Benchmarking Suite</h3>
+            <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">Custom allocator, scheduler, shell, and HTTP server</p>
+          </div>
+          <span class="chip shrink-0">2023 — 2024</span>
+        </div>
+
+        <dl class="mt-5 space-y-3 text-sm">
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Problem</dt>
+            <dd class="text-ink-600 dark:text-ink-400">Coursework rarely connects OS theory (allocation, scheduling, IO) to measurable performance on a single rig.</dd>
+          </div>
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Solution</dt>
+            <dd class="text-ink-600 dark:text-ink-400">Engineered a Makefile-driven suite implementing a custom memory allocator, process scheduler, UNIX shell, and minimal web server, each with reproducible benchmarks.</dd>
+          </div>
+          <div>
+            <dt class="font-semibold text-ink-800 dark:text-ink-200">Outcome</dt>
+            <dd class="text-ink-600 dark:text-ink-400">Reusable framework for systems performance experiments and a teaching reference.</dd>
+          </div>
+        </dl>
+
+        
+        <ul class="mt-5 flex flex-wrap gap-2">
+          <li class="chip-brand">C</li><li class="chip-brand">C++</li><li class="chip-brand">Makefile</li><li class="chip-brand">Linux</li><li class="chip-brand">System Programming</li>
+        </ul>
+        
+
+        <div class="mt-6 flex flex-wrap gap-2 pt-5 border-t border-ink-200 dark:border-ink-800">
+          <a href="https://github.com/mertBiricik/c_benchmark.git" target="_blank" rel="noopener noreferrer" class="btn-outline btn-sm"><i class="fa-brands fa-github"></i> Code</a>
+          
+          
+          
+        </div>
+      </article>
+      
+    </div>
+
+    <div class="mt-16 text-center">
+      <h2 class="text-2xl font-semibold text-ink-900 dark:text-white">Looking for a collaborator?</h2>
+      <p class="mt-2 text-ink-600 dark:text-ink-300">Open to research collaborations and applied cybersecurity / AI engineering roles.</p>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <a href="/contact/" class="btn-primary"><i class="fa-solid fa-envelope"></i> Contact</a>
+        <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="btn-outline"><i class="fa-brands fa-github"></i> See my GitHub</a>
       </div>
     </div>
   </div>
 </section>
+
   </main>
 
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Mert Biricik</h3>
-          <p>Cyber-Security Researcher & Data Scientist</p>
+  <footer class="mt-auto border-t border-ink-200 bg-ink-50 dark:border-ink-800 dark:bg-ink-950">
+    <div class="container-wide py-12">
+      <div class="grid gap-10 md:grid-cols-3">
+        <div>
+          <a href="/" class="flex items-center gap-2 text-lg font-semibold text-ink-900 dark:text-white">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-brand-600 to-accent-500 text-white shadow-sm">
+              <i class="fa-solid fa-shield-halved"></i>
+            </span>
+            Mert Biricik
+          </a>
+          <p class="mt-3 text-sm text-ink-600 dark:text-ink-400 max-w-sm">Cybersecurity Researcher &amp; CyberMACS Scholar. Erasmus Mundus CyberMACS Scholar based in Istanbul.</p>
         </div>
-        <div class="footer-section">
-          <h4>Connect</h4>
-          <div class="social-links">
-            <a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" aria-label="View my LinkedIn profile">
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/mertbiricik" target="_blank" rel="noopener noreferrer" aria-label="View my GitHub profile">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="mailto:mert@biricik.de" aria-label="Send me an email">
-              <i class="fas fa-envelope"></i> Email
-            </a>
-          </div>
+
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-500 dark:text-ink-400 mb-4">Connect</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="mailto:mert@biricik.de" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-solid fa-envelope w-4"></i> mert@biricik.de</a></li>
+            <li><a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-brands fa-linkedin w-4"></i> linkedin.com/in/mertbiricik</a></li>
+            <li><a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-brands fa-github w-4"></i> github.com/mertBiricik</a></li>
+            <li><a href="https://scholar.google.com/citations?user=MgyR0RMAAAAJ" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-solid fa-graduation-cap w-4"></i> Google Scholar</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-500 dark:text-ink-400 mb-4">Site</h4>
+          <ul class="space-y-2 text-sm">
+            
+            <li><a href="/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Home</a></li>
+            
+            <li><a href="/about/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">About</a></li>
+            
+            <li><a href="/projects/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Projects</a></li>
+            
+            <li><a href="/publications/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Publications</a></li>
+            
+            <li><a href="/blog/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Blog</a></li>
+            
+            <li><a href="/contact/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Contact</a></li>
+            
+            <li><a href="/rss.xml" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-solid fa-rss w-4"></i> RSS</a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Mert Biricik. All rights reserved.</p>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-ink-200 pt-6 text-xs text-ink-500 dark:border-ink-800 dark:text-ink-400">
+        <p>&copy; 2026 Mert Biricik. All rights reserved.</p>
+        <p>Built with Eleventy + Tailwind. Deployed on GitHub Pages.</p>
       </div>
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>

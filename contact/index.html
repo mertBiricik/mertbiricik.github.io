@@ -1,241 +1,273 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <script>
     (function() {
-      const savedTheme = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', savedTheme);
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+        if (theme === 'dark') document.documentElement.classList.add('dark');
+      } catch (e) {}
     })();
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Mert Biricik | Cyber-Security Researcher & Data Scientist</title>
-  <meta name="description" content="Get in touch with Mert Biricik for collaboration opportunities, project discussions, or professional networking.">
-  
-  <!-- Google Site Verification -->
+  <title>Contact — Mert Biricik | Cybersecurity Researcher &amp; CyberMACS Scholar</title>
+  <meta name="description" content="Get in touch with Mert Biricik for research collaborations, internships, and applied cybersecurity opportunities.">
+
   <meta name="google-site-verification" content="0b64d5c9758fafd9">
-  
-  <!-- Open Graph / Facebook -->
+
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mert.biricik.de/">
-  <meta property="og:title" content="Contact - Mert Biricik">
-  <meta property="og:description" content="Get in touch with Mert Biricik for collaboration opportunities, project discussions, or professional networking.">
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Contact - Mert Biricik">
-  <meta property="twitter:description" content="Get in touch with Mert Biricik for collaboration opportunities, project discussions, or professional networking.">
-  
-  <!-- Favicons and Icons -->
-  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/icon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <meta property="og:url" content="https://mert.biricik.de/contact/">
+  <meta property="og:title" content="Contact — Mert Biricik">
+  <meta property="og:description" content="Get in touch with Mert Biricik for research collaborations, internships, and applied cybersecurity opportunities.">
+  <meta property="og:site_name" content="Mert Biricik">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact — Mert Biricik">
+  <meta name="twitter:description" content="Get in touch with Mert Biricik for research collaborations, internships, and applied cybersecurity opportunities.">
+
+  <link rel="canonical" href="https://mert.biricik.de/contact/">
+
   <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
-  
-  <!-- Android/Chrome -->
   <link rel="manifest" href="/assets/icons/site.webmanifest">
-  <meta name="theme-color" content="#2b2b2b">
-  <link rel="alternate" href="/rss.xml" type="application/atom+xml" title="Mert Biricik's Blog Feed">
-  
+  <meta name="theme-color" content="#0f172a">
+  <link rel="alternate" href="/rss.xml" type="application/atom+xml" title="Mert Biricik — Feed">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <header class="header">
-    <nav class="nav">
-      <div class="nav-container">
-        <a href="/" class="nav-logo">Mert Biricik</a>
-        <ul class="nav-menu">
-          
-          <li class="nav-item">
-            <a href="/" class="nav-link">Home</a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="/about/" class="nav-link">About</a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="/projects/" class="nav-link">Portfolio</a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="/blog/" class="nav-link">Blog</a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="/publications/" class="nav-link">Publications</a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="/contact/" class="nav-link">Contact</a>
-          </li>
-          
-        </ul>
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-          <i class="fas fa-sun sun-icon"></i>
-          <i class="fas fa-moon moon-icon"></i>
+<body class="min-h-screen flex flex-col">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-brand-600 focus:text-white focus:px-3 focus:py-2 focus:rounded-md">Skip to content</a>
+
+  <header id="site-header" class="sticky top-0 z-40 border-b border-ink-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:border-ink-800/70 dark:bg-ink-950/70 dark:supports-[backdrop-filter]:bg-ink-950/60 transition-colors">
+    <nav class="container-wide flex h-16 items-center justify-between gap-4">
+      <a href="/" class="flex items-center gap-2 text-base font-semibold text-ink-900 dark:text-white">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-600 to-accent-500 text-white shadow-sm">
+          <i class="fa-solid fa-shield-halved text-sm"></i>
+        </span>
+        <span class="hidden sm:inline">Mert Biricik</span>
+      </a>
+
+      <ul id="nav-menu" class="hidden md:flex items-center gap-6">
+        
+        <li>
+          <a href="/" class="nav-link ">Home</a>
+        </li>
+        
+        <li>
+          <a href="/about/" class="nav-link ">About</a>
+        </li>
+        
+        <li>
+          <a href="/projects/" class="nav-link ">Projects</a>
+        </li>
+        
+        <li>
+          <a href="/publications/" class="nav-link ">Publications</a>
+        </li>
+        
+        <li>
+          <a href="/blog/" class="nav-link ">Blog</a>
+        </li>
+        
+        <li>
+          <a href="/contact/" class="nav-link active">Contact</a>
+        </li>
+        
+      </ul>
+
+      <div class="flex items-center gap-2">
+        <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-lg text-ink-600 hover:text-brand-700 hover:bg-ink-100 dark:text-ink-300 dark:hover:text-brand-300 dark:hover:bg-ink-800 transition" aria-label="GitHub profile">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <button id="theme-toggle" class="inline-flex h-9 w-9 items-center justify-center rounded-lg text-ink-600 hover:text-brand-700 hover:bg-ink-100 dark:text-ink-300 dark:hover:text-brand-300 dark:hover:bg-ink-800 transition" aria-label="Toggle color theme">
+          <i class="fa-solid fa-sun sun-icon"></i>
+          <i class="fa-solid fa-moon moon-icon"></i>
         </button>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
+        <button id="menu-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-ink-700 hover:bg-ink-100 dark:text-ink-200 dark:hover:bg-ink-800 transition" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </nav>
+
+    <div id="mobile-menu" class="md:hidden hidden border-t border-ink-200 dark:border-ink-800 bg-white dark:bg-ink-950">
+      <ul class="container-wide flex flex-col py-3">
+        
+        <li>
+          <a href="/" class="block py-2 nav-link ">Home</a>
+        </li>
+        
+        <li>
+          <a href="/about/" class="block py-2 nav-link ">About</a>
+        </li>
+        
+        <li>
+          <a href="/projects/" class="block py-2 nav-link ">Projects</a>
+        </li>
+        
+        <li>
+          <a href="/publications/" class="block py-2 nav-link ">Publications</a>
+        </li>
+        
+        <li>
+          <a href="/blog/" class="block py-2 nav-link ">Blog</a>
+        </li>
+        
+        <li>
+          <a href="/contact/" class="block py-2 nav-link active">Contact</a>
+        </li>
+        
+      </ul>
+    </div>
   </header>
 
-  <main class="main">
+  <main id="main" class="flex-1">
     
-<section class="section">
-  <div class="section-container">
-    <h1 class="section-title">Contact</h1>
-    <p class="section-subtitle">New opportunities. Exciting projects. Connect with developers/data scientists. Initiate conversation.</p>
+<section class="section pt-16 lg:pt-20">
+  <div class="container-wide">
+    <p class="section-eyebrow">Contact</p>
+    <h1 class="mt-2 text-4xl sm:text-5xl font-bold text-ink-900 dark:text-white">Let's talk.</h1>
+    <p class="mt-3 max-w-2xl text-lg text-ink-600 dark:text-ink-300">
+      Best reached by email. I respond within 24 hours on weekdays.
+    </p>
 
-    <div class="grid grid-2" style="margin-top: 3rem;">
-      <div>
-        <h2>Contact Information</h2>
-        <div class="card">
-          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <i class="fas fa-envelope" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+    <div class="mt-12 grid gap-8 lg:grid-cols-3">
+      <div class="lg:col-span-2 space-y-6">
+        <div class="card-flat">
+          <h2 class="text-lg font-semibold text-ink-900 dark:text-white">Channels</h2>
+          <div class="mt-5 grid gap-4 sm:grid-cols-2">
+            <a href="mailto:mert@biricik.de" class="group flex items-center gap-4 rounded-xl border border-ink-200 p-4 transition hover:border-brand-400 hover:bg-brand-50/50 dark:border-ink-800 dark:hover:border-brand-500 dark:hover:bg-brand-900/20">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 text-brand-700 dark:bg-brand-900/40 dark:text-brand-300 group-hover:bg-brand-600 group-hover:text-white transition"><i class="fa-solid fa-envelope"></i></span>
               <div>
-                <h4 style="margin: 0;">Email</h4>
-                <a href="mailto:mert@biricik.de" style="color: var(--text-secondary);">mert@biricik.de</a>
-              </div>
-            </div>
-            
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <i class="fas fa-map-marker-alt" style="font-size: 1.5rem; color: var(--primary-color);"></i>
-              <div>
-                <h4 style="margin: 0;">Location</h4>
-                <p style="margin: 0; color: var(--text-secondary);">Istanbul, Turkey</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <h3 style="margin-top: 2rem;">Social Media & Professional Networks</h3>
-        <div class="card">
-          <div style="display: flex; flex-direction: column; gap: 1rem;">
-            <a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" 
-               style="display: flex; align-items: center; gap: 1rem; text-decoration: none; color: var(--text-primary); padding: 0.5rem; border-radius: 0.5rem; transition: background-color 0.3s ease;"
-               onmouseover="this.style.backgroundColor='var(--bg-secondary)'" 
-               onmouseout="this.style.backgroundColor='transparent'">
-              <i class="fab fa-linkedin" style="font-size: 1.5rem; color: #0077B5;"></i>
-              <div>
-                <h4 style="margin: 0;">LinkedIn</h4>
-                <p style="margin: 0; color: var(--text-secondary); font-size: 0.9rem;">linkedin.com/in/mertbiricik</p>
+                <p class="text-xs uppercase tracking-wider text-ink-500 dark:text-ink-400">Email</p>
+                <p class="font-medium text-ink-900 dark:text-white">mert@biricik.de</p>
               </div>
             </a>
-            
-            <a href="https://github.com/mertbiricik" target="_blank" rel="noopener noreferrer"
-               style="display: flex; align-items: center; gap: 1rem; text-decoration: none; color: var(--text-primary); padding: 0.5rem; border-radius: 0.5rem; transition: background-color 0.3s ease;"
-               onmouseover="this.style.backgroundColor='var(--bg-secondary)'" 
-               onmouseout="this.style.backgroundColor='transparent'">
-              <i class="fab fa-github" style="font-size: 1.5rem; color: #333;"></i>
+            <a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-4 rounded-xl border border-ink-200 p-4 transition hover:border-brand-400 hover:bg-brand-50/50 dark:border-ink-800 dark:hover:border-brand-500 dark:hover:bg-brand-900/20">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 text-brand-700 dark:bg-brand-900/40 dark:text-brand-300 group-hover:bg-brand-600 group-hover:text-white transition"><i class="fa-brands fa-linkedin"></i></span>
               <div>
-                <h4 style="margin: 0;">GitHub</h4>
-                <p style="margin: 0; color: var(--text-secondary); font-size: 0.9rem;">github.com/mertbiricik</p>
+                <p class="text-xs uppercase tracking-wider text-ink-500 dark:text-ink-400">LinkedIn</p>
+                <p class="font-medium text-ink-900 dark:text-white">/in/mertbiricik</p>
+              </div>
+            </a>
+            <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-4 rounded-xl border border-ink-200 p-4 transition hover:border-brand-400 hover:bg-brand-50/50 dark:border-ink-800 dark:hover:border-brand-500 dark:hover:bg-brand-900/20">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 text-brand-700 dark:bg-brand-900/40 dark:text-brand-300 group-hover:bg-brand-600 group-hover:text-white transition"><i class="fa-brands fa-github"></i></span>
+              <div>
+                <p class="text-xs uppercase tracking-wider text-ink-500 dark:text-ink-400">GitHub</p>
+                <p class="font-medium text-ink-900 dark:text-white">/mertBiricik</p>
+              </div>
+            </a>
+            <a href="https://scholar.google.com/citations?user=MgyR0RMAAAAJ" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-4 rounded-xl border border-ink-200 p-4 transition hover:border-brand-400 hover:bg-brand-50/50 dark:border-ink-800 dark:hover:border-brand-500 dark:hover:bg-brand-900/20">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 text-brand-700 dark:bg-brand-900/40 dark:text-brand-300 group-hover:bg-brand-600 group-hover:text-white transition"><i class="fa-solid fa-graduation-cap"></i></span>
+              <div>
+                <p class="text-xs uppercase tracking-wider text-ink-500 dark:text-ink-400">Google Scholar</p>
+                <p class="font-medium text-ink-900 dark:text-white">scholar profile</p>
               </div>
             </a>
           </div>
         </div>
-      </div>
 
-      <div>
-        <h2>Seeking</h2>
-        <div class="card">
-          <h3>Professional Opportunities</h3>
-          <ul>
-            <li><strong>Cybersecurity Research Roles:</strong> Remote positions. AI-driven security solutions, threat detection.</li>
-            <li><strong>Data Science Positions:</strong> ML/AI projects in cybersecurity or critical infrastructure.</li>
-            <li><strong>Research Collaborations:</strong> Academic partnerships in applied AI and security.</li>
-            <li><strong>Consulting Projects:</strong> Technical advisory and implementation.</li>
-          </ul>
-        </div>
-
-        <div class="card" style="margin-top: 1.5rem;">
-          <h3>Technical Interests</h3>
-          <ul>
-            <li>AI-driven cybersecurity solutions.</li>
-            <li>Real-time data processing and analytics.</li>
-            <li>Cloud-native application development.</li>
-            <li>Open source contributions.</li>
-            <li>Academic research and publications.</li>
-          </ul>
-        </div>
-
-        <div class="card" style="margin-top: 1.5rem;">
-          <h3>Collaboration Opportunities</h3>
-          <ul>
-            <li>Technical mentorship. Knowledge sharing.</li>
-            <li>Conference speaking. Presentations.</li>
-            <li>Workshop facilitation. Training.</li>
-            <li>Startup advisory. Technical consultation.</li>
+        <div class="card-flat">
+          <h2 class="text-lg font-semibold text-ink-900 dark:text-white">What I'm currently open to</h2>
+          <ul class="mt-4 grid gap-2 sm:grid-cols-2 text-sm text-ink-700 dark:text-ink-300">
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-brand-600 dark:text-brand-400 text-xs"></i><span>Cybersecurity research collaborations (Zero Trust, cloud security, SASE, OSINT).</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-brand-600 dark:text-brand-400 text-xs"></i><span>Applied AI / ML projects in critical infrastructure or BCI.</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-brand-600 dark:text-brand-400 text-xs"></i><span>Internships and part-time roles aligned with the CyberMACS programme.</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-brand-600 dark:text-brand-400 text-xs"></i><span>Speaking, workshops, and academic mentoring.</span></li>
           </ul>
         </div>
       </div>
+
+      <aside class="space-y-4">
+        <div class="card-flat">
+          <p class="text-xs uppercase tracking-wider text-ink-500 dark:text-ink-400">Location</p>
+          <p class="mt-1 font-medium text-ink-900 dark:text-white"><i class="fa-solid fa-location-dot mr-2 text-brand-600 dark:text-brand-400"></i>Istanbul, Turkey</p>
+        </div>
+        <div class="card-flat">
+          <p class="text-xs uppercase tracking-wider text-ink-500 dark:text-ink-400">Mobility</p>
+          <p class="mt-2 text-sm text-ink-700 dark:text-ink-300">From 09/2026 onwards: between Istanbul (TR), Berlin (DE), and Skopje (MK) under the CyberMACS programme.</p>
+        </div>
+        <div class="card-flat">
+          <p class="text-xs uppercase tracking-wider text-ink-500 dark:text-ink-400">Response time</p>
+          <p class="mt-2 text-sm text-ink-700 dark:text-ink-300">Within 24 hours on weekdays.</p>
+        </div>
+      </aside>
     </div>
 
-    <div style="text-align: center; margin-top: 3rem; padding: 2rem; background-color: var(--bg-secondary); border-radius: var(--border-radius);">
-      <h2>Start Project?</h2>
-      <p style="max-width: 600px; margin: 0 auto 2rem;">Seeking developer for team. Need technical expertise. Discuss research collaboration. Contact.</p>
-      
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="mailto:mert@biricik.de?subject=Project%20Collaboration&body=Hi%20Mert,%0D%0A%0D%0AI'd%20like%20to%20discuss%20a%20potential%20collaboration.%0D%0A%0D%0ABest%20regards," 
-           class="btn btn-primary">
-          <i class="fas fa-paper-plane"></i>
-          Send Email
+    <div class="mt-16 rounded-3xl bg-gradient-to-br from-brand-600 to-accent-600 p-10 text-center text-white shadow-xl">
+      <h2 class="text-3xl font-bold">Ready to start?</h2>
+      <p class="mt-3 text-brand-100 max-w-xl mx-auto">Drop a line with the project, role, or research topic — I'll come back with concrete next steps.</p>
+      <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
+        <a href="mailto:mert@biricik.de?subject=Project%20Collaboration&body=Hi%20Mert%2C%0D%0A%0D%0AI%27d%20like%20to%20discuss%20a%20potential%20collaboration.%0D%0A%0D%0ABest%20regards%2C" class="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-brand-700 hover:bg-brand-50 transition">
+          <i class="fa-solid fa-paper-plane"></i> Email me
         </a>
-        
-        <a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-          <i class="fab fa-linkedin"></i>
-          Connect with Me
+        <a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg border border-white/30 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/20 transition">
+          <i class="fa-brands fa-linkedin"></i> Connect
         </a>
       </div>
-    </div>
-
-    <div style="text-align: center; margin-top: 2rem;">
-      <p style="color: var(--text-light); font-size: 0.9rem;">
-        <i class="fas fa-clock"></i>
-        Response time: Within 24 hours.
-      </p>
     </div>
   </div>
 </section>
+
   </main>
 
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Mert Biricik</h3>
-          <p>Cyber-Security Researcher & Data Scientist</p>
+  <footer class="mt-auto border-t border-ink-200 bg-ink-50 dark:border-ink-800 dark:bg-ink-950">
+    <div class="container-wide py-12">
+      <div class="grid gap-10 md:grid-cols-3">
+        <div>
+          <a href="/" class="flex items-center gap-2 text-lg font-semibold text-ink-900 dark:text-white">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-brand-600 to-accent-500 text-white shadow-sm">
+              <i class="fa-solid fa-shield-halved"></i>
+            </span>
+            Mert Biricik
+          </a>
+          <p class="mt-3 text-sm text-ink-600 dark:text-ink-400 max-w-sm">Cybersecurity Researcher &amp; CyberMACS Scholar. Erasmus Mundus CyberMACS Scholar based in Istanbul.</p>
         </div>
-        <div class="footer-section">
-          <h4>Connect</h4>
-          <div class="social-links">
-            <a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" aria-label="View my LinkedIn profile">
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/mertbiricik" target="_blank" rel="noopener noreferrer" aria-label="View my GitHub profile">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="mailto:mert@biricik.de" aria-label="Send me an email">
-              <i class="fas fa-envelope"></i> Email
-            </a>
-          </div>
+
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-500 dark:text-ink-400 mb-4">Connect</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="mailto:mert@biricik.de" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-solid fa-envelope w-4"></i> mert@biricik.de</a></li>
+            <li><a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-brands fa-linkedin w-4"></i> linkedin.com/in/mertbiricik</a></li>
+            <li><a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-brands fa-github w-4"></i> github.com/mertBiricik</a></li>
+            <li><a href="https://scholar.google.com/citations?user=MgyR0RMAAAAJ" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-solid fa-graduation-cap w-4"></i> Google Scholar</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-500 dark:text-ink-400 mb-4">Site</h4>
+          <ul class="space-y-2 text-sm">
+            
+            <li><a href="/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Home</a></li>
+            
+            <li><a href="/about/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">About</a></li>
+            
+            <li><a href="/projects/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Projects</a></li>
+            
+            <li><a href="/publications/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Publications</a></li>
+            
+            <li><a href="/blog/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Blog</a></li>
+            
+            <li><a href="/contact/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Contact</a></li>
+            
+            <li><a href="/rss.xml" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-solid fa-rss w-4"></i> RSS</a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Mert Biricik. All rights reserved.</p>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-ink-200 pt-6 text-xs text-ink-500 dark:border-ink-800 dark:text-ink-400">
+        <p>&copy; 2026 Mert Biricik. All rights reserved.</p>
+        <p>Built with Eleventy + Tailwind. Deployed on GitHub Pages.</p>
       </div>
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>

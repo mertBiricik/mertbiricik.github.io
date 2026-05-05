@@ -7,12 +7,6 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mert.biricik.de/blog/hello_world/</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.5</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
     <loc>https://mert.biricik.de/blog/basketball-rag-system-tutorial/</loc>
     <lastmod>2025-08-11</lastmod>
     <priority>0.5</priority>
@@ -20,62 +14,50 @@
   </url>
   <url>
     <loc>https://mert.biricik.de/about/</loc>
-    <lastmod>2025-08-12</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mert.biricik.de/assets/icons/README/</loc>
-    <lastmod>2025-08-12</lastmod>
-    <priority>0.5</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
     <loc>https://mert.biricik.de/blog/</loc>
-    <lastmod>2025-08-12</lastmod>
-    <priority>0.5</priority>
+    <lastmod>2026-05-05</lastmod>
+    <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://mert.biricik.de/case-studies/basketball-rag-agent/</loc>
-    <lastmod>2025-08-12</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://mert.biricik.de/contact/</loc>
-    <lastmod>2025-08-12</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <priority>0.8</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
     <loc>https://mert.biricik.de/demos/enerdata-primary-energy/</loc>
-    <lastmod>2025-08-12</lastmod>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-05</lastmod>
+    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
   </url>
   <url>
     <loc>https://mert.biricik.de/</loc>
-    <lastmod>2025-08-12</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <priority>1</priority>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://mert.biricik.de/projects/</loc>
-    <lastmod>2025-08-12</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://mert.biricik.de/publications/</loc>
-    <lastmod>2025-08-12</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <priority>0.8</priority>
-    <changefreq>yearly</changefreq>
-  </url>
-  <url>
-    <loc>https://mert.biricik.de/uses/</loc>
-    <lastmod>2025-08-12</lastmod>
-    <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
 </urlset> 
