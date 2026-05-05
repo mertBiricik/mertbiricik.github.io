@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <script>
     (function() {
@@ -14,145 +14,184 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CompTIA Security+ Fundamentals: Core Concepts — Mert Biricik | Cybersecurity Researcher &amp; CyberMACS Scholar</title>
+  <title>CompTIA Security+ Fundamentals: Core Concepts · Mert Biricik — Cybersecurity Researcher &amp; CyberMACS Scholar</title>
   <meta name="description" content="Cybersecurity researcher and Erasmus Mundus CyberMACS Scholar specializing in threat hunting, memory forensics, anomaly detection, and AI-driven protection of critical infrastructure.">
 
   <meta name="google-site-verification" content="0b64d5c9758fafd9">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mert.biricik.de/blog/comptia-security-plus-fundamentals/">
-  <meta property="og:title" content="CompTIA Security+ Fundamentals: Core Concepts — Mert Biricik">
+  <meta property="og:title" content="CompTIA Security+ Fundamentals: Core Concepts · Mert Biricik">
   <meta property="og:description" content="Cybersecurity researcher and Erasmus Mundus CyberMACS Scholar specializing in threat hunting, memory forensics, anomaly detection, and AI-driven protection of critical infrastructure.">
   <meta property="og:site_name" content="Mert Biricik">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CompTIA Security+ Fundamentals: Core Concepts — Mert Biricik">
+  <meta name="twitter:title" content="CompTIA Security+ Fundamentals: Core Concepts · Mert Biricik">
   <meta name="twitter:description" content="Cybersecurity researcher and Erasmus Mundus CyberMACS Scholar specializing in threat hunting, memory forensics, anomaly detection, and AI-driven protection of critical infrastructure.">
 
   <link rel="canonical" href="https://mert.biricik.de/blog/comptia-security-plus-fundamentals/">
 
   <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
   <link rel="manifest" href="/assets/icons/site.webmanifest">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#0a0a08">
   <link rel="alternate" href="/rss.xml" type="application/atom+xml" title="Mert Biricik — Feed">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;700&family=UnifrakturMaguntia&display=swap">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="min-h-screen flex flex-col">
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-brand-600 focus:text-white focus:px-3 focus:py-2 focus:rounded-md">Skip to content</a>
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-ink-900 focus:text-bone-50 focus:px-3 focus:py-2 focus:no-underline">Skip to content</a>
 
-  <header id="site-header" class="sticky top-0 z-40 border-b border-ink-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:border-ink-800/70 dark:bg-ink-950/70 dark:supports-[backdrop-filter]:bg-ink-950/60 transition-colors">
-    <nav class="container-wide flex h-16 items-center justify-between gap-4">
-      <a href="/" class="flex items-center gap-2 text-base font-semibold text-ink-900 dark:text-white">
-        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-600 to-accent-500 text-white shadow-sm">
-          <i class="fa-solid fa-shield-halved text-sm"></i>
-        </span>
-        <span class="hidden sm:inline">Mert Biricik</span>
-      </a>
-
-      <ul id="nav-menu" class="hidden md:flex items-center gap-6">
-        
-        <li>
-          <a href="/" class="nav-link ">Home</a>
-        </li>
-        
-        <li>
-          <a href="/about/" class="nav-link ">About</a>
-        </li>
-        
-        <li>
-          <a href="/projects/" class="nav-link ">Projects</a>
-        </li>
-        
-        <li>
-          <a href="/publications/" class="nav-link ">Publications</a>
-        </li>
-        
-        <li>
-          <a href="/blog/" class="nav-link ">Blog</a>
-        </li>
-        
-        <li>
-          <a href="/contact/" class="nav-link ">Contact</a>
-        </li>
-        
-      </ul>
-
-      <div class="flex items-center gap-2">
-        <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-lg text-ink-600 hover:text-brand-700 hover:bg-ink-100 dark:text-ink-300 dark:hover:text-brand-300 dark:hover:bg-ink-800 transition" aria-label="GitHub profile">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <button id="theme-toggle" class="inline-flex h-9 w-9 items-center justify-center rounded-lg text-ink-600 hover:text-brand-700 hover:bg-ink-100 dark:text-ink-300 dark:hover:text-brand-300 dark:hover:bg-ink-800 transition" aria-label="Toggle color theme">
-          <i class="fa-solid fa-sun sun-icon"></i>
-          <i class="fa-solid fa-moon moon-icon"></i>
-        </button>
-        <button id="menu-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-ink-700 hover:bg-ink-100 dark:text-ink-200 dark:hover:bg-ink-800 transition" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
+  
+  <header id="site-header" class="border-b-2 border-ink-900 dark:border-bone-100">
+    <div class="container-wide">
+      <div class="flex items-center justify-between py-3 text-[11px] font-mono uppercase tracking-[0.22em] text-ink-700 dark:text-bone-300 border-b border-ink-900 dark:border-bone-200">
+        <span>Vol. 2026 &nbsp;·&nbsp; No. 125</span>
+        <span class="hidden sm:inline">Istanbul, Turkey</span>
+        <span>Established <time datetime="2021">MMXXI</time></span>
       </div>
-    </nav>
 
-    <div id="mobile-menu" class="md:hidden hidden border-t border-ink-200 dark:border-ink-800 bg-white dark:bg-ink-950">
-      <ul class="container-wide flex flex-col py-3">
-        
-        <li>
-          <a href="/" class="block py-2 nav-link ">Home</a>
-        </li>
-        
-        <li>
-          <a href="/about/" class="block py-2 nav-link ">About</a>
-        </li>
-        
-        <li>
-          <a href="/projects/" class="block py-2 nav-link ">Projects</a>
-        </li>
-        
-        <li>
-          <a href="/publications/" class="block py-2 nav-link ">Publications</a>
-        </li>
-        
-        <li>
-          <a href="/blog/" class="block py-2 nav-link ">Blog</a>
-        </li>
-        
-        <li>
-          <a href="/contact/" class="block py-2 nav-link ">Contact</a>
-        </li>
-        
-      </ul>
+      <div class="py-6 sm:py-8 flex flex-col items-center text-center">
+        <a href="/" class="no-underline">
+          <h1 class="font-blackletter text-ink-900 dark:text-bone-50 leading-none text-5xl sm:text-7xl lg:text-8xl">Mert Biricik</h1>
+        </a>
+        <p class="mt-2 font-mono text-[10px] sm:text-xs uppercase tracking-[0.4em] text-blood-700 dark:text-blood-400">
+          ✠ &nbsp; Cybersecurity Researcher &amp; CyberMACS Scholar &nbsp; ✠
+        </p>
+      </div>
+
+      <nav class="border-t-2 border-ink-900 dark:border-bone-100">
+        <div class="flex items-center justify-between gap-4 py-3">
+          <ul id="nav-menu" class="hidden md:flex items-center gap-7">
+            
+            <li>
+              <a href="/" class="nav-link ">
+                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Home
+              </a>
+            </li>
+            
+            <li>
+              <a href="/about/" class="nav-link ">
+                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>About
+              </a>
+            </li>
+            
+            <li>
+              <a href="/projects/" class="nav-link ">
+                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Projects
+              </a>
+            </li>
+            
+            <li>
+              <a href="/publications/" class="nav-link ">
+                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Publications
+              </a>
+            </li>
+            
+            <li>
+              <a href="/blog/" class="nav-link ">
+                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Blog
+              </a>
+            </li>
+            
+            <li>
+              <a href="/contact/" class="nav-link ">
+                <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Contact
+              </a>
+            </li>
+            
+          </ul>
+
+          <div class="flex items-center gap-2 ml-auto">
+            <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors no-underline" aria-label="GitHub">
+              <i class="fa-brands fa-github text-sm"></i>
+            </a>
+            <a href="https://scholar.google.com/citations?user=MgyR0RMAAAAJ" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors no-underline" aria-label="Google Scholar">
+              <i class="fa-solid fa-graduation-cap text-sm"></i>
+            </a>
+            <button id="theme-toggle" class="inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors" aria-label="Toggle theme">
+              <i class="fa-solid fa-sun sun-icon text-sm"></i>
+              <i class="fa-solid fa-moon moon-icon text-sm"></i>
+            </button>
+            <button id="menu-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center border border-ink-900 dark:border-bone-100 text-ink-900 dark:text-bone-50 hover:bg-ink-900 hover:text-bone-50 dark:hover:bg-bone-50 dark:hover:text-ink-900 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+              <i class="fa-solid fa-bars text-sm"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div id="mobile-menu" class="md:hidden hidden border-t-2 border-ink-900 dark:border-bone-100">
+        <ul class="py-3 space-y-2">
+          
+          <li>
+            <a href="/" class="nav-link block py-1 ">
+              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Home
+            </a>
+          </li>
+          
+          <li>
+            <a href="/about/" class="nav-link block py-1 ">
+              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>About
+            </a>
+          </li>
+          
+          <li>
+            <a href="/projects/" class="nav-link block py-1 ">
+              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Projects
+            </a>
+          </li>
+          
+          <li>
+            <a href="/publications/" class="nav-link block py-1 ">
+              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Publications
+            </a>
+          </li>
+          
+          <li>
+            <a href="/blog/" class="nav-link block py-1 ">
+              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Blog
+            </a>
+          </li>
+          
+          <li>
+            <a href="/contact/" class="nav-link block py-1 ">
+              <span class="mr-1 text-blood-700 dark:text-blood-400">§</span>Contact
+            </a>
+          </li>
+          
+        </ul>
+      </div>
     </div>
   </header>
 
   <main id="main" class="flex-1">
     
-<section class="section">
+<article class="section">
   <div class="container-narrow">
-    <a href="/blog/" class="inline-flex items-center gap-2 text-sm text-ink-500 hover:text-brand-700 dark:text-ink-400 dark:hover:text-brand-300 mb-8">
-      <i class="fa-solid fa-arrow-left text-xs"></i> Back to blog
+    <a href="/blog/" class="font-mono text-[11px] uppercase tracking-[0.22em] no-underline hover:underline text-ink-700 dark:text-bone-300">
+      ← Return to index
     </a>
 
-    <article>
-      <header class="mb-10 border-b border-ink-200 pb-8 dark:border-ink-800">
-        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-ink-900 dark:text-white">CompTIA Security+ Fundamentals: Core Concepts</h1>
-        <div class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-ink-500 dark:text-ink-400">
-          
-          <span class="inline-flex items-center gap-2"><i class="fa-regular fa-calendar"></i> July 29, 2025</span>
-          
-          
-        </div>
-        
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="chip-brand">cybersecurity</span><span class="chip-brand">comptia</span><span class="chip-brand">security+</span>
-        </div>
-        
-      </header>
+    <header class="mt-8 border-b-2 border-ink-900 dark:border-bone-100 pb-8">
+      
+      <ul class="flex flex-wrap gap-2 mb-5">
+        <li class="tag-blood">cybersecurity</li><li class="tag-blood">comptia</li><li class="tag-blood">security+</li>
+      </ul>
+      
 
-      <div class="prose prose-lg dark:prose-invert max-w-none prose-headings:scroll-mt-24 prose-a:font-medium prose-pre:rounded-xl">
-        <h2>CompTIA Security+ Fundamentals: Core Concepts</h2>
+      <h1 class="font-display font-bold leading-[1.05] text-ink-900 dark:text-bone-50 text-4xl sm:text-5xl lg:text-6xl tracking-tight text-balance">CompTIA Security+ Fundamentals: Core Concepts</h1>
+
+      <div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[11px] uppercase tracking-[0.22em] text-ink-500 dark:text-bone-300">
+        <span>July 29, 2025</span>
+        
+        <span>· Filed under blog</span>
+      </div>
+    </header>
+
+    <div class="prose prose-lg dark:prose-invert max-w-none mt-10 first-letter:font-blackletter">
+      <h2>CompTIA Security+ Fundamentals: Core Concepts</h2>
 <h3>1.1 Controls</h3>
 <p>Cybersecurity controls are safeguards. They prevent, detect, or mitigate security risks.</p>
 <ul>
@@ -621,60 +660,63 @@
 </ul>
 <hr>
 
-      </div>
-    </article>
+    </div>
+
+    <div class="fleuron"><span class="font-blackletter text-2xl">✠</span></div>
+
+    <div class="text-center font-mono text-[11px] uppercase tracking-[0.22em] text-ink-500 dark:text-bone-300">
+      <p>End of article</p>
+    </div>
   </div>
-</section>
+</article>
 
   </main>
 
-  <footer class="mt-auto border-t border-ink-200 bg-ink-50 dark:border-ink-800 dark:bg-ink-950">
+  
+  <footer class="mt-auto border-t-2 border-ink-900 dark:border-bone-100">
     <div class="container-wide py-12">
-      <div class="grid gap-10 md:grid-cols-3">
-        <div>
-          <a href="/" class="flex items-center gap-2 text-lg font-semibold text-ink-900 dark:text-white">
-            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-brand-600 to-accent-500 text-white shadow-sm">
-              <i class="fa-solid fa-shield-halved"></i>
-            </span>
-            Mert Biricik
-          </a>
-          <p class="mt-3 text-sm text-ink-600 dark:text-ink-400 max-w-sm">Cybersecurity Researcher &amp; CyberMACS Scholar. Erasmus Mundus CyberMACS Scholar based in Istanbul.</p>
+      <div class="grid gap-10 md:grid-cols-12">
+        <div class="md:col-span-5">
+          <p class="eyebrow-blood">Colophon</p>
+          <p class="mt-3 font-serif text-base leading-relaxed text-ink-700 dark:text-bone-200">
+            Set in <span class="font-display italic">Cormorant Garamond</span> and <span class="font-serif italic">EB Garamond</span>; ornaments in <span class="font-blackletter">UnifrakturMaguntia</span>; labels in <span class="font-mono">JetBrains Mono</span>. Composed in Eleventy, hand-set with Tailwind. Pressed at GitHub Pages, Berlin–Istanbul.
+          </p>
         </div>
 
-        <div>
-          <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-500 dark:text-ink-400 mb-4">Connect</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="mailto:mert@biricik.de" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-solid fa-envelope w-4"></i> mert@biricik.de</a></li>
-            <li><a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-brands fa-linkedin w-4"></i> linkedin.com/in/mertbiricik</a></li>
-            <li><a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-brands fa-github w-4"></i> github.com/mertBiricik</a></li>
-            <li><a href="https://scholar.google.com/citations?user=MgyR0RMAAAAJ" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-solid fa-graduation-cap w-4"></i> Google Scholar</a></li>
+        <div class="md:col-span-3">
+          <p class="eyebrow">Correspondence</p>
+          <ul class="mt-3 space-y-1.5 font-mono text-xs uppercase tracking-[0.16em]">
+            <li><a href="mailto:mert@biricik.de" class="no-underline hover:underline">mert@biricik.de</a></li>
+            <li><a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">linkedin / mertbiricik</a></li>
+            <li><a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">github / mertBiricik</a></li>
+            <li><a href="https://scholar.google.com/citations?user=MgyR0RMAAAAJ" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">google scholar</a></li>
+            <li><a href="/rss.xml" class="no-underline hover:underline">rss feed</a></li>
           </ul>
         </div>
 
-        <div>
-          <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-500 dark:text-ink-400 mb-4">Site</h4>
-          <ul class="space-y-2 text-sm">
+        <div class="md:col-span-4">
+          <p class="eyebrow">Index</p>
+          <ul class="mt-3 grid grid-cols-2 gap-y-1.5 font-mono text-xs uppercase tracking-[0.16em]">
             
-            <li><a href="/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Home</a></li>
+            <li><a href="/" class="no-underline hover:underline">Home</a></li>
             
-            <li><a href="/about/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">About</a></li>
+            <li><a href="/about/" class="no-underline hover:underline">About</a></li>
             
-            <li><a href="/projects/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Projects</a></li>
+            <li><a href="/projects/" class="no-underline hover:underline">Projects</a></li>
             
-            <li><a href="/publications/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Publications</a></li>
+            <li><a href="/publications/" class="no-underline hover:underline">Publications</a></li>
             
-            <li><a href="/blog/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Blog</a></li>
+            <li><a href="/blog/" class="no-underline hover:underline">Blog</a></li>
             
-            <li><a href="/contact/" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300">Contact</a></li>
+            <li><a href="/contact/" class="no-underline hover:underline">Contact</a></li>
             
-            <li><a href="/rss.xml" class="text-ink-700 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"><i class="fa-solid fa-rss w-4"></i> RSS</a></li>
           </ul>
         </div>
       </div>
 
-      <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-ink-200 pt-6 text-xs text-ink-500 dark:border-ink-800 dark:text-ink-400">
-        <p>&copy; 2026 Mert Biricik. All rights reserved.</p>
-        <p>Built with Eleventy + Tailwind. Deployed on GitHub Pages.</p>
+      <div class="mt-10 pt-6 border-t-2 border-ink-900 dark:border-bone-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-500 dark:text-bone-300">
+        <p>© Anno Domini 2026 · Mert Biricik · All rights reserved</p>
+        <p>Memento mori &nbsp;✠&nbsp; Memento codere</p>
       </div>
     </div>
   </footer>
