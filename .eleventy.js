@@ -38,6 +38,23 @@ module.exports = function(eleventyConfig) {
     return new Date(date).getFullYear();
   });
 
+  eleventyConfig.addFilter("pad", function(number, width) {
+    width = width || 2;
+    return String(number).padStart(width, '0');
+  });
+
+  eleventyConfig.addFilter("roman", function(num) {
+    const map = [
+      [1000,'M'],[900,'CM'],[500,'D'],[400,'CD'],
+      [100,'C'],[90,'XC'],[50,'L'],[40,'XL'],
+      [10,'X'],[9,'IX'],[5,'V'],[4,'IV'],[1,'I']
+    ];
+    let n = parseInt(num, 10);
+    let out = '';
+    for (const [v, s] of map) { while (n >= v) { out += s; n -= v; } }
+    return out;
+  });
+
   eleventyConfig.setLibrary("md", require("markdown-it")({
     html: true,
     breaks: true,
