@@ -6,63 +6,70 @@ priority: 0.9
 changefreq: monthly
 ---
 
-<section class="section pt-16 lg:pt-20">
-  <div class="container-wide">
-    <p class="section-eyebrow">Portfolio</p>
-    <h1 class="mt-2 text-4xl sm:text-5xl font-bold text-ink-900 dark:text-white">Projects</h1>
-    <p class="mt-3 max-w-2xl text-lg text-ink-600 dark:text-ink-300">
-      Research-grade systems and tooling spanning cybersecurity, AI agents, energy data, BCI signal processing, and low-level systems programming.
+<section class="container-wide py-10 sm:py-14">
+  <div class="masthead">
+    <span class="eyebrow-blood">Folio III</span>
+    <span class="eyebrow">Register of works</span>
+  </div>
+
+  <div class="mt-10 max-w-3xl">
+    <span class="section-marker">Index</span>
+    <h2 class="display-1 mt-5 text-ink-900 dark:text-bone-50 text-balance">Dossiers.</h2>
+    <p class="mt-6 font-serif text-xl text-ink-700 dark:text-bone-200 leading-relaxed">
+      Research-grade systems and tooling spanning cybersecurity, AI agents, energy data, brain-computer interfaces, and low-level systems programming. Each entry is presented with its <em>subject</em>, <em>method</em>, and <em>verdict</em>.
     </p>
+  </div>
+</section>
 
-    <div class="mt-12 grid gap-6 lg:grid-cols-2">
-      {% for project in projects.all %}
-      <article class="card flex flex-col h-full">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="text-xl font-semibold text-ink-900 dark:text-white">{{ project.title }}</h3>
-            {% if project.subtitle %}<p class="mt-1 text-sm text-ink-500 dark:text-ink-400">{{ project.subtitle }}</p>{% endif %}
-          </div>
-          {% if project.period %}<span class="chip shrink-0">{{ project.period }}</span>{% endif %}
+<section class="container-wide section-tight">
+  <ol class="border-t-2 border-ink-900 dark:border-bone-100">
+    {% for project in projects.all %}
+    <article class="grid md:grid-cols-12 gap-6 py-10 border-b-2 border-ink-900 dark:border-bone-100">
+      <div class="md:col-span-2">
+        <span class="font-blackletter text-5xl text-blood-700 dark:text-blood-400 leading-none">№{{ loop.index | pad }}</span>
+        {% if project.period %}<p class="mt-3 font-mono text-[11px] uppercase tracking-[0.22em] text-ink-500 dark:text-bone-300">{{ project.period }}</p>{% endif %}
+      </div>
+
+      <div class="md:col-span-7 md:pr-6 md:border-r-2 md:border-ink-900 dark:md:border-bone-100">
+        <h3 class="font-display text-3xl sm:text-4xl leading-tight text-ink-900 dark:text-bone-50">{{ project.title }}</h3>
+        {% if project.subtitle %}<p class="mt-2 font-serif italic text-ink-500 dark:text-bone-300">{{ project.subtitle }}</p>{% endif %}
+
+        <div class="mt-6 space-y-3 font-serif text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">
+          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Subject.</span>{{ project.problem }}</p>
+          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Method.</span>{{ project.solution }}</p>
+          <p><span class="font-display text-ink-900 dark:text-bone-50 italic mr-1">Verdict.</span>{{ project.outcome }}</p>
         </div>
+      </div>
 
-        <dl class="mt-5 space-y-3 text-sm">
-          <div>
-            <dt class="font-semibold text-ink-800 dark:text-ink-200">Problem</dt>
-            <dd class="text-ink-600 dark:text-ink-400">{{ project.problem }}</dd>
-          </div>
-          <div>
-            <dt class="font-semibold text-ink-800 dark:text-ink-200">Solution</dt>
-            <dd class="text-ink-600 dark:text-ink-400">{{ project.solution }}</dd>
-          </div>
-          <div>
-            <dt class="font-semibold text-ink-800 dark:text-ink-200">Outcome</dt>
-            <dd class="text-ink-600 dark:text-ink-400">{{ project.outcome }}</dd>
-          </div>
-        </dl>
-
+      <div class="md:col-span-3">
         {% if project.tech %}
-        <ul class="mt-5 flex flex-wrap gap-2">
-          {% for t in project.tech %}<li class="chip-brand">{{ t }}</li>{% endfor %}
+        <p class="eyebrow mb-2">Apparatus</p>
+        <ul class="flex flex-wrap gap-1.5">
+          {% for t in project.tech %}<li class="tag">{{ t }}</li>{% endfor %}
         </ul>
         {% endif %}
 
-        <div class="mt-6 flex flex-wrap gap-2 pt-5 border-t border-ink-200 dark:border-ink-800">
-          {% if project.sourceLink %}<a href="{{ project.sourceLink }}" target="_blank" rel="noopener noreferrer" class="btn-outline btn-sm"><i class="fa-brands fa-github"></i> Code</a>{% endif %}
-          {% if project.visitSiteLink %}<a href="{{ project.visitSiteLink }}" target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm"><i class="fa-solid fa-up-right-from-square"></i> Live</a>{% endif %}
-          {% if project.demoLink %}<a href="{{ project.demoLink }}" class="btn-outline btn-sm"><i class="fa-solid fa-chart-bar"></i> Demo</a>{% endif %}
-          {% if project.publicationLink %}<a href="{{ project.publicationLink }}" target="_blank" rel="noopener noreferrer" class="btn-outline btn-sm"><i class="fa-solid fa-file-lines"></i> Paper</a>{% endif %}
+        <div class="mt-6">
+          <p class="eyebrow mb-2">References</p>
+          <ul class="space-y-1.5 font-mono text-[11px] uppercase tracking-[0.2em]">
+            {% if project.sourceLink %}<li><a href="{{ project.sourceLink }}" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Source</a></li>{% endif %}
+            {% if project.visitSiteLink %}<li><a href="{{ project.visitSiteLink }}" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Live site</a></li>{% endif %}
+            {% if project.demoLink %}<li><a href="{{ project.demoLink }}" class="no-underline hover:underline">→ Embedded demo</a></li>{% endif %}
+            {% if project.publicationLink %}<li><a href="{{ project.publicationLink }}" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Paper</a></li>{% endif %}
+          </ul>
         </div>
-      </article>
-      {% endfor %}
-    </div>
-
-    <div class="mt-16 text-center">
-      <h2 class="text-2xl font-semibold text-ink-900 dark:text-white">Looking for a collaborator?</h2>
-      <p class="mt-2 text-ink-600 dark:text-ink-300">Open to research collaborations and applied cybersecurity / AI engineering roles.</p>
-      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
-        <a href="/contact/" class="btn-primary"><i class="fa-solid fa-envelope"></i> Contact</a>
-        <a href="{{ metadata.social.github }}" target="_blank" rel="noopener noreferrer" class="btn-outline"><i class="fa-brands fa-github"></i> See my GitHub</a>
       </div>
+    </article>
+    {% endfor %}
+  </ol>
+
+  <div class="fleuron"><span class="font-blackletter text-2xl">✠</span></div>
+
+  <div class="text-center">
+    <h2 class="display-3 text-ink-900 dark:text-bone-50">Looking for collaboration?</h2>
+    <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
+      <a href="/contact/" class="btn-solid">→ Send word</a>
+      <a href="{{ metadata.social.github }}" target="_blank" rel="noopener noreferrer" class="btn-ghost">↗ Source code</a>
     </div>
   </div>
 </section>
