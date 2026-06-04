@@ -5,190 +5,152 @@ priority: 1.0
 changefreq: weekly
 ---
 
-{# ============= LEDE ============= #}
-<section class="container-wide pt-12 sm:pt-16 lg:pt-20 pb-10">
-  <div class="grid lg:grid-cols-12 gap-10">
-    <div class="lg:col-span-8 lg:pr-10 lg:border-r-2 lg:border-ink-900 dark:lg:border-bone-100">
-      <p class="eyebrow-blood">Cybersecurity researcher · CyberMACS scholar</p>
+{# ============= HERO ============= #}
+<section class="container-wide pt-32 pb-24">
+  <div class="grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-8 lg:pr-12">
+      <p class="text-sm font-semibold uppercase tracking-widest text-sage-600 dark:text-sage-400 mb-6">{{ home.hero.eyebrow }}</p>
 
-      <h1 class="display-1 mt-5 text-ink-900 dark:text-bone-50 text-balance">
-        I build and defend systems that don't fail quietly.
+      <h1 class="display-1 text-slate-900 dark:text-white text-balance mb-8">
+        {{ home.hero.title }}
       </h1>
 
-      <p class="mt-8 font-sans text-lg sm:text-xl leading-relaxed text-ink-700 dark:text-bone-200 max-w-2xl">
-        {{ profile.summary }}
+      <p class="font-sans text-lg sm:text-xl leading-relaxed text-slate-600 dark:text-slate-300 max-w-3xl mb-10 text-justify">
+        {{ home.hero.valueProposition }}
       </p>
 
-      <div class="mt-10 flex flex-wrap gap-3">
-        <a href="/projects/" class="btn-solid">→ View work</a>
-        <a href="/publications/" class="btn-ghost">Publications</a>
-        <a href="{{ metadata.social.github }}" target="_blank" rel="noopener noreferrer" class="btn-ghost">↗ GitHub</a>
+      <div class="flex flex-wrap gap-4">
+        <a href="{{ home.hero.ctaPrimary.url }}" class="btn-primary">
+          {{ home.hero.ctaPrimary.label }}
+        </a>
+        <a href="{{ home.hero.ctaSecondary.url }}" class="btn-secondary">
+          {{ home.hero.ctaSecondary.label }}
+        </a>
       </div>
     </div>
-
-    <aside class="lg:col-span-4">
-      <p class="eyebrow">Profile</p>
-      <dl class="mt-4">
-        <div class="def-row">
-          <dt class="def-key">Role</dt>
-          <dd class="font-display font-semibold text-base text-ink-900 dark:text-bone-50">{{ profile.title }}</dd>
-        </div>
-        <div class="def-row">
-          <dt class="def-key">Based</dt>
-          <dd class="font-sans text-base text-ink-700 dark:text-bone-200">{{ profile.location }}</dd>
-        </div>
-        <div class="def-row">
-          <dt class="def-key">Citizenship</dt>
-          <dd class="font-sans text-base text-ink-700 dark:text-bone-200">{{ profile.citizenship }}</dd>
-        </div>
-        <div class="def-row">
-          <dt class="def-key">Status</dt>
-          <dd class="font-sans text-base text-ink-700 dark:text-bone-200">Incoming Erasmus Mundus Scholar (CyberMACS, 2026)</dd>
-        </div>
-        <div class="def-row">
-          <dt class="def-key">Languages</dt>
-          <dd class="font-mono text-xs uppercase tracking-[0.14em] text-ink-700 dark:text-bone-200">
-            {% for l in profile.languages %}{{ l.name }} · {{ l.level }}{% if not loop.last %}<br>{% endif %}{% endfor %}
-          </dd>
-        </div>
-      </dl>
-    </aside>
   </div>
 </section>
 
-{# ============= 01 — FOCUS ============= #}
-<section class="container-wide section-tight">
-  <div class="masthead">
-    <span class="eyebrow-blood">01 — Focus</span>
-    <span class="eyebrow hidden sm:inline">What I work on</span>
+{# ============= PHILOSOPHY ============= #}
+<section class="bg-sage-50/50 dark:bg-slate-800/20 border-y border-slate-200 dark:border-slate-800">
+  <div class="container-wide section">
+    <div class="max-w-4xl mx-auto text-center mb-16">
+      <h2 class="display-2 text-slate-900 dark:text-white">{{ home.philosophy.title }}</h2>
+    </div>
+    
+    <div class="max-w-3xl mx-auto space-y-8 font-sans text-lg text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+      {% for p in home.philosophy.content %}
+      <p>{{ p }}</p>
+      {% endfor %}
+    </div>
   </div>
-
-  <ol class="mt-10 grid md:grid-cols-3 gap-0 border-2 border-ink-900 dark:border-bone-100">
-    <li class="p-7 border-b-2 md:border-b-0 md:border-r-2 border-ink-900 dark:border-bone-100">
-      <span class="font-mono text-xs uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">01</span>
-      <h3 class="font-display text-2xl mt-3 text-ink-900 dark:text-bone-50">Threat hunting & forensics</h3>
-      <p class="mt-3 font-sans text-ink-700 dark:text-bone-200 leading-relaxed">Memory forensics on Volatility3, OSINT-driven threat discovery, anomaly detection on SCADA testbeds and power distribution networks.</p>
-    </li>
-    <li class="p-7 border-b-2 md:border-b-0 md:border-r-2 border-ink-900 dark:border-bone-100">
-      <span class="font-mono text-xs uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">02</span>
-      <h3 class="font-display text-2xl mt-3 text-ink-900 dark:text-bone-50">Applied AI & agents</h3>
-      <p class="mt-3 font-sans text-ink-700 dark:text-bone-200 leading-relaxed">Agentic AI, retrieval-augmented generation, ETL and time-series pipelines for energy, sports analytics, and BCI signal processing.</p>
-    </li>
-    <li class="p-7">
-      <span class="font-mono text-xs uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">03</span>
-      <h3 class="font-display text-2xl mt-3 text-ink-900 dark:text-bone-50">Infrastructure</h3>
-      <p class="mt-3 font-sans text-ink-700 dark:text-bone-200 leading-relaxed">Linux administration on Debian and Red Hat, Docker and Kubernetes, QEMU+KVM virtualization, GPU-accelerated research clusters.</p>
-    </li>
-  </ol>
 </section>
 
-{# ============= 02 — STACK ============= #}
-<section class="container-wide section-tight">
-  <div class="masthead">
-    <span class="eyebrow-blood">02 — Stack</span>
-    <span class="eyebrow hidden sm:inline">Tools I use</span>
+{# ============= MEDIA & PUBLICATIONS ============= #}
+<section class="container-wide section">
+  <div class="flex items-center gap-6 mb-16">
+    <h2 class="display-2 text-slate-900 dark:text-white">{{ home.media.title }}</h2>
+    <div class="flex-1 h-px bg-slate-200 dark:bg-slate-800"></div>
   </div>
 
-  <div class="mt-10 grid md:grid-cols-2 gap-0 border-2 border-ink-900 dark:border-bone-100">
-    {% for group in profile.skills %}
-    <div class="p-7 {% if loop.index0 % 2 == 0 %}md:border-r-2{% endif %} {% if loop.index0 < (profile.skills | length) - 2 %}border-b-2{% else %}border-b-2 md:border-b-0{% endif %} border-ink-900 dark:border-bone-100">
-      <div class="flex items-baseline justify-between">
-        <h3 class="font-display text-xl text-ink-900 dark:text-bone-50">{{ group.group }}</h3>
-        <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-500 dark:text-bone-300">{{ group.items | length }} items</span>
-      </div>
-      <ul class="mt-4 flex flex-wrap gap-1.5">
-        {% for item in group.items %}<li class="tag">{{ item }}</li>{% endfor %}
-      </ul>
+  <div class="grid md:grid-cols-2 gap-8">
+    {% for item in home.media.items %}
+    <div class="glass-card p-8 group">
+      {% if item.type == 'publication' %}
+        <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">
+          <i class="fa-solid fa-file-lines text-sage-500"></i> Publication
+        </span>
+        <h3 class="font-display text-2xl font-semibold text-slate-900 dark:text-white mb-3">{{ item.title }}</h3>
+        <p class="text-sm font-medium text-sage-600 dark:text-sage-400 mb-4">{{ item.publisher }}</p>
+        <p class="font-sans text-slate-600 dark:text-slate-400 leading-relaxed text-justify">{{ item.summary }}</p>
+        {% if item.link and item.link != '#' %}
+        <a href="{{ item.link }}" class="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-slate-900 dark:text-white hover:text-sage-600 dark:hover:text-sage-400">
+          Read Paper <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        {% endif %}
+      {% elif item.type == 'video' %}
+        <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">
+          <i class="fa-solid fa-video text-sage-500"></i> Media
+        </span>
+        <h3 class="font-display text-2xl font-semibold text-slate-900 dark:text-white mb-4">{{ item.title }}</h3>
+        <div class="aspect-video bg-slate-200 dark:bg-slate-800 rounded-lg flex items-center justify-center mb-6 border border-slate-300 dark:border-slate-700">
+          <span class="text-sm text-slate-500">[ Video Placeholder: {{ item.videoId }} ]</span>
+        </div>
+        <details class="group/details">
+          <summary class="cursor-pointer font-medium text-slate-900 dark:text-white flex items-center justify-between border-t border-slate-200 dark:border-slate-700 pt-4">
+            Executive Summary
+            <i class="fa-solid fa-chevron-down transition-transform group-open/details:rotate-180"></i>
+          </summary>
+          <div class="pt-4 font-sans text-slate-600 dark:text-slate-400 leading-relaxed text-justify">
+            {{ item.executiveSummary }}
+          </div>
+        </details>
+      {% endif %}
     </div>
     {% endfor %}
   </div>
 </section>
 
-{# ============= 03 — FEATURED PROJECTS ============= #}
-<section class="container-wide section-tight">
-  <div class="masthead">
-    <span class="eyebrow-blood">03 — Selected work</span>
-    <a href="/projects/" class="hidden sm:inline eyebrow no-underline hover:underline">→ All projects</a>
-  </div>
-
-  <div class="mt-10 border-t-2 border-ink-900 dark:border-bone-100">
-    {% for project in projects.featured %}
-    <article class="grid md:grid-cols-12 gap-6 py-10 border-b-2 border-ink-900 dark:border-bone-100">
-      <div class="md:col-span-2">
-        <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">№ {{ loop.index | pad }}</span>
-        {% if project.period %}<p class="mt-2 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-500 dark:text-bone-300">{{ project.period }}</p>{% endif %}
-      </div>
-      <div class="md:col-span-7 md:pr-6 md:border-r-2 md:border-ink-900 dark:md:border-bone-100">
-        <h3 class="font-display text-3xl leading-tight text-ink-900 dark:text-bone-50">{{ project.title }}</h3>
-        {% if project.subtitle %}<p class="mt-2 font-sans text-ink-500 dark:text-bone-300">{{ project.subtitle }}</p>{% endif %}
-        <div class="mt-5 space-y-3 font-sans text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">
-          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Problem.</span>{{ project.problem }}</p>
-          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Approach.</span>{{ project.solution }}</p>
-          <p><span class="font-display font-semibold text-ink-900 dark:text-bone-50 mr-1">Result.</span>{{ project.outcome }}</p>
+{# ============= TIMELINE / CV ============= #}
+<section class="bg-slate-50 dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
+  <div class="container-wide section">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="display-2 text-slate-900 dark:text-white text-center mb-16">Experience & Education</h2>
+      
+      <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-3 md:ml-6 space-y-12">
+        {% for entry in home.timeline %}
+        <div class="relative pl-8 md:pl-12 group">
+          <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-white dark:bg-slate-900 border-2 border-sage-500 transition-colors group-hover:bg-sage-500"></span>
+          
+          <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 mb-3">
+            <h3 class="font-display text-xl font-semibold text-slate-900 dark:text-white">{{ entry.role }}</h3>
+            <span class="text-sm font-mono text-sage-600 dark:text-sage-400">{{ entry.period }}</span>
+          </div>
+          
+          <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-3">{{ entry.organization }}</p>
+          <p class="font-sans text-slate-600 dark:text-slate-300 leading-relaxed text-justify max-w-2xl">
+            {{ entry.description }}
+          </p>
         </div>
+        {% endfor %}
       </div>
-      <div class="md:col-span-3">
-        {% if project.tech %}
-        <p class="eyebrow mb-2">Stack</p>
-        <ul class="flex flex-wrap gap-1.5">
-          {% for t in project.tech %}<li class="tag">{{ t }}</li>{% endfor %}
-        </ul>
-        {% endif %}
-        <div class="mt-5 flex flex-col gap-1.5 font-mono text-[11px] uppercase tracking-[0.18em]">
-          {% if project.sourceLink %}<a href="{{ project.sourceLink }}" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Source</a>{% endif %}
-          {% if project.visitSiteLink %}<a href="{{ project.visitSiteLink }}" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Live site</a>{% endif %}
-          {% if project.demoLink %}<a href="{{ project.demoLink }}" class="no-underline hover:underline">→ Embedded demo</a>{% endif %}
-          {% if project.publicationLink %}<a href="{{ project.publicationLink }}" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Paper</a>{% endif %}
-        </div>
-      </div>
-    </article>
-    {% endfor %}
+    </div>
   </div>
 </section>
 
-{# ============= 04 — RECENT PUBLICATIONS ============= #}
-<section class="container-wide section-tight">
-  <div class="masthead">
-    <span class="eyebrow-blood">04 — Recent papers</span>
-    <a href="/publications/" class="hidden sm:inline eyebrow no-underline hover:underline">→ All publications</a>
-  </div>
+{# ============= CONTACT ============= #}
+<section class="container-wide section text-center">
+  <div class="max-w-3xl mx-auto">
+    <p class="text-sm font-semibold uppercase tracking-widest text-sage-600 dark:text-sage-400 mb-6">Contact</p>
+    <h2 class="display-2 text-slate-900 dark:text-white mb-6">{{ home.contact.title }}</h2>
+    <p class="font-sans text-lg text-slate-600 dark:text-slate-400 mb-12">
+      {{ home.contact.description }}
+    </p>
 
-  <ol class="mt-10 border-t-2 border-ink-900 dark:border-bone-100">
-    {% for pub in publications.slice(0, 4) %}
-    <li class="grid md:grid-cols-12 gap-4 py-5 border-b border-ink-900 dark:border-bone-200">
-      <div class="md:col-span-1 font-mono text-[11px] uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">{{ pub.year }}</div>
-      <div class="md:col-span-8">
-        <h3 class="font-display text-lg sm:text-xl text-ink-900 dark:text-bone-50">
-          {% if pub.link %}<a href="{{ pub.link }}" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
-        </h3>
-        <p class="mt-1 font-sans text-sm text-ink-500 dark:text-bone-300">{{ pub.authors | join(', ') }}</p>
+    <div class="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-16 text-left">
+      <div class="glass-card p-6 flex items-start gap-4">
+        <div class="h-10 w-10 rounded-full bg-sage-100 dark:bg-slate-800 flex items-center justify-center text-sage-600 dark:text-sage-400 shrink-0">
+          <i class="fa-regular fa-envelope"></i>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-1">Email</p>
+          <a href="mailto:{{ home.contact.email }}" class="font-medium text-slate-900 dark:text-white hover:text-sage-600">{{ home.contact.email }}</a>
+        </div>
       </div>
-      <div class="md:col-span-3 flex md:justify-end items-start">
-        {% if pub.status == 'published' %}<span class="status-published">Published · {{ pub.venue }}</span>
-        {% elif pub.status == 'under-review' %}<span class="status-review">Under review</span>
-        {% elif pub.status == 'ready' %}<span class="status-ready">Ready</span>
-        {% elif pub.status == 'in-preparation' %}<span class="status-prep">In preparation</span>
-        {% endif %}
+      <div class="glass-card p-6 flex items-start gap-4">
+        <div class="h-10 w-10 rounded-full bg-sage-100 dark:bg-slate-800 flex items-center justify-center text-sage-600 dark:text-sage-400 shrink-0">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-1">Location</p>
+          <p class="font-medium text-slate-900 dark:text-white">{{ home.contact.address }}</p>
+          <p class="text-sm text-slate-500 mt-1">{{ home.contact.workingHours }}</p>
+        </div>
       </div>
-    </li>
-    {% endfor %}
-  </ol>
-</section>
-
-{# ============= CTA ============= #}
-<section class="border-t-2 border-ink-900 dark:border-bone-100 mt-12 bg-ink-900 dark:bg-bone-50 text-bone-50 dark:text-ink-900">
-  <div class="container-wide section text-center">
-    <p class="eyebrow text-blood-400 dark:text-blood-700">Get in touch</p>
-    <h2 class="display-2 mt-4 text-bone-50 dark:text-ink-900 text-balance max-w-3xl mx-auto">
-      Open to collaboration on cybersecurity, applied AI, and edge defence.
-    </h2>
-    <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-      <a href="/contact/" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 font-mono text-xs uppercase tracking-[0.15em] border-2 border-bone-50 dark:border-ink-900 bg-bone-50 dark:bg-ink-900 text-ink-900 dark:text-bone-50 no-underline hover:bg-blood-700 hover:text-bone-50 hover:border-blood-700 transition-colors">
-        → Contact
-      </a>
-      <a href="{{ metadata.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 font-mono text-xs uppercase tracking-[0.15em] border-2 border-bone-50 dark:border-ink-900 text-bone-50 dark:text-ink-900 no-underline hover:bg-bone-50 hover:text-ink-900 dark:hover:bg-ink-900 dark:hover:text-bone-50 transition-colors">
-        ↗ LinkedIn
-      </a>
+    </div>
+    
+    <div class="aspect-[21/9] w-full bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-300 dark:border-slate-700 flex items-center justify-center relative group">
+      <span class="text-sm text-slate-500">[ Google Maps Embed Placeholder ]</span>
     </div>
   </div>
 </section>
