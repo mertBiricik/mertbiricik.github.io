@@ -22,25 +22,25 @@
 
   <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
   <link rel="manifest" href="/assets/icons/site.webmanifest">
-  <meta name="theme-color" content="#F5F5F3">
+  <meta name="theme-color" content="#f8fafc">
   <link rel="alternate" href="/rss.xml" type="application/atom+xml" title="Mert Biricik — Feed">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="min-h-screen flex flex-col bg-paper-100 text-ink-800 selection:bg-accent-500 selection:text-paper-50">
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-accent-500 focus:text-paper-50 focus:px-3 focus:py-2 focus:no-underline border-4 border-ink-900">Skip to content</a>
+<body class="min-h-screen flex flex-col bg-slate-50 text-slate-700 selection:bg-primary-500 selection:text-white">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-primary-600 focus:text-white focus:px-4 focus:py-2 focus:no-underline focus:rounded-lg">Skip to content</a>
 
-  <header id="site-header" class="border-b-4 border-ink-900 bg-paper-50 sticky top-0 z-40">
+  <header id="site-header" class="border-b border-slate-200 bg-white/80 backdrop-blur-md sticky top-0 z-40 transition-colors duration-300">
     <div class="container-wide">
-      <div class="flex items-center justify-between gap-4 py-5">
+      <div class="flex items-center justify-between gap-4 py-4">
         <a href="/" class="flex items-center gap-3 no-underline group">
-          <span class="inline-flex h-10 w-10 items-center justify-center border-4 border-ink-900 bg-paper-50 text-ink-900 transition-all duration-200 group-hover:bg-accent-500 group-hover:text-paper-50 shadow-[4px_4px_0px_#0A0A0A]">
-            <span class="font-display font-bold text-lg leading-none">MB</span>
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary-50 text-primary-600 transition-colors duration-200 group-hover:bg-primary-100">
+            <span class="font-display font-bold text-sm leading-none">MB</span>
           </span>
-          <span class="font-display font-bold text-xl text-ink-900 tracking-tight transition-colors duration-200">Mert Biricik</span>
+          <span class="font-display font-semibold text-lg text-slate-900 tracking-tight transition-colors duration-200">Mert Biricik</span>
         </a>
 
         <ul id="nav-menu" class="hidden md:flex items-center gap-8">
@@ -58,7 +58,7 @@
           </li>
           
           <li>
-            <a href="/publications/" class="nav-link text-accent-500 font-bold">Publications</a>
+            <a href="/publications/" class="nav-link text-primary-600 font-semibold">Publications</a>
           </li>
           
           <li>
@@ -72,40 +72,40 @@
         </ul>
 
         <div class="flex items-center gap-3">
-          <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center text-ink-800 hover:text-accent-500 transition-colors duration-200" aria-label="GitHub">
-            <i class="fa-brands fa-github text-2xl"></i>
+          <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-500 hover:text-primary-600 hover:bg-primary-50 transition-colors duration-200" aria-label="GitHub">
+            <i class="fa-brands fa-github text-xl"></i>
           </a>
-          <button id="menu-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center text-ink-800 hover:text-accent-500 transition-colors duration-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-            <i class="fa-solid fa-bars text-2xl"></i>
+          <button id="menu-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-slate-500 hover:text-primary-600 hover:bg-primary-50 transition-colors duration-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="fa-solid fa-bars text-xl"></i>
           </button>
         </div>
       </div>
 
-      <div id="mobile-menu" class="md:hidden hidden border-t-4 border-ink-900 bg-paper-50">
-        <ul class="py-4 space-y-3 px-6">
+      <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white">
+        <ul class="py-4 space-y-2 px-4">
           
           <li>
-            <a href="/" class="block font-mono text-sm uppercase tracking-widest hover:text-accent-500 text-ink-800">Home</a>
+            <a href="/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-slate-600">Home</a>
           </li>
           
           <li>
-            <a href="/about/" class="block font-mono text-sm uppercase tracking-widest hover:text-accent-500 text-ink-800">About</a>
+            <a href="/about/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-slate-600">About</a>
           </li>
           
           <li>
-            <a href="/projects/" class="block font-mono text-sm uppercase tracking-widest hover:text-accent-500 text-ink-800">Projects</a>
+            <a href="/projects/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-slate-600">Projects</a>
           </li>
           
           <li>
-            <a href="/publications/" class="block font-mono text-sm uppercase tracking-widest hover:text-accent-500 text-accent-500 font-bold">Publications</a>
+            <a href="/publications/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-primary-600 bg-primary-50">Publications</a>
           </li>
           
           <li>
-            <a href="/blog/" class="block font-mono text-sm uppercase tracking-widest hover:text-accent-500 text-ink-800">Blog</a>
+            <a href="/blog/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-slate-600">Blog</a>
           </li>
           
           <li>
-            <a href="/contact/" class="block font-mono text-sm uppercase tracking-widest hover:text-accent-500 text-ink-800">Contact</a>
+            <a href="/contact/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-slate-600">Contact</a>
           </li>
           
         </ul>
@@ -368,48 +368,48 @@
 
   </main>
 
-  <footer class="mt-auto border-t-4 border-ink-900 bg-paper-200">
-    <div class="container-wide py-16">
-      <div class="grid gap-12 md:grid-cols-12">
+  <footer class="mt-auto border-t border-slate-200 bg-white">
+    <div class="container-wide py-12 md:py-16">
+      <div class="grid gap-8 md:gap-12 md:grid-cols-12">
         <div class="md:col-span-5">
-          <p class="meta-label inline-block mb-4">Identity</p>
-          <p class="font-sans text-base leading-relaxed text-ink-700 max-w-md">
-            Built with strict brutalist principles. Engineered with Eleventy and Tailwind CSS. Rendered in <span class="font-display font-bold text-ink-900 italic">Playfair Display</span> and <span class="font-mono text-ink-900">JetBrains Mono</span>.
+          <p class="font-display font-semibold text-slate-900 mb-4">Mert Biricik</p>
+          <p class="font-sans text-sm leading-relaxed text-slate-500 max-w-sm">
+            Building elegant architectures and robust systems. Engineered with Eleventy and Tailwind CSS.
           </p>
         </div>
 
         <div class="md:col-span-3">
-          <p class="meta-label inline-block mb-4">Channels</p>
-          <ul class="space-y-3 font-mono text-sm text-ink-800">
-            <li><a href="mailto:mert@biricik.de" class="hover:text-accent-500 transition-colors duration-200 underline decoration-2 underline-offset-4">mert@biricik.de</a></li>
-            <li><a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" class="hover:text-accent-500 transition-colors duration-200 underline decoration-2 underline-offset-4">LinkedIn</a></li>
-            <li><a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hover:text-accent-500 transition-colors duration-200 underline decoration-2 underline-offset-4">GitHub</a></li>
+          <p class="font-sans text-sm font-semibold text-slate-900 mb-4 uppercase tracking-wider">Connect</p>
+          <ul class="space-y-3 font-sans text-sm text-slate-500">
+            <li><a href="mailto:mert@biricik.de" class="hover:text-primary-600 transition-colors duration-200">mert@biricik.de</a></li>
+            <li><a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" class="hover:text-primary-600 transition-colors duration-200">LinkedIn</a></li>
+            <li><a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hover:text-primary-600 transition-colors duration-200">GitHub</a></li>
           </ul>
         </div>
 
         <div class="md:col-span-4">
-          <p class="meta-label inline-block mb-4">Index</p>
-          <ul class="grid grid-cols-2 gap-y-3 font-mono text-sm text-ink-800">
+          <p class="font-sans text-sm font-semibold text-slate-900 mb-4 uppercase tracking-wider">Navigation</p>
+          <ul class="grid grid-cols-2 gap-y-3 font-sans text-sm text-slate-500">
             
-            <li><a href="/" class="hover:text-accent-500 transition-colors duration-200 underline decoration-2 underline-offset-4">Home</a></li>
+            <li><a href="/" class="hover:text-primary-600 transition-colors duration-200">Home</a></li>
             
-            <li><a href="/about/" class="hover:text-accent-500 transition-colors duration-200 underline decoration-2 underline-offset-4">About</a></li>
+            <li><a href="/about/" class="hover:text-primary-600 transition-colors duration-200">About</a></li>
             
-            <li><a href="/projects/" class="hover:text-accent-500 transition-colors duration-200 underline decoration-2 underline-offset-4">Projects</a></li>
+            <li><a href="/projects/" class="hover:text-primary-600 transition-colors duration-200">Projects</a></li>
             
-            <li><a href="/publications/" class="hover:text-accent-500 transition-colors duration-200 underline decoration-2 underline-offset-4">Publications</a></li>
+            <li><a href="/publications/" class="hover:text-primary-600 transition-colors duration-200">Publications</a></li>
             
-            <li><a href="/blog/" class="hover:text-accent-500 transition-colors duration-200 underline decoration-2 underline-offset-4">Blog</a></li>
+            <li><a href="/blog/" class="hover:text-primary-600 transition-colors duration-200">Blog</a></li>
             
-            <li><a href="/contact/" class="hover:text-accent-500 transition-colors duration-200 underline decoration-2 underline-offset-4">Contact</a></li>
+            <li><a href="/contact/" class="hover:text-primary-600 transition-colors duration-200">Contact</a></li>
             
           </ul>
         </div>
       </div>
 
-      <div class="mt-16 pt-8 border-t-4 border-ink-900 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-ink-500 uppercase tracking-widest font-bold">
+      <div class="mt-12 pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-sm text-slate-500">
         <p>© 2026 Mert Biricik.</p>
-        <p>Aesthetics over everything.</p>
+        <p>All systems nominal.</p>
       </div>
     </div>
   </footer>
