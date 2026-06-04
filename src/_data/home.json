@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "eyebrow": "Cybersecurity Researcher & Scholar",
+    "title": "I build and defend systems that don't fail quietly.",
+    "valueProposition": "Cybersecurity researcher and incoming Erasmus Mundus Scholar with hands-on experience in network administration, system deployment, and threat discovery. I run critical IT infrastructure and software rollouts under high-pressure conditions and focus on Zero Trust, Cloud Security, and SASE.",
+    "ctaPrimary": {
+      "label": "View Work",
+      "url": "/projects/"
+    },
+    "ctaSecondary": {
+      "label": "Publications",
+      "url": "/publications/"
+    }
+  },
+  "philosophy": {
+    "title": "Philosophy & Approach",
+    "content": [
+      "In the domain of critical infrastructure and high-stakes operations, failure is not simply an inconvenience—it is often a catastrophic event. My approach to cybersecurity and system administration is rooted in the belief that resilience must be engineered from the ground up. Whether analyzing memory dumps for forensic anomalies or deploying agentic AI systems for predictive maintenance, I prioritize robust, deterministic architectures over superficial complexity.",
+      "My background as a Search & Rescue Operator has profoundly shaped my engineering methodology. Operating under life-critical pressure instills a rigorous discipline: systems must be intuitive, redundancies must be automatic, and fail-safes must be absolute. I carry this philosophy into my technical work, ensuring that every deployment, from Kubernetes clusters to Zero Trust network configurations, is designed to withstand both adversarial actions and environmental degradation."
+    ]
+  },
+  "media": {
+    "title": "Media & Publications",
+    "items": [
+      {
+        "type": "publication",
+        "title": "Anomaly Detection in Electric Distribution Systems",
+        "publisher": "IEEE UPEC 2025",
+        "summary": "Collaborative research with BEDAS focusing on utilizing advanced time-series analysis and machine learning to identify anomalous behavior within critical power distribution networks.",
+        "link": "#"
+      },
+      {
+        "type": "video",
+        "title": "Brain-Computer Interface Architecture Overview",
+        "videoId": "example-id",
+        "executiveSummary": "This presentation covers the architecture of EEG-driven BCI systems, detailing the signal processing pipeline and the machine learning models used for real-time inference in clinical settings."
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "period": "2026 — 2027",
+      "role": "MSc in Applied Cybersecurity (CyberMACS)",
+      "organization": "Erasmus Mundus Joint MSc",
+      "description": "Awarded full EU scholarship based on academic excellence. Focus on Applied Cybersecurity, Cryptography, and Network Security across multiple European institutions."
+    },
+    {
+      "period": "2025 — Present",
+      "role": "Graduate Researcher",
+      "organization": "Kadir Has University BCI-Feast",
+      "description": "Conducting research on Brain-Computer Interface (BCI) systems, alongside delivering laboratory sessions for MIS undergraduates on algorithm design."
+    },
+    {
+      "period": "2023 — 2025",
+      "role": "Undergraduate Researcher & Admin",
+      "organization": "Kadir Has University CCIP",
+      "description": "Administered network and systems infrastructure for the Center on Cybersecurity and Critical Infrastructure Protection. Supported GPU-accelerated ML projects."
+    },
+    {
+      "period": "2025 — Present",
+      "role": "Search & Rescue Operator",
+      "organization": "AFAD",
+      "description": "Conduct high-stakes urban and mountain search & rescue operations under life-critical pressure. Certified AFAD instructor for disaster preparedness."
+    }
+  ],
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Open to collaboration on cybersecurity, applied AI, and edge defence.",
+    "email": "contact@example.com",
+    "address": "Istanbul, Turkey",
+    "workingHours": "Mon-Fri: 09:00 - 18:00 (TRT)"
+  }
+}
