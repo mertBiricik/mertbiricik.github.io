@@ -7,81 +7,82 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
-      fontFamily: {
-        display: ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        sans: ['"Inter"', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
-        mono: ['"JetBrains Mono"', '"IBM Plex Mono"', 'ui-monospace', 'monospace']
-      },
       colors: {
-        cyber: {
-          50: '#e0fbfc',
-          100: '#b2f0f4',
-          200: '#84e5ec',
-          300: '#56dae4',
-          400: '#28cfdc',
-          500: '#00c4d4', // Cyber Cyan
-          600: '#009da9',
-          700: '#00757f',
-          800: '#004e54',
-          900: '#00272a',
+        paper: {
+          50: '#FFFFFF',
+          100: '#F5F5F3', // Creamy off-white
+          200: '#E8E8E4',
+          300: '#D8D8D4',
         },
-        void: {
-          50: '#f4f5f6',
-          100: '#e9ebed',
-          200: '#c8cdd4',
-          300: '#a6afba',
-          400: '#64748b', // slate-500
-          500: '#334155',
-          600: '#1e293b',
-          700: '#0f172a', // deep slate
-          800: '#090e1a', // void midnight
-          900: '#04070d', // pure void
+        ink: {
+          900: '#0A0A0A', // Deep black
+          800: '#1C1C1C',
+          700: '#333333',
+          500: '#666666',
+          400: '#999999',
         },
-        alert: {
-          500: '#ff3366', // neon crimson
+        accent: {
+          500: '#D90429', // Striking MIT/Academic Red
+          600: '#BA0424',
         }
       },
-      typography: ({ theme }) => ({
+      fontFamily: {
+        display: ['"Playfair Display"', 'serif'],
+        sans: ['"Inter"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      },
+      typography: (theme) => ({
         DEFAULT: {
           css: {
-            '--tw-prose-body': theme('colors.void.300'),
-            '--tw-prose-headings': theme('colors.void.50'),
-            '--tw-prose-links': theme('colors.cyber.500'),
-            '--tw-prose-bold': theme('colors.void.50'),
-            '--tw-prose-counters': theme('colors.cyber.600'),
-            '--tw-prose-bullets': theme('colors.cyber.600'),
-            '--tw-prose-hr': theme('colors.void.700'),
-            '--tw-prose-quotes': theme('colors.void.200'),
-            '--tw-prose-quote-borders': theme('colors.cyber.500'),
-            '--tw-prose-code': theme('colors.cyber.400'),
-            '--tw-prose-pre-bg': theme('colors.void.900'),
-            '--tw-prose-pre-code': theme('colors.void.100'),
-            fontFamily: theme('fontFamily.sans').join(','),
-            fontSize: '1rem',
-            lineHeight: '1.7',
-            'h1, h2, h3, h4': {
-              fontFamily: theme('fontFamily.display').join(','),
-              fontWeight: '600',
-              letterSpacing: '-0.02em',
-              color: theme('colors.void.50')
-            },
+            color: theme('colors.ink.800'),
             a: {
+              color: theme('colors.ink.900'),
               textDecoration: 'none',
-              borderBottom: `1px solid ${theme('colors.cyber.500')}`,
-              transitionProperty: 'all',
-              transitionDuration: '300ms',
+              borderBottom: `2px solid ${theme('colors.accent.500')}`,
+              transition: 'all 0.2s ease',
               '&:hover': {
-                color: theme('colors.void.50'),
-                backgroundColor: theme('colors.cyber.500')
-              }
+                backgroundColor: theme('colors.accent.500'),
+                color: theme('colors.paper.50'),
+              },
             },
+            h1: {
+              fontFamily: theme('fontFamily.display').join(', '),
+              color: theme('colors.ink.900'),
+              fontWeight: '700',
+            },
+            h2: {
+              fontFamily: theme('fontFamily.display').join(', '),
+              color: theme('colors.ink.900'),
+              fontWeight: '700',
+              borderBottom: `2px solid ${theme('colors.ink.900')}`,
+              paddingBottom: '0.5rem',
+            },
+            h3: {
+              fontFamily: theme('fontFamily.display').join(', '),
+              color: theme('colors.ink.900'),
+              fontWeight: '600',
+            },
+            strong: { color: theme('colors.ink.900') },
             code: {
-              fontFamily: theme('fontFamily.mono').join(','),
-              fontWeight: '500'
+              color: theme('colors.ink.900'),
+              backgroundColor: theme('colors.paper.200'),
+              padding: '0.2em 0.4em',
+              borderRadius: '0px',
+              fontFamily: theme('fontFamily.mono').join(', '),
+            },
+            blockquote: {
+              color: theme('colors.ink.700'),
+              borderLeftColor: theme('colors.accent.500'),
+              borderLeftWidth: '4px',
+              fontStyle: 'italic',
+            },
+            hr: {
+              borderColor: theme('colors.ink.900'),
+              borderWidth: '2px',
             }
-          }
-        }
-      })
+          },
+        },
+      }),
     }
   },
   plugins: [
