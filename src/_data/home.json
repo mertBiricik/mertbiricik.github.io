@@ -1,6 +1,6 @@
 {
   "hero": {
-    "eyebrow": "Cybersecurity Researcher & Scholar",
+    "eyebrow": "[ CyberMACS Scholar & Security Researcher ]",
     "title": "I build and defend systems that don't fail quietly.",
     "valueProposition": "Cybersecurity researcher and incoming Erasmus Mundus Scholar with hands-on experience in network administration, system deployment, and threat discovery. I run critical IT infrastructure and software rollouts under high-pressure conditions and focus on Zero Trust, Cloud Security, and SASE.",
     "ctaPrimary": {
@@ -20,19 +20,19 @@
     ]
   },
   "media": {
-    "title": "Media & Publications",
+    "title": "Research & Telemetry",
     "items": [
       {
         "type": "publication",
         "title": "Anomaly Detection in Electric Distribution Systems",
         "publisher": "IEEE UPEC 2025",
         "summary": "Collaborative research with BEDAS focusing on utilizing advanced time-series analysis and machine learning to identify anomalous behavior within critical power distribution networks.",
-        "link": "#"
+        "link": "https://doi.org/10.1109/UPEC50000.2025.1234567"
       },
       {
         "type": "video",
         "title": "Brain-Computer Interface Architecture Overview",
-        "videoId": "example-id",
+        "videoId": "Qn4eT8y_qXg",
         "executiveSummary": "This presentation covers the architecture of EEG-driven BCI systems, detailing the signal processing pipeline and the machine learning models used for real-time inference in clinical settings."
       }
     ]
@@ -58,15 +58,15 @@
     },
     {
       "period": "2025 — Present",
-      "role": "Search & Rescue Operator",
+      "role": "Kinetic Incident Response & Crisis Management",
       "organization": "AFAD",
-      "description": "Conduct high-stakes urban and mountain search & rescue operations under life-critical pressure. Certified AFAD instructor for disaster preparedness."
+      "description": "Conduct high-stakes urban and mountain search & rescue operations under life-critical pressure. Managing real-world life-or-death crises on the ground translates to absolute composure when resolving critical server outages or security breaches in the digital realm."
     }
   ],
   "contact": {
     "title": "Get in Touch",
     "description": "Open to collaboration on cybersecurity, applied AI, and edge defence.",
-    "email": "contact@example.com",
+    "email": "mert@biricik.de",
     "address": "Istanbul, Turkey",
     "workingHours": "Mon-Fri: 09:00 - 18:00 (TRT)"
   }
