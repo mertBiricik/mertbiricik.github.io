@@ -53,57 +53,122 @@ changefreq: weekly
   </div>
 </section>
 
-{# ============= MEDIA & PUBLICATIONS ============= #}
+{# ============= STACK / SKILLS ============= #}
 <section class="container-wide section">
   <div class="flex items-center gap-6 mb-16">
-    <h2 class="display-2">{{ home.media.title }}</h2>
-    <div class="flex-1 h-px bg-void-700 relative overflow-hidden">
-      <div class="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-transparent via-cyber-500/50 to-transparent animate-[pulse_3s_ease-in-out_infinite]"></div>
-    </div>
+    <h2 class="display-2">Threat Vectors & Stack</h2>
+    <div class="flex-1 h-px bg-void-700 relative overflow-hidden"></div>
   </div>
 
-  <div class="grid md:grid-cols-2 gap-8">
-    {% for item in home.media.items %}
-    <div class="cyber-card p-8 group">
-      {% if item.type == 'publication' %}
-        <div class="flex items-center justify-between mb-4">
-          <span class="terminal-text">
-            <i class="fa-solid fa-file-lines mr-2"></i> PUBLICATION
-          </span>
-          <span class="text-xs font-mono text-void-500">PUB_{{ loop.index0 }}</span>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {% for group in profile.skills %}
+    <div class="cyber-card p-6 flex flex-col group">
+      <div class="flex items-center justify-between mb-6">
+        <div class="h-10 w-10 bg-void-900 border border-cyber-500/30 flex items-center justify-center text-cyber-500 shadow-[inset_0_0_10px_rgba(0,196,212,0.1)] group-hover:bg-cyber-500 group-hover:text-void-900 transition-colors">
+          <i class="fa-solid {{ group.icon | default('fa-microchip') }}"></i>
         </div>
-        <h3 class="font-display text-2xl font-semibold text-void-50 mb-3 group-hover:text-cyber-300 transition-colors">{{ item.title }}</h3>
-        <p class="font-mono text-sm text-cyber-500 mb-4">> {{ item.publisher }}</p>
-        <p class="font-sans text-void-300 leading-relaxed text-justify">{{ item.summary }}</p>
-        {% if item.link and item.link != '#' %}
-        <div class="mt-6 pt-4 border-t border-void-700">
-          <a href="{{ item.link }}" class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-void-50 hover:text-cyber-400 !border-none">
-            [ Access Protocol ] <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-        {% endif %}
-      {% elif item.type == 'video' %}
-        <div class="flex items-center justify-between mb-4">
-          <span class="terminal-text">
-            <i class="fa-solid fa-video mr-2"></i> MEDIA_STREAM
-          </span>
-          <span class="text-xs font-mono text-void-500">VID_{{ loop.index0 }}</span>
-        </div>
-        <h3 class="font-display text-2xl font-semibold text-void-50 mb-4 group-hover:text-cyber-300 transition-colors">{{ item.title }}</h3>
-        <div class="aspect-video bg-void-900 rounded flex items-center justify-center mb-6 border border-void-600 relative overflow-hidden group/vid">
-          <div class="absolute inset-0 bg-cyber-500/5 opacity-0 group-hover/vid:opacity-100 transition-opacity"></div>
-          <span class="font-mono text-sm text-void-500">[ VIDEO_FEED_OFFLINE : {{ item.videoId }} ]</span>
-        </div>
-        <details class="group/details">
-          <summary class="cursor-pointer font-mono text-sm text-void-50 flex items-center justify-between border-t border-void-700 pt-4 hover:text-cyber-400 transition-colors">
-            EXEC_SUMMARY.txt
-            <i class="fa-solid fa-chevron-down transition-transform group-open/details:rotate-180 text-cyber-500"></i>
-          </summary>
-          <div class="pt-4 font-sans text-void-300 leading-relaxed text-justify border-l-2 border-cyber-500/30 pl-4 mt-2">
-            {{ item.executiveSummary }}
+        <span class="font-mono text-[10px] text-void-500">{{ group.items | length }} items</span>
+      </div>
+      <h3 class="font-display text-lg font-semibold text-void-50 mb-4">{{ group.group }}</h3>
+      <ul class="flex flex-wrap gap-2 mt-auto">
+        {% for item in group.items %}
+        <li class="font-mono text-[10px] uppercase tracking-widest bg-void-900 text-cyber-400 border border-void-700 px-2 py-1 rounded group-hover:border-cyber-500/30 transition-colors">{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{# ============= FEATURED PROJECTS ============= #}
+<section class="bg-void-800/30 border-y border-void-700">
+  <div class="container-wide section">
+    <div class="flex items-center gap-6 mb-16">
+      <div class="flex-1 h-px bg-void-700 relative overflow-hidden hidden md:block"></div>
+      <h2 class="display-2">Deployed Architectures</h2>
+      <div class="flex-1 h-px bg-void-700 relative overflow-hidden">
+        <div class="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-transparent via-cyber-500/50 to-transparent animate-[pulse_3s_ease-in-out_infinite]"></div>
+      </div>
+    </div>
+
+    <div class="space-y-8">
+      {% for project in projects.featured %}
+      <article class="cyber-card p-8 grid lg:grid-cols-12 gap-8 items-start group">
+        <div class="lg:col-span-8">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="terminal-text !text-alert-500">OP_{{ loop.index | pad(2) }}</span>
+            <span class="text-void-600">/</span>
+            <span class="font-mono text-xs text-void-400">{{ project.period }}</span>
           </div>
-        </details>
-      {% endif %}
+          <h3 class="font-display text-3xl font-semibold text-void-50 mb-2 group-hover:text-cyber-300 transition-colors">{{ project.title }}</h3>
+          <p class="font-mono text-sm text-cyber-500 mb-6">> {{ project.subtitle }}</p>
+          
+          <div class="space-y-4 font-sans text-void-300 leading-relaxed text-justify">
+            <p><strong class="text-void-50 font-medium">Problem:</strong> {{ project.problem }}</p>
+            <p><strong class="text-void-50 font-medium">Approach:</strong> {{ project.solution }}</p>
+            <p><strong class="text-void-50 font-medium">Result:</strong> <span class="text-cyber-400">{{ project.outcome }}</span></p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 lg:pl-8 lg:border-l lg:border-void-700 h-full flex flex-col">
+          <p class="terminal-text mb-4">TECHNOLOGY_STACK</p>
+          <ul class="flex flex-wrap gap-2 mb-8">
+            {% for t in project.tech %}
+            <li class="font-mono text-[10px] uppercase tracking-widest bg-void-900 text-void-300 border border-void-600 px-2 py-1 rounded">{{ t }}</li>
+            {% endfor %}
+          </ul>
+
+          <div class="mt-auto space-y-3 font-mono text-[11px] uppercase tracking-[0.18em]">
+            {% if project.sourceLink %}
+            <a href="{{ project.sourceLink }}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-void-400 hover:text-cyber-400 !border-none group/link">
+              <i class="fa-brands fa-github"></i> Source Code <i class="fa-solid fa-arrow-right opacity-0 group-hover/link:opacity-100 transition-opacity ml-auto"></i>
+            </a>
+            {% endif %}
+            {% if project.visitSiteLink %}
+            <a href="{{ project.visitSiteLink }}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-void-400 hover:text-cyber-400 !border-none group/link">
+              <i class="fa-solid fa-globe"></i> Live System <i class="fa-solid fa-arrow-right opacity-0 group-hover/link:opacity-100 transition-opacity ml-auto"></i>
+            </a>
+            {% endif %}
+            {% if project.demoLink %}
+            <a href="{{ project.demoLink }}" class="flex items-center gap-2 text-void-400 hover:text-cyber-400 !border-none group/link">
+              <i class="fa-solid fa-display"></i> Embedded Demo <i class="fa-solid fa-arrow-right opacity-0 group-hover/link:opacity-100 transition-opacity ml-auto"></i>
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ============= RECENT PUBLICATIONS ============= #}
+<section class="container-wide section">
+  <div class="flex items-center gap-6 mb-16">
+    <h2 class="display-2">Academic Telemetry</h2>
+    <div class="flex-1 h-px bg-void-700 relative overflow-hidden"></div>
+  </div>
+
+  <div class="grid gap-6">
+    {% for pub in publications.slice(0, 4) %}
+    <div class="cyber-card p-6 md:p-8 flex flex-col md:flex-row gap-6 md:gap-8 items-start group">
+      <div class="shrink-0 font-mono text-xl font-bold text-void-700 group-hover:text-cyber-500/30 transition-colors">
+        {{ pub.year }}
+      </div>
+      <div class="flex-1">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          {% if pub.status == 'published' %}<span class="px-2 py-0.5 rounded bg-cyber-500/10 text-cyber-500 border border-cyber-500/30 font-mono text-[10px] uppercase tracking-widest">Published</span>
+          {% elif pub.status == 'under-review' %}<span class="px-2 py-0.5 rounded bg-alert-500/10 text-alert-500 border border-alert-500/30 font-mono text-[10px] uppercase tracking-widest">Under Review</span>
+          {% else %}<span class="px-2 py-0.5 rounded bg-void-800 text-void-400 border border-void-600 font-mono text-[10px] uppercase tracking-widest">{{ pub.status | replace("-", " ") }}</span>
+          {% endif %}
+          <span class="font-mono text-[11px] text-void-400">{{ pub.venue }}</span>
+        </div>
+        <h3 class="font-display text-xl font-semibold text-void-50 mb-3 group-hover:text-cyber-300 transition-colors">
+          {% if pub.link %}<a href="{{ pub.link }}" target="_blank" rel="noopener noreferrer" class="!border-none">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+        </h3>
+        <p class="font-sans text-sm text-void-400 mb-4">{{ pub.authors | join(', ') }}</p>
+        <p class="font-sans text-void-300 leading-relaxed text-justify">{{ pub.summary }}</p>
+      </div>
     </div>
     {% endfor %}
   </div>
