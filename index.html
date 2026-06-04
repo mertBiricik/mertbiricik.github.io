@@ -1,17 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" class="dark">
 <head>
-  <script>
-    (function() {
-      try {
-        var saved = localStorage.getItem('theme');
-        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var theme = saved || (prefersDark ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', theme);
-        if (theme === 'dark') document.documentElement.classList.add('dark');
-      } catch (e) {}
-    })();
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mert Biricik</title>
@@ -33,94 +22,90 @@
 
   <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
   <link rel="manifest" href="/assets/icons/site.webmanifest">
-  <meta name="theme-color" content="#f8fafc">
+  <meta name="theme-color" content="#090e1a">
   <link rel="alternate" href="/rss.xml" type="application/atom+xml" title="Mert Biricik — Feed">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="min-h-screen flex flex-col bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-200">
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-slate-900 focus:text-slate-50 focus:px-3 focus:py-2 focus:no-underline">Skip to content</a>
+<body class="min-h-screen flex flex-col bg-void-900 text-void-300 selection:bg-cyber-500 selection:text-void-900">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-cyber-500 focus:text-void-900 focus:px-3 focus:py-2 focus:no-underline">Skip to content</a>
 
-  <header id="site-header" class="border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur sticky top-0 z-40 transition-colors duration-300">
+  <header id="site-header" class="border-b border-void-700 bg-void-900/90 backdrop-blur sticky top-0 z-40 transition-colors duration-300">
     <div class="container-wide">
-      <div class="flex items-center justify-between gap-4 py-6">
+      <div class="flex items-center justify-between gap-4 py-5">
         <a href="/" class="flex items-center gap-3 no-underline group">
-          <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-slate-50 dark:bg-slate-50 dark:text-slate-900 transition-transform duration-300 group-hover:scale-105">
-            <span class="font-display font-semibold text-lg leading-none">MB</span>
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded border border-cyber-500/30 bg-void-800 text-cyber-500 transition-all duration-300 group-hover:bg-cyber-500 group-hover:text-void-900 group-hover:shadow-[0_0_15px_rgba(0,196,212,0.4)]">
+            <span class="font-display font-bold text-lg leading-none">MB</span>
           </span>
-          <span class="font-display font-semibold text-xl text-slate-900 dark:text-slate-50 tracking-tight group-hover:text-sage-600 transition-colors duration-300">Mert Biricik</span>
+          <span class="font-display font-semibold text-xl text-void-50 tracking-tight group-hover:text-cyber-400 transition-colors duration-300">Mert Biricik</span>
         </a>
 
         <ul id="nav-menu" class="hidden md:flex items-center gap-8">
           
           <li>
-            <a href="/" class="text-sm font-medium tracking-wide text-slate-600 dark:text-slate-400 hover:text-sage-600 dark:hover:text-sage-400 transition-colors duration-300 text-slate-900 dark:text-slate-50">Home</a>
+            <a href="/" class="terminal-text hover:text-cyber-300 transition-colors duration-300 text-void-50 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">Home</a>
           </li>
           
           <li>
-            <a href="/about/" class="text-sm font-medium tracking-wide text-slate-600 dark:text-slate-400 hover:text-sage-600 dark:hover:text-sage-400 transition-colors duration-300 ">About</a>
+            <a href="/about/" class="terminal-text hover:text-cyber-300 transition-colors duration-300 ">About</a>
           </li>
           
           <li>
-            <a href="/projects/" class="text-sm font-medium tracking-wide text-slate-600 dark:text-slate-400 hover:text-sage-600 dark:hover:text-sage-400 transition-colors duration-300 ">Projects</a>
+            <a href="/projects/" class="terminal-text hover:text-cyber-300 transition-colors duration-300 ">Projects</a>
           </li>
           
           <li>
-            <a href="/publications/" class="text-sm font-medium tracking-wide text-slate-600 dark:text-slate-400 hover:text-sage-600 dark:hover:text-sage-400 transition-colors duration-300 ">Publications</a>
+            <a href="/publications/" class="terminal-text hover:text-cyber-300 transition-colors duration-300 ">Publications</a>
           </li>
           
           <li>
-            <a href="/blog/" class="text-sm font-medium tracking-wide text-slate-600 dark:text-slate-400 hover:text-sage-600 dark:hover:text-sage-400 transition-colors duration-300 ">Blog</a>
+            <a href="/blog/" class="terminal-text hover:text-cyber-300 transition-colors duration-300 ">Blog</a>
           </li>
           
           <li>
-            <a href="/contact/" class="text-sm font-medium tracking-wide text-slate-600 dark:text-slate-400 hover:text-sage-600 dark:hover:text-sage-400 transition-colors duration-300 ">Contact</a>
+            <a href="/contact/" class="terminal-text hover:text-cyber-300 transition-colors duration-300 ">Contact</a>
           </li>
           
         </ul>
 
         <div class="flex items-center gap-3">
-          <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-300" aria-label="GitHub">
+          <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded text-void-400 hover:bg-void-800 hover:text-cyber-400 transition-colors duration-300" aria-label="GitHub">
             <i class="fa-brands fa-github text-lg"></i>
           </a>
-          <button id="theme-toggle" class="inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-300" aria-label="Toggle theme">
-            <i class="fa-solid fa-sun sun-icon text-lg"></i>
-            <i class="fa-solid fa-moon moon-icon text-lg"></i>
-          </button>
-          <button id="menu-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-300" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <button id="menu-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded text-void-400 hover:bg-void-800 hover:text-cyber-400 transition-colors duration-300" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
             <i class="fa-solid fa-bars text-lg"></i>
           </button>
         </div>
       </div>
 
-      <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
+      <div id="mobile-menu" class="md:hidden hidden border-t border-void-700 bg-void-900">
         <ul class="py-4 space-y-3">
           
           <li>
-            <a href="/" class="block text-base font-medium text-slate-600 dark:text-slate-400 hover:text-sage-600 dark:hover:text-sage-400 text-slate-900 dark:text-slate-50">Home</a>
+            <a href="/" class="block terminal-text hover:text-cyber-400 text-void-50 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">Home</a>
           </li>
           
           <li>
-            <a href="/about/" class="block text-base font-medium text-slate-600 dark:text-slate-400 hover:text-sage-600 dark:hover:text-sage-400 ">About</a>
+            <a href="/about/" class="block terminal-text hover:text-cyber-400 ">About</a>
           </li>
           
           <li>
-            <a href="/projects/" class="block text-base font-medium text-slate-600 dark:text-slate-400 hover:text-sage-600 dark:hover:text-sage-400 ">Projects</a>
+            <a href="/projects/" class="block terminal-text hover:text-cyber-400 ">Projects</a>
           </li>
           
           <li>
-            <a href="/publications/" class="block text-base font-medium text-slate-600 dark:text-slate-400 hover:text-sage-600 dark:hover:text-sage-400 ">Publications</a>
+            <a href="/publications/" class="block terminal-text hover:text-cyber-400 ">Publications</a>
           </li>
           
           <li>
-            <a href="/blog/" class="block text-base font-medium text-slate-600 dark:text-slate-400 hover:text-sage-600 dark:hover:text-sage-400 ">Blog</a>
+            <a href="/blog/" class="block terminal-text hover:text-cyber-400 ">Blog</a>
           </li>
           
           <li>
-            <a href="/contact/" class="block text-base font-medium text-slate-600 dark:text-slate-400 hover:text-sage-600 dark:hover:text-sage-400 ">Contact</a>
+            <a href="/contact/" class="block terminal-text hover:text-cyber-400 ">Contact</a>
           </li>
           
         </ul>
@@ -131,16 +116,17 @@
   <main id="main" class="flex-1">
     
 
-<section class="container-wide pt-32 pb-24">
+<section class="container-wide pt-32 pb-24 relative overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-cyber-900/40 via-void-900 to-void-900 -z-10 pointer-events-none"></div>
   <div class="grid lg:grid-cols-12 gap-12 items-center">
     <div class="lg:col-span-8 lg:pr-12">
-      <p class="text-sm font-semibold uppercase tracking-widest text-sage-600 dark:text-sage-400 mb-6">Cybersecurity Researcher &amp; Scholar</p>
+      <p class="terminal-text mb-6 before:content-['>_'] before:mr-2 before:text-void-400">Cybersecurity Researcher &amp; Scholar</p>
 
-      <h1 class="display-1 text-slate-900 dark:text-white text-balance mb-8">
+      <h1 class="display-1 text-balance mb-8 drop-shadow-[0_0_15px_rgba(0,196,212,0.15)]">
         I build and defend systems that don&#39;t fail quietly.
       </h1>
 
-      <p class="font-sans text-lg sm:text-xl leading-relaxed text-slate-600 dark:text-slate-300 max-w-3xl mb-10 text-justify">
+      <p class="font-sans text-lg sm:text-xl leading-relaxed text-void-300 max-w-3xl mb-10 text-justify">
         Cybersecurity researcher and incoming Erasmus Mundus Scholar with hands-on experience in network administration, system deployment, and threat discovery. I run critical IT infrastructure and software rollouts under high-pressure conditions and focus on Zero Trust, Cloud Security, and SASE.
       </p>
 
@@ -157,17 +143,26 @@
 </section>
 
 
-<section class="bg-sage-50/50 dark:bg-slate-800/20 border-y border-slate-200 dark:border-slate-800">
+<section class="bg-void-800/50 border-y border-void-700 relative">
+  <div class="absolute inset-y-0 left-0 w-1 bg-cyber-500/20"></div>
   <div class="container-wide section">
     <div class="max-w-4xl mx-auto text-center mb-16">
-      <h2 class="display-2 text-slate-900 dark:text-white">Philosophy &amp; Approach</h2>
+      <p class="terminal-text mb-2">SYSTEM.CORE</p>
+      <h2 class="display-2">Philosophy &amp; Approach</h2>
     </div>
     
-    <div class="max-w-3xl mx-auto space-y-8 font-sans text-lg text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+    <div class="max-w-3xl mx-auto space-y-8 font-sans text-lg text-void-300 leading-relaxed text-justify relative">
+      <div class="absolute -left-6 md:-left-12 top-0 bottom-0 border-l border-dashed border-void-600 hidden sm:block"></div>
       
-      <p>In the domain of critical infrastructure and high-stakes operations, failure is not simply an inconvenience—it is often a catastrophic event. My approach to cybersecurity and system administration is rooted in the belief that resilience must be engineered from the ground up. Whether analyzing memory dumps for forensic anomalies or deploying agentic AI systems for predictive maintenance, I prioritize robust, deterministic architectures over superficial complexity.</p>
+      <p class="relative">
+        <span class="absolute -left-8 md:-left-14 top-2.5 w-4 h-[1px] bg-cyber-500/50 hidden sm:block"></span>
+        In the domain of critical infrastructure and high-stakes operations, failure is not simply an inconvenience—it is often a catastrophic event. My approach to cybersecurity and system administration is rooted in the belief that resilience must be engineered from the ground up. Whether analyzing memory dumps for forensic anomalies or deploying agentic AI systems for predictive maintenance, I prioritize robust, deterministic architectures over superficial complexity.
+      </p>
       
-      <p>My background as a Search &amp; Rescue Operator has profoundly shaped my engineering methodology. Operating under life-critical pressure instills a rigorous discipline: systems must be intuitive, redundancies must be automatic, and fail-safes must be absolute. I carry this philosophy into my technical work, ensuring that every deployment, from Kubernetes clusters to Zero Trust network configurations, is designed to withstand both adversarial actions and environmental degradation.</p>
+      <p class="relative">
+        <span class="absolute -left-8 md:-left-14 top-2.5 w-4 h-[1px] bg-cyber-500/50 hidden sm:block"></span>
+        My background as a Search &amp; Rescue Operator has profoundly shaped my engineering methodology. Operating under life-critical pressure instills a rigorous discipline: systems must be intuitive, redundancies must be automatic, and fail-safes must be absolute. I carry this philosophy into my technical work, ensuring that every deployment, from Kubernetes clusters to Zero Trust network configurations, is designed to withstand both adversarial actions and environmental degradation.
+      </p>
       
     </div>
   </div>
@@ -176,39 +171,48 @@
 
 <section class="container-wide section">
   <div class="flex items-center gap-6 mb-16">
-    <h2 class="display-2 text-slate-900 dark:text-white">Media &amp; Publications</h2>
-    <div class="flex-1 h-px bg-slate-200 dark:bg-slate-800"></div>
+    <h2 class="display-2">Media &amp; Publications</h2>
+    <div class="flex-1 h-px bg-void-700 relative overflow-hidden">
+      <div class="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-transparent via-cyber-500/50 to-transparent animate-[pulse_3s_ease-in-out_infinite]"></div>
+    </div>
   </div>
 
   <div class="grid md:grid-cols-2 gap-8">
     
-    <div class="glass-card p-8 group">
+    <div class="cyber-card p-8 group">
       
-        <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">
-          <i class="fa-solid fa-file-lines text-sage-500"></i> Publication
-        </span>
-        <h3 class="font-display text-2xl font-semibold text-slate-900 dark:text-white mb-3">Anomaly Detection in Electric Distribution Systems</h3>
-        <p class="text-sm font-medium text-sage-600 dark:text-sage-400 mb-4">IEEE UPEC 2025</p>
-        <p class="font-sans text-slate-600 dark:text-slate-400 leading-relaxed text-justify">Collaborative research with BEDAS focusing on utilizing advanced time-series analysis and machine learning to identify anomalous behavior within critical power distribution networks.</p>
+        <div class="flex items-center justify-between mb-4">
+          <span class="terminal-text">
+            <i class="fa-solid fa-file-lines mr-2"></i> PUBLICATION
+          </span>
+          <span class="text-xs font-mono text-void-500">PUB_0</span>
+        </div>
+        <h3 class="font-display text-2xl font-semibold text-void-50 mb-3 group-hover:text-cyber-300 transition-colors">Anomaly Detection in Electric Distribution Systems</h3>
+        <p class="font-mono text-sm text-cyber-500 mb-4">> IEEE UPEC 2025</p>
+        <p class="font-sans text-void-300 leading-relaxed text-justify">Collaborative research with BEDAS focusing on utilizing advanced time-series analysis and machine learning to identify anomalous behavior within critical power distribution networks.</p>
         
       
     </div>
     
-    <div class="glass-card p-8 group">
+    <div class="cyber-card p-8 group">
       
-        <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">
-          <i class="fa-solid fa-video text-sage-500"></i> Media
-        </span>
-        <h3 class="font-display text-2xl font-semibold text-slate-900 dark:text-white mb-4">Brain-Computer Interface Architecture Overview</h3>
-        <div class="aspect-video bg-slate-200 dark:bg-slate-800 rounded-lg flex items-center justify-center mb-6 border border-slate-300 dark:border-slate-700">
-          <span class="text-sm text-slate-500">[ Video Placeholder: example-id ]</span>
+        <div class="flex items-center justify-between mb-4">
+          <span class="terminal-text">
+            <i class="fa-solid fa-video mr-2"></i> MEDIA_STREAM
+          </span>
+          <span class="text-xs font-mono text-void-500">VID_1</span>
+        </div>
+        <h3 class="font-display text-2xl font-semibold text-void-50 mb-4 group-hover:text-cyber-300 transition-colors">Brain-Computer Interface Architecture Overview</h3>
+        <div class="aspect-video bg-void-900 rounded flex items-center justify-center mb-6 border border-void-600 relative overflow-hidden group/vid">
+          <div class="absolute inset-0 bg-cyber-500/5 opacity-0 group-hover/vid:opacity-100 transition-opacity"></div>
+          <span class="font-mono text-sm text-void-500">[ VIDEO_FEED_OFFLINE : example-id ]</span>
         </div>
         <details class="group/details">
-          <summary class="cursor-pointer font-medium text-slate-900 dark:text-white flex items-center justify-between border-t border-slate-200 dark:border-slate-700 pt-4">
-            Executive Summary
-            <i class="fa-solid fa-chevron-down transition-transform group-open/details:rotate-180"></i>
+          <summary class="cursor-pointer font-mono text-sm text-void-50 flex items-center justify-between border-t border-void-700 pt-4 hover:text-cyber-400 transition-colors">
+            EXEC_SUMMARY.txt
+            <i class="fa-solid fa-chevron-down transition-transform group-open/details:rotate-180 text-cyber-500"></i>
           </summary>
-          <div class="pt-4 font-sans text-slate-600 dark:text-slate-400 leading-relaxed text-justify">
+          <div class="pt-4 font-sans text-void-300 leading-relaxed text-justify border-l-2 border-cyber-500/30 pl-4 mt-2">
             This presentation covers the architecture of EEG-driven BCI systems, detailing the signal processing pipeline and the machine learning models used for real-time inference in clinical settings.
           </div>
         </details>
@@ -219,65 +223,72 @@
 </section>
 
 
-<section class="bg-slate-50 dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
+<section class="bg-void-800/30 border-y border-void-700">
   <div class="container-wide section">
     <div class="max-w-4xl mx-auto">
-      <h2 class="display-2 text-slate-900 dark:text-white text-center mb-16">Experience & Education</h2>
+      <div class="text-center mb-16">
+        <p class="terminal-text mb-2">OPERATIONAL_HISTORY</p>
+        <h2 class="display-2">Experience & Education</h2>
+      </div>
       
-      <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-3 md:ml-6 space-y-12">
+      <div class="relative border-l border-void-600 ml-3 md:ml-6 space-y-12 py-4">
         
         <div class="relative pl-8 md:pl-12 group">
-          <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-white dark:bg-slate-900 border-2 border-sage-500 transition-colors group-hover:bg-sage-500"></span>
+          <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-sm bg-void-900 border border-cyber-500 transition-all duration-300 group-hover:bg-cyber-500 group-hover:shadow-[0_0_10px_rgba(0,196,212,0.8)]"></span>
+          <span class="absolute left-0 top-[11px] h-px w-6 md:w-10 bg-void-600 group-hover:bg-cyber-500/50 transition-colors"></span>
           
-          <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 mb-3">
-            <h3 class="font-display text-xl font-semibold text-slate-900 dark:text-white">MSc in Applied Cybersecurity (CyberMACS)</h3>
-            <span class="text-sm font-mono text-sage-600 dark:text-sage-400">2026 — 2027</span>
+          <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 mb-2">
+            <h3 class="font-display text-xl font-semibold text-void-50 drop-shadow-sm">MSc in Applied Cybersecurity (CyberMACS)</h3>
+            <span class="terminal-text !text-void-400 group-hover:!text-cyber-400 transition-colors">2026 — 2027</span>
           </div>
           
-          <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-3">Erasmus Mundus Joint MSc</p>
-          <p class="font-sans text-slate-600 dark:text-slate-300 leading-relaxed text-justify max-w-2xl">
+          <p class="font-mono text-sm text-cyber-500 mb-3">> Erasmus Mundus Joint MSc</p>
+          <p class="font-sans text-void-300 leading-relaxed text-justify max-w-2xl bg-void-900/50 p-4 rounded border border-void-700/50 group-hover:border-void-600 transition-colors">
             Awarded full EU scholarship based on academic excellence. Focus on Applied Cybersecurity, Cryptography, and Network Security across multiple European institutions.
           </p>
         </div>
         
         <div class="relative pl-8 md:pl-12 group">
-          <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-white dark:bg-slate-900 border-2 border-sage-500 transition-colors group-hover:bg-sage-500"></span>
+          <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-sm bg-void-900 border border-cyber-500 transition-all duration-300 group-hover:bg-cyber-500 group-hover:shadow-[0_0_10px_rgba(0,196,212,0.8)]"></span>
+          <span class="absolute left-0 top-[11px] h-px w-6 md:w-10 bg-void-600 group-hover:bg-cyber-500/50 transition-colors"></span>
           
-          <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 mb-3">
-            <h3 class="font-display text-xl font-semibold text-slate-900 dark:text-white">Graduate Researcher</h3>
-            <span class="text-sm font-mono text-sage-600 dark:text-sage-400">2025 — Present</span>
+          <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 mb-2">
+            <h3 class="font-display text-xl font-semibold text-void-50 drop-shadow-sm">Graduate Researcher</h3>
+            <span class="terminal-text !text-void-400 group-hover:!text-cyber-400 transition-colors">2025 — Present</span>
           </div>
           
-          <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-3">Kadir Has University BCI-Feast</p>
-          <p class="font-sans text-slate-600 dark:text-slate-300 leading-relaxed text-justify max-w-2xl">
+          <p class="font-mono text-sm text-cyber-500 mb-3">> Kadir Has University BCI-Feast</p>
+          <p class="font-sans text-void-300 leading-relaxed text-justify max-w-2xl bg-void-900/50 p-4 rounded border border-void-700/50 group-hover:border-void-600 transition-colors">
             Conducting research on Brain-Computer Interface (BCI) systems, alongside delivering laboratory sessions for MIS undergraduates on algorithm design.
           </p>
         </div>
         
         <div class="relative pl-8 md:pl-12 group">
-          <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-white dark:bg-slate-900 border-2 border-sage-500 transition-colors group-hover:bg-sage-500"></span>
+          <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-sm bg-void-900 border border-cyber-500 transition-all duration-300 group-hover:bg-cyber-500 group-hover:shadow-[0_0_10px_rgba(0,196,212,0.8)]"></span>
+          <span class="absolute left-0 top-[11px] h-px w-6 md:w-10 bg-void-600 group-hover:bg-cyber-500/50 transition-colors"></span>
           
-          <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 mb-3">
-            <h3 class="font-display text-xl font-semibold text-slate-900 dark:text-white">Undergraduate Researcher &amp; Admin</h3>
-            <span class="text-sm font-mono text-sage-600 dark:text-sage-400">2023 — 2025</span>
+          <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 mb-2">
+            <h3 class="font-display text-xl font-semibold text-void-50 drop-shadow-sm">Undergraduate Researcher &amp; Admin</h3>
+            <span class="terminal-text !text-void-400 group-hover:!text-cyber-400 transition-colors">2023 — 2025</span>
           </div>
           
-          <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-3">Kadir Has University CCIP</p>
-          <p class="font-sans text-slate-600 dark:text-slate-300 leading-relaxed text-justify max-w-2xl">
+          <p class="font-mono text-sm text-cyber-500 mb-3">> Kadir Has University CCIP</p>
+          <p class="font-sans text-void-300 leading-relaxed text-justify max-w-2xl bg-void-900/50 p-4 rounded border border-void-700/50 group-hover:border-void-600 transition-colors">
             Administered network and systems infrastructure for the Center on Cybersecurity and Critical Infrastructure Protection. Supported GPU-accelerated ML projects.
           </p>
         </div>
         
         <div class="relative pl-8 md:pl-12 group">
-          <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-white dark:bg-slate-900 border-2 border-sage-500 transition-colors group-hover:bg-sage-500"></span>
+          <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-sm bg-void-900 border border-cyber-500 transition-all duration-300 group-hover:bg-cyber-500 group-hover:shadow-[0_0_10px_rgba(0,196,212,0.8)]"></span>
+          <span class="absolute left-0 top-[11px] h-px w-6 md:w-10 bg-void-600 group-hover:bg-cyber-500/50 transition-colors"></span>
           
-          <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 mb-3">
-            <h3 class="font-display text-xl font-semibold text-slate-900 dark:text-white">Search &amp; Rescue Operator</h3>
-            <span class="text-sm font-mono text-sage-600 dark:text-sage-400">2025 — Present</span>
+          <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 mb-2">
+            <h3 class="font-display text-xl font-semibold text-void-50 drop-shadow-sm">Search &amp; Rescue Operator</h3>
+            <span class="terminal-text !text-void-400 group-hover:!text-cyber-400 transition-colors">2025 — Present</span>
           </div>
           
-          <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-3">AFAD</p>
-          <p class="font-sans text-slate-600 dark:text-slate-300 leading-relaxed text-justify max-w-2xl">
+          <p class="font-mono text-sm text-cyber-500 mb-3">> AFAD</p>
+          <p class="font-sans text-void-300 leading-relaxed text-justify max-w-2xl bg-void-900/50 p-4 rounded border border-void-700/50 group-hover:border-void-600 transition-colors">
             Conduct high-stakes urban and mountain search &amp; rescue operations under life-critical pressure. Certified AFAD instructor for disaster preparedness.
           </p>
         </div>
@@ -288,86 +299,87 @@
 </section>
 
 
-<section class="container-wide section text-center">
-  <div class="max-w-3xl mx-auto">
-    <p class="text-sm font-semibold uppercase tracking-widest text-sage-600 dark:text-sage-400 mb-6">Contact</p>
-    <h2 class="display-2 text-slate-900 dark:text-white mb-6">Get in Touch</h2>
-    <p class="font-sans text-lg text-slate-600 dark:text-slate-400 mb-12">
+<section class="container-wide section text-center relative">
+  <div class="max-w-3xl mx-auto relative z-10">
+    <p class="terminal-text mb-6 before:content-['<'] after:content-['>']">SECURE_CHANNEL</p>
+    <h2 class="display-2 mb-6">Get in Touch</h2>
+    <p class="font-sans text-lg text-void-300 mb-12">
       Open to collaboration on cybersecurity, applied AI, and edge defence.
     </p>
 
     <div class="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-16 text-left">
-      <div class="glass-card p-6 flex items-start gap-4">
-        <div class="h-10 w-10 rounded-full bg-sage-100 dark:bg-slate-800 flex items-center justify-center text-sage-600 dark:text-sage-400 shrink-0">
-          <i class="fa-regular fa-envelope"></i>
+      <div class="cyber-card p-6 flex items-start gap-4">
+        <div class="h-10 w-10 bg-void-900 border border-cyber-500/30 flex items-center justify-center text-cyber-500 shrink-0 shadow-[inset_0_0_10px_rgba(0,196,212,0.1)]">
+          <i class="fa-solid fa-terminal"></i>
         </div>
         <div>
-          <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-1">Email</p>
-          <a href="mailto:contact@example.com" class="font-medium text-slate-900 dark:text-white hover:text-sage-600">contact@example.com</a>
+          <p class="terminal-text !text-[10px] mb-1">PROTOCOL: EMAIL</p>
+          <a href="mailto:contact@example.com" class="font-mono text-sm text-void-50 hover:text-cyber-400 !border-none transition-colors">contact@example.com</a>
         </div>
       </div>
-      <div class="glass-card p-6 flex items-start gap-4">
-        <div class="h-10 w-10 rounded-full bg-sage-100 dark:bg-slate-800 flex items-center justify-center text-sage-600 dark:text-sage-400 shrink-0">
-          <i class="fa-solid fa-location-dot"></i>
+      <div class="cyber-card p-6 flex items-start gap-4">
+        <div class="h-10 w-10 bg-void-900 border border-cyber-500/30 flex items-center justify-center text-cyber-500 shrink-0 shadow-[inset_0_0_10px_rgba(0,196,212,0.1)]">
+          <i class="fa-solid fa-location-crosshairs"></i>
         </div>
         <div>
-          <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-1">Location</p>
-          <p class="font-medium text-slate-900 dark:text-white">Istanbul, Turkey</p>
-          <p class="text-sm text-slate-500 mt-1">Mon-Fri: 09:00 - 18:00 (TRT)</p>
+          <p class="terminal-text !text-[10px] mb-1">COORDINATES</p>
+          <p class="font-mono text-sm text-void-50">Istanbul, Turkey</p>
+          <p class="font-mono text-xs text-void-500 mt-1">UPTIME: Mon-Fri: 09:00 - 18:00 (TRT)</p>
         </div>
       </div>
     </div>
     
-    <div class="aspect-[21/9] w-full bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-300 dark:border-slate-700 flex items-center justify-center relative group">
-      <span class="text-sm text-slate-500">[ Google Maps Embed Placeholder ]</span>
+    <div class="aspect-[21/9] w-full bg-void-900 overflow-hidden border border-void-600 flex items-center justify-center relative group">
+      <div class="absolute inset-0 bg-[linear-gradient(rgba(0,196,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,196,212,0.03)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+      <span class="font-mono text-sm text-cyber-600 animate-pulse">[ MAP_TELEMETRY_UNAVAILABLE ]</span>
     </div>
   </div>
 </section>
 
   </main>
 
-  <footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900">
+  <footer class="mt-auto border-t border-void-700 bg-void-800">
     <div class="container-wide py-16">
       <div class="grid gap-12 md:grid-cols-12">
         <div class="md:col-span-5">
-          <p class="text-xs font-semibold uppercase tracking-widest text-sage-600 dark:text-sage-400 mb-4">About</p>
-          <p class="font-sans text-base leading-relaxed text-slate-600 dark:text-slate-400 max-w-md text-justify">
-            A premium, data-driven digital presence. Engineered with Eleventy, Tailwind CSS, and a strict JSON data architecture. Typography is set in <span class="font-display font-semibold">Playfair Display</span> and <span class="font-medium">Inter</span>.
+          <p class="terminal-text mb-4">System Identity</p>
+          <p class="font-sans text-base leading-relaxed text-void-300 max-w-md">
+            Architected for scale and security. Engineered with Eleventy and Tailwind CSS. Rendered in <span class="font-display font-semibold text-void-50">Space Grotesk</span> and <span class="font-mono text-cyber-500">JetBrains Mono</span>.
           </p>
         </div>
 
         <div class="md:col-span-3">
-          <p class="text-xs font-semibold uppercase tracking-widest text-slate-900 dark:text-slate-50 mb-4">Contact</p>
-          <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
-            <li><a href="mailto:mert@biricik.de" class="hover:text-sage-600 transition-colors duration-300">mert@biricik.de</a></li>
-            <li><a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" class="hover:text-sage-600 transition-colors duration-300">LinkedIn</a></li>
-            <li><a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hover:text-sage-600 transition-colors duration-300">GitHub</a></li>
+          <p class="terminal-text mb-4">Comms Link</p>
+          <ul class="space-y-3 font-mono text-sm text-void-400">
+            <li><a href="mailto:mert@biricik.de" class="hover:text-cyber-400 transition-colors duration-300">mert@biricik.de</a></li>
+            <li><a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" class="hover:text-cyber-400 transition-colors duration-300">LinkedIn</a></li>
+            <li><a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hover:text-cyber-400 transition-colors duration-300">GitHub</a></li>
           </ul>
         </div>
 
         <div class="md:col-span-4">
-          <p class="text-xs font-semibold uppercase tracking-widest text-slate-900 dark:text-slate-50 mb-4">Navigation</p>
-          <ul class="grid grid-cols-2 gap-y-3 text-sm text-slate-600 dark:text-slate-400">
+          <p class="terminal-text mb-4">Index</p>
+          <ul class="grid grid-cols-2 gap-y-3 font-mono text-sm text-void-400">
             
-            <li><a href="/" class="hover:text-sage-600 transition-colors duration-300">Home</a></li>
+            <li><a href="/" class="hover:text-cyber-400 transition-colors duration-300">Home</a></li>
             
-            <li><a href="/about/" class="hover:text-sage-600 transition-colors duration-300">About</a></li>
+            <li><a href="/about/" class="hover:text-cyber-400 transition-colors duration-300">About</a></li>
             
-            <li><a href="/projects/" class="hover:text-sage-600 transition-colors duration-300">Projects</a></li>
+            <li><a href="/projects/" class="hover:text-cyber-400 transition-colors duration-300">Projects</a></li>
             
-            <li><a href="/publications/" class="hover:text-sage-600 transition-colors duration-300">Publications</a></li>
+            <li><a href="/publications/" class="hover:text-cyber-400 transition-colors duration-300">Publications</a></li>
             
-            <li><a href="/blog/" class="hover:text-sage-600 transition-colors duration-300">Blog</a></li>
+            <li><a href="/blog/" class="hover:text-cyber-400 transition-colors duration-300">Blog</a></li>
             
-            <li><a href="/contact/" class="hover:text-sage-600 transition-colors duration-300">Contact</a></li>
+            <li><a href="/contact/" class="hover:text-cyber-400 transition-colors duration-300">Contact</a></li>
             
           </ul>
         </div>
       </div>
 
-      <div class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
-        <p>© 2026 Mert Biricik. All rights reserved.</p>
-        <p>Deployed with precision.</p>
+      <div class="mt-16 pt-8 border-t border-void-700 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-void-500 uppercase tracking-widest">
+        <p>© 2026 Mert Biricik.</p>
+        <p>Operational status: Normal.</p>
       </div>
     </div>
   </footer>
