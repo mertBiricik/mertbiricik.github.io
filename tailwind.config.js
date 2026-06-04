@@ -8,78 +8,76 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ['"Playfair Display"', 'ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
-        sans: ['"Inter"', '"Outfit"', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['"Inter"', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
         mono: ['"JetBrains Mono"', '"IBM Plex Mono"', 'ui-monospace', 'monospace']
       },
       colors: {
-        slate: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
+        cyber: {
+          50: '#e0fbfc',
+          100: '#b2f0f4',
+          200: '#84e5ec',
+          300: '#56dae4',
+          400: '#28cfdc',
+          500: '#00c4d4', // Cyber Cyan
+          600: '#009da9',
+          700: '#00757f',
+          800: '#004e54',
+          900: '#00272a',
         },
-        sage: {
-          50: '#f4f6f4',
-          100: '#e5ebe5',
-          200: '#ccd8cc',
-          300: '#a8bea8',
-          400: '#809e80',
-          500: '#608060',
-          600: '#4a654a',
-          700: '#3e513e',
-          800: '#334233',
-          900: '#2a362a',
+        void: {
+          50: '#f4f5f6',
+          100: '#e9ebed',
+          200: '#c8cdd4',
+          300: '#a6afba',
+          400: '#64748b', // slate-500
+          500: '#334155',
+          600: '#1e293b',
+          700: '#0f172a', // deep slate
+          800: '#090e1a', // void midnight
+          900: '#04070d', // pure void
         },
-        clay: {
-          50: '#fdf8f6',
-          100: '#f2e8e5',
-          200: '#eaddd7',
-          300: '#e0cec7',
-          400: '#d2bab0',
-          500: '#a38a80',
-          600: '#8a7168',
-          700: '#6f574f',
-          800: '#5c4740',
-          900: '#4c3933',
+        alert: {
+          500: '#ff3366', // neon crimson
         }
       },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
-            '--tw-prose-body': theme('colors.slate.700'),
-            '--tw-prose-headings': theme('colors.slate.900'),
-            '--tw-prose-links': theme('colors.sage.600'),
-            '--tw-prose-bold': theme('colors.slate.900'),
-            '--tw-prose-counters': theme('colors.slate.500'),
-            '--tw-prose-bullets': theme('colors.slate.400'),
-            '--tw-prose-hr': theme('colors.slate.200'),
-            '--tw-prose-quotes': theme('colors.slate.800'),
-            '--tw-prose-quote-borders': theme('colors.sage.300'),
-            '--tw-prose-code': theme('colors.sage.600'),
-            '--tw-prose-pre-bg': theme('colors.slate.900'),
-            '--tw-prose-pre-code': theme('colors.slate.100'),
+            '--tw-prose-body': theme('colors.void.300'),
+            '--tw-prose-headings': theme('colors.void.50'),
+            '--tw-prose-links': theme('colors.cyber.500'),
+            '--tw-prose-bold': theme('colors.void.50'),
+            '--tw-prose-counters': theme('colors.cyber.600'),
+            '--tw-prose-bullets': theme('colors.cyber.600'),
+            '--tw-prose-hr': theme('colors.void.700'),
+            '--tw-prose-quotes': theme('colors.void.200'),
+            '--tw-prose-quote-borders': theme('colors.cyber.500'),
+            '--tw-prose-code': theme('colors.cyber.400'),
+            '--tw-prose-pre-bg': theme('colors.void.900'),
+            '--tw-prose-pre-code': theme('colors.void.100'),
             fontFamily: theme('fontFamily.sans').join(','),
-            fontSize: '1.0625rem',
+            fontSize: '1rem',
             lineHeight: '1.7',
             'h1, h2, h3, h4': {
               fontFamily: theme('fontFamily.display').join(','),
               fontWeight: '600',
-              letterSpacing: '-0.01em'
+              letterSpacing: '-0.02em',
+              color: theme('colors.void.50')
             },
             a: {
               textDecoration: 'none',
+              borderBottom: `1px solid ${theme('colors.cyber.500')}`,
               transitionProperty: 'all',
               transitionDuration: '300ms',
               '&:hover': {
-                color: theme('colors.sage.700')
+                color: theme('colors.void.50'),
+                backgroundColor: theme('colors.cyber.500')
               }
+            },
+            code: {
+              fontFamily: theme('fontFamily.mono').join(','),
+              fontWeight: '500'
             }
           }
         }
