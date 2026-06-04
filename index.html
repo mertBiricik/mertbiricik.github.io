@@ -329,9 +329,45 @@
       </div>
     </div>
     
-    <div class="aspect-[21/9] w-full bg-void-900 overflow-hidden border border-void-600 flex items-center justify-center relative group">
+    <div class="w-full bg-void-900 overflow-hidden border border-void-600 relative group p-6">
       <div class="absolute inset-0 bg-[linear-gradient(rgba(0,196,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,196,212,0.03)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-      <span class="font-mono text-sm text-cyber-600 animate-pulse">[ MAP_TELEMETRY_UNAVAILABLE ]</span>
+      
+      <div class="relative z-10 aspect-[21/9] w-full flex items-center justify-center">
+        <!-- Abstract Europe Map Outline Placeholder -->
+        <svg class="absolute inset-0 w-full h-full opacity-20 text-cyber-500" viewBox="0 0 800 400" fill="none" stroke="currentColor" stroke-width="2">
+          <!-- Simplified nodes/connections line -->
+          <path d="M 450,250 L 350,150 L 500,300" stroke-dasharray="5,5" class="animate-[pulse_3s_ease-in-out_infinite]" />
+        </svg>
+
+        <!-- Berlin Node -->
+        <div class="absolute left-[40%] md:left-[43%] top-[35%] md:top-[30%] flex flex-col items-center group/node">
+          <span class="h-3 w-3 rounded-full bg-cyber-500 shadow-[0_0_15px_rgba(0,196,212,0.8)] relative">
+            <span class="absolute inset-0 rounded-full bg-cyber-500 animate-ping opacity-50"></span>
+          </span>
+          <span class="font-mono text-[10px] text-cyber-400 mt-2 bg-void-900/80 px-1 py-0.5 rounded border border-cyber-500/30">BERLIN_SRH</span>
+        </div>
+
+        <!-- Macedonia Node -->
+        <div class="absolute left-[50%] md:left-[52%] top-[65%] md:top-[60%] flex flex-col items-center group/node">
+          <span class="h-2.5 w-2.5 rounded-full bg-void-50 border border-cyber-500 shadow-[0_0_8px_rgba(255,255,255,0.4)]"></span>
+          <span class="font-mono text-[10px] text-void-400 mt-2 bg-void-900/80 px-1 py-0.5 rounded border border-void-700">UKIM_MKD</span>
+        </div>
+
+        <!-- Istanbul Node -->
+        <div class="absolute left-[65%] md:left-[60%] top-[75%] md:top-[70%] flex flex-col items-center group/node">
+          <span class="h-3 w-3 rounded-full bg-alert-500 shadow-[0_0_15px_rgba(255,51,102,0.8)] relative">
+            <span class="absolute inset-0 rounded-full bg-alert-500 animate-ping opacity-50"></span>
+          </span>
+          <span class="font-mono text-[10px] text-alert-500 mt-2 bg-void-900/80 px-1 py-0.5 rounded border border-alert-500/30">IST_KHAS</span>
+        </div>
+      </div>
+
+      <div class="relative z-10 mt-6 pt-4 border-t border-void-700 flex flex-col sm:flex-row justify-between items-center gap-2">
+        <span class="terminal-text !text-cyber-500"><i class="fa-solid fa-satellite-dish mr-2 animate-pulse"></i> GLOBAL_NODE_NETWORK</span>
+        <span class="font-mono text-xs text-void-300 bg-void-800 px-3 py-1.5 border border-void-600 rounded">
+          > Active Node: <span class="text-alert-500 font-semibold">Istanbul</span> <span class="text-void-500 mx-2">||</span> Next: <span class="text-cyber-500">Berlin</span>
+        </span>
+      </div>
     </div>
   </div>
 </section>
