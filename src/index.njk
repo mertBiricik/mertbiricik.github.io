@@ -11,15 +11,15 @@ changefreq: weekly
     <div class="lg:col-span-10 lg:pr-12">
       <p class="meta-label inline-block mb-6">{{ home.hero.eyebrow }}</p>
 
-      <h1 class="display-1 mb-8">
+      <h1 class="display-1 mb-6">
         {{ home.hero.title }}
       </h1>
 
-      <p class="font-sans text-xl sm:text-2xl leading-relaxed text-ink-700 max-w-4xl mb-10 text-justify font-medium">
+      <p class="font-sans text-xl leading-relaxed text-slate-500 max-w-3xl mb-10 font-medium">
         {{ home.hero.valueProposition }}
       </p>
 
-      <div class="flex flex-wrap gap-4 mt-12">
+      <div class="flex flex-wrap gap-4 mt-8">
         <a href="{{ home.hero.ctaPrimary.url }}" class="btn-primary">
           {{ home.hero.ctaPrimary.label }}
         </a>
@@ -32,19 +32,22 @@ changefreq: weekly
 </section>
 
 {# ============= PHILOSOPHY ============= #}
-<section class="bg-paper-200 border-y-4 border-ink-900 relative">
-  <div class="container-wide section">
+<section class="bg-white border-y border-slate-200 relative py-24">
+  <div class="container-wide">
     <div class="max-w-4xl mx-auto text-center mb-16">
       <p class="meta-label inline-block mb-4">Core Philosophy</p>
       <h2 class="display-2">{{ home.philosophy.title }}</h2>
     </div>
     
-    <div class="max-w-3xl mx-auto space-y-8 font-sans text-lg md:text-xl text-ink-800 leading-relaxed text-justify relative">
-      <div class="absolute -left-6 md:-left-12 top-0 bottom-0 border-l-4 border-ink-900 hidden sm:block"></div>
+    <div class="max-w-3xl mx-auto space-y-6 font-sans text-lg md:text-xl text-slate-600 leading-relaxed relative">
+      <div class="absolute -left-6 md:-left-12 top-0 bottom-0 border-l-2 border-slate-100 hidden sm:block"></div>
       {% for p in home.philosophy.content %}
-      <p class="relative bg-paper-50 p-6 sm:p-8 border-4 border-ink-900 shadow-[6px_6px_0px_#0A0A0A]">
-        {{ p }}
-      </p>
+      <div class="relative clean-card group">
+        <div class="absolute -left-[37px] md:-left-[61px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-slate-100 border-2 border-white group-hover:bg-primary-400 group-hover:scale-125 transition-all duration-300 hidden sm:block"></div>
+        <p>
+          {{ p }}
+        </p>
+      </div>
       {% endfor %}
     </div>
   </div>
@@ -52,24 +55,24 @@ changefreq: weekly
 
 {# ============= STACK / SKILLS ============= #}
 <section class="container-wide section">
-  <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 border-b-4 border-ink-900 pb-6">
+  <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-slate-200 pb-6">
     <h2 class="display-2">Threat Vectors & Stack</h2>
     <p class="meta-label">Technical Competencies</p>
   </div>
 
-  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
     {% for group in profile.skills %}
-    <div class="brutalist-card flex flex-col group">
-      <div class="flex items-center justify-between mb-8 pb-4 border-b-4 border-ink-900">
-        <div class="h-12 w-12 bg-ink-900 flex items-center justify-center text-paper-50 text-xl group-hover:bg-accent-500 transition-colors">
+    <div class="clean-card flex flex-col group hover:border-primary-200">
+      <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+        <div class="h-12 w-12 rounded-xl bg-primary-50 flex items-center justify-center text-primary-600 text-xl group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">
           <i class="fa-solid {{ group.icon | default('fa-microchip') }}"></i>
         </div>
-        <span class="font-mono text-sm font-bold text-ink-900">{{ group.items | length }} ITEMS</span>
+        <span class="font-mono text-xs font-semibold text-slate-400 uppercase tracking-wider">{{ group.items | length }} items</span>
       </div>
-      <h3 class="font-display text-2xl font-bold text-ink-900 mb-6 uppercase">{{ group.group }}</h3>
-      <ul class="flex flex-col gap-3 mt-auto font-mono text-sm uppercase tracking-wider text-ink-800 font-semibold">
+      <h3 class="font-display text-xl font-bold text-slate-900 mb-6">{{ group.group }}</h3>
+      <ul class="flex flex-col gap-3 mt-auto font-sans text-sm text-slate-600 font-medium">
         {% for item in group.items %}
-        <li class="flex items-center gap-2"><span class="w-2 h-2 bg-accent-500 block"></span>{{ item }}</li>
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>{{ item }}</li>
         {% endfor %}
       </ul>
     </div>
@@ -78,43 +81,43 @@ changefreq: weekly
 </section>
 
 {# ============= FEATURED PROJECTS ============= #}
-<section class="bg-paper-200 border-y-4 border-ink-900">
-  <div class="container-wide section">
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 border-b-4 border-ink-900 pb-6">
+<section class="bg-white border-y border-slate-200 py-24">
+  <div class="container-wide">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-slate-200 pb-6">
       <h2 class="display-2">Deployed Architectures</h2>
       <p class="meta-label">Selected Field Operations</p>
     </div>
 
-    <div class="space-y-12">
+    <div class="space-y-8">
       {% for project in projects.featured %}
-      <article class="brutalist-card grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch group p-0 overflow-hidden">
+      <article class="clean-card grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch group p-0 overflow-hidden hover:border-primary-200">
         <div class="lg:col-span-8 p-6 sm:p-10 flex flex-col justify-center">
-          <div class="flex items-center gap-4 mb-6">
-            <span class="meta-label !bg-accent-500">OP_{{ loop.index | pad(2) }}</span>
-            <span class="font-mono font-bold text-ink-900 uppercase">{{ project.period }}</span>
+          <div class="flex items-center gap-3 mb-6">
+            <span class="inline-flex px-2 py-0.5 rounded text-xs font-bold bg-primary-100 text-primary-700 tracking-wider">OP_{{ loop.index | pad(2) }}</span>
+            <span class="font-mono font-semibold text-sm text-slate-400 uppercase tracking-widest">{{ project.period }}</span>
           </div>
-          <h3 class="font-display text-4xl sm:text-5xl font-black text-ink-900 mb-4 group-hover:text-accent-500 transition-colors leading-tight uppercase">{{ project.title }}</h3>
-          <p class="font-sans text-xl font-bold text-ink-700 mb-8">{{ project.subtitle }}</p>
+          <h3 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-3 group-hover:text-primary-600 transition-colors leading-tight">{{ project.title }}</h3>
+          <p class="font-sans text-lg text-slate-500 mb-8">{{ project.subtitle }}</p>
           
-          <div class="space-y-6 font-sans text-lg text-ink-800 leading-relaxed text-justify">
-            <p><strong class="font-black text-ink-900 uppercase">Problem:</strong> {{ project.problem }}</p>
-            <p><strong class="font-black text-ink-900 uppercase">Approach:</strong> {{ project.solution }}</p>
-            <p class="bg-paper-200 p-4 border-l-4 border-accent-500"><strong class="font-black text-ink-900 uppercase">Result:</strong> {{ project.outcome }}</p>
+          <div class="space-y-4 font-sans text-[15px] sm:text-base text-slate-600 leading-relaxed">
+            <p><strong class="font-semibold text-slate-900">Problem:</strong> {{ project.problem }}</p>
+            <p><strong class="font-semibold text-slate-900">Approach:</strong> {{ project.solution }}</p>
+            <p class="bg-slate-50 p-4 rounded-lg border border-slate-100"><strong class="font-semibold text-slate-900">Result:</strong> {{ project.outcome }}</p>
           </div>
         </div>
 
-        <div class="lg:col-span-4 bg-ink-900 text-paper-50 p-6 sm:p-10 flex flex-col border-t-4 lg:border-t-0 lg:border-l-4 border-ink-900 group-hover:bg-ink-800 transition-colors">
-          <p class="meta-label !bg-paper-50 !text-ink-900 mb-8 self-start">TECHNOLOGY_STACK</p>
-          <ul class="flex flex-col gap-3 mb-12 font-mono text-sm uppercase tracking-wider">
+        <div class="lg:col-span-4 bg-slate-50 text-slate-700 p-6 sm:p-10 flex flex-col border-t lg:border-t-0 lg:border-l border-slate-200">
+          <p class="font-sans text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6">Technology Stack</p>
+          <ul class="flex flex-wrap gap-2 mb-12 font-sans text-xs font-medium">
             {% for t in project.tech %}
-            <li class="flex items-center gap-3"><span class="text-accent-500 font-black">+</span> {{ t }}</li>
+            <li class="bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-600 shadow-sm">{{ t }}</li>
             {% endfor %}
           </ul>
 
-          <div class="mt-auto flex flex-col gap-4">
+          <div class="mt-auto flex flex-col gap-3">
             {% if project.sourceLink %}
-            <a href="{{ project.sourceLink }}" target="_blank" rel="noopener noreferrer" class="btn-primary !border-paper-50 !shadow-[4px_4px_0px_#FFFFFF] hover:!shadow-[4px_4px_0px_#D90429] w-full text-center">
-              Source Code
+            <a href="{{ project.sourceLink }}" target="_blank" rel="noopener noreferrer" class="btn-primary w-full text-center">
+              View Source
             </a>
             {% endif %}
             {% if project.visitSiteLink %}
@@ -132,30 +135,30 @@ changefreq: weekly
 
 {# ============= RECENT PUBLICATIONS ============= #}
 <section class="container-wide section">
-  <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 border-b-4 border-ink-900 pb-6">
+  <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-slate-200 pb-6">
     <h2 class="display-2">Academic Telemetry</h2>
     <p class="meta-label">Selected Publications</p>
   </div>
 
-  <div class="grid gap-8">
+  <div class="grid gap-6">
     {% for pub in publications.slice(0, 4) %}
-    <div class="brutalist-card flex flex-col md:flex-row gap-6 md:gap-10 items-start group">
-      <div class="shrink-0 font-display text-5xl font-black text-ink-900 group-hover:text-accent-500 transition-colors pt-2">
+    <div class="clean-card flex flex-col md:flex-row gap-6 md:gap-8 items-start group hover:border-primary-200">
+      <div class="shrink-0 font-display text-4xl font-bold text-slate-300 group-hover:text-primary-500 transition-colors">
         {{ pub.year }}
       </div>
       <div class="flex-1">
-        <div class="flex flex-wrap items-center gap-3 mb-4">
-          {% if pub.status == 'published' %}<span class="meta-label">Published</span>
-          {% elif pub.status == 'under-review' %}<span class="meta-label !bg-accent-500">Under Review</span>
-          {% else %}<span class="meta-label bg-ink-500">{{ pub.status | replace("-", " ") }}</span>
+        <div class="flex flex-wrap items-center gap-3 mb-3">
+          {% if pub.status == 'published' %}<span class="inline-flex px-2 py-0.5 rounded text-[11px] font-bold bg-primary-50 text-primary-700 uppercase tracking-wider">Published</span>
+          {% elif pub.status == 'under-review' %}<span class="inline-flex px-2 py-0.5 rounded text-[11px] font-bold bg-amber-50 text-amber-700 uppercase tracking-wider">Under Review</span>
+          {% else %}<span class="inline-flex px-2 py-0.5 rounded text-[11px] font-bold bg-slate-100 text-slate-600 uppercase tracking-wider">{{ pub.status | replace("-", " ") }}</span>
           {% endif %}
-          <span class="font-mono font-bold text-sm text-ink-700 uppercase">{{ pub.venue }}</span>
+          <span class="font-sans font-medium text-xs text-slate-400 uppercase tracking-wider">{{ pub.venue }}</span>
         </div>
-        <h3 class="font-display text-2xl sm:text-3xl font-black text-ink-900 mb-4 group-hover:text-accent-500 transition-colors leading-tight">
-          {% if pub.link %}<a href="{{ pub.link }}" target="_blank" rel="noopener noreferrer" class="!border-none">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+        <h3 class="font-display text-xl font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors leading-snug">
+          {% if pub.link %}<a href="{{ pub.link }}" target="_blank" rel="noopener noreferrer" class="hover:underline">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
         </h3>
-        <p class="font-sans font-bold text-ink-800 mb-4">{{ pub.authors | join(', ') }}</p>
-        <p class="font-sans text-lg text-ink-700 leading-relaxed text-justify">{{ pub.summary }}</p>
+        <p class="font-sans text-sm font-medium text-slate-600 mb-3">{{ pub.authors | join(', ') }}</p>
+        <p class="font-sans text-slate-500 leading-relaxed">{{ pub.summary }}</p>
       </div>
     </div>
     {% endfor %}
@@ -163,29 +166,28 @@ changefreq: weekly
 </section>
 
 {# ============= TIMELINE / CV ============= #}
-<section class="bg-paper-200 border-y-4 border-ink-900">
-  <div class="container-wide section">
+<section class="bg-white border-y border-slate-200 py-24">
+  <div class="container-wide">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16">
-        <p class="meta-label inline-block mb-4">OPERATIONAL_HISTORY</p>
+        <p class="meta-label inline-block mb-4">Operational History</p>
         <h2 class="display-2">Experience & Education</h2>
       </div>
       
-      <div class="relative border-l-4 border-ink-900 ml-4 md:ml-8 space-y-16 py-8">
+      <div class="relative border-l-2 border-slate-100 ml-4 md:ml-8 space-y-12 py-8">
         {% for entry in home.timeline %}
         <div class="relative pl-8 md:pl-16 group">
-          <span class="absolute -left-[14px] top-2 h-6 w-6 bg-paper-50 border-4 border-ink-900 group-hover:bg-accent-500 transition-colors duration-200"></span>
-          <span class="absolute left-0 top-5 h-1 w-8 md:w-16 bg-ink-900"></span>
+          <span class="absolute -left-[11px] top-2 h-5 w-5 rounded-full bg-white border-4 border-slate-200 group-hover:border-primary-500 transition-colors duration-300"></span>
           
-          <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6 mb-4">
-            <h3 class="font-display text-2xl sm:text-3xl font-black text-ink-900 uppercase">{{ entry.role }}</h3>
-            <span class="meta-label">{{ entry.period }}</span>
+          <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 mb-2">
+            <h3 class="font-display text-xl font-bold text-slate-900">{{ entry.role }}</h3>
+            <span class="font-mono text-xs font-semibold text-slate-400 tracking-wider">{{ entry.period }}</span>
           </div>
           
-          <p class="font-mono font-bold text-lg text-accent-500 mb-4 uppercase">{{ entry.organization }}</p>
-          <p class="font-sans text-lg text-ink-800 leading-relaxed text-justify max-w-2xl bg-paper-50 p-6 border-4 border-ink-900 shadow-[4px_4px_0px_#0A0A0A] group-hover:shadow-[6px_6px_0px_#D90429] transition-all">
+          <p class="font-sans font-semibold text-sm text-primary-600 mb-4">{{ entry.organization }}</p>
+          <div class="clean-card bg-slate-50/50 p-6 text-slate-600 text-[15px] leading-relaxed group-hover:bg-white group-hover:border-primary-100 transition-colors">
             {{ entry.description }}
-          </p>
+          </div>
         </div>
         {% endfor %}
       </div>
@@ -196,30 +198,30 @@ changefreq: weekly
 {# ============= CONTACT ============= #}
 <section class="container-wide section text-center relative">
   <div class="max-w-3xl mx-auto">
-    <p class="meta-label inline-block mb-6">SECURE_CHANNEL</p>
-    <h2 class="display-2 mb-8">{{ home.contact.title }}</h2>
-    <p class="font-sans text-xl text-ink-700 font-medium mb-16">
+    <p class="meta-label inline-block mb-6">Secure Channel</p>
+    <h2 class="display-2 mb-6">{{ home.contact.title }}</h2>
+    <p class="font-sans text-lg text-slate-500 mb-16 max-w-2xl mx-auto">
       {{ home.contact.description }}
     </p>
 
-    <div class="grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto mb-16 text-left">
-      <div class="brutalist-card flex flex-col items-center text-center gap-4 hover:bg-ink-900 hover:text-paper-50 group">
-        <div class="h-16 w-16 bg-paper-200 border-4 border-ink-900 flex items-center justify-center text-ink-900 text-2xl group-hover:bg-accent-500 group-hover:border-accent-500 group-hover:text-paper-50 transition-colors">
+    <div class="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto text-left">
+      <div class="clean-card flex items-start gap-5 hover:border-primary-200 group">
+        <div class="h-12 w-12 rounded-full bg-primary-50 flex items-center justify-center text-primary-600 text-xl shrink-0 group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">
           <i class="fa-solid fa-envelope"></i>
         </div>
-        <div>
-          <p class="meta-label mb-3 inline-block">PROTOCOL: EMAIL</p><br/>
-          <a href="mailto:{{ home.contact.email }}" class="font-mono font-bold text-lg hover:text-accent-500 !border-none transition-colors">{{ home.contact.email }}</a>
+        <div class="pt-1">
+          <p class="font-sans text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">Email</p>
+          <a href="mailto:{{ home.contact.email }}" class="font-sans font-medium text-slate-900 hover:text-primary-600 transition-colors">{{ home.contact.email }}</a>
         </div>
       </div>
-      <div class="brutalist-card flex flex-col items-center text-center gap-4 hover:bg-ink-900 hover:text-paper-50 group">
-        <div class="h-16 w-16 bg-paper-200 border-4 border-ink-900 flex items-center justify-center text-ink-900 text-2xl group-hover:bg-accent-500 group-hover:border-accent-500 group-hover:text-paper-50 transition-colors">
+      <div class="clean-card flex items-start gap-5 hover:border-primary-200 group">
+        <div class="h-12 w-12 rounded-full bg-primary-50 flex items-center justify-center text-primary-600 text-xl shrink-0 group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">
           <i class="fa-solid fa-location-crosshairs"></i>
         </div>
-        <div>
-          <p class="meta-label mb-3 inline-block">COORDINATES</p><br/>
-          <p class="font-mono font-bold text-lg">{{ home.contact.address }}</p>
-          <p class="font-sans text-sm font-bold mt-2 opacity-80">UPTIME: {{ home.contact.workingHours }}</p>
+        <div class="pt-1">
+          <p class="font-sans text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">Location</p>
+          <p class="font-sans font-medium text-slate-900">{{ home.contact.address }}</p>
+          <p class="font-sans text-xs text-slate-500 mt-1">Uptime: {{ home.contact.workingHours }}</p>
         </div>
       </div>
     </div>
