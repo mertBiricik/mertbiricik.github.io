@@ -3,18 +3,18 @@
 @tailwind utilities;
 
 @layer base {
-  :root { color-scheme: dark; }
+  :root { color-scheme: light; }
   html {
     scroll-behavior: smooth;
   }
   
   body {
-    @apply bg-paper-100 text-ink-800 font-sans antialiased selection:bg-accent-500 selection:text-paper-50;
+    @apply bg-slate-50 text-slate-700 font-sans antialiased selection:bg-primary-500 selection:text-white;
   }
 }
 
 @layer components {
-  /* ACADEMIC BRUTALISM: Thick black borders, stark contrast, sharp corners */
+  /* SILICON VALLEY MINIMAL: Clean, white, rounded, soft shadows */
   .container-wide {
     @apply max-w-[1200px] mx-auto px-6 md:px-12 w-full;
   }
@@ -24,40 +24,40 @@
   }
 
   .display-1 {
-    @apply font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-ink-900 tracking-tight leading-[1.1] uppercase border-b-4 border-ink-900 pb-4;
+    @apply font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-slate-900 tracking-tight leading-[1.1];
   }
 
   .display-2 {
-    @apply font-display text-4xl sm:text-5xl md:text-6xl font-bold text-ink-900 tracking-tight leading-tight uppercase;
+    @apply font-display text-4xl sm:text-5xl md:text-6xl font-semibold text-slate-900 tracking-tight leading-tight;
   }
 
   /* Core Card Component */
-  .brutalist-card {
-    @apply bg-paper-50 border-4 border-ink-900 shadow-[6px_6px_0px_#0A0A0A] p-6 sm:p-8 transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[10px_10px_0px_#D90429] duration-200 relative;
+  .clean-card {
+    @apply bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 sm:p-8;
   }
 
   /* Metadata Label Component */
   .meta-label {
-    @apply font-mono text-[11px] uppercase tracking-[0.2em] bg-ink-900 text-paper-50 px-2 py-1 font-semibold;
+    @apply inline-flex px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-primary-50 text-primary-700 uppercase tracking-wider border border-primary-100;
   }
 
-  /* Primary Button */
+  /* Primary Action Button */
   .btn-primary {
-    @apply inline-flex items-center justify-center font-sans font-bold text-sm sm:text-base uppercase tracking-wider bg-ink-900 text-paper-50 px-8 py-4 border-4 border-ink-900 hover:bg-accent-500 hover:border-accent-500 hover:text-paper-50 transition-colors shadow-[4px_4px_0px_#D90429];
+    @apply inline-flex items-center justify-center font-sans font-medium text-sm sm:text-base bg-primary-600 text-white px-8 py-3.5 rounded-full hover:bg-primary-700 transition-colors shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
   }
 
-  /* Secondary Button */
+  /* Secondary Action Button */
   .btn-secondary {
-    @apply inline-flex items-center justify-center font-sans font-bold text-sm sm:text-base uppercase tracking-wider bg-paper-50 text-ink-900 px-8 py-4 border-4 border-ink-900 hover:bg-ink-900 hover:text-paper-50 transition-colors shadow-[4px_4px_0px_#0A0A0A];
+    @apply inline-flex items-center justify-center font-sans font-medium text-sm sm:text-base bg-white text-slate-700 px-8 py-3.5 border border-slate-200 rounded-full hover:bg-slate-50 hover:text-slate-900 transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2;
   }
 
-  /* Nav Links */
+  /* Top Navigation Links */
   .nav-link {
-    @apply font-mono text-sm uppercase tracking-widest text-ink-800 hover:text-accent-500 transition-colors relative;
+    @apply font-sans text-sm font-medium text-slate-600 hover:text-primary-600 transition-colors relative;
   }
   
   .nav-link::after {
-    @apply content-[''] absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-500 transition-all duration-300;
+    @apply content-[''] absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 rounded-full;
   }
   
   .nav-link:hover::after {
@@ -66,8 +66,5 @@
 }
 
 @layer utilities {
-  .sun-icon, .moon-icon { display: none; }
-  html:not([data-theme="dark"]) .sun-icon { display: inline-block; }
-  html[data-theme="dark"] .moon-icon { display: inline-block; }
   .text-balance { text-wrap: balance; }
 }
