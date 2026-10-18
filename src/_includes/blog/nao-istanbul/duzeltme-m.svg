@@ -1,0 +1,42 @@
+<svg class="viz viz-m" viewBox="0 0 380 300" role="img" aria-labelledby="duzeltme-m-t" tabindex="0" data-viz-line data-viz='{&quot;x&quot;: [40.0, 45.0, 50.3, 55.6, 60.3, 65.6, 70.8, 75.8, 81.0, 86.0, 91.3, 96.4, 101.5, 106.6, 111.8, 116.9, 122.0, 127.1, 132.3, 137.4, 142.5, 147.7, 152.8, 157.9, 163.0, 168.2, 173.3, 178.4, 183.6, 188.7, 193.8, 198.9, 204.1, 209.2, 214.3, 219.4, 224.6, 229.7, 234.8, 239.9, 245.1, 250.2, 255.3, 260.5, 265.6, 270.7, 275.8, 281.0, 286.1, 291.2], &quot;f&quot;: [50, 56, 63, 71, 79, 89, 100, 112, 126, 141, 159, 178, 200, 224, 252, 283, 317, 356, 400, 449, 504, 566, 635, 713, 800, 898, 1008, 1131, 1270, 1425, 1600, 1796, 2016, 2263, 2540, 2851, 3200, 3592, 4032, 4525, 5080, 5702, 6400, 7184, 8063, 9051, 10159, 11404, 12800, 14368], &quot;y&quot;: [[144.0, 144.0, 146.8, 189.4, 207.2, 222.4, 236.1, 234.8, 227.9, 222.4, 216.9, 216.9, 216.9, 219.6, 223.8, 227.9, 230.6, 227.9, 222.4, 216.9, 210.0, 204.5, 197.6, 189.4, 181.1, 170.1, 157.8, 142.6, 128.9, 119.2, 115.1, 113.8, 112.4, 111.0, 109.6, 108.2, 104.1, 100.0, 80.8, 61.5, 61.5, 78.0, 135.8, 200.4, 226.5, 226.5, 226.5, 226.5, 226.5, 226.5]], &quot;series&quot;: [{&quot;name&quot;: &quot;Gain&quot;, &quot;color&quot;: &quot;--viz-ink&quot;, &quot;values&quot;: [6.0, 6.0, 5.8, 2.7, 1.4, 0.3, -0.7, -0.6, -0.1, 0.3, 0.7, 0.7, 0.7, 0.5, 0.2, -0.1, -0.3, -0.1, 0.3, 0.7, 1.2, 1.6, 2.1, 2.7, 3.3, 4.1, 5.0, 6.1, 7.1, 7.8, 8.1, 8.2, 8.3, 8.4, 8.5, 8.6, 8.9, 9.2, 10.6, 12.0, 12.0, 10.8, 6.6, 1.9, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}]}'>
+<title id="duzeltme-m-t">Correction curve applied to the whole concert</title>
+<line class="viz-grid" x1="40" x2="296" y1="254.0" y2="254.0"/>
+<text class="viz-tick" x="32" y="258.0" text-anchor="end">-2</text>
+<line class="viz-axis" x1="40" x2="296" y1="226.5" y2="226.5"/>
+<text class="viz-tick" x="32" y="230.5" text-anchor="end">0</text>
+<line class="viz-grid" x1="40" x2="296" y1="199.0" y2="199.0"/>
+<text class="viz-tick" x="32" y="203.0" text-anchor="end">+2</text>
+<line class="viz-grid" x1="40" x2="296" y1="171.5" y2="171.5"/>
+<text class="viz-tick" x="32" y="175.5" text-anchor="end">+4</text>
+<line class="viz-grid" x1="40" x2="296" y1="144.0" y2="144.0"/>
+<text class="viz-tick" x="32" y="148.0" text-anchor="end">+6</text>
+<line class="viz-grid" x1="40" x2="296" y1="116.5" y2="116.5"/>
+<text class="viz-tick" x="32" y="120.5" text-anchor="end">+8</text>
+<line class="viz-grid" x1="40" x2="296" y1="89.0" y2="89.0"/>
+<text class="viz-tick" x="32" y="93.0" text-anchor="end">+10</text>
+<line class="viz-grid" x1="40" x2="296" y1="61.5" y2="61.5"/>
+<text class="viz-tick" x="32" y="65.5" text-anchor="end">+12</text>
+<line class="viz-grid" x1="40" x2="296" y1="34.0" y2="34.0"/>
+<text class="viz-tick" x="32" y="38.0" text-anchor="end">+14</text>
+<text class="viz-tick" x="32" y="18" text-anchor="end">dB</text>
+<line class="viz-grid" x1="40.0" x2="40.0" y1="34" y2="254"/>
+<line class="viz-grid" x1="101.5" x2="101.5" y1="34" y2="254"/>
+<line class="viz-grid" x1="142.2" x2="142.2" y1="34" y2="254"/>
+<line class="viz-grid" x1="203.7" x2="203.7" y1="34" y2="254"/>
+<line class="viz-grid" x1="244.4" x2="244.4" y1="34" y2="254"/>
+<line class="viz-grid" x1="70.8" x2="70.8" y1="34" y2="254"/>
+<text class="viz-tick" x="70.8" y="272" text-anchor="middle">100</text>
+<line class="viz-grid" x1="173.0" x2="173.0" y1="34" y2="254"/>
+<text class="viz-tick" x="173.0" y="272" text-anchor="middle">1k</text>
+<line class="viz-grid" x1="275.1" x2="275.1" y1="34" y2="254"/>
+<text class="viz-tick" x="275.1" y="272" text-anchor="middle">10k</text>
+<text class="viz-tick" x="168.0" y="292" text-anchor="middle">Frequency (Hz)</text>
+<rect class="viz-band" x="262.4" y="34" width="33.6" height="220"/>
+<path class="viz-line" style="stroke:var(--viz-ink)" d="M40.0,144.0 L45.0,144.0 L50.3,146.8 L55.6,189.4 L60.3,207.2 L65.6,222.4 L70.8,236.1 L75.8,234.8 L81.0,227.9 L86.0,222.4 L91.3,216.9 L96.4,216.9 L101.5,216.9 L106.6,219.6 L111.8,223.8 L116.9,227.9 L122.0,230.6 L127.1,227.9 L132.3,222.4 L137.4,216.9 L142.5,210.0 L147.7,204.5 L152.8,197.6 L157.9,189.4 L163.0,181.1 L168.2,170.1 L173.3,157.8 L178.4,142.6 L183.6,128.9 L188.7,119.2 L193.8,115.1 L198.9,113.8 L204.1,112.4 L209.2,111.0 L214.3,109.6 L219.4,108.2 L224.6,104.1 L229.7,100.0 L234.8,80.8 L239.9,61.5 L245.1,61.5 L250.2,78.0 L255.3,135.8 L260.5,200.4 L265.6,226.5 L270.7,226.5 L275.8,226.5 L281.0,226.5 L286.1,226.5 L291.2,226.5"/>
+<line class="viz-leader" x1="295.2" y1="226.5" x2="303.2" y2="226.5"/>
+<circle class="viz-key" cx="309.2" cy="226.5" r="4" style="fill:var(--viz-ink)"/>
+<text class="viz-label" x="317.2" y="230.5">Correction</text>
+<line class="viz-cross" x1="0" x2="0" y1="34" y2="254" visibility="hidden"/>
+<circle class="viz-dot" r="4" style="fill:var(--viz-ink)" visibility="hidden"/>
+<rect class="viz-hit" x="40" y="34" width="256" height="220"/>
+</svg>
