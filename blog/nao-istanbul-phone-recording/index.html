@@ -162,6 +162,7 @@
 .viz-tip b { font-weight: 600; font-variant-numeric: tabular-nums; }
 .viz-figure figcaption { margin-top: .75rem; font-size: .9rem; color: var(--viz-text2); }
 .viz-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 2rem 0; }
+.viz-tiles.two { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .viz-tile { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 16px; }
 .viz-tile p { margin: 0; }
 .viz-tile .l { font-size: .85rem; color: #64748b; }
@@ -592,7 +593,7 @@ details.data summary { cursor: pointer; color: #475569; }
 <p>A two-hour file is not an album. I needed track boundaries and, where possible, titles. Four sources helped.</p>
 <p><strong>Audience videos on YouTube.</strong> Other people in the hall had uploaded clips, and I had already downloaded eleven of them. I located each one inside my recording with GCC-PHAT, a cross-correlation that whitens the spectrum so two different phones in two different seats still line up. Each clip was tested with three 20-second pieces; when at least two of them pointed to the same offset, the clip was found. Nine of the eleven matched, which gave me <em>Wahashtini</em>, <em>Shuruq</em>, <em>Kaybolan Yıllar</em>, <em>Alışamadım</em> and <em>Ah İstanbul</em>. The other two, <em>Alf Leila wa Leila</em> and <em>Li Beirut</em>, matched nothing, and their descriptions explained why: they were filmed at the second Istanbul concert on 28 September.</p>
 <p><strong>Speech recognition for the stage announcements.</strong> Whisper did well on the conductor's English: the welcome, the introductions (&quot;our first singer for the evening, the NAO's very own co-founder&quot;, Usama Baalbaki; Nai Barghouti &quot;all the way from Palestine&quot;; and for Aytaç Doğan &quot;the most brilliant kanun player&quot;, which it heard as &quot;combo player&quot;) and the thank-yous at the end. On sung Arabic recorded from the audience it was useless. It filled the gaps with the boilerplate it learned from subtitled YouTube videos, &quot;subscribe to the channel&quot; and &quot;subtitles by&quot; in several languages.</p>
-<p><strong>Audience versus stage.</strong> I also separated the audience sound (applause, clapping along, talking) from the stage sound with a source-separation model and compared the two levels second by second. That gave a clean map of where each piece ends and the applause begins.</p>
+<p><strong>Audience versus stage.</strong> I also separated the audience sound (applause, clapping along, talking) from the stage sound with a source-separation model and compared the two levels second by second. (More about that model in <a href="/blog/nao-istanbul-ai-version/">part 2</a>.) That gave a clean map of where each piece ends and the applause begins.</p>
 <p><strong>Melody matching for the encore.</strong> The last piece had no video from my night. Later I found a 47-second clip from the second night titled <em>Kara Köprü Narlıktır</em>. Since it was a different performance, exact alignment was impossible, so I compared melodies instead: 24-bin chroma features (quarter-tone resolution, which Arabic music needs), slid along the whole recording while allowing the tempo to differ by −20% to +30%. The whole clip and each of its halves landed between 127:25 and 129:45, all inside the final four minutes.</p>
 <p>The cutting rule was simple: applause belongs to the piece it follows, and spoken introductions go at the start of the piece they introduce. Long speeches got their own tracks.</p>
 <figure class="viz-figure">
@@ -865,6 +866,7 @@ details.data summary { cursor: pointer; color: #475569; }
 </tbody>
 </table>
 <p>The album is in this folder as 24-bit / 48 kHz FLAC: <a href="https://drive.google.com/drive/folders/10Aee-fidz0-qxajbvN0oFbJHIP9uUmJN?usp=sharing">National Arab Orchestra, Istanbul, 27 September 2026</a>.</p>
+<p><a href="/blog/nao-istanbul-ai-version/">Part 2</a> is about a second version of the album, made with two machine-learning models.</p>
 <p>This is an audience recording made for personal listening. The music belongs to the National Arab Orchestra, the soloists and the composers. If any of them would like it taken down, email me and I will remove it.</p>
 <script src="/js/blog-charts.js" defer></script>
 

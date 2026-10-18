@@ -31,8 +31,13 @@
     return (d > 0 ? '+' : d < 0 ? '−' : '') + Math.abs(d).toFixed(1) + ' dB';
   }
 
+  function fmtUnit(d, unit) {
+    return (d < 0 ? '−' : '') + Math.abs(d).toFixed(1) + ' ' + unit;
+  }
+
   function lineChart(svg) {
     const data = JSON.parse(svg.dataset.viz);
+    const fmtVal = data.unit ? (d) => fmtUnit(d, data.unit) : fmtDb;
     const fig = svg.closest('.viz-figure');
     const tip = tipFor(fig);
     const cross = svg.querySelector('.viz-cross');
@@ -54,7 +59,7 @@
       tip.replaceChildren();
       const head = document.createElement('div');
       head.className = 'viz-tip-head';
-      head.textContent = fmtHz(data.f[idx]);
+      head.textContent = data.labels ? data.labels[idx] : fmtHz(data.f[idx]);
       tip.appendChild(head);
       data.series.forEach((s) => {
         const row = document.createElement('div');
@@ -62,7 +67,7 @@
         key.className = 'viz-tip-key';
         key.style.background = 'var(' + s.color + ')';
         const val = document.createElement('b');
-        val.textContent = fmtDb(s.values[idx]);
+        val.textContent = fmtVal(s.values[idx]);
         row.append(key, val, document.createTextNode(' ' + s.name));
         tip.appendChild(row);
       });
