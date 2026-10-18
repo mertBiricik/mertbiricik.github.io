@@ -496,7 +496,7 @@ details.data summary { cursor: pointer; color: #475569; }
 &lt;img src=&quot;https://mert.biricik.de/assets/blog/nao-istanbul-ai/spektrogram-waid.webp&quot; alt=&quot;Two spectrograms of the same 20 seconds of Wa&#39;id, from 0 to 20 kHz. Without models, the signal stops just above 5 kHz. In the AI version, short vertical streaks reach up to 20 kHz at the start of notes, while the horizontal lines of sustained tones stop near the dashed line at 5.5 kHz.&quot; width=&quot;1360&quot; height=&quot;980&quot; loading=&quot;lazy&quot; /&gt;
 &lt;figcaption&gt;Figure 3. The same 20 seconds of &lt;em&gt;Wa&#39;id&lt;/em&gt; as in part 1, now up to 20 kHz. The dashed line is the 5.5 kHz seam.&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;p&gt;The spectrogram shows what kind of high end the model invents. It is mostly vertical: short broadband bursts at the start of notes, reaching up to 20 kHz. The horizontal lines of sustained tones mostly stop near the seam; the model does not carry the harmonics of the strings and the voice upward. What you get is the attack and air of the music, not its overtones.&lt;/p&gt;
+&lt;p&gt;The spectrogram shows what kind of high end the model invents. It is mostly vertical: short broadband bursts at the start of notes, reaching up to 20 kHz. The horizontal lines of sustained tones mostly stop near the seam; the model does not carry the harmonics of the strings and the voice upward. What you get is the attack and air of the music, not its overtones. Listened to on its own, the generated band is mostly the jingles of the riq and the def: it sounds like a stream of clicks, but they are clearly instrument sounds, and inside the music they come across as the shimmer of the percussion.&lt;/p&gt;
 &lt;p&gt;With 725 separately generated windows I expected seams. I measured the level above 6 kHz in 50 ms steps over the whole concert and folded it onto the 9.6-second window grid. The change from one step to the next is the same at the crossfades as anywhere else, about 3.4 dB on average. There are no measurable seams.&lt;/p&gt;
 &lt;p&gt;Two side effects. The generated highs raised the inter-sample peaks: with the same limiter as the version without models, the true peak reached +0.2 dBTP. Running the limiter at four times the sample rate (192 kHz) brought it down to −0.9 dBTP. And the generated top is noise-like, so it compresses worse: the AI album is 669 MB of FLAC against 609 MB.&lt;/p&gt;
 &lt;p&gt;These two clips are matched to the same loudness individually, as in part 1, because the AI version is 1.1 dB louder overall.&lt;/p&gt;
@@ -511,7 +511,9 @@ details.data summary { cursor: pointer; color: #475569; }
 &lt;div class=&quot;viz-tile&quot;&gt;&lt;p class=&quot;l&quot;&gt;Applause&lt;/p&gt;&lt;p class=&quot;v&quot;&gt;−5 to −7 dB&lt;/p&gt;&lt;p class=&quot;d&quot;&gt;from −12 dB in the mix&lt;/p&gt;&lt;/div&gt;
 &lt;div class=&quot;viz-tile&quot;&gt;&lt;p class=&quot;l&quot;&gt;GPU time&lt;/p&gt;&lt;p class=&quot;v&quot;&gt;≈ 2 h 15 min&lt;/p&gt;&lt;p class=&quot;d&quot;&gt;45 min separation, 90 min AudioSR&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;By the measurements, the AI version is closer to the studio release in the upper frequencies and has less applause. Whether that makes it better is a matter of taste. What the model adds is plausible, not true: it has never heard this concert above 7 kHz, so it fills in what music like this usually has up there. The album I shared in part 1 is the version without models.&lt;/p&gt;
+&lt;p&gt;By the measurements, the AI version is closer to the studio release in the upper frequencies and has less applause. Whether that makes it better is a matter of taste. What the model adds is plausible, not true: it has never heard this concert above 7 kHz, so it fills in what music like this usually has up there.&lt;/p&gt;
+&lt;p&gt;Both albums are available as 24-bit / 48 kHz FLAC, 17 tracks each: &lt;a href=&quot;https://drive.google.com/drive/folders/11axoT7418hRC7uaDNmyZEMNJMvklUEwp?usp=sharing&quot;&gt;without models&lt;/a&gt; and &lt;a href=&quot;https://drive.google.com/drive/folders/1a15W28hYTbNU7IOg28BXUjRLDtF38XYC?usp=sharing&quot;&gt;the AI version&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;These are audience recordings made for personal listening. The music belongs to the National Arab Orchestra, the soloists and the composers. If any of them would like them taken down, email me and I will remove them.&lt;/p&gt;
 &lt;details class=&quot;data&quot;&gt;
 &lt;summary&gt;All settings&lt;/summary&gt;
 &lt;ul&gt;
@@ -1264,8 +1266,8 @@ details.data summary { cursor: pointer; color: #475569; }
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;The album is in this folder as 24-bit / 48 kHz FLAC: &lt;a href=&quot;https://drive.google.com/drive/folders/10Aee-fidz0-qxajbvN0oFbJHIP9uUmJN?usp=sharing&quot;&gt;National Arab Orchestra, Istanbul, 27 September 2026&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://mert.biricik.de/blog/nao-istanbul-ai-version/&quot;&gt;Part 2&lt;/a&gt; is about a second version of the album, made with two machine-learning models.&lt;/p&gt;
+&lt;p&gt;The album is in this folder as 24-bit / 48 kHz FLAC: &lt;a href=&quot;https://drive.google.com/drive/folders/11axoT7418hRC7uaDNmyZEMNJMvklUEwp?usp=sharing&quot;&gt;National Arab Orchestra, Istanbul, 27 September 2026&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://mert.biricik.de/blog/nao-istanbul-ai-version/&quot;&gt;Part 2&lt;/a&gt; is about a second version of the album, made with two machine-learning models. That version is &lt;a href=&quot;https://drive.google.com/drive/folders/1a15W28hYTbNU7IOg28BXUjRLDtF38XYC?usp=sharing&quot;&gt;in its own folder&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This is an audience recording made for personal listening. The music belongs to the National Arab Orchestra, the soloists and the composers. If any of them would like it taken down, email me and I will remove it.&lt;/p&gt;
 &lt;script src=&quot;https://mert.biricik.de/js/blog-charts.js&quot; defer=&quot;&quot;&gt;&lt;/script&gt;
 </content>
