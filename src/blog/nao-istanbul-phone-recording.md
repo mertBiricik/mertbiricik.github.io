@@ -161,25 +161,25 @@ What the correction cannot do: it cannot bring back what was never recorded. The
 
 ## The album
 
-Seventeen tracks, 1 hour 56 minutes. Five titles are still unknown to me; if you were there and recognise them, please write to me.
+Seventeen tracks, 1 hour 56 minutes. Four titles are still unknown to me; if you were there and recognise them, please write to me.
 
 | # | Title | Performer | Length |
 |---|---|---|---|
 | 1 | Wa'id (Promise) | National Arab Orchestra, Michael Ibrahim | 14:17 |
 | 2 | Michael Ibrahim speaks | | 2:50 |
 | 3 | Untitled 1 | Usama Baalbaki | 6:51 |
-| 4 | Untitled 2 | Nai Barghouti | 11:11 |
+| 4 | Lamma Bada Yatathanna | Nai Barghouti | 11:11 |
 | 5 | Nai Barghouti speaks | | 2:04 |
 | 6 | Wahashtini | Nai Barghouti | 12:40 |
-| 7 | Untitled 3 (a Fairuz song) | Nai Barghouti | 4:23 |
-| 8 | Untitled 4 | | 4:11 |
+| 7 | Untitled 2 (a Fairuz song) | Nai Barghouti | 4:23 |
+| 8 | Untitled 3 | | 4:11 |
 | 9 | Shuruq | National Arab Orchestra | 10:17 |
 | 10 | Şaşkın & Al-Ain Mulayitain | National Arab Orchestra | 5:47 |
 | 11 | Kaybolan Yıllar | Aytaç Doğan | 7:49 |
 | 12 | Alışamadım | Aytaç Doğan | 5:26 |
 | 13 | Ah İstanbul | Nai Barghouti, Aytaç Doğan | 9:28 |
 | 14 | Hicaz Mandıra | Nai Barghouti | 7:08 |
-| 15 | Untitled 5 | | 5:37 |
+| 15 | Untitled 4 | | 5:37 |
 | 16 | Thank-yous | Michael Ibrahim | 1:43 |
 | 17 | Kara Köprü Narlıktır (encore) | National Arab Orchestra, Michael Ibrahim | 4:04 |
 
