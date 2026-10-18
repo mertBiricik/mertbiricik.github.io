@@ -1,10 +1,10 @@
 {
   "hero": {
-    "eyebrow": "[ CyberMACS Scholar & Security Researcher ]",
-    "title": "I build and defend systems that don't fail quietly.",
-    "valueProposition": "Cybersecurity researcher and incoming Erasmus Mundus Scholar with hands-on experience in network administration, system deployment, and threat discovery. I run critical IT infrastructure and software rollouts under high-pressure conditions and focus on Zero Trust, Cloud Security, and SASE.",
+    "eyebrow": "Security researcher · Istanbul",
+    "title": "Hi, I'm Mert. I work on security and the infrastructure underneath it.",
+    "valueProposition": "I'm an Erasmus Mundus scholar in the CyberMACS master's programme in applied cybersecurity. Before that I ran the network and servers at Kadir Has University's cybersecurity center, and I still build data platforms for research projects. Lately I've been working on memory forensics, anomaly detection in power grids and EEG-based brain–computer interfaces.",
     "ctaPrimary": {
-      "label": "View Work",
+      "label": "Projects",
       "url": "/projects/"
     },
     "ctaSecondary": {
@@ -13,61 +13,43 @@
     }
   },
   "philosophy": {
-    "title": "Philosophy & Approach",
+    "title": "About me",
     "content": [
-      "In the domain of critical infrastructure and high-stakes operations, failure is not simply an inconvenience—it is often a catastrophic event. My approach to cybersecurity and system administration is rooted in the belief that resilience must be engineered from the ground up. Whether analyzing memory dumps for forensic anomalies or deploying agentic AI systems for predictive maintenance, I prioritize robust, deterministic architectures over superficial complexity.",
-      "My background as a Search & Rescue Operator has profoundly shaped my engineering methodology. Operating under life-critical pressure instills a rigorous discipline: systems must be intuitive, redundancies must be automatic, and fail-safes must be absolute. I carry this philosophy into my technical work, ensuring that every deployment, from Kubernetes clusters to Zero Trust network configurations, is designed to withstand both adversarial actions and environmental degradation."
-    ]
-  },
-  "media": {
-    "title": "Research & Telemetry",
-    "items": [
-      {
-        "type": "publication",
-        "title": "Anomaly Detection in Electric Distribution Systems",
-        "publisher": "IEEE UPEC 2025",
-        "summary": "Collaborative research with BEDAS focusing on utilizing advanced time-series analysis and machine learning to identify anomalous behavior within critical power distribution networks.",
-        "link": "https://doi.org/10.1109/UPEC50000.2025.1234567"
-      },
-      {
-        "type": "video",
-        "title": "Brain-Computer Interface Architecture Overview",
-        "videoId": "Qn4eT8y_qXg",
-        "executiveSummary": "This presentation covers the architecture of EEG-driven BCI systems, detailing the signal processing pipeline and the machine learning models used for real-time inference in clinical settings."
-      }
+      "Most of my work sits where security meets day-to-day operations: keeping a lab's machines and network running, digging through memory dumps for malware that never touches the disk, and turning messy research data into something people can actually query. I like systems that are simple enough to understand when they break.",
+      "I'm also a search and rescue operator and instructor at AFAD. Rescue work teaches you to keep plans simple, to check your gear before you need it and to stay calm when things go wrong. I try to bring the same habits to the servers I look after."
     ]
   },
   "timeline": [
     {
-      "period": "2026 — 2027",
+      "period": "2026 – 2027",
       "role": "MSc in Applied Cybersecurity (CyberMACS)",
       "organization": "Erasmus Mundus Joint MSc",
-      "description": "Awarded full EU scholarship based on academic excellence. Focus on Applied Cybersecurity, Cryptography, and Network Security across multiple European institutions."
+      "description": "Full EU scholarship. The first year is at Kadir Has University in Istanbul and SRH Berlin, the second at UKIM in Skopje. Courses in cryptography, network security and applied cybersecurity."
     },
     {
-      "period": "2025 — Present",
+      "period": "2025 – Present",
       "role": "Graduate Researcher",
       "organization": "Kadir Has University BCI-Feast",
-      "description": "Conducting research on Brain-Computer Interface (BCI) systems, alongside delivering laboratory sessions for MIS undergraduates on algorithm design."
+      "description": "Research on EEG-based brain–computer interfaces. I also teach the lab sessions of undergraduate MIS courses on algorithms and operating systems."
     },
     {
-      "period": "2023 — 2025",
+      "period": "2023 – 2025",
       "role": "Undergraduate Researcher & Admin",
       "organization": "Kadir Has University CCIP",
-      "description": "Administered network and systems infrastructure for the Center on Cybersecurity and Critical Infrastructure Protection. Supported GPU-accelerated ML projects."
+      "description": "Ran the network and servers of the Center for Cybersecurity and Critical Infrastructure Protection, and kept the GPU machines going for the lab's machine learning projects."
     },
     {
-      "period": "2025 — Present",
-      "role": "Kinetic Incident Response & Crisis Management",
+      "period": "2025 – Present",
+      "role": "Search & Rescue Operator and Instructor",
       "organization": "AFAD",
-      "description": "Conduct high-stakes urban and mountain search & rescue operations under life-critical pressure. Managing real-world life-or-death crises on the ground translates to absolute composure when resolving critical server outages or security breaches in the digital realm."
+      "description": "Urban and mountain search and rescue under AFAD and INSARAG standards. As a certified AFAD instructor I also teach disaster preparedness and USAR courses."
     }
   ],
   "contact": {
-    "title": "Get in Touch",
-    "description": "Open to collaboration on cybersecurity, applied AI, and edge defence.",
+    "title": "Contact",
+    "description": "If you're working on something in security, infrastructure or research data and want to talk, send me an email.",
     "email": "mert@biricik.de",
     "address": "Istanbul, Turkey",
-    "workingHours": "Mon-Fri: 09:00 - 18:00 (TRT)"
+    "workingHours": "Mon–Fri, 09:00–18:00 (TRT)"
   }
 }
