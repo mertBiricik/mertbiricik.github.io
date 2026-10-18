@@ -1,0 +1,48 @@
+<svg class="viz viz-d" viewBox="0 0 680 340" role="img" aria-labelledby="duzeltme-t" tabindex="0" data-viz-line data-viz='{&quot;x&quot;: [52.0, 61.8, 72.0, 82.4, 91.6, 102.0, 112.1, 121.9, 132.1, 141.9, 152.3, 162.1, 172.2, 182.0, 192.2, 202.3, 212.1, 222.1, 232.2, 242.3, 252.3, 262.3, 272.3, 282.3, 292.3, 302.3, 312.4, 322.3, 332.4, 342.4, 352.4, 362.4, 372.4, 382.5, 392.5, 402.5, 412.5, 422.5, 432.5, 442.5, 452.6, 462.6, 472.6, 482.6, 492.6, 502.6, 512.6, 522.6, 532.7, 542.7], &quot;f&quot;: [50, 56, 63, 71, 79, 89, 100, 112, 126, 141, 159, 178, 200, 224, 252, 283, 317, 356, 400, 449, 504, 566, 635, 713, 800, 898, 1008, 1131, 1270, 1425, 1600, 1796, 2016, 2263, 2540, 2851, 3200, 3592, 4032, 4525, 5080, 5702, 6400, 7184, 8063, 9051, 10159, 11404, 12800, 14368], &quot;y&quot;: [[164.0, 164.0, 167.2, 217.6, 238.8, 256.6, 272.9, 271.2, 263.1, 256.6, 250.1, 250.1, 250.1, 253.4, 258.2, 263.1, 266.4, 263.1, 256.6, 250.1, 242.0, 235.5, 227.4, 217.6, 207.9, 194.9, 180.2, 162.4, 146.1, 134.8, 129.9, 128.2, 126.6, 125.0, 123.4, 121.8, 116.9, 112.0, 89.2, 66.5, 66.5, 86.0, 154.2, 230.6, 261.5, 261.5, 261.5, 261.5, 261.5, 261.5]], &quot;series&quot;: [{&quot;name&quot;: &quot;Gain&quot;, &quot;color&quot;: &quot;--viz-ink&quot;, &quot;values&quot;: [6.0, 6.0, 5.8, 2.7, 1.4, 0.3, -0.7, -0.6, -0.1, 0.3, 0.7, 0.7, 0.7, 0.5, 0.2, -0.1, -0.3, -0.1, 0.3, 0.7, 1.2, 1.6, 2.1, 2.7, 3.3, 4.1, 5.0, 6.1, 7.1, 7.8, 8.1, 8.2, 8.3, 8.4, 8.5, 8.6, 8.9, 9.2, 10.6, 12.0, 12.0, 10.8, 6.6, 1.9, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}]}'>
+<title id="duzeltme-t">Correction curve applied to the whole concert</title>
+<line class="viz-grid" x1="52" x2="552" y1="294.0" y2="294.0"/>
+<text class="viz-tick" x="44" y="298.0" text-anchor="end">-2</text>
+<line class="viz-axis" x1="52" x2="552" y1="261.5" y2="261.5"/>
+<text class="viz-tick" x="44" y="265.5" text-anchor="end">0</text>
+<line class="viz-grid" x1="52" x2="552" y1="229.0" y2="229.0"/>
+<text class="viz-tick" x="44" y="233.0" text-anchor="end">+2</text>
+<line class="viz-grid" x1="52" x2="552" y1="196.5" y2="196.5"/>
+<text class="viz-tick" x="44" y="200.5" text-anchor="end">+4</text>
+<line class="viz-grid" x1="52" x2="552" y1="164.0" y2="164.0"/>
+<text class="viz-tick" x="44" y="168.0" text-anchor="end">+6</text>
+<line class="viz-grid" x1="52" x2="552" y1="131.5" y2="131.5"/>
+<text class="viz-tick" x="44" y="135.5" text-anchor="end">+8</text>
+<line class="viz-grid" x1="52" x2="552" y1="99.0" y2="99.0"/>
+<text class="viz-tick" x="44" y="103.0" text-anchor="end">+10</text>
+<line class="viz-grid" x1="52" x2="552" y1="66.5" y2="66.5"/>
+<text class="viz-tick" x="44" y="70.5" text-anchor="end">+12</text>
+<line class="viz-grid" x1="52" x2="552" y1="34.0" y2="34.0"/>
+<text class="viz-tick" x="44" y="38.0" text-anchor="end">+14</text>
+<text class="viz-tick" x="44" y="18" text-anchor="end">dB</text>
+<line class="viz-grid" x1="52.0" x2="52.0" y1="34" y2="294"/>
+<text class="viz-tick" x="52.0" y="312" text-anchor="middle">50</text>
+<line class="viz-grid" x1="112.1" x2="112.1" y1="34" y2="294"/>
+<text class="viz-tick" x="112.1" y="312" text-anchor="middle">100</text>
+<line class="viz-grid" x1="172.2" x2="172.2" y1="34" y2="294"/>
+<text class="viz-tick" x="172.2" y="312" text-anchor="middle">200</text>
+<line class="viz-grid" x1="251.6" x2="251.6" y1="34" y2="294"/>
+<text class="viz-tick" x="251.6" y="312" text-anchor="middle">500</text>
+<line class="viz-grid" x1="311.7" x2="311.7" y1="34" y2="294"/>
+<text class="viz-tick" x="311.7" y="312" text-anchor="middle">1k</text>
+<line class="viz-grid" x1="371.8" x2="371.8" y1="34" y2="294"/>
+<text class="viz-tick" x="371.8" y="312" text-anchor="middle">2k</text>
+<line class="viz-grid" x1="451.2" x2="451.2" y1="34" y2="294"/>
+<text class="viz-tick" x="451.2" y="312" text-anchor="middle">5k</text>
+<line class="viz-grid" x1="511.3" x2="511.3" y1="34" y2="294"/>
+<text class="viz-tick" x="511.3" y="312" text-anchor="middle">10k</text>
+<text class="viz-tick" x="302.0" y="332" text-anchor="middle">Frequency (Hz)</text>
+<rect class="viz-band" x="486.3" y="34" width="65.7" height="260"/>
+<text class="viz-note" x="492.3" y="50">nothing left to boost</text>
+<path class="viz-line" style="stroke:var(--viz-ink)" d="M52.0,164.0 L61.8,164.0 L72.0,167.2 L82.4,217.6 L91.6,238.8 L102.0,256.6 L112.1,272.9 L121.9,271.2 L132.1,263.1 L141.9,256.6 L152.3,250.1 L162.1,250.1 L172.2,250.1 L182.0,253.4 L192.2,258.2 L202.3,263.1 L212.1,266.4 L222.1,263.1 L232.2,256.6 L242.3,250.1 L252.3,242.0 L262.3,235.5 L272.3,227.4 L282.3,217.6 L292.3,207.9 L302.3,194.9 L312.4,180.2 L322.3,162.4 L332.4,146.1 L342.4,134.8 L352.4,129.9 L362.4,128.2 L372.4,126.6 L382.5,125.0 L392.5,123.4 L402.5,121.8 L412.5,116.9 L422.5,112.0 L432.5,89.2 L442.5,66.5 L452.6,66.5 L462.6,86.0 L472.6,154.2 L482.6,230.6 L492.6,261.5 L502.6,261.5 L512.6,261.5 L522.6,261.5 L532.7,261.5 L542.7,261.5"/>
+<line class="viz-leader" x1="546.7" y1="261.5" x2="554.7" y2="261.5"/>
+<circle class="viz-key" cx="560.7" cy="261.5" r="4" style="fill:var(--viz-ink)"/>
+<text class="viz-label" x="568.7" y="265.5">Correction</text>
+<line class="viz-cross" x1="0" x2="0" y1="34" y2="294" visibility="hidden"/>
+<circle class="viz-dot" r="4" style="fill:var(--viz-ink)" visibility="hidden"/>
+<rect class="viz-hit" x="52" y="34" width="500" height="260"/>
+</svg>

@@ -1,0 +1,60 @@
+<svg class="viz viz-m" viewBox="0 0 380 210" role="img" aria-labelledby="zaman-m-t">
+<title id="zaman-m-t">Timeline of the recording: album tracks, speech, the cut pre-concert part and audience clips found on YouTube</title>
+<rect class="viz-song" x="4" y="8" width="12" height="12" rx="2"/>
+<text class="viz-tick" x="21" y="18">Song</text>
+<rect class="viz-speech" x="65" y="8" width="12" height="12" rx="2"/>
+<text class="viz-tick" x="82" y="18">Speech</text>
+<rect class="viz-cut" x="140" y="8" width="12" height="12" rx="2"/>
+<text class="viz-tick" x="157" y="18">Cut</text>
+<rect class="viz-clip" x="194" y="8" width="12" height="12" rx="2"/>
+<text class="viz-tick" x="211" y="18">YouTube clip</text>
+<text class="viz-tick" x="50" y="63.0" text-anchor="end">Album</text>
+<rect class="viz-cut viz-seg" x="58.0" y="44" width="32.7" height="30" rx="3" tabindex="0" data-tip="0:00–14:30 · Before the concert (cut)"/>
+<rect class="viz-song viz-seg" x="92.7" y="44" width="32.2" height="30" rx="3" tabindex="0" data-tip="01. Wa&#x27;id (Promise) · 14:30–28:47 (14.3 min)"/>
+<text class="viz-inlabel" x="108.8" y="63.0" text-anchor="middle">1</text>
+<rect class="viz-speech viz-seg" x="126.9" y="44" width="4.8" height="30" rx="3" tabindex="0" data-tip="02. Michael Ibrahim speaks · 28:47–31:37 (2.8 min)"/>
+<rect class="viz-song viz-seg" x="133.7" y="44" width="14.4" height="30" rx="3" tabindex="0" data-tip="03. Untitled 1 (Usama Baalbaki) · 31:37–38:28 (6.8 min)"/>
+<rect class="viz-song viz-seg" x="150.1" y="44" width="24.8" height="30" rx="3" tabindex="0" data-tip="04. Untitled 2 (Nai Barghouti) · 38:28–49:39 (11.2 min)"/>
+<text class="viz-inlabel" x="162.5" y="63.0" text-anchor="middle">4</text>
+<rect class="viz-speech viz-seg" x="176.8" y="44" width="2.9" height="30" rx="3" tabindex="0" data-tip="05. Nai Barghouti speaks · 49:39–51:43 (2.1 min)"/>
+<rect class="viz-song viz-seg" x="181.8" y="44" width="28.3" height="30" rx="3" tabindex="0" data-tip="06. Wahashtini · 51:43–64:23 (12.7 min)"/>
+<text class="viz-inlabel" x="195.9" y="63.0" text-anchor="middle">6</text>
+<rect class="viz-song viz-seg" x="212.1" y="44" width="8.5" height="30" rx="3" tabindex="0" data-tip="07. Untitled 3 (a Fairuz song) · 64:23–68:46 (4.4 min)"/>
+<rect class="viz-song viz-seg" x="222.6" y="44" width="8.0" height="30" rx="3" tabindex="0" data-tip="08. Untitled 4 · 68:46–72:57 (4.2 min)"/>
+<rect class="viz-song viz-seg" x="232.6" y="44" width="22.6" height="30" rx="3" tabindex="0" data-tip="09. Shuruq · 72:57–83:14 (10.3 min)"/>
+<text class="viz-inlabel" x="243.9" y="63.0" text-anchor="middle">9</text>
+<rect class="viz-song viz-seg" x="257.2" y="44" width="11.8" height="30" rx="3" tabindex="0" data-tip="10. Şaşkın &amp; Al-Ain Mulayitain · 83:14–89:01 (5.8 min)"/>
+<rect class="viz-song viz-seg" x="271.1" y="44" width="16.7" height="30" rx="3" tabindex="0" data-tip="11. Kaybolan Yıllar · 89:01–96:50 (7.8 min)"/>
+<text class="viz-inlabel" x="279.4" y="63.0" text-anchor="middle">11</text>
+<rect class="viz-song viz-seg" x="289.8" y="44" width="11.0" height="30" rx="3" tabindex="0" data-tip="12. Alışamadım · 96:50–102:16 (5.4 min)"/>
+<rect class="viz-song viz-seg" x="302.8" y="44" width="20.7" height="30" rx="3" tabindex="0" data-tip="13. Ah İstanbul · 102:16–111:44 (9.5 min)"/>
+<text class="viz-inlabel" x="313.1" y="63.0" text-anchor="middle">13</text>
+<rect class="viz-song viz-seg" x="325.4" y="44" width="15.1" height="30" rx="3" tabindex="0" data-tip="14. Hicaz Mandıra · 111:44–118:52 (7.1 min)"/>
+<rect class="viz-song viz-seg" x="342.5" y="44" width="11.4" height="30" rx="3" tabindex="0" data-tip="15. Untitled 5 · 118:52–124:29 (5.6 min)"/>
+<rect class="viz-speech viz-seg" x="356.0" y="44" width="2.1" height="30" rx="3" tabindex="0" data-tip="16. Thank-yous · 124:29–126:12 (1.7 min)"/>
+<rect class="viz-song viz-seg" x="360.1" y="44" width="7.7" height="30" rx="3" tabindex="0" data-tip="17. Kara Köprü Narlıktır (encore) · 126:12–130:16 (4.1 min)"/>
+<text class="viz-tick" x="50" y="106" text-anchor="end">YouTube</text>
+<rect class="viz-clip viz-seg" x="137.3" y="96" width="4.7" height="8" rx="3" tabindex="0" data-tip="Audience clip found at 33:08–35:06"/>
+<rect class="viz-clip viz-seg" x="183.3" y="96" width="28.7" height="8" rx="3" tabindex="0" data-tip="Audience clip found at 52:20–64:20"/>
+<rect class="viz-clip viz-seg" x="235.7" y="96" width="10.1" height="8" rx="3" tabindex="0" data-tip="Audience clip found at 74:14–78:28"/>
+<rect class="viz-clip viz-seg" x="259.0" y="96" width="11.7" height="8" rx="3" tabindex="0" data-tip="Audience clip found at 83:58–88:51"/>
+<rect class="viz-clip viz-seg" x="278.5" y="96" width="22.9" height="8" rx="3" tabindex="0" data-tip="Audience clip found at 92:07–101:41"/>
+<rect class="viz-clip viz-seg" x="298.4" y="108" width="4.0" height="8" rx="3" tabindex="0" data-tip="Audience clip found at 100:26–101:50"/>
+<rect class="viz-clip viz-seg" x="305.2" y="96" width="17.1" height="8" rx="3" tabindex="0" data-tip="Audience clip found at 103:16–110:25"/>
+<text class="viz-tick" x="50" y="140" text-anchor="end">Edits</text>
+<path class="viz-mark viz-seg" d="M266.6,130 L278.6,130 L272.6,141 Z" tabindex="0" data-tip="89:40 · Our own chat during applause, replaced with nearby applause"/>
+<path class="viz-mark viz-seg" d="M295.4,130 L307.4,130 L301.4,141 Z" tabindex="0" data-tip="101:42 · Our own chat during applause, replaced with nearby applause"/>
+<path class="viz-mark viz-seg" d="M363.8,130 L375.8,130 L369.8,141 Z" tabindex="0" data-tip="130:16 · Fade-out before my own voice at the very end"/>
+<line class="viz-axis" x1="58" x2="370" y1="168" y2="168"/>
+<line class="viz-axis" x1="58.0" x2="58.0" y1="168" y2="173"/>
+<text class="viz-tick" x="58.0" y="188" text-anchor="middle">0:00</text>
+<line class="viz-axis" x1="129.8" x2="129.8" y1="168" y2="173"/>
+<text class="viz-tick" x="129.8" y="188" text-anchor="middle">0:30</text>
+<line class="viz-axis" x1="201.6" x2="201.6" y1="168" y2="173"/>
+<text class="viz-tick" x="201.6" y="188" text-anchor="middle">1:00</text>
+<line class="viz-axis" x1="273.4" x2="273.4" y1="168" y2="173"/>
+<text class="viz-tick" x="273.4" y="188" text-anchor="middle">1:30</text>
+<line class="viz-axis" x1="345.2" x2="345.2" y1="168" y2="173"/>
+<text class="viz-tick" x="345.2" y="188" text-anchor="middle">2:00</text>
+<text class="viz-tick" x="370" y="204" text-anchor="end">Position in the recording (h:mm)</text>
+</svg>
