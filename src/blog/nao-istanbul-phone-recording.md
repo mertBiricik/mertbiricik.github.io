@@ -145,9 +145,9 @@ Seventeen tracks, 1 hour 56 minutes. Four titles are still unknown to me; if you
 | 16 | Thank-yous | Michael Ibrahim | 1:43 |
 | 17 | Kara Köprü Narlıktır (encore) | National Arab Orchestra, Michael Ibrahim | 4:04 |
 
-The album is in this folder as 24-bit / 48 kHz FLAC: [National Arab Orchestra, Istanbul, 27 September 2026](https://drive.google.com/drive/folders/10Aee-fidz0-qxajbvN0oFbJHIP9uUmJN?usp=sharing).
+The album is in this folder as 24-bit / 48 kHz FLAC: [National Arab Orchestra, Istanbul, 27 September 2026](https://drive.google.com/drive/folders/11axoT7418hRC7uaDNmyZEMNJMvklUEwp?usp=sharing).
 
-[Part 2](/blog/nao-istanbul-ai-version/) is about a second version of the album, made with two machine-learning models.
+[Part 2](/blog/nao-istanbul-ai-version/) is about a second version of the album, made with two machine-learning models. That version is [in its own folder](https://drive.google.com/drive/folders/1a15W28hYTbNU7IOg28BXUjRLDtF38XYC?usp=sharing).
 
 This is an audience recording made for personal listening. The music belongs to the National Arab Orchestra, the soloists and the composers. If any of them would like it taken down, email me and I will remove it.
 

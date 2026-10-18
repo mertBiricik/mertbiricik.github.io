@@ -97,7 +97,7 @@ On music, the AI version carries about 25 dB more energy above 7 kHz than the ve
 <figcaption>Figure 3. The same 20 seconds of <em>Wa'id</em> as in part 1, now up to 20 kHz. The dashed line is the 5.5 kHz seam.</figcaption>
 </figure>
 
-The spectrogram shows what kind of high end the model invents. It is mostly vertical: short broadband bursts at the start of notes, reaching up to 20 kHz. The horizontal lines of sustained tones mostly stop near the seam; the model does not carry the harmonics of the strings and the voice upward. What you get is the attack and air of the music, not its overtones.
+The spectrogram shows what kind of high end the model invents. It is mostly vertical: short broadband bursts at the start of notes, reaching up to 20 kHz. The horizontal lines of sustained tones mostly stop near the seam; the model does not carry the harmonics of the strings and the voice upward. What you get is the attack and air of the music, not its overtones. Listened to on its own, the generated band is mostly the jingles of the riq and the def: it sounds like a stream of clicks, but they are clearly instrument sounds, and inside the music they come across as the shimmer of the percussion.
 
 With 725 separately generated windows I expected seams. I measured the level above 6 kHz in 50 ms steps over the whole concert and folded it onto the 9.6-second window grid. The change from one step to the next is the same at the crossfades as anywhere else, about 3.4 dB on average. There are no measurable seams.
 
@@ -119,7 +119,11 @@ These two clips are matched to the same loudness individually, as in part 1, bec
 <div class="viz-tile"><p class="l">GPU time</p><p class="v">≈ 2 h 15 min</p><p class="d">45 min separation, 90 min AudioSR</p></div>
 </div>
 
-By the measurements, the AI version is closer to the studio release in the upper frequencies and has less applause. Whether that makes it better is a matter of taste. What the model adds is plausible, not true: it has never heard this concert above 7 kHz, so it fills in what music like this usually has up there. The album I shared in part 1 is the version without models.
+By the measurements, the AI version is closer to the studio release in the upper frequencies and has less applause. Whether that makes it better is a matter of taste. What the model adds is plausible, not true: it has never heard this concert above 7 kHz, so it fills in what music like this usually has up there.
+
+Both albums are available as 24-bit / 48 kHz FLAC, 17 tracks each: [without models](https://drive.google.com/drive/folders/11axoT7418hRC7uaDNmyZEMNJMvklUEwp?usp=sharing) and [the AI version](https://drive.google.com/drive/folders/1a15W28hYTbNU7IOg28BXUjRLDtF38XYC?usp=sharing).
+
+These are audience recordings made for personal listening. The music belongs to the National Arab Orchestra, the soloists and the composers. If any of them would like them taken down, email me and I will remove them.
 
 <details class="data">
 <summary>All settings</summary>
