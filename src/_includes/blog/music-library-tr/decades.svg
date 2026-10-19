@@ -1,0 +1,121 @@
+<svg class="viz viz-d" viewBox="0 0 680 364" role="img" aria-labelledby="decades-t">
+<title id="decades-t">Albüm yayın yılının on yılına göre parça sayısı, gruplara göre</title>
+<rect x="52.0" y="6" width="11" height="11" rx="2" style="fill:#8e5cd9"/>
+<text class="viz-tick" x="68.0" y="16">Pop, synth-pop, hip-hop</text>
+<rect x="234.8" y="6" width="11" height="11" rx="2" style="fill:#2a78d6"/>
+<text class="viz-tick" x="250.8" y="16">Sanat müziği</text>
+<rect x="345.0" y="6" width="11" height="11" rx="2" style="fill:#c99a1c"/>
+<text class="viz-tick" x="361.0" y="16">Country, şanson</text>
+<rect x="475.0" y="6" width="11" height="11" rx="2" style="fill:#eb6834"/>
+<text class="viz-tick" x="491.0" y="16">Türkçe şarkı, arabesk</text>
+<rect x="52.0" y="24" width="11" height="11" rx="2" style="fill:#c2417d"/>
+<text class="viz-tick" x="68.0" y="34">Türk/Arap/Fars pop</text>
+<rect x="201.8" y="24" width="11" height="11" rx="2" style="fill:#475569"/>
+<text class="viz-tick" x="217.8" y="34">Rock, indie, metal</text>
+<rect x="351.6" y="24" width="11" height="11" rx="2" style="fill:#1baf7a"/>
+<text class="viz-tick" x="367.6" y="34">Halk müziği</text>
+<rect x="455.2" y="24" width="11" height="11" rx="2" style="fill:#25aab6"/>
+<text class="viz-tick" x="471.2" y="34">Film müziği, klasik</text>
+<rect x="52.0" y="42" width="11" height="11" rx="2" style="fill:#9c6b3c"/>
+<text class="viz-tick" x="68.0" y="52">Dünya, psikedelik</text>
+<line class="viz-grid" x1="52" x2="670" y1="324.0" y2="324.0"/>
+<text class="viz-tick" x="46" y="328.0" text-anchor="end">0</text>
+<line class="viz-grid" x1="52" x2="670" y1="274.0" y2="274.0"/>
+<text class="viz-tick" x="46" y="278.0" text-anchor="end">2.000</text>
+<line class="viz-grid" x1="52" x2="670" y1="224.0" y2="224.0"/>
+<text class="viz-tick" x="46" y="228.0" text-anchor="end">4.000</text>
+<line class="viz-grid" x1="52" x2="670" y1="174.0" y2="174.0"/>
+<text class="viz-tick" x="46" y="178.0" text-anchor="end">6.000</text>
+<line class="viz-grid" x1="52" x2="670" y1="124.0" y2="124.0"/>
+<text class="viz-tick" x="46" y="128.0" text-anchor="end">8.000</text>
+<line class="viz-grid" x1="52" x2="670" y1="74.0" y2="74.0"/>
+<text class="viz-tick" x="46" y="78.0" text-anchor="end">10.000</text>
+<rect class="viz-seg" x="61.6" y="323.2" width="49.4" height="0.8" style="fill:#2a78d6" tabindex="0" data-tip="1950 öncesi · Türk sanat müziği: 33 parça (on yılın %97)"/>
+<rect class="viz-seg" x="61.6" y="323.2" width="49.4" height="0.0" style="fill:#c2417d" tabindex="0" data-tip="1950 öncesi · Türk, Arap ve Fars popu: 1 parça (on yılın %3)"/>
+<text class="viz-tick" x="86.3" y="318.1" text-anchor="middle">34</text>
+<text class="viz-tick" x="86.3" y="342" text-anchor="middle">1950 öncesi</text>
+<rect class="viz-seg" x="130.3" y="318.5" width="49.4" height="5.5" style="fill:#2a78d6" tabindex="0" data-tip="1950&#x27;ler · Türk sanat müziği: 219 parça (on yılın %72)"/>
+<rect class="viz-seg" x="130.3" y="317.6" width="49.4" height="1.0" style="fill:#c99a1c" tabindex="0" data-tip="1950&#x27;ler · Country, şanson ve söz yazarları: 38 parça (on yılın %13)"/>
+<rect class="viz-seg" x="130.3" y="317.3" width="49.4" height="0.2" style="fill:#eb6834" tabindex="0" data-tip="1950&#x27;ler · Türkçe şarkı ve arabesk: 9 parça (on yılın %3)"/>
+<rect class="viz-seg" x="130.3" y="316.7" width="49.4" height="0.7" style="fill:#c2417d" tabindex="0" data-tip="1950&#x27;ler · Türk, Arap ve Fars popu: 27 parça (on yılın %9)"/>
+<rect class="viz-seg" x="130.3" y="316.6" width="49.4" height="0.0" style="fill:#1baf7a" tabindex="0" data-tip="1950&#x27;ler · Türk halk müziği: 2 parça (on yılın %1)"/>
+<rect class="viz-seg" x="130.3" y="316.4" width="49.4" height="0.2" style="fill:#9c6b3c" tabindex="0" data-tip="1950&#x27;ler · Dünya müziği ve psikedelik: 8 parça (on yılın %3)"/>
+<text class="viz-tick" x="155.0" y="311.4" text-anchor="middle">303</text>
+<text class="viz-tick" x="155.0" y="342" text-anchor="middle">1950&#x27;ler</text>
+<rect class="viz-seg" x="198.9" y="321.7" width="49.4" height="2.3" style="fill:#2a78d6" tabindex="0" data-tip="1960&#x27;lar · Türk sanat müziği: 91 parça (on yılın %13)"/>
+<rect class="viz-seg" x="198.9" y="311.2" width="49.4" height="10.5" style="fill:#c99a1c" tabindex="0" data-tip="1960&#x27;lar · Country, şanson ve söz yazarları: 420 parça (on yılın %60)"/>
+<rect class="viz-seg" x="198.9" y="310.9" width="49.4" height="0.3" style="fill:#eb6834" tabindex="0" data-tip="1960&#x27;lar · Türkçe şarkı ve arabesk: 12 parça (on yılın %2)"/>
+<rect class="viz-seg" x="198.9" y="307.6" width="49.4" height="3.3" style="fill:#c2417d" tabindex="0" data-tip="1960&#x27;lar · Türk, Arap ve Fars popu: 133 parça (on yılın %19)"/>
+<rect class="viz-seg" x="198.9" y="307.1" width="49.4" height="0.5" style="fill:#475569" tabindex="0" data-tip="1960&#x27;lar · Rock, indie ve metal: 19 parça (on yılın %3)"/>
+<rect class="viz-seg" x="198.9" y="306.6" width="49.4" height="0.5" style="fill:#1baf7a" tabindex="0" data-tip="1960&#x27;lar · Türk halk müziği: 21 parça (on yılın %3)"/>
+<rect class="viz-seg" x="198.9" y="306.5" width="49.4" height="0.1" style="fill:#25aab6" tabindex="0" data-tip="1960&#x27;lar · Film ve oyun müziği, klasik: 3 parça (on yılın %0)"/>
+<rect class="viz-seg" x="198.9" y="306.5" width="49.4" height="0.0" style="fill:#9c6b3c" tabindex="0" data-tip="1960&#x27;lar · Dünya müziği ve psikedelik: 1 parça (on yılın %0)"/>
+<text class="viz-tick" x="223.7" y="301.5" text-anchor="middle">700</text>
+<text class="viz-tick" x="223.7" y="342" text-anchor="middle">1960&#x27;lar</text>
+<rect class="viz-seg" x="267.6" y="323.4" width="49.4" height="0.6" style="fill:#8e5cd9" tabindex="0" data-tip="1970&#x27;ler · Pop, synth-pop ve hip-hop: 23 parça (on yılın %2)"/>
+<rect class="viz-seg" x="267.6" y="316.2" width="49.4" height="7.2" style="fill:#2a78d6" tabindex="0" data-tip="1970&#x27;ler · Türk sanat müziği: 289 parça (on yılın %20)"/>
+<rect class="viz-seg" x="267.6" y="304.2" width="49.4" height="12.0" style="fill:#c99a1c" tabindex="0" data-tip="1970&#x27;ler · Country, şanson ve söz yazarları: 480 parça (on yılın %32)"/>
+<rect class="viz-seg" x="267.6" y="301.5" width="49.4" height="2.7" style="fill:#eb6834" tabindex="0" data-tip="1970&#x27;ler · Türkçe şarkı ve arabesk: 107 parça (on yılın %7)"/>
+<rect class="viz-seg" x="267.6" y="294.0" width="49.4" height="7.5" style="fill:#c2417d" tabindex="0" data-tip="1970&#x27;ler · Türk, Arap ve Fars popu: 301 parça (on yılın %20)"/>
+<rect class="viz-seg" x="267.6" y="290.9" width="49.4" height="3.1" style="fill:#475569" tabindex="0" data-tip="1970&#x27;ler · Rock, indie ve metal: 126 parça (on yılın %9)"/>
+<rect class="viz-seg" x="267.6" y="288.1" width="49.4" height="2.7" style="fill:#1baf7a" tabindex="0" data-tip="1970&#x27;ler · Türk halk müziği: 109 parça (on yılın %7)"/>
+<rect class="viz-seg" x="267.6" y="287.5" width="49.4" height="0.6" style="fill:#25aab6" tabindex="0" data-tip="1970&#x27;ler · Film ve oyun müziği, klasik: 26 parça (on yılın %2)"/>
+<rect class="viz-seg" x="267.6" y="287.0" width="49.4" height="0.5" style="fill:#9c6b3c" tabindex="0" data-tip="1970&#x27;ler · Dünya müziği ve psikedelik: 21 parça (on yılın %1)"/>
+<text class="viz-tick" x="292.3" y="281.9" text-anchor="middle">1.482</text>
+<text class="viz-tick" x="292.3" y="342" text-anchor="middle">1970&#x27;ler</text>
+<rect class="viz-seg" x="336.3" y="314.8" width="49.4" height="9.2" style="fill:#8e5cd9" tabindex="0" data-tip="1980&#x27;ler · Pop, synth-pop ve hip-hop: 369 parça (on yılın %18)"/>
+<rect class="viz-seg" x="336.3" y="310.3" width="49.4" height="4.4" style="fill:#2a78d6" tabindex="0" data-tip="1980&#x27;ler · Türk sanat müziği: 177 parça (on yılın %9)"/>
+<rect class="viz-seg" x="336.3" y="302.3" width="49.4" height="8.0" style="fill:#c99a1c" tabindex="0" data-tip="1980&#x27;ler · Country, şanson ve söz yazarları: 320 parça (on yılın %16)"/>
+<rect class="viz-seg" x="336.3" y="292.9" width="49.4" height="9.5" style="fill:#eb6834" tabindex="0" data-tip="1980&#x27;ler · Türkçe şarkı ve arabesk: 379 parça (on yılın %19)"/>
+<rect class="viz-seg" x="336.3" y="286.7" width="49.4" height="6.1" style="fill:#c2417d" tabindex="0" data-tip="1980&#x27;ler · Türk, Arap ve Fars popu: 245 parça (on yılın %12)"/>
+<rect class="viz-seg" x="336.3" y="281.2" width="49.4" height="5.6" style="fill:#475569" tabindex="0" data-tip="1980&#x27;ler · Rock, indie ve metal: 223 parça (on yılın %11)"/>
+<rect class="viz-seg" x="336.3" y="275.9" width="49.4" height="5.3" style="fill:#1baf7a" tabindex="0" data-tip="1980&#x27;ler · Türk halk müziği: 211 parça (on yılın %10)"/>
+<rect class="viz-seg" x="336.3" y="274.4" width="49.4" height="1.5" style="fill:#25aab6" tabindex="0" data-tip="1980&#x27;ler · Film ve oyun müziği, klasik: 62 parça (on yılın %3)"/>
+<rect class="viz-seg" x="336.3" y="273.7" width="49.4" height="0.6" style="fill:#9c6b3c" tabindex="0" data-tip="1980&#x27;ler · Dünya müziği ve psikedelik: 25 parça (on yılın %1)"/>
+<text class="viz-tick" x="361.0" y="268.7" text-anchor="middle">2.011</text>
+<text class="viz-tick" x="361.0" y="342" text-anchor="middle">1980&#x27;ler</text>
+<rect class="viz-seg" x="404.9" y="311.7" width="49.4" height="12.3" style="fill:#8e5cd9" tabindex="0" data-tip="1990&#x27;lar · Pop, synth-pop ve hip-hop: 491 parça (on yılın %10)"/>
+<rect class="viz-seg" x="404.9" y="287.9" width="49.4" height="23.8" style="fill:#2a78d6" tabindex="0" data-tip="1990&#x27;lar · Türk sanat müziği: 953 parça (on yılın %19)"/>
+<rect class="viz-seg" x="404.9" y="266.1" width="49.4" height="21.8" style="fill:#c99a1c" tabindex="0" data-tip="1990&#x27;lar · Country, şanson ve söz yazarları: 873 parça (on yılın %18)"/>
+<rect class="viz-seg" x="404.9" y="245.1" width="49.4" height="20.9" style="fill:#eb6834" tabindex="0" data-tip="1990&#x27;lar · Türkçe şarkı ve arabesk: 837 parça (on yılın %17)"/>
+<rect class="viz-seg" x="404.9" y="230.4" width="49.4" height="14.8" style="fill:#c2417d" tabindex="0" data-tip="1990&#x27;lar · Türk, Arap ve Fars popu: 591 parça (on yılın %12)"/>
+<rect class="viz-seg" x="404.9" y="220.3" width="49.4" height="10.1" style="fill:#475569" tabindex="0" data-tip="1990&#x27;lar · Rock, indie ve metal: 404 parça (on yılın %8)"/>
+<rect class="viz-seg" x="404.9" y="207.2" width="49.4" height="13.1" style="fill:#1baf7a" tabindex="0" data-tip="1990&#x27;lar · Türk halk müziği: 524 parça (on yılın %11)"/>
+<rect class="viz-seg" x="404.9" y="203.0" width="49.4" height="4.1" style="fill:#25aab6" tabindex="0" data-tip="1990&#x27;lar · Film ve oyun müziği, klasik: 165 parça (on yılın %3)"/>
+<rect class="viz-seg" x="404.9" y="201.1" width="49.4" height="2.0" style="fill:#9c6b3c" tabindex="0" data-tip="1990&#x27;lar · Dünya müziği ve psikedelik: 78 parça (on yılın %2)"/>
+<text class="viz-tick" x="429.7" y="196.1" text-anchor="middle">4.916</text>
+<text class="viz-tick" x="429.7" y="342" text-anchor="middle">1990&#x27;lar</text>
+<rect class="viz-seg" x="473.6" y="301.9" width="49.4" height="22.1" style="fill:#8e5cd9" tabindex="0" data-tip="2000&#x27;lar · Pop, synth-pop ve hip-hop: 886 parça (on yılın %18)"/>
+<rect class="viz-seg" x="473.6" y="287.5" width="49.4" height="14.4" style="fill:#2a78d6" tabindex="0" data-tip="2000&#x27;lar · Türk sanat müziği: 576 parça (on yılın %12)"/>
+<rect class="viz-seg" x="473.6" y="264.8" width="49.4" height="22.6" style="fill:#c99a1c" tabindex="0" data-tip="2000&#x27;lar · Country, şanson ve söz yazarları: 905 parça (on yılın %18)"/>
+<rect class="viz-seg" x="473.6" y="252.5" width="49.4" height="12.3" style="fill:#eb6834" tabindex="0" data-tip="2000&#x27;lar · Türkçe şarkı ve arabesk: 492 parça (on yılın %10)"/>
+<rect class="viz-seg" x="473.6" y="231.1" width="49.4" height="21.5" style="fill:#c2417d" tabindex="0" data-tip="2000&#x27;lar · Türk, Arap ve Fars popu: 859 parça (on yılın %17)"/>
+<rect class="viz-seg" x="473.6" y="221.2" width="49.4" height="9.8" style="fill:#475569" tabindex="0" data-tip="2000&#x27;lar · Rock, indie ve metal: 392 parça (on yılın %8)"/>
+<rect class="viz-seg" x="473.6" y="205.4" width="49.4" height="15.8" style="fill:#1baf7a" tabindex="0" data-tip="2000&#x27;lar · Türk halk müziği: 633 parça (on yılın %13)"/>
+<rect class="viz-seg" x="473.6" y="202.8" width="49.4" height="2.6" style="fill:#25aab6" tabindex="0" data-tip="2000&#x27;lar · Film ve oyun müziği, klasik: 106 parça (on yılın %2)"/>
+<rect class="viz-seg" x="473.6" y="200.5" width="49.4" height="2.3" style="fill:#9c6b3c" tabindex="0" data-tip="2000&#x27;lar · Dünya müziği ve psikedelik: 91 parça (on yılın %2)"/>
+<text class="viz-tick" x="498.3" y="195.5" text-anchor="middle">4.940</text>
+<text class="viz-tick" x="498.3" y="342" text-anchor="middle">2000&#x27;lar</text>
+<rect class="viz-seg" x="542.3" y="268.4" width="49.4" height="55.6" style="fill:#8e5cd9" tabindex="0" data-tip="2010&#x27;lar · Pop, synth-pop ve hip-hop: 2.225 parça (on yılın %23)"/>
+<rect class="viz-seg" x="542.3" y="235.4" width="49.4" height="33.0" style="fill:#2a78d6" tabindex="0" data-tip="2010&#x27;lar · Türk sanat müziği: 1.320 parça (on yılın %13)"/>
+<rect class="viz-seg" x="542.3" y="213.2" width="49.4" height="22.1" style="fill:#c99a1c" tabindex="0" data-tip="2010&#x27;lar · Country, şanson ve söz yazarları: 886 parça (on yılın %9)"/>
+<rect class="viz-seg" x="542.3" y="174.8" width="49.4" height="38.4" style="fill:#eb6834" tabindex="0" data-tip="2010&#x27;lar · Türkçe şarkı ve arabesk: 1.538 parça (on yılın %16)"/>
+<rect class="viz-seg" x="542.3" y="152.6" width="49.4" height="22.2" style="fill:#c2417d" tabindex="0" data-tip="2010&#x27;lar · Türk, Arap ve Fars popu: 888 parça (on yılın %9)"/>
+<rect class="viz-seg" x="542.3" y="128.1" width="49.4" height="24.5" style="fill:#475569" tabindex="0" data-tip="2010&#x27;lar · Rock, indie ve metal: 979 parça (on yılın %10)"/>
+<rect class="viz-seg" x="542.3" y="111.9" width="49.4" height="16.2" style="fill:#1baf7a" tabindex="0" data-tip="2010&#x27;lar · Türk halk müziği: 649 parça (on yılın %7)"/>
+<rect class="viz-seg" x="542.3" y="83.6" width="49.4" height="28.3" style="fill:#25aab6" tabindex="0" data-tip="2010&#x27;lar · Film ve oyun müziği, klasik: 1.132 parça (on yılın %11)"/>
+<rect class="viz-seg" x="542.3" y="77.7" width="49.4" height="5.9" style="fill:#9c6b3c" tabindex="0" data-tip="2010&#x27;lar · Dünya müziği ve psikedelik: 237 parça (on yılın %2)"/>
+<text class="viz-tick" x="567.0" y="72.6" text-anchor="middle">9.854</text>
+<text class="viz-tick" x="567.0" y="342" text-anchor="middle">2010&#x27;lar</text>
+<rect class="viz-seg" x="610.9" y="311.9" width="49.4" height="12.1" style="fill:#8e5cd9" tabindex="0" data-tip="2020&#x27;ler · Pop, synth-pop ve hip-hop: 486 parça (on yılın %24)"/>
+<rect class="viz-seg" x="610.9" y="304.4" width="49.4" height="7.4" style="fill:#2a78d6" tabindex="0" data-tip="2020&#x27;ler · Türk sanat müziği: 297 parça (on yılın %15)"/>
+<rect class="viz-seg" x="610.9" y="301.2" width="49.4" height="3.2" style="fill:#c99a1c" tabindex="0" data-tip="2020&#x27;ler · Country, şanson ve söz yazarları: 130 parça (on yılın %6)"/>
+<rect class="viz-seg" x="610.9" y="300.2" width="49.4" height="1.0" style="fill:#eb6834" tabindex="0" data-tip="2020&#x27;ler · Türkçe şarkı ve arabesk: 38 parça (on yılın %2)"/>
+<rect class="viz-seg" x="610.9" y="297.2" width="49.4" height="3.1" style="fill:#c2417d" tabindex="0" data-tip="2020&#x27;ler · Türk, Arap ve Fars popu: 123 parça (on yılın %6)"/>
+<rect class="viz-seg" x="610.9" y="290.5" width="49.4" height="6.6" style="fill:#475569" tabindex="0" data-tip="2020&#x27;ler · Rock, indie ve metal: 265 parça (on yılın %13)"/>
+<rect class="viz-seg" x="610.9" y="288.7" width="49.4" height="1.9" style="fill:#1baf7a" tabindex="0" data-tip="2020&#x27;ler · Türk halk müziği: 75 parça (on yılın %4)"/>
+<rect class="viz-seg" x="610.9" y="277.7" width="49.4" height="10.9" style="fill:#25aab6" tabindex="0" data-tip="2020&#x27;ler · Film ve oyun müziği, klasik: 438 parça (on yılın %22)"/>
+<rect class="viz-seg" x="610.9" y="273.9" width="49.4" height="3.9" style="fill:#9c6b3c" tabindex="0" data-tip="2020&#x27;ler · Dünya müziği ve psikedelik: 154 parça (on yılın %8)"/>
+<text class="viz-tick" x="635.7" y="268.9" text-anchor="middle">2.006</text>
+<text class="viz-tick" x="635.7" y="342" text-anchor="middle">2020&#x27;ler</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg class="viz viz-m" viewBox="0 0 380 494" role="img" aria-labelledby="languages-m-t">
+<title id="languages-m-t">Sözü olan parçalarda sözlerin dili</title>
+<text class="viz-label" x="4" y="15.0">Türkçe</text>
+<rect class="viz-seg" x="4" y="20" width="316.0" height="14" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="Türkçe: 7,557 parça (%49,6)"/>
+<text class="viz-tick" x="326.0" y="31.0">7.557</text>
+<text class="viz-label" x="4" y="55.0">İngilizce</text>
+<rect class="viz-seg" x="4" y="60" width="232.8" height="14" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="İngilizce: 5,568 parça (%36,6)"/>
+<text class="viz-tick" x="242.8" y="71.0">5.568</text>
+<text class="viz-label" x="4" y="95.0">Almanca</text>
+<rect class="viz-seg" x="4" y="100" width="19.4" height="14" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="Almanca: 463 parça (%3,0)"/>
+<text class="viz-tick" x="29.4" y="111.0">463</text>
+<text class="viz-label" x="4" y="135.0">Fransızca</text>
+<rect class="viz-seg" x="4" y="140" width="18.5" height="14" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="Fransızca: 443 parça (%2,9)"/>
+<text class="viz-tick" x="28.5" y="151.0">443</text>
+<text class="viz-label" x="4" y="175.0">İtalyanca</text>
+<rect class="viz-seg" x="4" y="180" width="14.9" height="14" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="İtalyanca: 356 parça (%2,3)"/>
+<text class="viz-tick" x="24.9" y="191.0">356</text>
+<text class="viz-label" x="4" y="215.0">Farsça</text>
+<rect class="viz-seg" x="4" y="220" width="12.8" height="14" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="Farsça: 305 parça (%2,0)"/>
+<text class="viz-tick" x="22.8" y="231.0">305</text>
+<text class="viz-label" x="4" y="255.0">Arapça</text>
+<rect class="viz-seg" x="4" y="260" width="7.4" height="14" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="Arapça: 176 parça (%1,2)"/>
+<text class="viz-tick" x="17.4" y="271.0">176</text>
+<text class="viz-label" x="4" y="295.0">İspanyolca</text>
+<rect class="viz-seg" x="4" y="300" width="5.5" height="14" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="İspanyolca: 132 parça (%0,9)"/>
+<text class="viz-tick" x="15.5" y="311.0">132</text>
+<text class="viz-label" x="4" y="335.0">İbranice</text>
+<rect class="viz-seg" x="4" y="340" width="1.8" height="14" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="İbranice: 42 parça (%0,3)"/>
+<text class="viz-tick" x="11.8" y="351.0">42</text>
+<text class="viz-label" x="4" y="375.0">Rusça</text>
+<rect class="viz-seg" x="4" y="380" width="1.5" height="14" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="Rusça: 24 parça (%0,2)"/>
+<text class="viz-tick" x="11.5" y="391.0">24</text>
+<text class="viz-label" x="4" y="415.0">Diğer</text>
+<rect class="viz-seg" x="4" y="420" width="6.9" height="14" rx="3" style="fill:#94a3b8" tabindex="0" data-tip="Diğer: 165 parça (%1,1)"/>
+<text class="viz-tick" x="16.9" y="431.0">165</text>
+<text class="viz-tick" x="4" y="486">Sözü olan parçalar (toplam 15.231)</text>
+</svg>

@@ -22,8 +22,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/js/");
   eleventyConfig.addWatchTarget("./tailwind.config.js");
 
-  eleventyConfig.addFilter("dateFormat", function(date) {
-    return new Date(date).toLocaleDateString('en-US', {
+  eleventyConfig.addFilter("dateFormat", function(date, lang) {
+    return new Date(date).toLocaleDateString(lang === 'tr' ? 'tr-TR' : 'en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
