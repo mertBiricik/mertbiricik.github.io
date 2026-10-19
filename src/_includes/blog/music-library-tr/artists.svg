@@ -1,0 +1,64 @@
+<svg class="viz viz-d" viewBox="0 0 680 606" role="img" aria-labelledby="artists-t">
+<title id="artists-t">En çok saati olan 20 sanatçı, parçalarının çoğunun düştüğü gruba göre renkli</title>
+<text class="viz-label" x="200" y="26.5" text-anchor="end">Zeki Müren</text>
+<rect class="viz-seg" x="208" y="12" width="408.0" height="20" rx="3" style="fill:#eb6834" tabindex="0" data-tip="Zeki Müren: 110 saat, 1.737 parça · çoğu Türkçe şarkı ve arabesk"/>
+<text class="viz-tick" x="622.0" y="26.0">110 sa</text>
+<text class="viz-label" x="200" y="54.5" text-anchor="end">Inna</text>
+<rect class="viz-seg" x="208" y="40" width="319.0" height="20" rx="3" style="fill:#8e5cd9" tabindex="0" data-tip="Inna: 86 saat, 1.270 parça · çoğu Pop, synth-pop ve hip-hop"/>
+<text class="viz-tick" x="533.0" y="54.0">86 sa</text>
+<text class="viz-label" x="200" y="82.5" text-anchor="end">Kani Karaca</text>
+<rect class="viz-seg" x="208" y="68" width="289.3" height="20" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="Kani Karaca: 78 saat, 173 parça · çoğu Türk sanat müziği"/>
+<text class="viz-tick" x="503.3" y="82.0">78 sa</text>
+<text class="viz-label" x="200" y="110.5" text-anchor="end">Johnny Cash</text>
+<rect class="viz-seg" x="208" y="96" width="237.4" height="20" rx="3" style="fill:#c99a1c" tabindex="0" data-tip="Johnny Cash: 64 saat, 1.373 parça · çoğu Country, şanson ve söz yazarları"/>
+<text class="viz-tick" x="451.4" y="110.0">64 sa</text>
+<text class="viz-label" x="200" y="138.5" text-anchor="end">OMD</text>
+<rect class="viz-seg" x="208" y="124" width="233.7" height="20" rx="3" style="fill:#8e5cd9" tabindex="0" data-tip="OMD: 63 saat, 921 parça · çoğu Pop, synth-pop ve hip-hop"/>
+<text class="viz-tick" x="447.7" y="138.0">63 sa</text>
+<text class="viz-label" x="200" y="166.5" text-anchor="end">Müzeyyen Senar</text>
+<rect class="viz-seg" x="208" y="152" width="222.5" height="20" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="Müzeyyen Senar: 60 saat, 1.100 parça · çoğu Türk sanat müziği"/>
+<text class="viz-tick" x="436.5" y="166.0">60 sa</text>
+<text class="viz-label" x="200" y="194.5" text-anchor="end">Münir Nurettin Selçuk</text>
+<rect class="viz-seg" x="208" y="180" width="200.3" height="20" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="Münir Nurettin Selçuk: 54 saat, 919 parça · çoğu Türk sanat müziği"/>
+<text class="viz-tick" x="414.3" y="194.0">54 sa</text>
+<text class="viz-label" x="200" y="222.5" text-anchor="end">Cem Karaca</text>
+<rect class="viz-seg" x="208" y="208" width="192.9" height="20" rx="3" style="fill:#475569" tabindex="0" data-tip="Cem Karaca: 52 saat, 765 parça · çoğu Rock, indie ve metal"/>
+<text class="viz-tick" x="406.9" y="222.0">52 sa</text>
+<text class="viz-label" x="200" y="250.5" text-anchor="end">Bülent Ersoy</text>
+<rect class="viz-seg" x="208" y="236" width="166.9" height="20" rx="3" style="fill:#eb6834" tabindex="0" data-tip="Bülent Ersoy: 45 saat, 615 parça · çoğu Türkçe şarkı ve arabesk"/>
+<text class="viz-tick" x="380.9" y="250.0">45 sa</text>
+<text class="viz-label" x="200" y="278.5" text-anchor="end">Neşet Ertaş</text>
+<rect class="viz-seg" x="208" y="264" width="137.2" height="20" rx="3" style="fill:#1baf7a" tabindex="0" data-tip="Neşet Ertaş: 37 saat, 422 parça · çoğu Türk halk müziği"/>
+<text class="viz-tick" x="351.2" y="278.0">37 sa</text>
+<text class="viz-label" x="200" y="306.5" text-anchor="end">Muazzez Ersoy</text>
+<rect class="viz-seg" x="208" y="292" width="122.4" height="20" rx="3" style="fill:#eb6834" tabindex="0" data-tip="Muazzez Ersoy: 33 saat, 528 parça · çoğu Türkçe şarkı ve arabesk"/>
+<text class="viz-tick" x="336.4" y="306.0">33 sa</text>
+<text class="viz-label" x="200" y="334.5" text-anchor="end">Gülden Karaböcek</text>
+<rect class="viz-seg" x="208" y="320" width="118.7" height="20" rx="3" style="fill:#c2417d" tabindex="0" data-tip="Gülden Karaböcek: 32 saat, 458 parça · çoğu Türk, Arap ve Fars popu"/>
+<text class="viz-tick" x="332.7" y="334.0">32 sa</text>
+<text class="viz-label" x="200" y="362.5" text-anchor="end">The Human League</text>
+<rect class="viz-seg" x="208" y="348" width="111.3" height="20" rx="3" style="fill:#8e5cd9" tabindex="0" data-tip="The Human League: 30 saat, 425 parça · çoğu Pop, synth-pop ve hip-hop"/>
+<text class="viz-tick" x="325.3" y="362.0">30 sa</text>
+<text class="viz-label" x="200" y="390.5" text-anchor="end">Emel Sayın</text>
+<rect class="viz-seg" x="208" y="376" width="111.3" height="20" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="Emel Sayın: 30 saat, 441 parça · çoğu Türk sanat müziği"/>
+<text class="viz-tick" x="325.3" y="390.0">30 sa</text>
+<text class="viz-label" x="200" y="418.5" text-anchor="end">Barış Manço</text>
+<rect class="viz-seg" x="208" y="404" width="107.6" height="20" rx="3" style="fill:#475569" tabindex="0" data-tip="Barış Manço: 29 saat, 420 parça · çoğu Rock, indie ve metal"/>
+<text class="viz-tick" x="321.6" y="418.0">29 sa</text>
+<text class="viz-label" x="200" y="446.5" text-anchor="end">Selda Bağcan</text>
+<rect class="viz-seg" x="208" y="432" width="107.6" height="20" rx="3" style="fill:#1baf7a" tabindex="0" data-tip="Selda Bağcan: 29 saat, 429 parça · çoğu Türk halk müziği"/>
+<text class="viz-tick" x="321.6" y="446.0">29 sa</text>
+<text class="viz-label" x="200" y="474.5" text-anchor="end">Aşık Mahzuni Şerif</text>
+<rect class="viz-seg" x="208" y="460" width="107.6" height="20" rx="3" style="fill:#1baf7a" tabindex="0" data-tip="Aşık Mahzuni Şerif: 29 saat, 422 parça · çoğu Türk halk müziği"/>
+<text class="viz-tick" x="321.6" y="474.0">29 sa</text>
+<text class="viz-label" x="200" y="502.5" text-anchor="end">Musa Eroğlu</text>
+<rect class="viz-seg" x="208" y="488" width="107.6" height="20" rx="3" style="fill:#1baf7a" tabindex="0" data-tip="Musa Eroğlu: 29 saat, 415 parça · çoğu Türk halk müziği"/>
+<text class="viz-tick" x="321.6" y="502.0">29 sa</text>
+<text class="viz-label" x="200" y="530.5" text-anchor="end">Googoosh</text>
+<rect class="viz-seg" x="208" y="516" width="107.6" height="20" rx="3" style="fill:#c2417d" tabindex="0" data-tip="Googoosh: 29 saat, 401 parça · çoğu Türk, Arap ve Fars popu"/>
+<text class="viz-tick" x="321.6" y="530.0">29 sa</text>
+<text class="viz-label" x="200" y="558.5" text-anchor="end">Ümit Besen</text>
+<rect class="viz-seg" x="208" y="544" width="100.1" height="20" rx="3" style="fill:#eb6834" tabindex="0" data-tip="Ümit Besen: 27 saat, 389 parça · çoğu Türkçe şarkı ve arabesk"/>
+<text class="viz-tick" x="314.1" y="558.0">27 sa</text>
+<text class="viz-tick" x="208" y="598">Müzik süresi (saat)</text>
+</svg>

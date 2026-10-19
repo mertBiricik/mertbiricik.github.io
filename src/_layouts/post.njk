@@ -4,7 +4,7 @@ layout: base
 
 <article class="pt-12 pb-20 md:pt-16 md:pb-28">
   <div class="max-w-3xl mx-auto px-6 md:px-8 w-full">
-    <a href="/blog/" class="font-sans text-sm text-slate-500 hover:text-primary-600 no-underline">← Back to blog</a>
+    <a href="/blog/" class="font-sans text-sm text-slate-500 hover:text-primary-600 no-underline">← {{ "Bloga dön" if lang == "tr" else "Back to blog" }}</a>
 
     <header class="mt-8 border-b border-slate-200 pb-8">
       {% if tags %}
@@ -16,8 +16,9 @@ layout: base
       <h1 class="font-display font-bold text-slate-900 text-4xl sm:text-5xl leading-tight tracking-tight">{{ title }}</h1>
 
       <div class="mt-5 font-sans text-sm text-slate-500">
-        {% if date %}<span>{{ date | dateFormat }}</span>{% endif %}
+        {% if date %}<span>{{ date | dateFormat(lang) }}</span>{% endif %}
         {% if author %}<span> · {{ author }}</span>{% endif %}
+        {% if translation %}<span> · <a href="{{ translation }}" class="text-primary-600 hover:underline" hreflang="{{ 'en' if lang == 'tr' else 'tr' }}">{{ "English version" if lang == "tr" else "Türkçesi" }}</a></span>{% endif %}
       </div>
     </header>
 
@@ -26,7 +27,7 @@ layout: base
     </div>
 
     <div class="mt-16 pt-8 border-t border-slate-200">
-      <a href="/blog/" class="font-sans text-sm text-slate-500 hover:text-primary-600 no-underline">← All posts</a>
+      <a href="/blog/" class="font-sans text-sm text-slate-500 hover:text-primary-600 no-underline">← {{ "Tüm yazılar" if lang == "tr" else "All posts" }}</a>
     </div>
   </div>
 </article>

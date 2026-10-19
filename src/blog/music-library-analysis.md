@@ -3,6 +3,7 @@ layout: post
 title: "What 26,700 tracks look like to a machine: analysing my music library on a laptop GPU"
 description: "I ran every track of my library through open-source audio models and fetched lyrics for all of them. What the data says about the library, where LRCLIB and Western-trained taggers fall short, and how it turned into 110 playlists."
 date: 2026-10-19
+translation: /blog/tr/muzik-kutuphanesi-analizi/
 tags:
   - music
   - data
@@ -83,7 +84,7 @@ This chart says more about how music is published than about when it was recorde
 The embeddings have 712 dimensions. UMAP squeezes them into two so that recordings that sound alike end up close together. Every dot is one recording, coloured by family; the labels mark some of the 60 clusters.
 
 <figure class="viz-figure">
-<img src="/assets/blog/music-library/map.webp" alt="A scatter plot of 23,689 recordings. Classical Turkish music in blue fills the left side, with Turkish folk in green next to it. Turkish song and arabesk in orange and Middle Eastern pop in magenta sit in the middle. Pop, synth-pop and hip-hop in purple fill the upper right, with rap as a separate island at the top. Country and chanson in yellow are at the bottom middle, game scores in teal at the lower right, and Wagner and opera form a separate island at the very bottom." width="1360" height="1000" loading="lazy">
+<img src="/assets/blog/music-library/map.webp" alt="A scatter plot of 23,689 recordings. Classical Turkish music in blue fills the left side, with Turkish folk in green next to it. Turkish song and arabesk in orange and Middle Eastern pop in magenta sit in the middle. Pop, synth-pop and hip-hop in purple fill the upper right, with rap as a separate island at the top. Country and chanson in yellow are at the bottom middle, game scores in teal at the lower right, and Wagner and opera form a separate island at the very bottom." width="1360" height="960" loading="lazy">
 <figcaption>Figure 4. UMAP projection of the combined CLAP and MusiCNN embeddings. Distances between distant groups are not meaningful in UMAP; neighbourhoods are.</figcaption>
 </figure>
 

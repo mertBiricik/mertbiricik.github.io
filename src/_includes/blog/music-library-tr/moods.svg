@@ -1,0 +1,127 @@
+<svg class="viz viz-d" viewBox="0 0 680 340" role="img" aria-labelledby="moods-t">
+<title id="moods-t">Gruplara göre ruh hali puanları, kütüphane ortalamasından standart sapma cinsinden</title>
+<text class="viz-tick" x="247.0" y="20" text-anchor="middle">dans edilir</text>
+<text class="viz-tick" x="325.0" y="20" text-anchor="middle">agresif</text>
+<text class="viz-tick" x="403.0" y="20" text-anchor="middle">mutlu</text>
+<text class="viz-tick" x="481.0" y="20" text-anchor="middle">parti</text>
+<text class="viz-tick" x="559.0" y="20" text-anchor="middle">rahat</text>
+<text class="viz-tick" x="637.0" y="20" text-anchor="middle">hüzünlü</text>
+<text class="viz-label" x="200" y="49.5" text-anchor="end">Pop, synth-pop, hip-hop</text>
+<rect class="viz-seg" x="209.0" y="31" width="76.0" height="28" rx="3" style="fill:#eb6834" tabindex="0" data-tip="Pop, synth-pop ve hip-hop · dans edilir: +1,58 SS"/>
+<text x="247.0" y="49.0" text-anchor="middle" style="font-size:11px;fill:#fff;pointer-events:none">+1,6</text>
+<rect class="viz-seg" x="287.0" y="31" width="76.0" height="28" rx="3" style="fill:#ee8b63" tabindex="0" data-tip="Pop, synth-pop ve hip-hop · agresif: +1,14 SS"/>
+<text x="325.0" y="49.0" text-anchor="middle" style="font-size:11px;fill:#fff;pointer-events:none">+1,1</text>
+<rect class="viz-seg" x="365.0" y="31" width="76.0" height="28" rx="3" style="fill:#f5dbd1" tabindex="0" data-tip="Pop, synth-pop ve hip-hop · mutlu: +0,32 SS"/>
+<text x="403.0" y="49.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">+0,3</text>
+<rect class="viz-seg" x="443.0" y="31" width="76.0" height="28" rx="3" style="fill:#ee8b64" tabindex="0" data-tip="Pop, synth-pop ve hip-hop · parti: +1,14 SS"/>
+<text x="481.0" y="49.0" text-anchor="middle" style="font-size:11px;fill:#fff;pointer-events:none">+1,1</text>
+<rect class="viz-seg" x="521.0" y="31" width="76.0" height="28" rx="3" style="fill:#f5dcd3" tabindex="0" data-tip="Pop, synth-pop ve hip-hop · rahat: +0,31 SS"/>
+<text x="559.0" y="49.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">+0,3</text>
+<rect class="viz-seg" x="599.0" y="31" width="76.0" height="28" rx="3" style="fill:#dde9f7" tabindex="0" data-tip="Pop, synth-pop ve hip-hop · hüzünlü: -0,20 SS"/>
+<text x="637.0" y="49.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,2</text>
+<text class="viz-label" x="200" y="79.5" text-anchor="end">Sanat müziği</text>
+<rect class="viz-seg" x="209.0" y="61" width="76.0" height="28" rx="3" style="fill:#9cc0eb" tabindex="0" data-tip="Türk sanat müziği · dans edilir: -0,67 SS"/>
+<text x="247.0" y="79.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,7</text>
+<rect class="viz-seg" x="287.0" y="61" width="76.0" height="28" rx="3" style="fill:#afccee" tabindex="0" data-tip="Türk sanat müziği · agresif: -0,53 SS"/>
+<text x="325.0" y="79.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,5</text>
+<rect class="viz-seg" x="365.0" y="61" width="76.0" height="28" rx="3" style="fill:#e3edf8" tabindex="0" data-tip="Türk sanat müziği · mutlu: -0,15 SS"/>
+<text x="403.0" y="79.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,1</text>
+<rect class="viz-seg" x="443.0" y="61" width="76.0" height="28" rx="3" style="fill:#c4d9f2" tabindex="0" data-tip="Türk sanat müziği · parti: -0,38 SS"/>
+<text x="481.0" y="79.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,4</text>
+<rect class="viz-seg" x="521.0" y="61" width="76.0" height="28" rx="3" style="fill:#cedff4" tabindex="0" data-tip="Türk sanat müziği · rahat: -0,31 SS"/>
+<text x="559.0" y="79.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,3</text>
+<rect class="viz-seg" x="599.0" y="61" width="76.0" height="28" rx="3" style="fill:#edf3fa" tabindex="0" data-tip="Türk sanat müziği · hüzünlü: -0,08 SS"/>
+<text x="637.0" y="79.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,1</text>
+<text class="viz-label" x="200" y="109.5" text-anchor="end">Country, şanson</text>
+<rect class="viz-seg" x="209.0" y="91" width="76.0" height="28" rx="3" style="fill:#bbd3f1" tabindex="0" data-tip="Country, şanson ve söz yazarları · dans edilir: -0,45 SS"/>
+<text x="247.0" y="109.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,4</text>
+<rect class="viz-seg" x="287.0" y="91" width="76.0" height="28" rx="3" style="fill:#d6e4f6" tabindex="0" data-tip="Country, şanson ve söz yazarları · agresif: -0,25 SS"/>
+<text x="325.0" y="109.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,2</text>
+<rect class="viz-seg" x="365.0" y="91" width="76.0" height="28" rx="3" style="fill:#f6e1da" tabindex="0" data-tip="Country, şanson ve söz yazarları · mutlu: +0,26 SS"/>
+<text x="403.0" y="109.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">+0,3</text>
+<rect class="viz-seg" x="443.0" y="91" width="76.0" height="28" rx="3" style="fill:#c6dbf3" tabindex="0" data-tip="Country, şanson ve söz yazarları · parti: -0,36 SS"/>
+<text x="481.0" y="109.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,4</text>
+<rect class="viz-seg" x="521.0" y="91" width="76.0" height="28" rx="3" style="fill:#f7ebe7" tabindex="0" data-tip="Country, şanson ve söz yazarları · rahat: +0,15 SS"/>
+<text x="559.0" y="109.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">+0,2</text>
+<rect class="viz-seg" x="599.0" y="91" width="76.0" height="28" rx="3" style="fill:#f3bfab" tabindex="0" data-tip="Country, şanson ve söz yazarları · hüzünlü: +0,61 SS"/>
+<text x="637.0" y="109.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">+0,6</text>
+<text class="viz-label" x="200" y="139.5" text-anchor="end">Türkçe şarkı, arabesk</text>
+<rect class="viz-seg" x="209.0" y="121" width="76.0" height="28" rx="3" style="fill:#e2ecf8" tabindex="0" data-tip="Türkçe şarkı ve arabesk · dans edilir: -0,16 SS"/>
+<text x="247.0" y="139.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,2</text>
+<rect class="viz-seg" x="287.0" y="121" width="76.0" height="28" rx="3" style="fill:#ebf2fa" tabindex="0" data-tip="Türkçe şarkı ve arabesk · agresif: -0,09 SS"/>
+<text x="325.0" y="139.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,1</text>
+<rect class="viz-seg" x="365.0" y="121" width="76.0" height="28" rx="3" style="fill:#f5d3c7" tabindex="0" data-tip="Türkçe şarkı ve arabesk · mutlu: +0,40 SS"/>
+<text x="403.0" y="139.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">+0,4</text>
+<rect class="viz-seg" x="443.0" y="121" width="76.0" height="28" rx="3" style="fill:#f7edeb" tabindex="0" data-tip="Türkçe şarkı ve arabesk · parti: +0,13 SS"/>
+<text x="481.0" y="139.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">+0,1</text>
+<rect class="viz-seg" x="521.0" y="121" width="76.0" height="28" rx="3" style="fill:#ecf2fa" tabindex="0" data-tip="Türkçe şarkı ve arabesk · rahat: -0,09 SS"/>
+<text x="559.0" y="139.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,1</text>
+<rect class="viz-seg" x="599.0" y="121" width="76.0" height="28" rx="3" style="fill:#f6e7e2" tabindex="0" data-tip="Türkçe şarkı ve arabesk · hüzünlü: +0,19 SS"/>
+<text x="637.0" y="139.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">+0,2</text>
+<text class="viz-label" x="200" y="169.5" text-anchor="end">Türk/Arap/Fars pop</text>
+<rect class="viz-seg" x="209.0" y="151" width="76.0" height="28" rx="3" style="fill:#f7ebe8" tabindex="0" data-tip="Türk, Arap ve Fars popu · dans edilir: +0,15 SS"/>
+<text x="247.0" y="169.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">+0,2</text>
+<rect class="viz-seg" x="287.0" y="151" width="76.0" height="28" rx="3" style="fill:#f6f9fc" tabindex="0" data-tip="Türk, Arap ve Fars popu · agresif: -0,01 SS"/>
+<text x="325.0" y="169.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,0</text>
+<rect class="viz-seg" x="365.0" y="151" width="76.0" height="28" rx="3" style="fill:#f6dfd8" tabindex="0" data-tip="Türk, Arap ve Fars popu · mutlu: +0,27 SS"/>
+<text x="403.0" y="169.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">+0,3</text>
+<rect class="viz-seg" x="443.0" y="151" width="76.0" height="28" rx="3" style="fill:#f6ded6" tabindex="0" data-tip="Türk, Arap ve Fars popu · parti: +0,29 SS"/>
+<text x="481.0" y="169.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">+0,3</text>
+<rect class="viz-seg" x="521.0" y="151" width="76.0" height="28" rx="3" style="fill:#f6e3dd" tabindex="0" data-tip="Türk, Arap ve Fars popu · rahat: +0,23 SS"/>
+<text x="559.0" y="169.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">+0,2</text>
+<rect class="viz-seg" x="599.0" y="151" width="76.0" height="28" rx="3" style="fill:#c9dcf3" tabindex="0" data-tip="Türk, Arap ve Fars popu · hüzünlü: -0,34 SS"/>
+<text x="637.0" y="169.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,3</text>
+<text class="viz-label" x="200" y="199.5" text-anchor="end">Rock, indie, metal</text>
+<rect class="viz-seg" x="209.0" y="181" width="76.0" height="28" rx="3" style="fill:#e0ebf7" tabindex="0" data-tip="Rock, indie ve metal · dans edilir: -0,18 SS"/>
+<text x="247.0" y="199.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,2</text>
+<rect class="viz-seg" x="287.0" y="181" width="76.0" height="28" rx="3" style="fill:#f6e2db" tabindex="0" data-tip="Rock, indie ve metal · agresif: +0,25 SS"/>
+<text x="325.0" y="199.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">+0,3</text>
+<rect class="viz-seg" x="365.0" y="181" width="76.0" height="28" rx="3" style="fill:#e3edf8" tabindex="0" data-tip="Rock, indie ve metal · mutlu: -0,15 SS"/>
+<text x="403.0" y="199.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,2</text>
+<rect class="viz-seg" x="443.0" y="181" width="76.0" height="28" rx="3" style="fill:#f2f6fb" tabindex="0" data-tip="Rock, indie ve metal · parti: -0,05 SS"/>
+<text x="481.0" y="199.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,0</text>
+<rect class="viz-seg" x="521.0" y="181" width="76.0" height="28" rx="3" style="fill:#c0d6f2" tabindex="0" data-tip="Rock, indie ve metal · rahat: -0,41 SS"/>
+<text x="559.0" y="199.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,4</text>
+<rect class="viz-seg" x="599.0" y="181" width="76.0" height="28" rx="3" style="fill:#f8f9fa" tabindex="0" data-tip="Rock, indie ve metal · hüzünlü: +0,01 SS"/>
+<text x="637.0" y="199.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">+0,0</text>
+<text class="viz-label" x="200" y="229.5" text-anchor="end">Halk müziği</text>
+<rect class="viz-seg" x="209.0" y="211" width="76.0" height="28" rx="3" style="fill:#99beea" tabindex="0" data-tip="Türk halk müziği · dans edilir: -0,69 SS"/>
+<text x="247.0" y="229.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,7</text>
+<rect class="viz-seg" x="287.0" y="211" width="76.0" height="28" rx="3" style="fill:#bcd4f1" tabindex="0" data-tip="Türk halk müziği · agresif: -0,44 SS"/>
+<text x="325.0" y="229.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,4</text>
+<rect class="viz-seg" x="365.0" y="211" width="76.0" height="28" rx="3" style="fill:#e9f1f9" tabindex="0" data-tip="Türk halk müziği · mutlu: -0,11 SS"/>
+<text x="403.0" y="229.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,1</text>
+<rect class="viz-seg" x="443.0" y="211" width="76.0" height="28" rx="3" style="fill:#e1ecf8" tabindex="0" data-tip="Türk halk müziği · parti: -0,17 SS"/>
+<text x="481.0" y="229.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,2</text>
+<rect class="viz-seg" x="521.0" y="211" width="76.0" height="28" rx="3" style="fill:#9bbfeb" tabindex="0" data-tip="Türk halk müziği · rahat: -0,68 SS"/>
+<text x="559.0" y="229.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,7</text>
+<rect class="viz-seg" x="599.0" y="211" width="76.0" height="28" rx="3" style="fill:#f7eeec" tabindex="0" data-tip="Türk halk müziği · hüzünlü: +0,12 SS"/>
+<text x="637.0" y="229.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">+0,1</text>
+<text class="viz-label" x="200" y="259.5" text-anchor="end">Film müziği, klasik</text>
+<rect class="viz-seg" x="209.0" y="241" width="76.0" height="28" rx="3" style="fill:#f2f6fb" tabindex="0" data-tip="Film ve oyun müziği, klasik · dans edilir: -0,04 SS"/>
+<text x="247.0" y="259.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,0</text>
+<rect class="viz-seg" x="287.0" y="241" width="76.0" height="28" rx="3" style="fill:#d0e1f5" tabindex="0" data-tip="Film ve oyun müziği, klasik · agresif: -0,29 SS"/>
+<text x="325.0" y="259.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,3</text>
+<rect class="viz-seg" x="365.0" y="241" width="76.0" height="28" rx="3" style="fill:#347ed8" tabindex="0" data-tip="Film ve oyun müziği, klasik · mutlu: -1,43 SS"/>
+<text x="403.0" y="259.0" text-anchor="middle" style="font-size:11px;fill:#fff;pointer-events:none">-1,4</text>
+<rect class="viz-seg" x="443.0" y="241" width="76.0" height="28" rx="3" style="fill:#5492de" tabindex="0" data-tip="Film ve oyun müziği, klasik · parti: -1,19 SS"/>
+<text x="481.0" y="259.0" text-anchor="middle" style="font-size:11px;fill:#fff;pointer-events:none">-1,2</text>
+<rect class="viz-seg" x="521.0" y="241" width="76.0" height="28" rx="3" style="fill:#f5d5c9" tabindex="0" data-tip="Film ve oyun müziği, klasik · rahat: +0,38 SS"/>
+<text x="559.0" y="259.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">+0,4</text>
+<rect class="viz-seg" x="599.0" y="241" width="76.0" height="28" rx="3" style="fill:#aecbee" tabindex="0" data-tip="Film ve oyun müziği, klasik · hüzünlü: -0,54 SS"/>
+<text x="637.0" y="259.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,5</text>
+<text class="viz-label" x="200" y="289.5" text-anchor="end">Dünya, psikedelik</text>
+<rect class="viz-seg" x="209.0" y="271" width="76.0" height="28" rx="3" style="fill:#abcaee" tabindex="0" data-tip="Dünya müziği ve psikedelik · dans edilir: -0,56 SS"/>
+<text x="247.0" y="289.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,6</text>
+<rect class="viz-seg" x="287.0" y="271" width="76.0" height="28" rx="3" style="fill:#73a6e3" tabindex="0" data-tip="Dünya müziği ve psikedelik · agresif: -0,97 SS"/>
+<text x="325.0" y="289.0" text-anchor="middle" style="font-size:11px;fill:#fff;pointer-events:none">-1,0</text>
+<rect class="viz-seg" x="365.0" y="271" width="76.0" height="28" rx="3" style="fill:#5794de" tabindex="0" data-tip="Dünya müziği ve psikedelik · mutlu: -1,17 SS"/>
+<text x="403.0" y="289.0" text-anchor="middle" style="font-size:11px;fill:#fff;pointer-events:none">-1,2</text>
+<rect class="viz-seg" x="443.0" y="271" width="76.0" height="28" rx="3" style="fill:#679fe1" tabindex="0" data-tip="Dünya müziği ve psikedelik · parti: -1,05 SS"/>
+<text x="481.0" y="289.0" text-anchor="middle" style="font-size:11px;fill:#fff;pointer-events:none">-1,1</text>
+<rect class="viz-seg" x="521.0" y="271" width="76.0" height="28" rx="3" style="fill:#ef9572" tabindex="0" data-tip="Dünya müziği ve psikedelik · rahat: +1,04 SS"/>
+<text x="559.0" y="289.0" text-anchor="middle" style="font-size:11px;fill:#fff;pointer-events:none">+1,0</text>
+<rect class="viz-seg" x="599.0" y="271" width="76.0" height="28" rx="3" style="fill:#e4eef8" tabindex="0" data-tip="Dünya müziği ve psikedelik · hüzünlü: -0,14 SS"/>
+<text x="637.0" y="289.0" text-anchor="middle" style="font-size:11px;fill:#334155;pointer-events:none">-0,1</text>
+<text class="viz-tick" x="208" y="330">Mavi: kütüphane ortalamasının altında · turuncu: üstünde</text>
+</svg>
