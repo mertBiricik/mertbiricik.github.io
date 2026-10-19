@@ -1,0 +1,161 @@
+<svg class="viz viz-d" viewBox="0 0 680 364" role="img" aria-labelledby="musicnn-tags-t">
+<title id="musicnn-tags-t">MusiCNN&#x27;s top tag for each track, by family</title>
+<rect x="208.0" y="6" width="11" height="11" rx="2" style="fill:#475569"/>
+<text class="viz-tick" x="224.0" y="16">rock</text>
+<rect x="265.4" y="6" width="11" height="11" rx="2" style="fill:#1e293b"/>
+<text class="viz-tick" x="281.4" y="16">metal</text>
+<rect x="329.4" y="6" width="11" height="11" rx="2" style="fill:#8e5cd9"/>
+<text class="viz-tick" x="345.4" y="16">pop</text>
+<rect x="380.2" y="6" width="11" height="11" rx="2" style="fill:#c2417d"/>
+<text class="viz-tick" x="396.2" y="16">female vocalists</text>
+<rect x="516.8" y="6" width="11" height="11" rx="2" style="fill:#1baf7a"/>
+<text class="viz-tick" x="532.8" y="16">folk</text>
+<rect x="574.2" y="6" width="11" height="11" rx="2" style="fill:#c99a1c"/>
+<text class="viz-tick" x="590.2" y="16">country</text>
+<rect x="208.0" y="24" width="11" height="11" rx="2" style="fill:#2a78d6"/>
+<text class="viz-tick" x="224.0" y="34">jazz</text>
+<rect x="265.4" y="24" width="11" height="11" rx="2" style="fill:#7ea6e0"/>
+<text class="viz-tick" x="281.4" y="34">blues</text>
+<rect x="329.4" y="24" width="11" height="11" rx="2" style="fill:#b9a27a"/>
+<text class="viz-tick" x="345.4" y="34">oldies</text>
+<rect x="400.0" y="24" width="11" height="11" rx="2" style="fill:#eb6834"/>
+<text class="viz-tick" x="416.0" y="34">electronic and dance</text>
+<rect x="208.0" y="42" width="11" height="11" rx="2" style="fill:#25aab6"/>
+<text class="viz-tick" x="224.0" y="52">ambient and instrumental</text>
+<rect x="397.4" y="42" width="11" height="11" rx="2" style="fill:#e2e8f0"/>
+<text class="viz-tick" x="413.4" y="52">other</text>
+<text class="viz-label" x="200" y="85.5" text-anchor="end">Pop, synth-pop, hip-hop</text>
+<rect class="viz-seg" x="208.0" y="70" width="26.4" height="22" style="fill:#475569" tabindex="0" data-tip="Pop, synth-pop, hip-hop · rock: 6% (261 tracks)"/>
+<rect class="viz-seg" x="234.4" y="70" width="94.9" height="22" style="fill:#8e5cd9" tabindex="0" data-tip="Pop, synth-pop, hip-hop · pop: 22% (940 tracks)"/>
+<text class="viz-inlabel" x="281.8" y="85.0" text-anchor="middle">22%</text>
+<rect class="viz-seg" x="329.3" y="70" width="12.6" height="22" style="fill:#c2417d" tabindex="0" data-tip="Pop, synth-pop, hip-hop · female vocalists: 3% (125 tracks)"/>
+<rect class="viz-seg" x="341.9" y="70" width="0.3" height="22" style="fill:#2a78d6" tabindex="0" data-tip="Pop, synth-pop, hip-hop · jazz: 0% (3 tracks)"/>
+<rect class="viz-seg" x="342.2" y="70" width="278.9" height="22" style="fill:#eb6834" tabindex="0" data-tip="Pop, synth-pop, hip-hop · electronic and dance: 66% (2,762 tracks)"/>
+<text class="viz-inlabel" x="481.7" y="85.0" text-anchor="middle">66%</text>
+<rect class="viz-seg" x="621.1" y="70" width="0.2" height="22" style="fill:#25aab6" tabindex="0" data-tip="Pop, synth-pop, hip-hop · ambient and instrumental: 0% (2 tracks)"/>
+<rect class="viz-seg" x="621.3" y="70" width="8.7" height="22" style="fill:#e2e8f0" tabindex="0" data-tip="Pop, synth-pop, hip-hop · other: 2% (86 tracks)"/>
+<text class="viz-label" x="200" y="117.5" text-anchor="end">Turkish classical</text>
+<rect class="viz-seg" x="208.0" y="102" width="87.8" height="22" style="fill:#475569" tabindex="0" data-tip="Turkish classical · rock: 21% (816 tracks)"/>
+<text class="viz-inlabel" x="251.9" y="117.0" text-anchor="middle">21%</text>
+<rect class="viz-seg" x="295.8" y="102" width="30.8" height="22" style="fill:#8e5cd9" tabindex="0" data-tip="Turkish classical · pop: 7% (286 tracks)"/>
+<rect class="viz-seg" x="326.5" y="102" width="56.4" height="22" style="fill:#c2417d" tabindex="0" data-tip="Turkish classical · female vocalists: 13% (524 tracks)"/>
+<text class="viz-inlabel" x="354.7" y="117.0" text-anchor="middle">13%</text>
+<rect class="viz-seg" x="382.9" y="102" width="32.3" height="22" style="fill:#1baf7a" tabindex="0" data-tip="Turkish classical · folk: 8% (300 tracks)"/>
+<rect class="viz-seg" x="415.2" y="102" width="5.1" height="22" style="fill:#c99a1c" tabindex="0" data-tip="Turkish classical · country: 1% (47 tracks)"/>
+<rect class="viz-seg" x="420.2" y="102" width="92.0" height="22" style="fill:#2a78d6" tabindex="0" data-tip="Turkish classical · jazz: 22% (855 tracks)"/>
+<text class="viz-inlabel" x="466.2" y="117.0" text-anchor="middle">22%</text>
+<rect class="viz-seg" x="512.2" y="102" width="66.6" height="22" style="fill:#7ea6e0" tabindex="0" data-tip="Turkish classical · blues: 16% (619 tracks)"/>
+<text class="viz-inlabel" x="545.5" y="117.0" text-anchor="middle">16%</text>
+<rect class="viz-seg" x="578.8" y="102" width="40.2" height="22" style="fill:#b9a27a" tabindex="0" data-tip="Turkish classical · oldies: 10% (374 tracks)"/>
+<text class="viz-inlabel" x="598.9" y="117.0" text-anchor="middle">10%</text>
+<rect class="viz-seg" x="619.0" y="102" width="6.2" height="22" style="fill:#eb6834" tabindex="0" data-tip="Turkish classical · electronic and dance: 1% (58 tracks)"/>
+<rect class="viz-seg" x="625.3" y="102" width="2.4" height="22" style="fill:#25aab6" tabindex="0" data-tip="Turkish classical · ambient and instrumental: 1% (22 tracks)"/>
+<rect class="viz-seg" x="627.6" y="102" width="2.4" height="22" style="fill:#e2e8f0" tabindex="0" data-tip="Turkish classical · other: 1% (22 tracks)"/>
+<text class="viz-label" x="200" y="149.5" text-anchor="end">Country, chanson</text>
+<rect class="viz-seg" x="208.0" y="134" width="56.4" height="22" style="fill:#475569" tabindex="0" data-tip="Country, chanson · rock: 13% (517 tracks)"/>
+<text class="viz-inlabel" x="236.2" y="149.0" text-anchor="middle">13%</text>
+<rect class="viz-seg" x="264.4" y="134" width="2.7" height="22" style="fill:#8e5cd9" tabindex="0" data-tip="Country, chanson · pop: 1% (25 tracks)"/>
+<rect class="viz-seg" x="267.2" y="134" width="38.1" height="22" style="fill:#c2417d" tabindex="0" data-tip="Country, chanson · female vocalists: 9% (349 tracks)"/>
+<text class="viz-inlabel" x="286.2" y="149.0" text-anchor="middle">9%</text>
+<rect class="viz-seg" x="305.3" y="134" width="64.9" height="22" style="fill:#1baf7a" tabindex="0" data-tip="Country, chanson · folk: 15% (595 tracks)"/>
+<text class="viz-inlabel" x="337.7" y="149.0" text-anchor="middle">15%</text>
+<rect class="viz-seg" x="370.2" y="134" width="187.2" height="22" style="fill:#c99a1c" tabindex="0" data-tip="Country, chanson · country: 44% (1,715 tracks)"/>
+<text class="viz-inlabel" x="463.8" y="149.0" text-anchor="middle">44%</text>
+<rect class="viz-seg" x="557.4" y="134" width="24.3" height="22" style="fill:#2a78d6" tabindex="0" data-tip="Country, chanson · jazz: 6% (223 tracks)"/>
+<rect class="viz-seg" x="581.8" y="134" width="7.0" height="22" style="fill:#7ea6e0" tabindex="0" data-tip="Country, chanson · blues: 2% (64 tracks)"/>
+<rect class="viz-seg" x="588.7" y="134" width="32.6" height="22" style="fill:#b9a27a" tabindex="0" data-tip="Country, chanson · oldies: 8% (299 tracks)"/>
+<rect class="viz-seg" x="621.4" y="134" width="3.7" height="22" style="fill:#eb6834" tabindex="0" data-tip="Country, chanson · electronic and dance: 1% (34 tracks)"/>
+<rect class="viz-seg" x="625.1" y="134" width="4.0" height="22" style="fill:#25aab6" tabindex="0" data-tip="Country, chanson · ambient and instrumental: 1% (37 tracks)"/>
+<rect class="viz-seg" x="629.1" y="134" width="0.9" height="22" style="fill:#e2e8f0" tabindex="0" data-tip="Country, chanson · other: 0% (8 tracks)"/>
+<text class="viz-label" x="200" y="181.5" text-anchor="end">Turkish song, arabesk</text>
+<rect class="viz-seg" x="208.0" y="166" width="209.8" height="22" style="fill:#475569" tabindex="0" data-tip="Turkish song, arabesk · rock: 50% (1,655 tracks)"/>
+<text class="viz-inlabel" x="312.9" y="181.0" text-anchor="middle">50%</text>
+<rect class="viz-seg" x="417.8" y="166" width="81.5" height="22" style="fill:#8e5cd9" tabindex="0" data-tip="Turkish song, arabesk · pop: 19% (643 tracks)"/>
+<text class="viz-inlabel" x="458.6" y="181.0" text-anchor="middle">19%</text>
+<rect class="viz-seg" x="499.3" y="166" width="3.4" height="22" style="fill:#c2417d" tabindex="0" data-tip="Turkish song, arabesk · female vocalists: 1% (27 tracks)"/>
+<rect class="viz-seg" x="502.7" y="166" width="9.3" height="22" style="fill:#1baf7a" tabindex="0" data-tip="Turkish song, arabesk · folk: 2% (73 tracks)"/>
+<rect class="viz-seg" x="512.0" y="166" width="35.1" height="22" style="fill:#c99a1c" tabindex="0" data-tip="Turkish song, arabesk · country: 8% (277 tracks)"/>
+<text class="viz-inlabel" x="529.5" y="181.0" text-anchor="middle">8%</text>
+<rect class="viz-seg" x="547.1" y="166" width="22.6" height="22" style="fill:#2a78d6" tabindex="0" data-tip="Turkish song, arabesk · jazz: 5% (178 tracks)"/>
+<rect class="viz-seg" x="569.7" y="166" width="1.8" height="22" style="fill:#7ea6e0" tabindex="0" data-tip="Turkish song, arabesk · blues: 0% (14 tracks)"/>
+<rect class="viz-seg" x="571.4" y="166" width="42.6" height="22" style="fill:#b9a27a" tabindex="0" data-tip="Turkish song, arabesk · oldies: 10% (336 tracks)"/>
+<text class="viz-inlabel" x="592.7" y="181.0" text-anchor="middle">10%</text>
+<rect class="viz-seg" x="614.0" y="166" width="14.8" height="22" style="fill:#eb6834" tabindex="0" data-tip="Turkish song, arabesk · electronic and dance: 4% (117 tracks)"/>
+<rect class="viz-seg" x="628.9" y="166" width="0.5" height="22" style="fill:#25aab6" tabindex="0" data-tip="Turkish song, arabesk · ambient and instrumental: 0% (4 tracks)"/>
+<rect class="viz-seg" x="629.4" y="166" width="0.6" height="22" style="fill:#e2e8f0" tabindex="0" data-tip="Turkish song, arabesk · other: 0% (5 tracks)"/>
+<text class="viz-label" x="200" y="213.5" text-anchor="end">Turkish/Arabic/Persian pop</text>
+<rect class="viz-seg" x="208.0" y="198" width="12.7" height="22" style="fill:#475569" tabindex="0" data-tip="Turkish/Arabic/Persian pop · rock: 3% (96 tracks)"/>
+<rect class="viz-seg" x="220.7" y="198" width="142.9" height="22" style="fill:#8e5cd9" tabindex="0" data-tip="Turkish/Arabic/Persian pop · pop: 34% (1,079 tracks)"/>
+<text class="viz-inlabel" x="292.1" y="213.0" text-anchor="middle">34%</text>
+<rect class="viz-seg" x="363.6" y="198" width="144.9" height="22" style="fill:#c2417d" tabindex="0" data-tip="Turkish/Arabic/Persian pop · female vocalists: 34% (1,094 tracks)"/>
+<text class="viz-inlabel" x="436.0" y="213.0" text-anchor="middle">34%</text>
+<rect class="viz-seg" x="508.4" y="198" width="2.4" height="22" style="fill:#1baf7a" tabindex="0" data-tip="Turkish/Arabic/Persian pop · folk: 1% (18 tracks)"/>
+<rect class="viz-seg" x="510.8" y="198" width="0.1" height="22" style="fill:#c99a1c" tabindex="0" data-tip="Turkish/Arabic/Persian pop · country: 0% (1 tracks)"/>
+<rect class="viz-seg" x="511.0" y="198" width="36.3" height="22" style="fill:#2a78d6" tabindex="0" data-tip="Turkish/Arabic/Persian pop · jazz: 9% (274 tracks)"/>
+<text class="viz-inlabel" x="529.1" y="213.0" text-anchor="middle">9%</text>
+<rect class="viz-seg" x="547.2" y="198" width="2.4" height="22" style="fill:#7ea6e0" tabindex="0" data-tip="Turkish/Arabic/Persian pop · blues: 1% (18 tracks)"/>
+<rect class="viz-seg" x="549.6" y="198" width="27.5" height="22" style="fill:#b9a27a" tabindex="0" data-tip="Turkish/Arabic/Persian pop · oldies: 7% (208 tracks)"/>
+<rect class="viz-seg" x="577.2" y="198" width="23.4" height="22" style="fill:#eb6834" tabindex="0" data-tip="Turkish/Arabic/Persian pop · electronic and dance: 6% (177 tracks)"/>
+<rect class="viz-seg" x="600.6" y="198" width="0.3" height="22" style="fill:#25aab6" tabindex="0" data-tip="Turkish/Arabic/Persian pop · ambient and instrumental: 0% (2 tracks)"/>
+<rect class="viz-seg" x="600.9" y="198" width="29.1" height="22" style="fill:#e2e8f0" tabindex="0" data-tip="Turkish/Arabic/Persian pop · other: 7% (220 tracks)"/>
+<text class="viz-label" x="200" y="245.5" text-anchor="end">Rock, indie, metal</text>
+<rect class="viz-seg" x="208.0" y="230" width="302.8" height="22" style="fill:#475569" tabindex="0" data-tip="Rock, indie, metal · rock: 72% (1,717 tracks)"/>
+<text class="viz-inlabel" x="359.4" y="245.0" text-anchor="middle">72%</text>
+<rect class="viz-seg" x="510.8" y="230" width="57.3" height="22" style="fill:#1e293b" tabindex="0" data-tip="Rock, indie, metal · metal: 14% (325 tracks)"/>
+<text class="viz-inlabel" x="539.4" y="245.0" text-anchor="middle">14%</text>
+<rect class="viz-seg" x="568.1" y="230" width="7.1" height="22" style="fill:#8e5cd9" tabindex="0" data-tip="Rock, indie, metal · pop: 2% (40 tracks)"/>
+<rect class="viz-seg" x="575.2" y="230" width="0.2" height="22" style="fill:#c2417d" tabindex="0" data-tip="Rock, indie, metal · female vocalists: 0% (1 tracks)"/>
+<rect class="viz-seg" x="575.3" y="230" width="0.4" height="22" style="fill:#1baf7a" tabindex="0" data-tip="Rock, indie, metal · folk: 0% (2 tracks)"/>
+<rect class="viz-seg" x="575.7" y="230" width="8.3" height="22" style="fill:#c99a1c" tabindex="0" data-tip="Rock, indie, metal · country: 2% (47 tracks)"/>
+<rect class="viz-seg" x="584.0" y="230" width="1.6" height="22" style="fill:#2a78d6" tabindex="0" data-tip="Rock, indie, metal · jazz: 0% (9 tracks)"/>
+<rect class="viz-seg" x="585.6" y="230" width="10.8" height="22" style="fill:#7ea6e0" tabindex="0" data-tip="Rock, indie, metal · blues: 3% (61 tracks)"/>
+<rect class="viz-seg" x="596.3" y="230" width="16.2" height="22" style="fill:#b9a27a" tabindex="0" data-tip="Rock, indie, metal · oldies: 4% (92 tracks)"/>
+<rect class="viz-seg" x="612.5" y="230" width="12.2" height="22" style="fill:#eb6834" tabindex="0" data-tip="Rock, indie, metal · electronic and dance: 3% (69 tracks)"/>
+<rect class="viz-seg" x="624.7" y="230" width="5.3" height="22" style="fill:#e2e8f0" tabindex="0" data-tip="Rock, indie, metal · other: 1% (30 tracks)"/>
+<text class="viz-label" x="200" y="277.5" text-anchor="end">Turkish folk</text>
+<rect class="viz-seg" x="208.0" y="262" width="88.9" height="22" style="fill:#475569" tabindex="0" data-tip="Turkish folk · rock: 21% (461 tracks)"/>
+<text class="viz-inlabel" x="252.4" y="277.0" text-anchor="middle">21%</text>
+<rect class="viz-seg" x="296.9" y="262" width="9.8" height="22" style="fill:#8e5cd9" tabindex="0" data-tip="Turkish folk · pop: 2% (51 tracks)"/>
+<rect class="viz-seg" x="306.7" y="262" width="35.1" height="22" style="fill:#c2417d" tabindex="0" data-tip="Turkish folk · female vocalists: 8% (182 tracks)"/>
+<text class="viz-inlabel" x="324.2" y="277.0" text-anchor="middle">8%</text>
+<rect class="viz-seg" x="341.8" y="262" width="167.5" height="22" style="fill:#1baf7a" tabindex="0" data-tip="Turkish folk · folk: 40% (869 tracks)"/>
+<text class="viz-inlabel" x="425.6" y="277.0" text-anchor="middle">40%</text>
+<rect class="viz-seg" x="509.3" y="262" width="8.5" height="22" style="fill:#c99a1c" tabindex="0" data-tip="Turkish folk · country: 2% (44 tracks)"/>
+<rect class="viz-seg" x="517.8" y="262" width="15.0" height="22" style="fill:#2a78d6" tabindex="0" data-tip="Turkish folk · jazz: 4% (78 tracks)"/>
+<rect class="viz-seg" x="532.8" y="262" width="52.4" height="22" style="fill:#7ea6e0" tabindex="0" data-tip="Turkish folk · blues: 12% (272 tracks)"/>
+<text class="viz-inlabel" x="559.1" y="277.0" text-anchor="middle">12%</text>
+<rect class="viz-seg" x="585.3" y="262" width="15.6" height="22" style="fill:#b9a27a" tabindex="0" data-tip="Turkish folk · oldies: 4% (81 tracks)"/>
+<rect class="viz-seg" x="600.9" y="262" width="22.9" height="22" style="fill:#eb6834" tabindex="0" data-tip="Turkish folk · electronic and dance: 5% (119 tracks)"/>
+<rect class="viz-seg" x="623.8" y="262" width="6.0" height="22" style="fill:#25aab6" tabindex="0" data-tip="Turkish folk · ambient and instrumental: 1% (31 tracks)"/>
+<rect class="viz-seg" x="629.8" y="262" width="0.2" height="22" style="fill:#e2e8f0" tabindex="0" data-tip="Turkish folk · other: 0% (1 tracks)"/>
+<text class="viz-label" x="200" y="309.5" text-anchor="end">Scores, classical</text>
+<rect class="viz-seg" x="208.0" y="294" width="24.1" height="22" style="fill:#475569" tabindex="0" data-tip="Scores, classical · rock: 6% (109 tracks)"/>
+<rect class="viz-seg" x="232.1" y="294" width="1.8" height="22" style="fill:#1e293b" tabindex="0" data-tip="Scores, classical · metal: 0% (8 tracks)"/>
+<rect class="viz-seg" x="233.9" y="294" width="0.4" height="22" style="fill:#8e5cd9" tabindex="0" data-tip="Scores, classical · pop: 0% (2 tracks)"/>
+<rect class="viz-seg" x="234.3" y="294" width="3.5" height="22" style="fill:#c2417d" tabindex="0" data-tip="Scores, classical · female vocalists: 1% (16 tracks)"/>
+<rect class="viz-seg" x="237.8" y="294" width="0.2" height="22" style="fill:#1baf7a" tabindex="0" data-tip="Scores, classical · folk: 0% (1 tracks)"/>
+<rect class="viz-seg" x="238.1" y="294" width="54.4" height="22" style="fill:#2a78d6" tabindex="0" data-tip="Scores, classical · jazz: 13% (246 tracks)"/>
+<text class="viz-inlabel" x="265.3" y="309.0" text-anchor="middle">13%</text>
+<rect class="viz-seg" x="292.4" y="294" width="0.2" height="22" style="fill:#7ea6e0" tabindex="0" data-tip="Scores, classical · blues: 0% (1 tracks)"/>
+<rect class="viz-seg" x="292.7" y="294" width="22.5" height="22" style="fill:#b9a27a" tabindex="0" data-tip="Scores, classical · oldies: 5% (102 tracks)"/>
+<rect class="viz-seg" x="315.2" y="294" width="111.0" height="22" style="fill:#eb6834" tabindex="0" data-tip="Scores, classical · electronic and dance: 26% (502 tracks)"/>
+<text class="viz-inlabel" x="370.7" y="309.0" text-anchor="middle">26%</text>
+<rect class="viz-seg" x="426.2" y="294" width="203.6" height="22" style="fill:#25aab6" tabindex="0" data-tip="Scores, classical · ambient and instrumental: 48% (921 tracks)"/>
+<text class="viz-inlabel" x="528.0" y="309.0" text-anchor="middle">48%</text>
+<rect class="viz-seg" x="629.8" y="294" width="0.2" height="22" style="fill:#e2e8f0" tabindex="0" data-tip="Scores, classical · other: 0% (1 tracks)"/>
+<text class="viz-label" x="200" y="341.5" text-anchor="end">World, psychedelic</text>
+<rect class="viz-seg" x="208.0" y="326" width="37.5" height="22" style="fill:#475569" tabindex="0" data-tip="World, psychedelic · rock: 9% (48 tracks)"/>
+<text class="viz-inlabel" x="226.8" y="341.0" text-anchor="middle">9%</text>
+<rect class="viz-seg" x="245.5" y="326" width="1.6" height="22" style="fill:#8e5cd9" tabindex="0" data-tip="World, psychedelic · pop: 0% (2 tracks)"/>
+<rect class="viz-seg" x="247.1" y="326" width="3.9" height="22" style="fill:#c2417d" tabindex="0" data-tip="World, psychedelic · female vocalists: 1% (5 tracks)"/>
+<rect class="viz-seg" x="251.0" y="326" width="3.9" height="22" style="fill:#1baf7a" tabindex="0" data-tip="World, psychedelic · folk: 1% (5 tracks)"/>
+<rect class="viz-seg" x="254.9" y="326" width="140.7" height="22" style="fill:#2a78d6" tabindex="0" data-tip="World, psychedelic · jazz: 33% (180 tracks)"/>
+<text class="viz-inlabel" x="325.2" y="341.0" text-anchor="middle">33%</text>
+<rect class="viz-seg" x="395.6" y="326" width="13.3" height="22" style="fill:#7ea6e0" tabindex="0" data-tip="World, psychedelic · blues: 3% (17 tracks)"/>
+<rect class="viz-seg" x="408.8" y="326" width="1.6" height="22" style="fill:#b9a27a" tabindex="0" data-tip="World, psychedelic · oldies: 0% (2 tracks)"/>
+<rect class="viz-seg" x="410.4" y="326" width="133.6" height="22" style="fill:#eb6834" tabindex="0" data-tip="World, psychedelic · electronic and dance: 32% (171 tracks)"/>
+<text class="viz-inlabel" x="477.2" y="341.0" text-anchor="middle">32%</text>
+<rect class="viz-seg" x="544.0" y="326" width="84.4" height="22" style="fill:#25aab6" tabindex="0" data-tip="World, psychedelic · ambient and instrumental: 20% (108 tracks)"/>
+<text class="viz-inlabel" x="586.2" y="341.0" text-anchor="middle">20%</text>
+<rect class="viz-seg" x="628.4" y="326" width="1.6" height="22" style="fill:#e2e8f0" tabindex="0" data-tip="World, psychedelic · other: 0% (2 tracks)"/>
+</svg>

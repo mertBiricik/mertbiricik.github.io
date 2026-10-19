@@ -1,0 +1,64 @@
+<svg class="viz viz-m" viewBox="0 0 380 854" role="img" aria-labelledby="artists-m-t">
+<title id="artists-m-t">The 20 artists with the most hours of music, coloured by the family most of their tracks fall into</title>
+<text class="viz-label" x="4" y="15.0">Zeki Müren</text>
+<rect class="viz-seg" x="4" y="20" width="316.0" height="14" rx="3" style="fill:#eb6834" tabindex="0" data-tip="Zeki Müren: 110 hours, 1,737 tracks · mostly Turkish song and arabesk"/>
+<text class="viz-tick" x="326.0" y="31.0">110 h</text>
+<text class="viz-label" x="4" y="55.0">Inna</text>
+<rect class="viz-seg" x="4" y="60" width="247.1" height="14" rx="3" style="fill:#8e5cd9" tabindex="0" data-tip="Inna: 86 hours, 1,270 tracks · mostly Pop, synth-pop and hip-hop"/>
+<text class="viz-tick" x="257.1" y="71.0">86 h</text>
+<text class="viz-label" x="4" y="95.0">Kani Karaca</text>
+<rect class="viz-seg" x="4" y="100" width="224.1" height="14" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="Kani Karaca: 78 hours, 173 tracks · mostly Turkish classical"/>
+<text class="viz-tick" x="234.1" y="111.0">78 h</text>
+<text class="viz-label" x="4" y="135.0">Johnny Cash</text>
+<rect class="viz-seg" x="4" y="140" width="183.9" height="14" rx="3" style="fill:#c99a1c" tabindex="0" data-tip="Johnny Cash: 64 hours, 1,373 tracks · mostly Country, chanson and songwriters"/>
+<text class="viz-tick" x="193.9" y="151.0">64 h</text>
+<text class="viz-label" x="4" y="175.0">OMD</text>
+<rect class="viz-seg" x="4" y="180" width="181.0" height="14" rx="3" style="fill:#8e5cd9" tabindex="0" data-tip="OMD: 63 hours, 921 tracks · mostly Pop, synth-pop and hip-hop"/>
+<text class="viz-tick" x="191.0" y="191.0">63 h</text>
+<text class="viz-label" x="4" y="215.0">Müzeyyen Senar</text>
+<rect class="viz-seg" x="4" y="220" width="172.4" height="14" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="Müzeyyen Senar: 60 hours, 1,100 tracks · mostly Turkish classical"/>
+<text class="viz-tick" x="182.4" y="231.0">60 h</text>
+<text class="viz-label" x="4" y="255.0">Münir Nurettin Selçuk</text>
+<rect class="viz-seg" x="4" y="260" width="155.1" height="14" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="Münir Nurettin Selçuk: 54 hours, 919 tracks · mostly Turkish classical"/>
+<text class="viz-tick" x="165.1" y="271.0">54 h</text>
+<text class="viz-label" x="4" y="295.0">Cem Karaca</text>
+<rect class="viz-seg" x="4" y="300" width="149.4" height="14" rx="3" style="fill:#475569" tabindex="0" data-tip="Cem Karaca: 52 hours, 765 tracks · mostly Rock, indie and metal"/>
+<text class="viz-tick" x="159.4" y="311.0">52 h</text>
+<text class="viz-label" x="4" y="335.0">Bülent Ersoy</text>
+<rect class="viz-seg" x="4" y="340" width="129.3" height="14" rx="3" style="fill:#eb6834" tabindex="0" data-tip="Bülent Ersoy: 45 hours, 615 tracks · mostly Turkish song and arabesk"/>
+<text class="viz-tick" x="139.3" y="351.0">45 h</text>
+<text class="viz-label" x="4" y="375.0">Neşet Ertaş</text>
+<rect class="viz-seg" x="4" y="380" width="106.3" height="14" rx="3" style="fill:#1baf7a" tabindex="0" data-tip="Neşet Ertaş: 37 hours, 422 tracks · mostly Turkish folk"/>
+<text class="viz-tick" x="116.3" y="391.0">37 h</text>
+<text class="viz-label" x="4" y="415.0">Muazzez Ersoy</text>
+<rect class="viz-seg" x="4" y="420" width="94.8" height="14" rx="3" style="fill:#eb6834" tabindex="0" data-tip="Muazzez Ersoy: 33 hours, 528 tracks · mostly Turkish song and arabesk"/>
+<text class="viz-tick" x="104.8" y="431.0">33 h</text>
+<text class="viz-label" x="4" y="455.0">Gülden Karaböcek</text>
+<rect class="viz-seg" x="4" y="460" width="91.9" height="14" rx="3" style="fill:#c2417d" tabindex="0" data-tip="Gülden Karaböcek: 32 hours, 458 tracks · mostly Turkish, Arabic and Persian pop"/>
+<text class="viz-tick" x="101.9" y="471.0">32 h</text>
+<text class="viz-label" x="4" y="495.0">The Human League</text>
+<rect class="viz-seg" x="4" y="500" width="86.2" height="14" rx="3" style="fill:#8e5cd9" tabindex="0" data-tip="The Human League: 30 hours, 425 tracks · mostly Pop, synth-pop and hip-hop"/>
+<text class="viz-tick" x="96.2" y="511.0">30 h</text>
+<text class="viz-label" x="4" y="535.0">Emel Sayın</text>
+<rect class="viz-seg" x="4" y="540" width="86.2" height="14" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="Emel Sayın: 30 hours, 441 tracks · mostly Turkish classical"/>
+<text class="viz-tick" x="96.2" y="551.0">30 h</text>
+<text class="viz-label" x="4" y="575.0">Barış Manço</text>
+<rect class="viz-seg" x="4" y="580" width="83.3" height="14" rx="3" style="fill:#475569" tabindex="0" data-tip="Barış Manço: 29 hours, 420 tracks · mostly Rock, indie and metal"/>
+<text class="viz-tick" x="93.3" y="591.0">29 h</text>
+<text class="viz-label" x="4" y="615.0">Selda Bağcan</text>
+<rect class="viz-seg" x="4" y="620" width="83.3" height="14" rx="3" style="fill:#1baf7a" tabindex="0" data-tip="Selda Bağcan: 29 hours, 429 tracks · mostly Turkish folk"/>
+<text class="viz-tick" x="93.3" y="631.0">29 h</text>
+<text class="viz-label" x="4" y="655.0">Aşık Mahzuni Şerif</text>
+<rect class="viz-seg" x="4" y="660" width="83.3" height="14" rx="3" style="fill:#1baf7a" tabindex="0" data-tip="Aşık Mahzuni Şerif: 29 hours, 422 tracks · mostly Turkish folk"/>
+<text class="viz-tick" x="93.3" y="671.0">29 h</text>
+<text class="viz-label" x="4" y="695.0">Musa Eroğlu</text>
+<rect class="viz-seg" x="4" y="700" width="83.3" height="14" rx="3" style="fill:#1baf7a" tabindex="0" data-tip="Musa Eroğlu: 29 hours, 415 tracks · mostly Turkish folk"/>
+<text class="viz-tick" x="93.3" y="711.0">29 h</text>
+<text class="viz-label" x="4" y="735.0">Googoosh</text>
+<rect class="viz-seg" x="4" y="740" width="83.3" height="14" rx="3" style="fill:#c2417d" tabindex="0" data-tip="Googoosh: 29 hours, 401 tracks · mostly Turkish, Arabic and Persian pop"/>
+<text class="viz-tick" x="93.3" y="751.0">29 h</text>
+<text class="viz-label" x="4" y="775.0">Ümit Besen</text>
+<rect class="viz-seg" x="4" y="780" width="77.6" height="14" rx="3" style="fill:#eb6834" tabindex="0" data-tip="Ümit Besen: 27 hours, 389 tracks · mostly Turkish song and arabesk"/>
+<text class="viz-tick" x="87.6" y="791.0">27 h</text>
+<text class="viz-tick" x="4" y="846">Hours of music</text>
+</svg>

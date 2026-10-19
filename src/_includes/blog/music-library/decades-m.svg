@@ -1,0 +1,121 @@
+<svg class="viz viz-m" viewBox="0 0 380 400" role="img" aria-labelledby="decades-m-t">
+<title id="decades-m-t">Tracks by decade of the album&#x27;s release year, coloured by family</title>
+<rect x="40.0" y="6" width="11" height="11" rx="2" style="fill:#8e5cd9"/>
+<text class="viz-tick" x="56.0" y="16">Pop, synth-pop, hip-hop</text>
+<rect x="222.8" y="6" width="11" height="11" rx="2" style="fill:#2a78d6"/>
+<text class="viz-tick" x="238.8" y="16">Turkish classical</text>
+<rect x="40.0" y="24" width="11" height="11" rx="2" style="fill:#c99a1c"/>
+<text class="viz-tick" x="56.0" y="34">Country, chanson</text>
+<rect x="176.6" y="24" width="11" height="11" rx="2" style="fill:#eb6834"/>
+<text class="viz-tick" x="192.6" y="34">Turkish song, arabesk</text>
+<rect x="40.0" y="42" width="11" height="11" rx="2" style="fill:#c2417d"/>
+<text class="viz-tick" x="56.0" y="52">Turkish/Arabic/Persian pop</text>
+<rect x="40.0" y="60" width="11" height="11" rx="2" style="fill:#475569"/>
+<text class="viz-tick" x="56.0" y="70">Rock, indie, metal</text>
+<rect x="189.8" y="60" width="11" height="11" rx="2" style="fill:#1baf7a"/>
+<text class="viz-tick" x="205.8" y="70">Turkish folk</text>
+<rect x="40.0" y="78" width="11" height="11" rx="2" style="fill:#25aab6"/>
+<text class="viz-tick" x="56.0" y="88">Scores, classical</text>
+<rect x="183.2" y="78" width="11" height="11" rx="2" style="fill:#9c6b3c"/>
+<text class="viz-tick" x="199.2" y="88">World, psychedelic</text>
+<line class="viz-grid" x1="40" x2="374" y1="360.0" y2="360.0"/>
+<text class="viz-tick" x="34" y="364.0" text-anchor="end">0</text>
+<line class="viz-grid" x1="40" x2="374" y1="310.0" y2="310.0"/>
+<text class="viz-tick" x="34" y="314.0" text-anchor="end">2,000</text>
+<line class="viz-grid" x1="40" x2="374" y1="260.0" y2="260.0"/>
+<text class="viz-tick" x="34" y="264.0" text-anchor="end">4,000</text>
+<line class="viz-grid" x1="40" x2="374" y1="210.0" y2="210.0"/>
+<text class="viz-tick" x="34" y="214.0" text-anchor="end">6,000</text>
+<line class="viz-grid" x1="40" x2="374" y1="160.0" y2="160.0"/>
+<text class="viz-tick" x="34" y="164.0" text-anchor="end">8,000</text>
+<line class="viz-grid" x1="40" x2="374" y1="110.0" y2="110.0"/>
+<text class="viz-tick" x="34" y="114.0" text-anchor="end">10,000</text>
+<rect class="viz-seg" x="45.2" y="359.2" width="26.7" height="0.8" style="fill:#2a78d6" tabindex="0" data-tip="before 1950 · Turkish classical: 33 tracks (97% of the decade)"/>
+<rect class="viz-seg" x="45.2" y="359.2" width="26.7" height="0.0" style="fill:#c2417d" tabindex="0" data-tip="before 1950 · Turkish, Arabic and Persian pop: 1 tracks (3% of the decade)"/>
+<text class="viz-tick" x="58.6" y="354.1" text-anchor="middle"></text>
+<text class="viz-tick" x="58.6" y="378" text-anchor="middle">&lt;1950</text>
+<rect class="viz-seg" x="82.3" y="354.5" width="26.7" height="5.5" style="fill:#2a78d6" tabindex="0" data-tip="1950s · Turkish classical: 219 tracks (72% of the decade)"/>
+<rect class="viz-seg" x="82.3" y="353.6" width="26.7" height="1.0" style="fill:#c99a1c" tabindex="0" data-tip="1950s · Country, chanson and songwriters: 38 tracks (13% of the decade)"/>
+<rect class="viz-seg" x="82.3" y="353.3" width="26.7" height="0.2" style="fill:#eb6834" tabindex="0" data-tip="1950s · Turkish song and arabesk: 9 tracks (3% of the decade)"/>
+<rect class="viz-seg" x="82.3" y="352.7" width="26.7" height="0.7" style="fill:#c2417d" tabindex="0" data-tip="1950s · Turkish, Arabic and Persian pop: 27 tracks (9% of the decade)"/>
+<rect class="viz-seg" x="82.3" y="352.6" width="26.7" height="0.0" style="fill:#1baf7a" tabindex="0" data-tip="1950s · Turkish folk: 2 tracks (1% of the decade)"/>
+<rect class="viz-seg" x="82.3" y="352.4" width="26.7" height="0.2" style="fill:#9c6b3c" tabindex="0" data-tip="1950s · World and psychedelic: 8 tracks (3% of the decade)"/>
+<text class="viz-tick" x="95.7" y="347.4" text-anchor="middle"></text>
+<text class="viz-tick" x="95.7" y="378" text-anchor="middle">’50s</text>
+<rect class="viz-seg" x="119.4" y="357.7" width="26.7" height="2.3" style="fill:#2a78d6" tabindex="0" data-tip="1960s · Turkish classical: 91 tracks (13% of the decade)"/>
+<rect class="viz-seg" x="119.4" y="347.2" width="26.7" height="10.5" style="fill:#c99a1c" tabindex="0" data-tip="1960s · Country, chanson and songwriters: 420 tracks (60% of the decade)"/>
+<rect class="viz-seg" x="119.4" y="346.9" width="26.7" height="0.3" style="fill:#eb6834" tabindex="0" data-tip="1960s · Turkish song and arabesk: 12 tracks (2% of the decade)"/>
+<rect class="viz-seg" x="119.4" y="343.6" width="26.7" height="3.3" style="fill:#c2417d" tabindex="0" data-tip="1960s · Turkish, Arabic and Persian pop: 133 tracks (19% of the decade)"/>
+<rect class="viz-seg" x="119.4" y="343.1" width="26.7" height="0.5" style="fill:#475569" tabindex="0" data-tip="1960s · Rock, indie and metal: 19 tracks (3% of the decade)"/>
+<rect class="viz-seg" x="119.4" y="342.6" width="26.7" height="0.5" style="fill:#1baf7a" tabindex="0" data-tip="1960s · Turkish folk: 21 tracks (3% of the decade)"/>
+<rect class="viz-seg" x="119.4" y="342.5" width="26.7" height="0.1" style="fill:#25aab6" tabindex="0" data-tip="1960s · Scores, classical and ambient: 3 tracks (0% of the decade)"/>
+<rect class="viz-seg" x="119.4" y="342.5" width="26.7" height="0.0" style="fill:#9c6b3c" tabindex="0" data-tip="1960s · World and psychedelic: 1 tracks (0% of the decade)"/>
+<text class="viz-tick" x="132.8" y="337.5" text-anchor="middle"></text>
+<text class="viz-tick" x="132.8" y="378" text-anchor="middle">’60s</text>
+<rect class="viz-seg" x="156.5" y="359.4" width="26.7" height="0.6" style="fill:#8e5cd9" tabindex="0" data-tip="1970s · Pop, synth-pop and hip-hop: 23 tracks (2% of the decade)"/>
+<rect class="viz-seg" x="156.5" y="352.2" width="26.7" height="7.2" style="fill:#2a78d6" tabindex="0" data-tip="1970s · Turkish classical: 289 tracks (20% of the decade)"/>
+<rect class="viz-seg" x="156.5" y="340.2" width="26.7" height="12.0" style="fill:#c99a1c" tabindex="0" data-tip="1970s · Country, chanson and songwriters: 480 tracks (32% of the decade)"/>
+<rect class="viz-seg" x="156.5" y="337.5" width="26.7" height="2.7" style="fill:#eb6834" tabindex="0" data-tip="1970s · Turkish song and arabesk: 107 tracks (7% of the decade)"/>
+<rect class="viz-seg" x="156.5" y="330.0" width="26.7" height="7.5" style="fill:#c2417d" tabindex="0" data-tip="1970s · Turkish, Arabic and Persian pop: 301 tracks (20% of the decade)"/>
+<rect class="viz-seg" x="156.5" y="326.9" width="26.7" height="3.1" style="fill:#475569" tabindex="0" data-tip="1970s · Rock, indie and metal: 126 tracks (9% of the decade)"/>
+<rect class="viz-seg" x="156.5" y="324.1" width="26.7" height="2.7" style="fill:#1baf7a" tabindex="0" data-tip="1970s · Turkish folk: 109 tracks (7% of the decade)"/>
+<rect class="viz-seg" x="156.5" y="323.5" width="26.7" height="0.6" style="fill:#25aab6" tabindex="0" data-tip="1970s · Scores, classical and ambient: 26 tracks (2% of the decade)"/>
+<rect class="viz-seg" x="156.5" y="323.0" width="26.7" height="0.5" style="fill:#9c6b3c" tabindex="0" data-tip="1970s · World and psychedelic: 21 tracks (1% of the decade)"/>
+<text class="viz-tick" x="169.9" y="317.9" text-anchor="middle">1,482</text>
+<text class="viz-tick" x="169.9" y="378" text-anchor="middle">’70s</text>
+<rect class="viz-seg" x="193.6" y="350.8" width="26.7" height="9.2" style="fill:#8e5cd9" tabindex="0" data-tip="1980s · Pop, synth-pop and hip-hop: 369 tracks (18% of the decade)"/>
+<rect class="viz-seg" x="193.6" y="346.3" width="26.7" height="4.4" style="fill:#2a78d6" tabindex="0" data-tip="1980s · Turkish classical: 177 tracks (9% of the decade)"/>
+<rect class="viz-seg" x="193.6" y="338.3" width="26.7" height="8.0" style="fill:#c99a1c" tabindex="0" data-tip="1980s · Country, chanson and songwriters: 320 tracks (16% of the decade)"/>
+<rect class="viz-seg" x="193.6" y="328.9" width="26.7" height="9.5" style="fill:#eb6834" tabindex="0" data-tip="1980s · Turkish song and arabesk: 379 tracks (19% of the decade)"/>
+<rect class="viz-seg" x="193.6" y="322.7" width="26.7" height="6.1" style="fill:#c2417d" tabindex="0" data-tip="1980s · Turkish, Arabic and Persian pop: 245 tracks (12% of the decade)"/>
+<rect class="viz-seg" x="193.6" y="317.2" width="26.7" height="5.6" style="fill:#475569" tabindex="0" data-tip="1980s · Rock, indie and metal: 223 tracks (11% of the decade)"/>
+<rect class="viz-seg" x="193.6" y="311.9" width="26.7" height="5.3" style="fill:#1baf7a" tabindex="0" data-tip="1980s · Turkish folk: 211 tracks (10% of the decade)"/>
+<rect class="viz-seg" x="193.6" y="310.4" width="26.7" height="1.5" style="fill:#25aab6" tabindex="0" data-tip="1980s · Scores, classical and ambient: 62 tracks (3% of the decade)"/>
+<rect class="viz-seg" x="193.6" y="309.7" width="26.7" height="0.6" style="fill:#9c6b3c" tabindex="0" data-tip="1980s · World and psychedelic: 25 tracks (1% of the decade)"/>
+<text class="viz-tick" x="207.0" y="304.7" text-anchor="middle">2,011</text>
+<text class="viz-tick" x="207.0" y="378" text-anchor="middle">’80s</text>
+<rect class="viz-seg" x="230.8" y="347.7" width="26.7" height="12.3" style="fill:#8e5cd9" tabindex="0" data-tip="1990s · Pop, synth-pop and hip-hop: 491 tracks (10% of the decade)"/>
+<rect class="viz-seg" x="230.8" y="323.9" width="26.7" height="23.8" style="fill:#2a78d6" tabindex="0" data-tip="1990s · Turkish classical: 953 tracks (19% of the decade)"/>
+<rect class="viz-seg" x="230.8" y="302.1" width="26.7" height="21.8" style="fill:#c99a1c" tabindex="0" data-tip="1990s · Country, chanson and songwriters: 873 tracks (18% of the decade)"/>
+<rect class="viz-seg" x="230.8" y="281.1" width="26.7" height="20.9" style="fill:#eb6834" tabindex="0" data-tip="1990s · Turkish song and arabesk: 837 tracks (17% of the decade)"/>
+<rect class="viz-seg" x="230.8" y="266.4" width="26.7" height="14.8" style="fill:#c2417d" tabindex="0" data-tip="1990s · Turkish, Arabic and Persian pop: 591 tracks (12% of the decade)"/>
+<rect class="viz-seg" x="230.8" y="256.3" width="26.7" height="10.1" style="fill:#475569" tabindex="0" data-tip="1990s · Rock, indie and metal: 404 tracks (8% of the decade)"/>
+<rect class="viz-seg" x="230.8" y="243.2" width="26.7" height="13.1" style="fill:#1baf7a" tabindex="0" data-tip="1990s · Turkish folk: 524 tracks (11% of the decade)"/>
+<rect class="viz-seg" x="230.8" y="239.0" width="26.7" height="4.1" style="fill:#25aab6" tabindex="0" data-tip="1990s · Scores, classical and ambient: 165 tracks (3% of the decade)"/>
+<rect class="viz-seg" x="230.8" y="237.1" width="26.7" height="2.0" style="fill:#9c6b3c" tabindex="0" data-tip="1990s · World and psychedelic: 78 tracks (2% of the decade)"/>
+<text class="viz-tick" x="244.1" y="232.1" text-anchor="middle">4,916</text>
+<text class="viz-tick" x="244.1" y="378" text-anchor="middle">’90s</text>
+<rect class="viz-seg" x="267.9" y="337.9" width="26.7" height="22.1" style="fill:#8e5cd9" tabindex="0" data-tip="2000s · Pop, synth-pop and hip-hop: 886 tracks (18% of the decade)"/>
+<rect class="viz-seg" x="267.9" y="323.5" width="26.7" height="14.4" style="fill:#2a78d6" tabindex="0" data-tip="2000s · Turkish classical: 576 tracks (12% of the decade)"/>
+<rect class="viz-seg" x="267.9" y="300.8" width="26.7" height="22.6" style="fill:#c99a1c" tabindex="0" data-tip="2000s · Country, chanson and songwriters: 905 tracks (18% of the decade)"/>
+<rect class="viz-seg" x="267.9" y="288.5" width="26.7" height="12.3" style="fill:#eb6834" tabindex="0" data-tip="2000s · Turkish song and arabesk: 492 tracks (10% of the decade)"/>
+<rect class="viz-seg" x="267.9" y="267.1" width="26.7" height="21.5" style="fill:#c2417d" tabindex="0" data-tip="2000s · Turkish, Arabic and Persian pop: 859 tracks (17% of the decade)"/>
+<rect class="viz-seg" x="267.9" y="257.2" width="26.7" height="9.8" style="fill:#475569" tabindex="0" data-tip="2000s · Rock, indie and metal: 392 tracks (8% of the decade)"/>
+<rect class="viz-seg" x="267.9" y="241.4" width="26.7" height="15.8" style="fill:#1baf7a" tabindex="0" data-tip="2000s · Turkish folk: 633 tracks (13% of the decade)"/>
+<rect class="viz-seg" x="267.9" y="238.8" width="26.7" height="2.6" style="fill:#25aab6" tabindex="0" data-tip="2000s · Scores, classical and ambient: 106 tracks (2% of the decade)"/>
+<rect class="viz-seg" x="267.9" y="236.5" width="26.7" height="2.3" style="fill:#9c6b3c" tabindex="0" data-tip="2000s · World and psychedelic: 91 tracks (2% of the decade)"/>
+<text class="viz-tick" x="281.2" y="231.5" text-anchor="middle">4,940</text>
+<text class="viz-tick" x="281.2" y="378" text-anchor="middle">’00s</text>
+<rect class="viz-seg" x="305.0" y="304.4" width="26.7" height="55.6" style="fill:#8e5cd9" tabindex="0" data-tip="2010s · Pop, synth-pop and hip-hop: 2,225 tracks (23% of the decade)"/>
+<rect class="viz-seg" x="305.0" y="271.4" width="26.7" height="33.0" style="fill:#2a78d6" tabindex="0" data-tip="2010s · Turkish classical: 1,320 tracks (13% of the decade)"/>
+<rect class="viz-seg" x="305.0" y="249.2" width="26.7" height="22.1" style="fill:#c99a1c" tabindex="0" data-tip="2010s · Country, chanson and songwriters: 886 tracks (9% of the decade)"/>
+<rect class="viz-seg" x="305.0" y="210.8" width="26.7" height="38.4" style="fill:#eb6834" tabindex="0" data-tip="2010s · Turkish song and arabesk: 1,538 tracks (16% of the decade)"/>
+<rect class="viz-seg" x="305.0" y="188.6" width="26.7" height="22.2" style="fill:#c2417d" tabindex="0" data-tip="2010s · Turkish, Arabic and Persian pop: 888 tracks (9% of the decade)"/>
+<rect class="viz-seg" x="305.0" y="164.1" width="26.7" height="24.5" style="fill:#475569" tabindex="0" data-tip="2010s · Rock, indie and metal: 979 tracks (10% of the decade)"/>
+<rect class="viz-seg" x="305.0" y="147.9" width="26.7" height="16.2" style="fill:#1baf7a" tabindex="0" data-tip="2010s · Turkish folk: 649 tracks (7% of the decade)"/>
+<rect class="viz-seg" x="305.0" y="119.6" width="26.7" height="28.3" style="fill:#25aab6" tabindex="0" data-tip="2010s · Scores, classical and ambient: 1,132 tracks (11% of the decade)"/>
+<rect class="viz-seg" x="305.0" y="113.7" width="26.7" height="5.9" style="fill:#9c6b3c" tabindex="0" data-tip="2010s · World and psychedelic: 237 tracks (2% of the decade)"/>
+<text class="viz-tick" x="318.3" y="108.6" text-anchor="middle">9,854</text>
+<text class="viz-tick" x="318.3" y="378" text-anchor="middle">’10s</text>
+<rect class="viz-seg" x="342.1" y="347.9" width="26.7" height="12.1" style="fill:#8e5cd9" tabindex="0" data-tip="2020s · Pop, synth-pop and hip-hop: 486 tracks (24% of the decade)"/>
+<rect class="viz-seg" x="342.1" y="340.4" width="26.7" height="7.4" style="fill:#2a78d6" tabindex="0" data-tip="2020s · Turkish classical: 297 tracks (15% of the decade)"/>
+<rect class="viz-seg" x="342.1" y="337.2" width="26.7" height="3.2" style="fill:#c99a1c" tabindex="0" data-tip="2020s · Country, chanson and songwriters: 130 tracks (6% of the decade)"/>
+<rect class="viz-seg" x="342.1" y="336.2" width="26.7" height="1.0" style="fill:#eb6834" tabindex="0" data-tip="2020s · Turkish song and arabesk: 38 tracks (2% of the decade)"/>
+<rect class="viz-seg" x="342.1" y="333.2" width="26.7" height="3.1" style="fill:#c2417d" tabindex="0" data-tip="2020s · Turkish, Arabic and Persian pop: 123 tracks (6% of the decade)"/>
+<rect class="viz-seg" x="342.1" y="326.5" width="26.7" height="6.6" style="fill:#475569" tabindex="0" data-tip="2020s · Rock, indie and metal: 265 tracks (13% of the decade)"/>
+<rect class="viz-seg" x="342.1" y="324.7" width="26.7" height="1.9" style="fill:#1baf7a" tabindex="0" data-tip="2020s · Turkish folk: 75 tracks (4% of the decade)"/>
+<rect class="viz-seg" x="342.1" y="313.7" width="26.7" height="10.9" style="fill:#25aab6" tabindex="0" data-tip="2020s · Scores, classical and ambient: 438 tracks (22% of the decade)"/>
+<rect class="viz-seg" x="342.1" y="309.9" width="26.7" height="3.9" style="fill:#9c6b3c" tabindex="0" data-tip="2020s · World and psychedelic: 154 tracks (8% of the decade)"/>
+<text class="viz-tick" x="355.4" y="304.9" text-anchor="middle">2,006</text>
+<text class="viz-tick" x="355.4" y="378" text-anchor="middle">’20s</text>
+</svg>

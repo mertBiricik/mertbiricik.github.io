@@ -1,0 +1,86 @@
+<svg class="viz viz-m" viewBox="0 0 380 486" role="img" aria-labelledby="lyrics-coverage-m-t">
+<title id="lyrics-coverage-m-t">Share of tracks for which LRCLIB had lyrics, by family (first pass)</title>
+<rect x="4.0" y="6" width="11" height="11" rx="2" style="fill:#1baf7a"/>
+<text class="viz-tick" x="20.0" y="16">Synced lyrics</text>
+<rect x="120.8" y="6" width="11" height="11" rx="2" style="fill:#8fd6b9"/>
+<text class="viz-tick" x="136.8" y="16">Plain lyrics</text>
+<rect x="231.0" y="6" width="11" height="11" rx="2" style="fill:#cbd5e1"/>
+<text class="viz-tick" x="247.0" y="16">Instrumental</text>
+<rect x="4.0" y="24" width="11" height="11" rx="2" style="fill:#f1a7a0"/>
+<text class="viz-tick" x="20.0" y="34">Not found</text>
+<text class="viz-label" x="4" y="61.0">Country, chanson</text>
+<rect class="viz-seg" x="4.0" y="66" width="199.9" height="16" style="fill:#1baf7a" tabindex="0" data-tip="Country, chanson · Synced lyrics: 61% (2,414 tracks)"/>
+<text class="viz-inlabel" x="104.0" y="78.0" text-anchor="middle">61%</text>
+<rect class="viz-seg" x="203.9" y="66" width="46.2" height="16" style="fill:#8fd6b9" tabindex="0" data-tip="Country, chanson · Plain lyrics: 14% (558 tracks)"/>
+<text class="viz-inlabel" x="227.0" y="78.0" text-anchor="middle">14%</text>
+<rect class="viz-seg" x="250.1" y="66" width="6.5" height="16" style="fill:#cbd5e1" tabindex="0" data-tip="Country, chanson · Instrumental: 2% (78 tracks)"/>
+<rect class="viz-seg" x="256.6" y="66" width="77.4" height="16" style="fill:#f1a7a0" tabindex="0" data-tip="Country, chanson · Not found: 23% (935 tracks)"/>
+<text class="viz-inlabel" x="295.3" y="78.0" text-anchor="middle">23%</text>
+<text class="viz-tick" x="340.0" y="78.0">75%</text>
+<text class="viz-label" x="4" y="105.0">Rock, indie, metal</text>
+<rect class="viz-seg" x="4.0" y="110" width="213.2" height="16" style="fill:#1baf7a" tabindex="0" data-tip="Rock, indie, metal · Synced lyrics: 65% (1,489 tracks)"/>
+<text class="viz-inlabel" x="110.6" y="122.0" text-anchor="middle">65%</text>
+<rect class="viz-seg" x="217.2" y="110" width="24.2" height="16" style="fill:#8fd6b9" tabindex="0" data-tip="Rock, indie, metal · Plain lyrics: 7% (169 tracks)"/>
+<rect class="viz-seg" x="241.4" y="110" width="10.5" height="16" style="fill:#cbd5e1" tabindex="0" data-tip="Rock, indie, metal · Instrumental: 3% (73 tracks)"/>
+<rect class="viz-seg" x="251.8" y="110" width="82.2" height="16" style="fill:#f1a7a0" tabindex="0" data-tip="Rock, indie, metal · Not found: 25% (574 tracks)"/>
+<text class="viz-inlabel" x="292.9" y="122.0" text-anchor="middle">25%</text>
+<text class="viz-tick" x="340.0" y="122.0">72%</text>
+<text class="viz-label" x="4" y="149.0">Pop, synth-pop, hip-hop</text>
+<rect class="viz-seg" x="4.0" y="154" width="189.9" height="16" style="fill:#1baf7a" tabindex="0" data-tip="Pop, synth-pop, hip-hop · Synced lyrics: 58% (2,478 tracks)"/>
+<text class="viz-inlabel" x="98.9" y="166.0" text-anchor="middle">58%</text>
+<rect class="viz-seg" x="193.9" y="154" width="27.2" height="16" style="fill:#8fd6b9" tabindex="0" data-tip="Pop, synth-pop, hip-hop · Plain lyrics: 8% (355 tracks)"/>
+<rect class="viz-seg" x="221.1" y="154" width="1.4" height="16" style="fill:#cbd5e1" tabindex="0" data-tip="Pop, synth-pop, hip-hop · Instrumental: 0% (18 tracks)"/>
+<rect class="viz-seg" x="222.4" y="154" width="111.6" height="16" style="fill:#f1a7a0" tabindex="0" data-tip="Pop, synth-pop, hip-hop · Not found: 34% (1,456 tracks)"/>
+<text class="viz-inlabel" x="278.2" y="166.0" text-anchor="middle">34%</text>
+<text class="viz-tick" x="340.0" y="166.0">66%</text>
+<text class="viz-label" x="4" y="193.0">Turkish song, arabesk</text>
+<rect class="viz-seg" x="4.0" y="198" width="178.6" height="16" style="fill:#1baf7a" tabindex="0" data-tip="Turkish song, arabesk · Synced lyrics: 54% (1,836 tracks)"/>
+<text class="viz-inlabel" x="93.3" y="210.0" text-anchor="middle">54%</text>
+<rect class="viz-seg" x="182.6" y="198" width="21.6" height="16" style="fill:#8fd6b9" tabindex="0" data-tip="Turkish song, arabesk · Plain lyrics: 7% (222 tracks)"/>
+<rect class="viz-seg" x="204.2" y="198" width="1.6" height="16" style="fill:#cbd5e1" tabindex="0" data-tip="Turkish song, arabesk · Instrumental: 0% (16 tracks)"/>
+<rect class="viz-seg" x="205.8" y="198" width="128.2" height="16" style="fill:#f1a7a0" tabindex="0" data-tip="Turkish song, arabesk · Not found: 39% (1,318 tracks)"/>
+<text class="viz-inlabel" x="269.9" y="210.0" text-anchor="middle">39%</text>
+<text class="viz-tick" x="340.0" y="210.0">61%</text>
+<text class="viz-label" x="4" y="237.0">Turkish/Arabic/Persian pop</text>
+<rect class="viz-seg" x="4.0" y="242" width="151.9" height="16" style="fill:#1baf7a" tabindex="0" data-tip="Turkish/Arabic/Persian pop · Synced lyrics: 46% (1,248 tracks)"/>
+<text class="viz-inlabel" x="79.9" y="254.0" text-anchor="middle">46%</text>
+<rect class="viz-seg" x="155.9" y="242" width="26.3" height="16" style="fill:#8fd6b9" tabindex="0" data-tip="Turkish/Arabic/Persian pop · Plain lyrics: 8% (216 tracks)"/>
+<rect class="viz-seg" x="182.1" y="242" width="1.6" height="16" style="fill:#cbd5e1" tabindex="0" data-tip="Turkish/Arabic/Persian pop · Instrumental: 0% (13 tracks)"/>
+<rect class="viz-seg" x="183.7" y="242" width="150.3" height="16" style="fill:#f1a7a0" tabindex="0" data-tip="Turkish/Arabic/Persian pop · Not found: 46% (1,235 tracks)"/>
+<text class="viz-inlabel" x="258.9" y="254.0" text-anchor="middle">46%</text>
+<text class="viz-tick" x="340.0" y="254.0">54%</text>
+<text class="viz-label" x="4" y="281.0">Turkish folk</text>
+<rect class="viz-seg" x="4.0" y="286" width="88.5" height="16" style="fill:#1baf7a" tabindex="0" data-tip="Turkish folk · Synced lyrics: 27% (605 tracks)"/>
+<text class="viz-inlabel" x="48.3" y="298.0" text-anchor="middle">27%</text>
+<rect class="viz-seg" x="92.5" y="286" width="27.4" height="16" style="fill:#8fd6b9" tabindex="0" data-tip="Turkish folk · Plain lyrics: 8% (187 tracks)"/>
+<rect class="viz-seg" x="119.9" y="286" width="6.9" height="16" style="fill:#cbd5e1" tabindex="0" data-tip="Turkish folk · Instrumental: 2% (47 tracks)"/>
+<rect class="viz-seg" x="126.8" y="286" width="207.2" height="16" style="fill:#f1a7a0" tabindex="0" data-tip="Turkish folk · Not found: 63% (1,416 tracks)"/>
+<text class="viz-inlabel" x="230.4" y="298.0" text-anchor="middle">63%</text>
+<text class="viz-tick" x="340.0" y="298.0">35%</text>
+<text class="viz-label" x="4" y="325.0">World, psychedelic</text>
+<rect class="viz-seg" x="4.0" y="330" width="84.3" height="16" style="fill:#1baf7a" tabindex="0" data-tip="World, psychedelic · Synced lyrics: 26% (155 tracks)"/>
+<text class="viz-inlabel" x="46.1" y="342.0" text-anchor="middle">26%</text>
+<rect class="viz-seg" x="88.3" y="330" width="14.1" height="16" style="fill:#8fd6b9" tabindex="0" data-tip="World, psychedelic · Plain lyrics: 4% (26 tracks)"/>
+<rect class="viz-seg" x="102.4" y="330" width="82.6" height="16" style="fill:#cbd5e1" tabindex="0" data-tip="World, psychedelic · Instrumental: 25% (152 tracks)"/>
+<text class="viz-inlabel" x="143.7" y="342.0" text-anchor="middle">25%</text>
+<rect class="viz-seg" x="185.0" y="330" width="149.0" height="16" style="fill:#f1a7a0" tabindex="0" data-tip="World, psychedelic · Not found: 45% (274 tracks)"/>
+<text class="viz-inlabel" x="259.5" y="342.0" text-anchor="middle">45%</text>
+<text class="viz-tick" x="340.0" y="342.0">30%</text>
+<text class="viz-label" x="4" y="369.0">Turkish classical</text>
+<rect class="viz-seg" x="4.0" y="374" width="45.9" height="16" style="fill:#1baf7a" tabindex="0" data-tip="Turkish classical · Synced lyrics: 14% (468 tracks)"/>
+<text class="viz-inlabel" x="26.9" y="386.0" text-anchor="middle">14%</text>
+<rect class="viz-seg" x="49.9" y="374" width="9.7" height="16" style="fill:#8fd6b9" tabindex="0" data-tip="Turkish classical · Plain lyrics: 3% (99 tracks)"/>
+<rect class="viz-seg" x="59.6" y="374" width="0.5" height="16" style="fill:#cbd5e1" tabindex="0" data-tip="Turkish classical · Instrumental: 0% (5 tracks)"/>
+<rect class="viz-seg" x="60.1" y="374" width="273.9" height="16" style="fill:#f1a7a0" tabindex="0" data-tip="Turkish classical · Not found: 83% (2,795 tracks)"/>
+<text class="viz-inlabel" x="197.0" y="386.0" text-anchor="middle">83%</text>
+<text class="viz-tick" x="340.0" y="386.0">17%</text>
+<text class="viz-label" x="4" y="413.0">Scores, classical</text>
+<rect class="viz-seg" x="4.0" y="418" width="29.4" height="16" style="fill:#1baf7a" tabindex="0" data-tip="Scores, classical · Synced lyrics: 9% (172 tracks)"/>
+<rect class="viz-seg" x="33.4" y="418" width="11.6" height="16" style="fill:#8fd6b9" tabindex="0" data-tip="Scores, classical · Plain lyrics: 4% (68 tracks)"/>
+<rect class="viz-seg" x="45.0" y="418" width="72.2" height="16" style="fill:#cbd5e1" tabindex="0" data-tip="Scores, classical · Instrumental: 22% (422 tracks)"/>
+<text class="viz-inlabel" x="81.1" y="430.0" text-anchor="middle">22%</text>
+<rect class="viz-seg" x="117.2" y="418" width="216.8" height="16" style="fill:#f1a7a0" tabindex="0" data-tip="Scores, classical · Not found: 66% (1,268 tracks)"/>
+<text class="viz-inlabel" x="225.6" y="430.0" text-anchor="middle">66%</text>
+<text class="viz-tick" x="340.0" y="430.0">12%</text>
+<text class="viz-tick" x="4" y="480">Tracks that already had lyrics are left out. Right: share found.</text>
+</svg>
