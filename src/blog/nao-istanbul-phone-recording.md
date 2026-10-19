@@ -123,13 +123,13 @@ What the correction cannot do: it cannot bring back what was never recorded. The
 
 ## The album
 
-Seventeen tracks, 1 hour 56 minutes. Four titles are still unknown to me; if you were there and recognise them, please write to me.
+Seventeen tracks, 1 hour 56 minutes. Three titles are still unknown to me; if you were there and recognise them, please write to me.
 
 | # | Title | Performer | Length |
 |---|---|---|---|
 | 1 | Wa'id (Promise) | National Arab Orchestra, Michael Ibrahim | 14:17 |
 | 2 | Michael Ibrahim speaks | | 2:50 |
-| 3 | Untitled 1 | Usama Baalbaki | 6:51 |
+| 3 | Alâ Rimsh Oyounha | Usama Baalbaki | 6:51 |
 | 4 | Lamma Bada Yatathanna | Nai Barghouti | 11:11 |
 | 5 | Nai Barghouti speaks | | 2:04 |
 | 6 | Wahashtini | Nai Barghouti | 12:40 |
