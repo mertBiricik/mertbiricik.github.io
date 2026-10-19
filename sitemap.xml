@@ -13,6 +13,12 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://mert.biricik.de/blog/music-library-analysis/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://mert.biricik.de/about/</loc>
     <lastmod>2026-10-19</lastmod>
     <priority>0.8</priority>
