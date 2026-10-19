@@ -2434,7 +2434,7 @@ details.data summary { cursor: pointer; color: #475569; }
 &lt;rect class=&quot;viz-song viz-seg&quot; x=&quot;156.1&quot; y=&quot;44&quot; width=&quot;61.1&quot; height=&quot;30&quot; rx=&quot;3&quot; tabindex=&quot;0&quot; data-tip=&quot;01. Wa&amp;#x27;id (Promise) · 14:30–28:47 (14.3 min)&quot;&gt;&lt;/rect&gt;
 &lt;text class=&quot;viz-inlabel&quot; x=&quot;186.6&quot; y=&quot;63.0&quot; text-anchor=&quot;middle&quot;&gt;1&lt;/text&gt;
 &lt;rect class=&quot;viz-speech viz-seg&quot; x=&quot;219.2&quot; y=&quot;44&quot; width=&quot;10.5&quot; height=&quot;30&quot; rx=&quot;3&quot; tabindex=&quot;0&quot; data-tip=&quot;02. Michael Ibrahim speaks · 28:47–31:37 (2.8 min)&quot;&gt;&lt;/rect&gt;
-&lt;rect class=&quot;viz-song viz-seg&quot; x=&quot;231.7&quot; y=&quot;44&quot; width=&quot;28.3&quot; height=&quot;30&quot; rx=&quot;3&quot; tabindex=&quot;0&quot; data-tip=&quot;03. Untitled 1 (Usama Baalbaki) · 31:37–38:28 (6.8 min)&quot;&gt;&lt;/rect&gt;
+&lt;rect class=&quot;viz-song viz-seg&quot; x=&quot;231.7&quot; y=&quot;44&quot; width=&quot;28.3&quot; height=&quot;30&quot; rx=&quot;3&quot; tabindex=&quot;0&quot; data-tip=&quot;03. Alâ Rimsh Oyounha (Usama Baalbaki) · 31:37–38:28 (6.8 min)&quot;&gt;&lt;/rect&gt;
 &lt;text class=&quot;viz-inlabel&quot; x=&quot;245.8&quot; y=&quot;63.0&quot; text-anchor=&quot;middle&quot;&gt;3&lt;/text&gt;
 &lt;rect class=&quot;viz-song viz-seg&quot; x=&quot;262.0&quot; y=&quot;44&quot; width=&quot;47.4&quot; height=&quot;30&quot; rx=&quot;3&quot; tabindex=&quot;0&quot; data-tip=&quot;04. Lamma Bada Yatathanna · 38:28–49:39 (11.2 min)&quot;&gt;&lt;/rect&gt;
 &lt;text class=&quot;viz-inlabel&quot; x=&quot;285.7&quot; y=&quot;63.0&quot; text-anchor=&quot;middle&quot;&gt;4&lt;/text&gt;
@@ -2507,7 +2507,7 @@ details.data summary { cursor: pointer; color: #475569; }
 &lt;rect class=&quot;viz-song viz-seg&quot; x=&quot;92.7&quot; y=&quot;44&quot; width=&quot;32.2&quot; height=&quot;30&quot; rx=&quot;3&quot; tabindex=&quot;0&quot; data-tip=&quot;01. Wa&amp;#x27;id (Promise) · 14:30–28:47 (14.3 min)&quot;&gt;&lt;/rect&gt;
 &lt;text class=&quot;viz-inlabel&quot; x=&quot;108.8&quot; y=&quot;63.0&quot; text-anchor=&quot;middle&quot;&gt;1&lt;/text&gt;
 &lt;rect class=&quot;viz-speech viz-seg&quot; x=&quot;126.9&quot; y=&quot;44&quot; width=&quot;4.8&quot; height=&quot;30&quot; rx=&quot;3&quot; tabindex=&quot;0&quot; data-tip=&quot;02. Michael Ibrahim speaks · 28:47–31:37 (2.8 min)&quot;&gt;&lt;/rect&gt;
-&lt;rect class=&quot;viz-song viz-seg&quot; x=&quot;133.7&quot; y=&quot;44&quot; width=&quot;14.4&quot; height=&quot;30&quot; rx=&quot;3&quot; tabindex=&quot;0&quot; data-tip=&quot;03. Untitled 1 (Usama Baalbaki) · 31:37–38:28 (6.8 min)&quot;&gt;&lt;/rect&gt;
+&lt;rect class=&quot;viz-song viz-seg&quot; x=&quot;133.7&quot; y=&quot;44&quot; width=&quot;14.4&quot; height=&quot;30&quot; rx=&quot;3&quot; tabindex=&quot;0&quot; data-tip=&quot;03. Alâ Rimsh Oyounha (Usama Baalbaki) · 31:37–38:28 (6.8 min)&quot;&gt;&lt;/rect&gt;
 &lt;rect class=&quot;viz-song viz-seg&quot; x=&quot;150.1&quot; y=&quot;44&quot; width=&quot;24.8&quot; height=&quot;30&quot; rx=&quot;3&quot; tabindex=&quot;0&quot; data-tip=&quot;04. Lamma Bada Yatathanna · 38:28–49:39 (11.2 min)&quot;&gt;&lt;/rect&gt;
 &lt;text class=&quot;viz-inlabel&quot; x=&quot;162.5&quot; y=&quot;63.0&quot; text-anchor=&quot;middle&quot;&gt;4&lt;/text&gt;
 &lt;rect class=&quot;viz-speech viz-seg&quot; x=&quot;176.8&quot; y=&quot;44&quot; width=&quot;2.9&quot; height=&quot;30&quot; rx=&quot;3&quot; tabindex=&quot;0&quot; data-tip=&quot;05. Nai Barghouti speaks · 49:39–51:43 (2.1 min)&quot;&gt;&lt;/rect&gt;
@@ -2571,7 +2571,7 @@ details.data summary { cursor: pointer; color: #475569; }
 &lt;/figure&gt;
 &lt;p&gt;What the correction cannot do: it cannot bring back what was never recorded. There is still nothing above about 7 kHz, so cymbals and the air of the hall stay dull, and the recording is still mono. The result sounds like a decent broadcast from an old radio, which is a long way from where it started.&lt;/p&gt;
 &lt;h2&gt;The album&lt;/h2&gt;
-&lt;p&gt;Seventeen tracks, 1 hour 56 minutes. Four titles are still unknown to me; if you were there and recognise them, please write to me.&lt;/p&gt;
+&lt;p&gt;Seventeen tracks, 1 hour 56 minutes. Three titles are still unknown to me; if you were there and recognise them, please write to me.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -2596,7 +2596,7 @@ details.data summary { cursor: pointer; color: #475569; }
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;Untitled 1&lt;/td&gt;
+&lt;td&gt;Alâ Rimsh Oyounha&lt;/td&gt;
 &lt;td&gt;Usama Baalbaki&lt;/td&gt;
 &lt;td&gt;6:51&lt;/td&gt;
 &lt;/tr&gt;
