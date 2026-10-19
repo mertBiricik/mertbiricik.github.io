@@ -133,7 +133,7 @@ Seventeen tracks, 1 hour 56 minutes. Four titles are still unknown to me; if you
 | 4 | Lamma Bada Yatathanna | Nai Barghouti | 11:11 |
 | 5 | Nai Barghouti speaks | | 2:04 |
 | 6 | Wahashtini | Nai Barghouti | 12:40 |
-| 7 | Untitled 2 (a Fairuz song) | Nai Barghouti | 4:23 |
+| 7 | Li Beirut | Nai Barghouti | 4:23 |
 | 8 | Untitled 3 | | 4:11 |
 | 9 | Shuruq | National Arab Orchestra | 10:17 |
 | 10 | Şaşkın & Al-Ain Mulayitain | National Arab Orchestra | 5:47 |
