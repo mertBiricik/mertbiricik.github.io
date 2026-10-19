@@ -1,0 +1,31 @@
+<svg class="viz viz-m" viewBox="0 0 380 414" role="img" aria-labelledby="families-m-t">
+<title id="families-m-t">Hours of music in each family</title>
+<text class="viz-label" x="4" y="15.0">Turkish classical</text>
+<rect class="viz-seg" x="4" y="20" width="316.0" height="14" rx="3" style="fill:#2a78d6" tabindex="0" data-tip="Turkish classical: 320 hours, 4,114 tracks"/>
+<text class="viz-tick" x="326.0" y="31.0">320 h</text>
+<text class="viz-label" x="4" y="55.0">Pop, synth-pop, hip-hop</text>
+<rect class="viz-seg" x="4" y="60" width="306.1" height="14" rx="3" style="fill:#8e5cd9" tabindex="0" data-tip="Pop, synth-pop and hip-hop: 310 hours, 4,506 tracks"/>
+<text class="viz-tick" x="316.1" y="71.0">310 h</text>
+<text class="viz-label" x="4" y="95.0">Turkish song, arabesk</text>
+<rect class="viz-seg" x="4" y="100" width="240.0" height="14" rx="3" style="fill:#eb6834" tabindex="0" data-tip="Turkish song and arabesk: 243 hours, 3,480 tracks"/>
+<text class="viz-tick" x="250.0" y="111.0">243 h</text>
+<text class="viz-label" x="4" y="135.0">Country, chanson</text>
+<rect class="viz-seg" x="4" y="140" width="227.1" height="14" rx="3" style="fill:#c99a1c" tabindex="0" data-tip="Country, chanson and songwriters: 230 hours, 4,066 tracks"/>
+<text class="viz-tick" x="237.1" y="151.0">230 h</text>
+<text class="viz-label" x="4" y="175.0">Turkish/Arabic/Persian pop</text>
+<rect class="viz-seg" x="4" y="180" width="211.3" height="14" rx="3" style="fill:#c2417d" tabindex="0" data-tip="Turkish, Arabic and Persian pop: 214 hours, 3,189 tracks"/>
+<text class="viz-tick" x="221.3" y="191.0">214 h</text>
+<text class="viz-label" x="4" y="215.0">Rock, indie, metal</text>
+<rect class="viz-seg" x="4" y="220" width="173.8" height="14" rx="3" style="fill:#475569" tabindex="0" data-tip="Rock, indie and metal: 176 hours, 2,452 tracks"/>
+<text class="viz-tick" x="183.8" y="231.0">176 h</text>
+<text class="viz-label" x="4" y="255.0">Turkish folk</text>
+<rect class="viz-seg" x="4" y="260" width="159.0" height="14" rx="3" style="fill:#1baf7a" tabindex="0" data-tip="Turkish folk: 161 hours, 2,333 tracks"/>
+<text class="viz-tick" x="169.0" y="271.0">161 h</text>
+<text class="viz-label" x="4" y="295.0">Scores, classical</text>
+<rect class="viz-seg" x="4" y="300" width="131.3" height="14" rx="3" style="fill:#25aab6" tabindex="0" data-tip="Scores, classical and ambient: 133 hours, 1,937 tracks"/>
+<text class="viz-tick" x="141.3" y="311.0">133 h</text>
+<text class="viz-label" x="4" y="335.0">World, psychedelic</text>
+<rect class="viz-seg" x="4" y="340" width="38.5" height="14" rx="3" style="fill:#9c6b3c" tabindex="0" data-tip="World and psychedelic: 39 hours, 625 tracks"/>
+<text class="viz-tick" x="48.5" y="351.0">39 h</text>
+<text class="viz-tick" x="4" y="406">Hours of music</text>
+</svg>
