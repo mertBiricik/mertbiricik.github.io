@@ -1,8 +1,8 @@
 {
   "hero": {
-    "eyebrow": "Security researcher · Istanbul",
-    "title": "Hi, I'm Mert. I work on security and the infrastructure underneath it.",
-    "valueProposition": "I'm an Erasmus Mundus scholar in the CyberMACS master's programme in applied cybersecurity. Before that I ran the network and servers at Kadir Has University's cybersecurity center, and I still build data platforms for research projects. Lately I've been working on anomaly detection in power grids, OSINT for SCADA systems and EEG-based brain–computer interfaces.",
+    "eyebrow": "Istanbul",
+    "title": "I'm Mert. I study cybersecurity and look after servers.",
+    "valueProposition": "I'm doing the CyberMACS master's in applied cybersecurity. Before that I looked after the network and servers of the cybersecurity centre at Kadir Has University for two years, and I still write code for a couple of research projects there. This site has the things I've worked on and a few longer posts.",
     "ctaPrimary": {
       "label": "Projects",
       "url": "/projects/"
@@ -15,8 +15,8 @@
   "philosophy": {
     "title": "About me",
     "content": [
-      "Most of my work sits where security meets day-to-day operations: keeping a lab's machines and network running, digging through memory dumps for malware that never touches the disk, and turning messy research data into something people can actually query. I like systems that are simple enough to understand when they break.",
-      "I'm also a search and rescue operator and instructor at AFAD. Rescue work teaches you to keep plans simple, to check your gear before you need it and to stay calm when things go wrong. I try to bring the same habits to the servers I look after."
+      "So far my work has been fairly ordinary infrastructure and data work: keeping a research lab's machines and network running, building a data portal and a few data pipelines for TÜBİTAK projects, and helping with papers on power grid data and EEG signals. I try to keep things simple and write down how they work.",
+      "Outside of that I'm in AFAD's search and rescue team and teach some of their courses. I climb when I can, and I keep a large music library that turns up in the blog now and then."
     ]
   },
   "timeline": [
