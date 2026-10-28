@@ -1,62 +1,32 @@
 (function () {
   'use strict';
 
-  const root = document.documentElement;
   const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  function applyTheme(theme) {
-    root.setAttribute('data-theme', theme);
-    root.classList.toggle('dark', theme === 'dark');
-    try { localStorage.setItem('theme', theme); } catch (e) { /* ignore */ }
-  }
-
-  function setupThemeToggle() {
-    const btn = document.getElementById('theme-toggle');
-    if (!btn) return;
-    btn.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-      applyTheme(current === 'dark' ? 'light' : 'dark');
-    });
-  }
 
   function setupMobileMenu() {
     const toggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('mobile-menu');
     if (!toggle || !menu) return;
+    const iconOpen = toggle.querySelector('.icon-open');
+    const iconClose = toggle.querySelector('.icon-close');
 
-    function close() {
-      menu.classList.add('hidden');
-      toggle.setAttribute('aria-expanded', 'false');
+    function set(open) {
+      menu.classList.toggle('hidden', !open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      if (iconOpen) iconOpen.classList.toggle('hidden', open);
+      if (iconClose) iconClose.classList.toggle('hidden', !open);
     }
-    function open() {
-      menu.classList.remove('hidden');
-      toggle.setAttribute('aria-expanded', 'true');
-    }
 
-    toggle.addEventListener('click', () => {
-      const isHidden = menu.classList.contains('hidden');
-      if (isHidden) open(); else close();
-    });
-
-    menu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', close);
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') close();
-    });
+    toggle.addEventListener('click', () => set(menu.classList.contains('hidden')));
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => set(false)));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') set(false); });
   }
 
   function setupHeaderShadow() {
     const header = document.getElementById('site-header');
     if (!header) return;
-    const onScroll = () => {
-      if (window.scrollY > 8) {
-        header.classList.add('shadow-sm');
-      } else {
-        header.classList.remove('shadow-sm');
-      }
-    };
+    const onScroll = () => header.classList.toggle('shadow-sm', window.scrollY > 8);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
   }
@@ -75,39 +45,19 @@
     });
   }
 
-  function setupRevealOnScroll() {
-    const items = document.querySelectorAll('.reveal-on-scroll');
-    if (!items.length) return;
-    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-      items.forEach(el => el.classList.add('is-visible'));
-      return;
-    }
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    items.forEach(el => observer.observe(el));
-  }
-
   function setupExternalLinkSafety() {
     document.querySelectorAll('a[target="_blank"]').forEach(a => {
-      const rel = (a.getAttribute('rel') || '').split(/\s+/);
+      const rel = (a.getAttribute('rel') || '').split(/\s+/).filter(Boolean);
       if (!rel.includes('noopener')) rel.push('noopener');
       if (!rel.includes('noreferrer')) rel.push('noreferrer');
-      a.setAttribute('rel', rel.filter(Boolean).join(' '));
+      a.setAttribute('rel', rel.join(' '));
     });
   }
 
   function init() {
-    setupThemeToggle();
     setupMobileMenu();
     setupHeaderShadow();
     setupSmoothAnchors();
-    setupRevealOnScroll();
     setupExternalLinkSafety();
   }
 

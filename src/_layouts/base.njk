@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ lang or 'en' }}" data-theme="light">
+<html lang="{{ lang or 'en' }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,21 +13,25 @@
   <meta property="og:title" content="{% if title %}{{ title }} · {% endif %}{{ metadata.title }}">
   <meta property="og:description" content="{{ description or metadata.description }}">
   <meta property="og:site_name" content="{{ metadata.title }}">
+  {% if lang == 'tr' %}<meta property="og:locale" content="tr_TR">{% else %}<meta property="og:locale" content="en_US">{% endif %}
 
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{% if title %}{{ title }} · {% endif %}{{ metadata.title }}">
   <meta name="twitter:description" content="{{ description or metadata.description }}">
 
   <link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
+  {% if translation %}
+  <link rel="alternate" hreflang="{{ lang or 'en' }}" href="{{ metadata.url }}{{ page.url }}">
+  <link rel="alternate" hreflang="{{ 'en' if lang == 'tr' else 'tr' }}" href="{{ metadata.url }}{{ translation }}">
+  {% endif %}
 
   <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
   <link rel="manifest" href="/assets/icons/site.webmanifest">
   <meta name="theme-color" content="#f8fafc">
   <link rel="alternate" href="/rss.xml" type="application/atom+xml" title="{{ metadata.title }} — Feed">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="min-h-screen flex flex-col bg-slate-50 text-slate-700 selection:bg-primary-500 selection:text-white">
@@ -46,17 +50,18 @@
         <ul id="nav-menu" class="hidden md:flex items-center gap-8">
           {% for item in navigation %}
           <li>
-            <a href="{{ item.url }}" class="nav-link {% if page.url == item.url %}text-primary-600 font-semibold{% endif %}">{{ item.text }}</a>
+            <a href="{{ item.url }}" class="nav-link {% if page.url == item.url %}text-primary-600 font-semibold{% endif %}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.text }}</a>
           </li>
           {% endfor %}
         </ul>
 
         <div class="flex items-center gap-3">
-          <a href="{{ metadata.social.github }}" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-500 hover:text-primary-600 hover:bg-primary-50 transition-colors duration-200" aria-label="GitHub">
-            <i class="fa-brands fa-github text-xl"></i>
+          <a href="{{ metadata.social.github }}" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-500 hover:text-primary-600 hover:bg-primary-50 transition-colors duration-200 text-xl" aria-label="GitHub">
+            {% include "icons/github.svg" %}
           </a>
-          <button id="menu-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-slate-500 hover:text-primary-600 hover:bg-primary-50 transition-colors duration-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-            <i class="fa-solid fa-bars text-xl"></i>
+          <button id="menu-toggle" type="button" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-slate-500 hover:text-primary-600 hover:bg-primary-50 transition-colors duration-200 text-xl" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="icon-open inline-flex">{% include "icons/menu.svg" %}</span>
+            <span class="icon-close hidden">{% include "icons/close.svg" %}</span>
           </button>
         </div>
       </div>
@@ -65,7 +70,7 @@
         <ul class="py-4 space-y-2 px-4">
           {% for item in navigation %}
           <li>
-            <a href="{{ item.url }}" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors {% if page.url == item.url %}text-primary-600 bg-primary-50{% else %}text-slate-600{% endif %}">{{ item.text }}</a>
+            <a href="{{ item.url }}" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors {% if page.url == item.url %}text-primary-600 bg-primary-50{% else %}text-slate-600{% endif %}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.text }}</a>
           </li>
           {% endfor %}
         </ul>
@@ -93,6 +98,7 @@
             <li><a href="{{ metadata.social.email }}" class="hover:text-primary-600 transition-colors duration-200">mert@biricik.de</a></li>
             <li><a href="{{ metadata.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="hover:text-primary-600 transition-colors duration-200">LinkedIn</a></li>
             <li><a href="{{ metadata.social.github }}" target="_blank" rel="noopener noreferrer" class="hover:text-primary-600 transition-colors duration-200">GitHub</a></li>
+            <li><a href="{{ metadata.social.scholar }}" target="_blank" rel="noopener noreferrer" class="hover:text-primary-600 transition-colors duration-200">Google Scholar</a></li>
           </ul>
         </div>
 

@@ -2,7 +2,7 @@
   "hero": {
     "eyebrow": "Security researcher · Istanbul",
     "title": "Hi, I'm Mert. I work on security and the infrastructure underneath it.",
-    "valueProposition": "I'm an Erasmus Mundus scholar in the CyberMACS master's programme in applied cybersecurity. Before that I ran the network and servers at Kadir Has University's cybersecurity center, and I still build data platforms for research projects. Lately I've been working on memory forensics, anomaly detection in power grids and EEG-based brain–computer interfaces.",
+    "valueProposition": "I'm an Erasmus Mundus scholar in the CyberMACS master's programme in applied cybersecurity. Before that I ran the network and servers at Kadir Has University's cybersecurity center, and I still build data platforms for research projects. Lately I've been working on anomaly detection in power grids, OSINT for SCADA systems and EEG-based brain–computer interfaces.",
     "ctaPrimary": {
       "label": "Projects",
       "url": "/projects/"
@@ -21,7 +21,7 @@
   },
   "timeline": [
     {
-      "period": "2026 – 2027",
+      "period": "2026 – 2028",
       "role": "MSc in Applied Cybersecurity (CyberMACS)",
       "organization": "Erasmus Mundus Joint MSc",
       "description": "Full EU scholarship. The first year is at Kadir Has University in Istanbul and SRH Berlin, the second at UKIM in Skopje. Courses in cryptography, network security and applied cybersecurity."

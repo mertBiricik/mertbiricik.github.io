@@ -1,0 +1,9 @@
+{%- if status == 'published' -%}
+<span class="inline-flex px-2 py-0.5 rounded text-[11px] font-bold bg-primary-50 text-primary-700 uppercase tracking-wider">Published</span>
+{%- elif status == 'under-review' -%}
+<span class="inline-flex px-2 py-0.5 rounded text-[11px] font-bold bg-amber-50 text-amber-700 uppercase tracking-wider">Under review</span>
+{%- elif status == 'submitted' -%}
+<span class="inline-flex px-2 py-0.5 rounded text-[11px] font-bold bg-amber-50 text-amber-700 uppercase tracking-wider">Submitted</span>
+{%- else -%}
+<span class="inline-flex px-2 py-0.5 rounded text-[11px] font-bold bg-slate-100 text-slate-600 uppercase tracking-wider">{{ status | replace("-", " ") }}</span>
+{%- endif -%}

@@ -1,108 +1,109 @@
 ---
 layout: base
 title: About
-description: Mert Biricik — cybersecurity researcher, CyberMACS scholar, AFAD search & rescue operator. Education, experience, languages, and interests.
+description: Mert Biricik, cybersecurity researcher and Erasmus Mundus CyberMACS scholar in Istanbul. Education, experience, skills and languages.
 priority: 0.8
 changefreq: monthly
 ---
 
-<section class="container-wide pt-12 sm:pt-16 lg:pt-20 pb-10">
-  <div class="grid lg:grid-cols-12 gap-10">
-    <div class="lg:col-span-8 lg:pr-10 lg:border-r-2 lg:border-ink-900 dark:lg:border-bone-100">
-      <p class="eyebrow-blood">About</p>
-      <h1 class="display-1 mt-5 text-ink-900 dark:text-bone-50 text-balance">Mert Biricik.</h1>
-      <p class="mt-6 font-sans text-xl leading-relaxed text-ink-700 dark:text-bone-200 max-w-2xl">{{ profile.summary }}</p>
-      <p class="mt-5 font-sans text-lg leading-relaxed text-ink-700 dark:text-bone-200 max-w-2xl">
-        I work at the seam between systems engineering and applied AI: building research tools that survive production loads, hardening the infrastructure that hosts them, and turning sensor data — power grids, EEG signals, sports telemetry — into signals defenders can act on.
+<section class="container-wide pt-20 pb-16 md:pt-28">
+  <div class="grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-8">
+      <p class="meta-label mb-6">About</p>
+      <h1 class="display-2 mb-8">About me</h1>
+      <p class="font-sans text-xl leading-relaxed text-slate-600 max-w-2xl">{{ profile.summary }}</p>
+      <p class="mt-6 font-sans text-lg leading-relaxed text-slate-600 max-w-2xl">
+        Day to day that means a mix of systems work and applied machine learning: keeping research infrastructure running, and building the tools and data pipelines that projects need. The data has ranged from power grid readings and EEG signals to basketball video.
       </p>
 
-      <div class="mt-10">
-        <p class="eyebrow-blood">Particular interests</p>
-        <ul class="mt-3 grid sm:grid-cols-2 gap-y-1.5">
+      <div class="mt-12">
+        <p class="label mb-4">Particular interests</p>
+        <ul class="grid sm:grid-cols-2 gap-y-3 gap-x-8">
           {% for f in profile.focus %}
-          <li class="flex gap-2 font-sans text-base text-ink-700 dark:text-bone-200">
-            <span class="text-blood-700 dark:text-blood-400">·</span>{{ f }}
-          </li>
+          <li class="flex items-center gap-3 font-sans text-slate-700"><span class="w-1.5 h-1.5 rounded-full bg-primary-400 block shrink-0"></span>{{ f }}</li>
           {% endfor %}
         </ul>
       </div>
     </div>
 
     <aside class="lg:col-span-4">
-      <p class="eyebrow">Particulars</p>
-      <dl class="mt-4">
-        <div class="def-row">
-          <dt class="def-key">Citizenship</dt>
-          <dd class="font-sans text-base text-ink-700 dark:text-bone-200">{{ profile.citizenship }}</dd>
-        </div>
-        <div class="def-row">
-          <dt class="def-key">Based</dt>
-          <dd class="font-sans text-base text-ink-700 dark:text-bone-200">{{ profile.location }}</dd>
-        </div>
-        <div class="def-row">
-          <dt class="def-key">Languages</dt>
-          <dd>
-            <ul class="space-y-0.5">
-              {% for l in profile.languages %}
-              <li class="font-sans text-base text-ink-700 dark:text-bone-200"><span class="font-semibold">{{ l.name }}</span> — {{ l.level }}{% if l.note %} <span class="font-mono text-xs text-ink-500 dark:text-bone-300">({{ l.note }})</span>{% endif %}</li>
-              {% endfor %}
-            </ul>
-          </dd>
-        </div>
-        <div class="def-row">
-          <dt class="def-key">Off the clock</dt>
-          <dd class="font-sans text-base text-ink-700 dark:text-bone-200">{{ profile.interests | join(' · ') }}</dd>
-        </div>
-      </dl>
+      <div class="clean-card">
+        <dl class="space-y-6">
+          <div>
+            <dt class="label mb-1">Citizenship</dt>
+            <dd class="font-sans text-slate-900">{{ profile.citizenship }}</dd>
+          </div>
+          <div>
+            <dt class="label mb-1">Based in</dt>
+            <dd class="font-sans text-slate-900">{{ profile.location }}</dd>
+          </div>
+          <div>
+            <dt class="label mb-2">Languages</dt>
+            <dd>
+              <ul class="space-y-1.5">
+                {% for l in profile.languages %}
+                <li class="font-sans text-slate-900"><span class="font-semibold">{{ l.name }}</span> <span class="text-slate-500">{{ l.level }}{% if l.note %}, {{ l.note }}{% endif %}</span></li>
+                {% endfor %}
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt class="label mb-1">Off the clock</dt>
+            <dd class="font-sans text-slate-900">{{ profile.interests | join(', ') }}</dd>
+          </div>
+        </dl>
+      </div>
     </aside>
   </div>
 </section>
 
-{# ============= 01 — STACK ============= #}
-<section class="container-wide section-tight">
-  <div class="masthead">
-    <span class="eyebrow-blood">01 — Stack</span>
-    <span class="eyebrow hidden sm:inline">Tools I use</span>
-  </div>
-
-  <div class="mt-10 grid md:grid-cols-2 gap-0 border-2 border-ink-900 dark:border-bone-100">
-    {% for group in profile.skills %}
-    <div class="p-7 {% if loop.index0 % 2 == 0 %}md:border-r-2{% endif %} {% if loop.index0 < (profile.skills | length) - 2 %}border-b-2{% else %}border-b-2 md:border-b-0{% endif %} border-ink-900 dark:border-bone-100">
-      <div class="flex items-baseline justify-between">
-        <h3 class="font-display text-xl text-ink-900 dark:text-bone-50">{{ group.group }}</h3>
-        <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-500 dark:text-bone-300">{{ group.items | length }} items</span>
-      </div>
-      <ul class="mt-4 flex flex-wrap gap-1.5">
-        {% for item in group.items %}<li class="tag">{{ item }}</li>{% endfor %}
-      </ul>
+{# ============= SKILLS ============= #}
+<section class="bg-white border-y border-slate-200 py-20">
+  <div class="container-wide">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-slate-200 pb-6">
+      <h2 class="display-3">Skills</h2>
+      <p class="meta-label">Tools I use</p>
     </div>
-    {% endfor %}
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {% for group in profile.skills %}
+      <div class="clean-card group hover:border-primary-200">
+        <div class="h-12 w-12 rounded-xl bg-primary-50 flex items-center justify-center text-primary-600 text-xl mb-6 group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">
+          {% include "icons/" ~ group.icon ~ ".svg" %}
+        </div>
+        <h3 class="font-display text-xl font-bold text-slate-900 mb-4">{{ group.group }}</h3>
+        <ul class="flex flex-wrap gap-2">
+          {% for item in group.items %}<li class="tag">{{ item }}</li>{% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
 
-{# ============= 02 — EXPERIENCE ============= #}
-<section class="container-wide section-tight">
-  <div class="masthead">
-    <span class="eyebrow-blood">02 — Experience</span>
-    <span class="eyebrow hidden sm:inline">Where I've worked</span>
+{# ============= EXPERIENCE ============= #}
+<section class="container-wide py-20">
+  <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-slate-200 pb-6">
+    <h2 class="display-3">Experience</h2>
+    <p class="meta-label">Where I've worked</p>
   </div>
 
-  <ol class="mt-10 border-t-2 border-ink-900 dark:border-bone-100">
+  <ol class="space-y-6">
     {% for job in profile.experience %}
-    <li class="grid md:grid-cols-12 gap-4 py-7 border-b-2 border-ink-900 dark:border-bone-100">
+    <li class="clean-card grid md:grid-cols-12 gap-6 hover:border-primary-200">
       <div class="md:col-span-3">
-        <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">{{ job.period }}</p>
-        {% if job.location %}<p class="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-500 dark:text-bone-300">{{ job.location }}</p>{% endif %}
+        <p class="font-mono text-xs font-semibold text-slate-400 tracking-wider">{{ job.period }}</p>
+        {% if job.location %}<p class="mt-1 font-sans text-sm text-slate-500">{{ job.location }}</p>{% endif %}
       </div>
       <div class="md:col-span-9">
-        <h3 class="font-display text-2xl text-ink-900 dark:text-bone-50">{{ job.role }}</h3>
-        <p class="mt-1 font-sans text-ink-500 dark:text-bone-300">
-          at {% if job.url %}<a href="{{ job.url }}" target="_blank" rel="noopener noreferrer">{{ job.org }}</a>{% else %}{{ job.org }}{% endif %}
+        <h3 class="font-display text-xl font-bold text-slate-900">{{ job.role }}</h3>
+        <p class="mt-1 font-sans font-semibold text-sm text-primary-600">
+          {% if job.url %}<a href="{{ job.url }}" target="_blank" rel="noopener noreferrer" class="hover:underline">{{ job.org }}</a>{% else %}{{ job.org }}{% endif %}
         </p>
         <ul class="mt-4 space-y-2">
           {% for b in job.bullets %}
-          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
-            <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
+          <li class="flex gap-3 font-sans text-[15px] text-slate-600 leading-relaxed">
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-300 block shrink-0 mt-2.5"></span>
             <span>{{ b }}</span>
           </li>
           {% endfor %}
@@ -113,42 +114,44 @@ changefreq: monthly
   </ol>
 </section>
 
-{# ============= 03 — EDUCATION ============= #}
-<section class="container-wide section-tight">
-  <div class="masthead">
-    <span class="eyebrow-blood">03 — Education</span>
-    <span class="eyebrow hidden sm:inline">Studies</span>
-  </div>
+{# ============= EDUCATION ============= #}
+<section class="bg-white border-y border-slate-200 py-20">
+  <div class="container-wide">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-slate-200 pb-6">
+      <h2 class="display-3">Education</h2>
+      <p class="meta-label">Studies</p>
+    </div>
 
-  <ol class="mt-10 border-t-2 border-ink-900 dark:border-bone-100">
-    {% for ed in profile.education %}
-    <li class="grid md:grid-cols-12 gap-4 py-7 border-b-2 border-ink-900 dark:border-bone-100">
-      <div class="md:col-span-3">
-        <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">{{ ed.period }}</p>
-      </div>
-      <div class="md:col-span-9">
-        <h3 class="font-display text-2xl text-ink-900 dark:text-bone-50">
-          {% if ed.url %}<a href="{{ ed.url }}" target="_blank" rel="noopener noreferrer">{{ ed.degree }}</a>{% else %}{{ ed.degree }}{% endif %}
-        </h3>
-        <p class="mt-1 font-sans text-ink-500 dark:text-bone-300">{{ ed.institution }}</p>
-        <ul class="mt-4 space-y-2">
-          {% for d in ed.details %}
-          <li class="flex gap-3 font-sans text-base text-ink-700 dark:text-bone-200 leading-relaxed">
-            <span class="text-blood-700 dark:text-blood-400 flex-none">›</span>
-            <span>{{ d }}</span>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </li>
-    {% endfor %}
-  </ol>
+    <ol class="space-y-6">
+      {% for ed in profile.education %}
+      <li class="clean-card grid md:grid-cols-12 gap-6 hover:border-primary-200">
+        <div class="md:col-span-3">
+          <p class="font-mono text-xs font-semibold text-slate-400 tracking-wider">{{ ed.period }}</p>
+        </div>
+        <div class="md:col-span-9">
+          <h3 class="font-display text-xl font-bold text-slate-900">
+            {% if ed.url %}<a href="{{ ed.url }}" target="_blank" rel="noopener noreferrer" class="hover:text-primary-600">{{ ed.degree }}</a>{% else %}{{ ed.degree }}{% endif %}
+          </h3>
+          <p class="mt-1 font-sans font-semibold text-sm text-primary-600">{{ ed.institution }}</p>
+          <ul class="mt-4 space-y-2">
+            {% for d in ed.details %}
+            <li class="flex gap-3 font-sans text-[15px] text-slate-600 leading-relaxed">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 block shrink-0 mt-2.5"></span>
+              <span>{{ d }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
 </section>
 
-<section class="container-wide section-tight text-center">
-  <h2 class="display-3 text-ink-900 dark:text-bone-50">Get in touch.</h2>
-  <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
-    <a href="/contact/" class="btn-solid">→ Contact</a>
-    <a href="/projects/" class="btn-ghost">View projects</a>
+<section class="container-wide section text-center">
+  <h2 class="display-3 mb-8">Get in touch</h2>
+  <div class="flex flex-wrap items-center justify-center gap-4">
+    <a href="/contact/" class="btn-primary">Contact</a>
+    <a href="/projects/" class="btn-secondary">Projects</a>
   </div>
 </section>

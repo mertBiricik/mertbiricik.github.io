@@ -1,124 +1,105 @@
 ---
 layout: base
 title: Publications
-description: Peer-reviewed and forthcoming publications by Mert Biricik in cybersecurity, memory forensics, BCI, and critical infrastructure protection.
+description: "Publications by Mert Biricik: two IEEE UPEC 2025 papers on power distribution security, and manuscripts under review on cognitive screening and the brainrot literature."
 priority: 0.8
 changefreq: monthly
 ---
 
-<section class="container-wide pt-12 sm:pt-16 lg:pt-20 pb-10">
-  <div class="grid lg:grid-cols-12 gap-10">
-    <div class="lg:col-span-8 lg:pr-10 lg:border-r-2 lg:border-ink-900 dark:lg:border-bone-100">
-      <p class="eyebrow-blood">Publications</p>
-      <h1 class="display-1 mt-5 text-ink-900 dark:text-bone-50 text-balance">Research output.</h1>
-      <p class="mt-6 font-sans text-xl text-ink-700 dark:text-bone-200 leading-relaxed">
-        Peer-reviewed work and active manuscripts across cybersecurity, memory forensics, brain-computer interfaces, and AI-driven protection of critical infrastructure.
+{% set published = 0 %}{% set inReview = 0 %}
+{% for p in publications %}{% if p.status == 'published' %}{% set published = published + 1 %}{% elif p.status == 'under-review' or p.status == 'submitted' %}{% set inReview = inReview + 1 %}{% endif %}{% endfor %}
+
+<section class="container-wide pt-20 pb-12 md:pt-28">
+  <div class="grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-8">
+      <p class="meta-label mb-6">Publications</p>
+      <h1 class="display-2 mb-8">Papers and manuscripts</h1>
+      <p class="font-sans text-xl text-slate-600 leading-relaxed max-w-2xl">
+        Two conference papers on the security of power distribution systems, and two manuscripts under review on cognitive screening tests and the brainrot literature.
       </p>
-      <p class="mt-4 font-mono text-[11px] uppercase tracking-[0.18em]">
-        <a href="{{ metadata.social.scholar }}" target="_blank" rel="noopener noreferrer" class="no-underline hover:underline">→ Indexed at Google Scholar</a>
+      <p class="mt-6">
+        <a href="{{ metadata.social.scholar }}" target="_blank" rel="noopener noreferrer" class="font-sans text-sm font-medium text-primary-600 hover:underline">Google Scholar profile</a>
       </p>
     </div>
 
     <aside class="lg:col-span-4">
-      <p class="eyebrow">At a glance</p>
-      <dl class="mt-4">
-        <div class="def-row">
-          <dt class="def-key">Total</dt>
-          <dd class="font-display font-bold text-2xl text-ink-900 dark:text-bone-50">{{ publications | length }}</dd>
+      <div class="clean-card grid grid-cols-3 gap-4 text-center">
+        <div>
+          <p class="font-display font-bold text-3xl text-slate-900">{{ publications | length }}</p>
+          <p class="label mt-1">Total</p>
         </div>
-        <div class="def-row">
-          <dt class="def-key">Published</dt>
-          <dd class="font-display font-bold text-2xl text-ink-900 dark:text-bone-50">{% set published = 0 %}{% for p in publications %}{% if p.status == 'published' %}{% set published = published + 1 %}{% endif %}{% endfor %}{{ published }}</dd>
+        <div>
+          <p class="font-display font-bold text-3xl text-slate-900">{{ published }}</p>
+          <p class="label mt-1">Published</p>
         </div>
-        <div class="def-row">
-          <dt class="def-key">In review</dt>
-          <dd class="font-display font-bold text-2xl text-ink-900 dark:text-bone-50">{% set rev = 0 %}{% for p in publications %}{% if p.status == 'under-review' %}{% set rev = rev + 1 %}{% endif %}{% endfor %}{{ rev }}</dd>
+        <div>
+          <p class="font-display font-bold text-3xl text-slate-900">{{ inReview }}</p>
+          <p class="label mt-1">In review</p>
         </div>
-        <div class="def-row">
-          <dt class="def-key">In preparation</dt>
-          <dd class="font-display font-bold text-2xl text-ink-900 dark:text-bone-50">{% set prep = 0 %}{% for p in publications %}{% if p.status == 'in-preparation' or p.status == 'ready' %}{% set prep = prep + 1 %}{% endif %}{% endfor %}{{ prep }}</dd>
-        </div>
-      </dl>
+      </div>
     </aside>
   </div>
 </section>
 
-<section class="container-wide section-tight">
-  <ol class="border-t-2 border-ink-900 dark:border-bone-100">
+<section class="container-wide pb-24">
+  <ol class="grid gap-6">
     {% for pub in publications %}
-    <article class="grid md:grid-cols-12 gap-6 py-10 border-b-2 border-ink-900 dark:border-bone-100">
-      <div class="md:col-span-2">
-        <span class="font-display font-bold text-5xl text-blood-700 dark:text-blood-400 leading-none">{{ pub.year }}</span>
-      </div>
-
-      <div class="md:col-span-7 md:pr-6 md:border-r-2 md:border-ink-900 dark:md:border-bone-100">
-        <h3 class="font-display text-2xl sm:text-3xl leading-tight text-ink-900 dark:text-bone-50">
-          {% if pub.link %}<a href="{{ pub.link }}" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
-        </h3>
-        <p class="mt-3 font-sans text-ink-500 dark:text-bone-300">{{ pub.authors | join(', ') }}</p>
-        <p class="mt-4 font-sans text-base sm:text-[17px] leading-relaxed text-ink-700 dark:text-bone-200">{{ pub.summary }}</p>
-
-        {% if pub.tags %}
-        <ul class="mt-5 flex flex-wrap gap-1.5">
-          {% for t in pub.tags %}<li class="tag">{{ t }}</li>{% endfor %}
-        </ul>
-        {% endif %}
-      </div>
-
-      <div class="md:col-span-3 space-y-4">
-        <div>
-          <p class="eyebrow mb-2">Venue</p>
-          <p class="font-display font-semibold text-base text-ink-900 dark:text-bone-50">{{ pub.venue }}</p>
+    <li>
+      <article class="clean-card flex flex-col md:flex-row gap-6 md:gap-8 items-start group hover:border-primary-200">
+        <div class="shrink-0 font-display text-4xl font-bold text-slate-300 group-hover:text-primary-500 transition-colors">{{ pub.year }}</div>
+        <div class="flex-1 min-w-0">
+          <div class="flex flex-wrap items-center gap-3 mb-3">
+            {% set status = pub.status %}{% include "status.njk" %}
+            <span class="font-sans font-medium text-xs text-slate-400 uppercase tracking-wider">{{ pub.venue }}</span>
+          </div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors leading-snug">
+            {% if pub.link %}<a href="{{ pub.link }}" target="_blank" rel="noopener noreferrer" class="hover:underline">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+          </h2>
+          <p class="font-sans text-sm font-medium text-slate-600 mb-3">{{ pub.authors | join(', ') }}</p>
+          <p class="font-sans text-slate-500 leading-relaxed">{{ pub.summary }}</p>
+          <div class="mt-5 flex flex-wrap items-center gap-2">
+            {% for t in pub.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+            {% if pub.doi %}<a href="{{ pub.link }}" target="_blank" rel="noopener noreferrer" class="tag hover:text-primary-600 font-mono break-all">doi:{{ pub.doi }}</a>{% endif %}
+          </div>
         </div>
-        <div>
-          <p class="eyebrow mb-2">Status</p>
-          {% if pub.status == 'published' %}<span class="status-published">Published</span>
-          {% elif pub.status == 'under-review' %}<span class="status-review">Under review</span>
-          {% elif pub.status == 'ready' %}<span class="status-ready">Ready</span>
-          {% elif pub.status == 'in-preparation' %}<span class="status-prep">In preparation</span>
-          {% endif %}
-        </div>
-        {% if pub.doi %}
-        <div>
-          <p class="eyebrow mb-2">DOI</p>
-          <a href="{{ pub.link }}" target="_blank" rel="noopener noreferrer" class="font-mono text-xs uppercase tracking-[0.14em] no-underline hover:underline break-all">{{ pub.doi }}</a>
-        </div>
-        {% endif %}
-      </div>
-    </article>
+      </article>
+    </li>
     {% endfor %}
   </ol>
 </section>
 
-<section class="container-wide section-tight">
-  <div class="masthead">
-    <span class="eyebrow-blood">Research areas</span>
-  </div>
+<section class="bg-white border-y border-slate-200 py-20">
+  <div class="container-wide">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-slate-200 pb-6">
+      <h2 class="display-3">Research areas</h2>
+      <p class="meta-label">What the papers are about</p>
+    </div>
 
-  <div class="mt-8 grid md:grid-cols-3 gap-0 border-2 border-ink-900 dark:border-bone-100">
-    <div class="p-7 border-b-2 md:border-b-0 md:border-r-2 border-ink-900 dark:border-bone-100">
-      <span class="font-mono text-xs uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">01</span>
-      <h3 class="font-display text-xl mt-3 text-ink-900 dark:text-bone-50">Critical infrastructure security</h3>
-      <p class="mt-3 font-sans text-ink-700 dark:text-bone-200 leading-relaxed">SCADA threat discovery, OSINT-based assessments, anomaly detection in power distribution networks.</p>
-    </div>
-    <div class="p-7 border-b-2 md:border-b-0 md:border-r-2 border-ink-900 dark:border-bone-100">
-      <span class="font-mono text-xs uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">02</span>
-      <h3 class="font-display text-xl mt-3 text-ink-900 dark:text-bone-50">Memory forensics</h3>
-      <p class="mt-3 font-sans text-ink-700 dark:text-bone-200 leading-relaxed">Unsupervised triage on Volatility3 artefacts; behavioural and graph-theoretic features against fileless malware.</p>
-    </div>
-    <div class="p-7">
-      <span class="font-mono text-xs uppercase tracking-[0.2em] text-blood-700 dark:text-blood-400">03</span>
-      <h3 class="font-display text-xl mt-3 text-ink-900 dark:text-bone-50">EEG / BCI signal processing</h3>
-      <p class="mt-3 font-sans text-ink-700 dark:text-bone-200 leading-relaxed">Real-time change-point detection (PELT) for asynchronous BCI on edge devices.</p>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="clean-card">
+        <span class="font-mono text-xs font-bold text-primary-600 tracking-wider">01</span>
+        <h3 class="font-display text-xl font-bold text-slate-900 mt-3 mb-3">Critical infrastructure security</h3>
+        <p class="font-sans text-slate-600 leading-relaxed">OSINT assessments of SCADA systems and anomaly detection for non-technical losses in power distribution networks.</p>
+      </div>
+      <div class="clean-card">
+        <span class="font-mono text-xs font-bold text-primary-600 tracking-wider">02</span>
+        <h3 class="font-display text-xl font-bold text-slate-900 mt-3 mb-3">Cognitive assessment</h3>
+        <p class="font-sans text-slate-600 leading-relaxed">How screening tests like the MMSE and the MoCA perform at their conventional cut-offs, and what the "brainrot" literature actually contains.</p>
+      </div>
+      <div class="clean-card">
+        <span class="font-mono text-xs font-bold text-primary-600 tracking-wider">03</span>
+        <h3 class="font-display text-xl font-bold text-slate-900 mt-3 mb-3">EEG and brain–computer interfaces</h3>
+        <p class="font-sans text-slate-600 leading-relaxed">Signal processing for EEG-based BCIs in the BCI-Feast lab at Kadir Has University.</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <div class="text-center mt-16">
-    <h2 class="display-3 text-ink-900 dark:text-bone-50">Want to collaborate?</h2>
-    <p class="mt-3 font-sans text-lg text-ink-700 dark:text-bone-200 max-w-xl mx-auto">Particularly interested in joint work bridging applied cybersecurity, anomaly detection, and edge AI.</p>
-    <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
-      <a href="/contact/" class="btn-solid">→ Contact</a>
-      <a href="/projects/" class="btn-ghost">View related projects</a>
-    </div>
+<section class="container-wide section text-center">
+  <h2 class="display-3 mb-4">Want to work together?</h2>
+  <p class="font-sans text-lg text-slate-500 mb-8 max-w-xl mx-auto">I'm interested in joint work on applied cybersecurity and anomaly detection.</p>
+  <div class="flex flex-wrap items-center justify-center gap-4">
+    <a href="/contact/" class="btn-primary">Contact</a>
+    <a href="/projects/" class="btn-secondary">Projects</a>
   </div>
 </section>
