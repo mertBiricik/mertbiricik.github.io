@@ -1,0 +1,21 @@
+{
+  "name": "Mert Biricik",
+  "short_name": "Mert Biricik",
+  "description": "Cybersecurity Researcher & CyberMACS Scholar",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#f8fafc",
+  "icons": [
+    {
+      "src": "/assets/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["portfolio", "technology", "security"],
+  "lang": "en",
+  "dir": "ltr"
+}

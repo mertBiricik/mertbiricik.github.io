@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mert Biricik</title>
+  <meta name="description" content="Mert Biricik, security researcher in Istanbul and Erasmus Mundus CyberMACS scholar. OSINT and anomaly detection for critical infrastructure, EEG-based brain–computer interfaces, research data platforms.">
+
+  <meta name="google-site-verification" content="0b64d5c9758fafd9">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mert.biricik.de/">
+  <meta property="og:title" content="Mert Biricik">
+  <meta property="og:description" content="Mert Biricik, security researcher in Istanbul and Erasmus Mundus CyberMACS scholar. OSINT and anomaly detection for critical infrastructure, EEG-based brain–computer interfaces, research data platforms.">
+  <meta property="og:site_name" content="Mert Biricik">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mert Biricik">
+  <meta name="twitter:description" content="Mert Biricik, security researcher in Istanbul and Erasmus Mundus CyberMACS scholar. OSINT and anomaly detection for critical infrastructure, EEG-based brain–computer interfaces, research data platforms.">
+
+  <link rel="canonical" href="https://mert.biricik.de/">
+  
+
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
+  <link rel="manifest" href="/assets/icons/site.webmanifest">
+  <meta name="theme-color" content="#f8fafc">
+  <link rel="alternate" href="/rss.xml" type="application/atom+xml" title="Mert Biricik — Feed">
+
+  <link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="min-h-screen flex flex-col bg-slate-50 text-slate-700 selection:bg-primary-500 selection:text-white">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-primary-600 focus:text-white focus:px-4 focus:py-2 focus:no-underline focus:rounded-lg">Skip to content</a>
+
+  <header id="site-header" class="border-b border-slate-200 bg-white/80 backdrop-blur-md sticky top-0 z-40 transition-colors duration-300">
+    <div class="container-wide">
+      <div class="flex items-center justify-between gap-4 py-4">
+        <a href="/" class="flex items-center gap-3 no-underline group">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary-50 text-primary-600 transition-colors duration-200 group-hover:bg-primary-100">
+            <span class="font-display font-bold text-sm leading-none">MB</span>
+          </span>
+          <span class="font-display font-semibold text-lg text-slate-900 tracking-tight transition-colors duration-200">Mert Biricik</span>
+        </a>
+
+        <ul id="nav-menu" class="hidden md:flex items-center gap-8">
+          
+          <li>
+            <a href="/" class="nav-link text-primary-600 font-semibold" aria-current="page">Home</a>
+          </li>
+          
+          <li>
+            <a href="/about/" class="nav-link " >About</a>
+          </li>
+          
+          <li>
+            <a href="/projects/" class="nav-link " >Projects</a>
+          </li>
+          
+          <li>
+            <a href="/publications/" class="nav-link " >Publications</a>
+          </li>
+          
+          <li>
+            <a href="/blog/" class="nav-link " >Blog</a>
+          </li>
+          
+          <li>
+            <a href="/contact/" class="nav-link " >Contact</a>
+          </li>
+          
+        </ul>
+
+        <div class="flex items-center gap-3">
+          <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-500 hover:text-primary-600 hover:bg-primary-50 transition-colors duration-200 text-xl" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+
+          </a>
+          <button id="menu-toggle" type="button" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-slate-500 hover:text-primary-600 hover:bg-primary-50 transition-colors duration-200 text-xl" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="icon-open inline-flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+</span>
+            <span class="icon-close hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>
+</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white">
+        <ul class="py-4 space-y-2 px-4">
+          
+          <li>
+            <a href="/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-primary-600 bg-primary-50" aria-current="page">Home</a>
+          </li>
+          
+          <li>
+            <a href="/about/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-slate-600" >About</a>
+          </li>
+          
+          <li>
+            <a href="/projects/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-slate-600" >Projects</a>
+          </li>
+          
+          <li>
+            <a href="/publications/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-slate-600" >Publications</a>
+          </li>
+          
+          <li>
+            <a href="/blog/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-slate-600" >Blog</a>
+          </li>
+          
+          <li>
+            <a href="/contact/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-slate-600" >Contact</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="flex-1">
+    
+
+<section class="container-wide pt-32 pb-24 relative overflow-hidden">
+  <div class="grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-10 lg:pr-12">
+      <p class="meta-label inline-block mb-6">Istanbul</p>
+
+      <h1 class="display-1 mb-6">
+        I&#39;m Mert. I study cybersecurity and look after servers.
+      </h1>
+
+      <p class="font-sans text-xl leading-relaxed text-slate-500 max-w-3xl mb-10 font-medium">
+        I&#39;m doing the CyberMACS master&#39;s in applied cybersecurity. Before that I looked after the network and servers of the cybersecurity centre at Kadir Has University for two years, and I still write code for a couple of research projects there. This site has the things I&#39;ve worked on and a few longer posts.
+      </p>
+
+      <div class="flex flex-wrap gap-4 mt-8">
+        <a href="/projects/" class="btn-primary">
+          Projects
+        </a>
+        <a href="/publications/" class="btn-secondary">
+          Publications
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-white border-y border-slate-200 relative py-24">
+  <div class="container-wide">
+    <div class="max-w-4xl mx-auto text-center mb-16">
+      <p class="meta-label inline-block mb-4">About</p>
+      <h2 class="display-2">About me</h2>
+    </div>
+    
+    <div class="max-w-3xl mx-auto space-y-6 font-sans text-lg md:text-xl text-slate-600 leading-relaxed relative">
+      <div class="absolute -left-6 md:-left-12 top-0 bottom-0 border-l-2 border-slate-100 hidden sm:block"></div>
+      
+      <div class="relative clean-card group">
+        <div class="absolute -left-[37px] md:-left-[61px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-slate-100 border-2 border-white group-hover:bg-primary-400 group-hover:scale-125 transition-all duration-300 hidden sm:block"></div>
+        <p>
+          So far my work has been fairly ordinary infrastructure and data work: keeping a research lab&#39;s machines and network running, building a data portal and a few data pipelines for TÜBİTAK projects, and helping with papers on power grid data and EEG signals. I try to keep things simple and write down how they work.
+        </p>
+      </div>
+      
+      <div class="relative clean-card group">
+        <div class="absolute -left-[37px] md:-left-[61px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-slate-100 border-2 border-white group-hover:bg-primary-400 group-hover:scale-125 transition-all duration-300 hidden sm:block"></div>
+        <p>
+          Outside of that I&#39;m in AFAD&#39;s search and rescue team and teach some of their courses. I climb when I can, and I keep a large music library that turns up in the blog now and then.
+        </p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="container-wide section">
+  <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-slate-200 pb-6">
+    <h2 class="display-2">Skills</h2>
+    <p class="meta-label">Tools I use</p>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    
+    <div class="clean-card flex flex-col group hover:border-primary-200">
+      <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+        <div class="h-12 w-12 rounded-xl bg-primary-50 flex items-center justify-center text-primary-600 text-xl group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 5 3.4 8.4 8 9.5 4.6-1.1 8-4.5 8-9.5V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+
+        </div>
+        
+      </div>
+      <h3 class="font-display text-xl font-bold text-slate-900 mb-6">Security</h3>
+      <ul class="flex flex-col gap-3 mt-auto font-sans text-sm text-slate-600 font-medium">
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>Threat Hunting</li>
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>Memory Forensics</li>
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>OSINT Analysis</li>
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>Anomaly Detection</li>
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>Network Security</li>
+        
+      </ul>
+    </div>
+    
+    <div class="clean-card flex flex-col group hover:border-primary-200">
+      <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+        <div class="h-12 w-12 rounded-xl bg-primary-50 flex items-center justify-center text-primary-600 text-xl group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4m0 0-5.5 6.2M12 11l5.5 6.2"/></svg>
+
+        </div>
+        
+      </div>
+      <h3 class="font-display text-xl font-bold text-slate-900 mb-6">AI &amp; Data</h3>
+      <ul class="flex flex-col gap-3 mt-auto font-sans text-sm text-slate-600 font-medium">
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>Agentic AI</li>
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>RAG</li>
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>ETL Pipelines</li>
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>Time-Series Analysis</li>
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>NLP</li>
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>Predictive Modeling</li>
+        
+      </ul>
+    </div>
+    
+    <div class="clean-card flex flex-col group hover:border-primary-200">
+      <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+        <div class="h-12 w-12 rounded-xl bg-primary-50 flex items-center justify-center text-primary-600 text-xl group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></svg>
+
+        </div>
+        
+      </div>
+      <h3 class="font-display text-xl font-bold text-slate-900 mb-6">Infrastructure</h3>
+      <ul class="flex flex-col gap-3 mt-auto font-sans text-sm text-slate-600 font-medium">
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>Docker</li>
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>Kubernetes</li>
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>QEMU + KVM</li>
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>Linux (Debian, Red Hat)</li>
+        
+      </ul>
+    </div>
+    
+    <div class="clean-card flex flex-col group hover:border-primary-200">
+      <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+        <div class="h-12 w-12 rounded-xl bg-primary-50 flex items-center justify-center text-primary-600 text-xl group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+
+        </div>
+        
+      </div>
+      <h3 class="font-display text-xl font-bold text-slate-900 mb-6">Tooling</h3>
+      <ul class="flex flex-col gap-3 mt-auto font-sans text-sm text-slate-600 font-medium">
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>Python</li>
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>Shell Scripting</li>
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>Git</li>
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>LaTeX</li>
+        
+        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 block group-hover:bg-primary-400 transition-colors"></span>Microsoft Office</li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</section>
+
+
+<section class="bg-white border-y border-slate-200 py-24">
+  <div class="container-wide">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-slate-200 pb-6">
+      <h2 class="display-2">Projects</h2>
+      <p class="meta-label">Selected work</p>
+    </div>
+
+    <div class="space-y-8">
+      
+      <article class="clean-card grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch group p-0 overflow-hidden hover:border-primary-200">
+        <div class="lg:col-span-8 p-6 sm:p-10 flex flex-col justify-center">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="inline-flex px-2 py-0.5 rounded text-xs font-bold bg-primary-100 text-primary-700 tracking-wider">01</span>
+            <span class="font-mono font-semibold text-sm text-slate-400 uppercase tracking-widest">09/2024 – Present</span>
+          </div>
+          <h3 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-3 group-hover:text-primary-600 transition-colors leading-tight">EnerjiVeri: 100 Years of Turkish Energy Data</h3>
+          <p class="font-sans text-lg text-slate-500 mb-8">TÜBİTAK 1001 project No. 323K520, sole web developer</p>
+          
+          <div class="space-y-4 font-sans text-[15px] sm:text-base text-slate-600 leading-relaxed">
+            <p>A hundred years of Turkish energy production, consumption and policy data was spread across CSV files and PDFs. I built the project&#39;s Turkish-language portal that brings it together, with time-series charts, sector breakdowns and interactive dashboards.</p>
+            <p class="text-slate-500">The portal is live and used by the project&#39;s researchers and policy stakeholders (&quot;Energy Strategies in the Second Century of the Republic&quot;).</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 bg-slate-50 text-slate-700 p-6 sm:p-10 flex flex-col border-t lg:border-t-0 lg:border-l border-slate-200">
+          <p class="font-sans text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6">Built with</p>
+          <ul class="flex flex-wrap gap-2 mb-12 font-sans text-xs font-medium">
+            
+            <li class="bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-600 shadow-sm">Python</li>
+            
+            <li class="bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-600 shadow-sm">Data Visualization</li>
+            
+            <li class="bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-600 shadow-sm">Time-Series</li>
+            
+            <li class="bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-600 shadow-sm">Web Portal</li>
+            
+            <li class="bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-600 shadow-sm">ETL</li>
+            
+          </ul>
+
+          <div class="mt-auto flex flex-col gap-3">
+            
+            <a href="https://github.com/mertBiricik/enerdata" target="_blank" rel="noopener noreferrer" class="btn-primary w-full text-center">
+              Source code
+            </a>
+            
+            
+            <a href="https://enerjiveri.khas.edu.tr/" target="_blank" rel="noopener noreferrer" class="btn-secondary w-full text-center">
+              Visit site
+            </a>
+            
+            
+          </div>
+        </div>
+      </article>
+      
+      <article class="clean-card grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch group p-0 overflow-hidden hover:border-primary-200">
+        <div class="lg:col-span-8 p-6 sm:p-10 flex flex-col justify-center">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="inline-flex px-2 py-0.5 rounded text-xs font-bold bg-primary-100 text-primary-700 tracking-wider">02</span>
+            <span class="font-mono font-semibold text-sm text-slate-400 uppercase tracking-widest">2024 – 2025</span>
+          </div>
+          <h3 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-3 group-hover:text-primary-600 transition-colors leading-tight">Tune2Travel: Music Videos and Destination Marketing</h3>
+          <p class="font-sans text-lg text-slate-500 mb-8">TÜBİTAK 1001 project, data infrastructure and NLP</p>
+          
+          <div class="space-y-4 font-sans text-[15px] sm:text-base text-slate-600 leading-relaxed">
+            <p>The project studies how music videos shape the way people see a travel destination, which needs a lot of multilingual social media data. I built the data side: collecting videos and comments through the YouTube API, the ETL pipelines, and the NLP and ML models that pull cultural and sociological signals out of the comments.</p>
+            <p class="text-slate-500">Marketing and sociology researchers on the project use it to compare patterns across thousands of music videos in several languages.</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 bg-slate-50 text-slate-700 p-6 sm:p-10 flex flex-col border-t lg:border-t-0 lg:border-l border-slate-200">
+          <p class="font-sans text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6">Built with</p>
+          <ul class="flex flex-wrap gap-2 mb-12 font-sans text-xs font-medium">
+            
+            <li class="bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-600 shadow-sm">Python</li>
+            
+            <li class="bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-600 shadow-sm">NLP</li>
+            
+            <li class="bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-600 shadow-sm">spaCy</li>
+            
+            <li class="bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-600 shadow-sm">Gensim</li>
+            
+            <li class="bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-600 shadow-sm">YouTube API</li>
+            
+            <li class="bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-600 shadow-sm">ETL</li>
+            
+            <li class="bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-600 shadow-sm">Selenium</li>
+            
+          </ul>
+
+          <div class="mt-auto flex flex-col gap-3">
+            
+            
+            <a href="https://listenandtravelwithme.khas.edu.tr/" target="_blank" rel="noopener noreferrer" class="btn-secondary w-full text-center">
+              Visit site
+            </a>
+            
+            
+          </div>
+        </div>
+      </article>
+      
+      <article class="clean-card grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch group p-0 overflow-hidden hover:border-primary-200">
+        <div class="lg:col-span-8 p-6 sm:p-10 flex flex-col justify-center">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="inline-flex px-2 py-0.5 rounded text-xs font-bold bg-primary-100 text-primary-700 tracking-wider">03</span>
+            <span class="font-mono font-semibold text-sm text-slate-400 uppercase tracking-widest">2024 – 2025</span>
+          </div>
+          <h3 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-3 group-hover:text-primary-600 transition-colors leading-tight">OSINT-Driven SCADA Threat Discovery</h3>
+          <p class="font-sans text-lg text-slate-500 mb-8">Field assessment on a SCADA testbed in Milan</p>
+          
+          <div class="space-y-4 font-sans text-[15px] sm:text-base text-slate-600 leading-relaxed">
+            <p>Power distribution operators have no structured way to combine open-source intelligence about their assets with AI-based protection. I did a hands-on OSINT vulnerability assessment of a SCADA testbed in Milan and worked on a framework that pairs OSINT-based threat discovery with AI-based protective controls.</p>
+            <p class="text-slate-500">Published at IEEE UPEC 2025.</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 bg-slate-50 text-slate-700 p-6 sm:p-10 flex flex-col border-t lg:border-t-0 lg:border-l border-slate-200">
+          <p class="font-sans text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6">Built with</p>
+          <ul class="flex flex-wrap gap-2 mb-12 font-sans text-xs font-medium">
+            
+            <li class="bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-600 shadow-sm">OSINT</li>
+            
+            <li class="bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-600 shadow-sm">SCADA</li>
+            
+            <li class="bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-600 shadow-sm">Threat Discovery</li>
+            
+            <li class="bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-600 shadow-sm">Network Security</li>
+            
+          </ul>
+
+          <div class="mt-auto flex flex-col gap-3">
+            
+            
+            
+            <a href="https://doi.org/10.1109/UPEC65436.2025.11279773" target="_blank" rel="noopener noreferrer" class="btn-secondary w-full text-center">
+              Paper
+            </a>
+            
+          </div>
+        </div>
+      </article>
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="container-wide section">
+  <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-slate-200 pb-6">
+    <h2 class="display-2">Publications</h2>
+    <p class="meta-label">Papers and manuscripts</p>
+  </div>
+
+  <div class="grid gap-6">
+    
+    <div class="clean-card flex flex-col md:flex-row gap-6 md:gap-8 items-start group hover:border-primary-200">
+      <div class="shrink-0 font-display text-4xl font-bold text-slate-300 group-hover:text-primary-500 transition-colors">
+        2026
+      </div>
+      <div class="flex-1">
+        <div class="flex flex-wrap items-center gap-3 mb-3">
+          <span class="inline-flex px-2 py-0.5 rounded text-[11px] font-bold bg-amber-50 text-amber-700 uppercase tracking-wider">Under review</span>
+          <span class="font-sans font-medium text-xs text-slate-400 uppercase tracking-wider">Turkish Journal of Neurology</span>
+        </div>
+        <h3 class="font-display text-xl font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors leading-snug">
+          Comparative Performance of the Mini-Mental State Examination and the Montreal Cognitive Assessment at Their Conventional Thresholds
+        </h3>
+        <p class="font-sans text-sm font-medium text-slate-600 mb-3">Özgenç, G., Biricik, M., Kırbaş, D.</p>
+        <p class="font-sans text-slate-500 leading-relaxed">Single-centre retrospective audit comparing the MMSE and the MoCA through paired discordance (exact McNemar test) and ROC analysis (DeLong&#39;s test). The MoCA&#39;s higher sensitivity for mild cognitive impairment comes from its less strict conventional threshold, not from better discriminative validity.</p>
+      </div>
+    </div>
+    
+    <div class="clean-card flex flex-col md:flex-row gap-6 md:gap-8 items-start group hover:border-primary-200">
+      <div class="shrink-0 font-display text-4xl font-bold text-slate-300 group-hover:text-primary-500 transition-colors">
+        2026
+      </div>
+      <div class="flex-1">
+        <div class="flex flex-wrap items-center gap-3 mb-3">
+          <span class="inline-flex px-2 py-0.5 rounded text-[11px] font-bold bg-amber-50 text-amber-700 uppercase tracking-wider">Submitted</span>
+          <span class="font-sans font-medium text-xs text-slate-400 uppercase tracking-wider">Quality &amp; Quantity</span>
+        </div>
+        <h3 class="font-display text-xl font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors leading-snug">
+          Has Brainrot Entered the Research Literature? A Bibliometric Analysis and a Neurocognitive Hypothesis
+        </h3>
+        <p class="font-sans text-sm font-medium text-slate-600 mb-3">Özgenç, G., Biricik, M.</p>
+        <p class="font-sans text-slate-500 leading-relaxed">A quantitative bibliometric network analysis of the emerging &quot;brainrot&quot; literature, and a neurocognitive hypothesis on algorithm-driven cognitive degradation.</p>
+      </div>
+    </div>
+    
+    <div class="clean-card flex flex-col md:flex-row gap-6 md:gap-8 items-start group hover:border-primary-200">
+      <div class="shrink-0 font-display text-4xl font-bold text-slate-300 group-hover:text-primary-500 transition-colors">
+        2025
+      </div>
+      <div class="flex-1">
+        <div class="flex flex-wrap items-center gap-3 mb-3">
+          <span class="inline-flex px-2 py-0.5 rounded text-[11px] font-bold bg-primary-50 text-primary-700 uppercase tracking-wider">Published</span>
+          <span class="font-sans font-medium text-xs text-slate-400 uppercase tracking-wider">IEEE UPEC 2025</span>
+        </div>
+        <h3 class="font-display text-xl font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors leading-snug">
+          <a href="https://doi.org/10.1109/UPEC65436.2025.11279878" target="_blank" rel="noopener noreferrer" class="hover:underline">Customer-Level Aggregation: The Imperative for Reliable Non-Technical Loss Detection Amidst Row-Level Analysis Pitfalls</a>
+        </h3>
+        <p class="font-sans text-sm font-medium text-slate-600 mb-3">Küçük, M., Coşkun, H., Biricik, M., Bülbül, B. E.</p>
+        <p class="font-sans text-slate-500 leading-relaxed">A customer-level aggregation model for BEDAŞ with 136 engineered features that prevents data leakage in electricity theft detection.</p>
+      </div>
+    </div>
+    
+    <div class="clean-card flex flex-col md:flex-row gap-6 md:gap-8 items-start group hover:border-primary-200">
+      <div class="shrink-0 font-display text-4xl font-bold text-slate-300 group-hover:text-primary-500 transition-colors">
+        2025
+      </div>
+      <div class="flex-1">
+        <div class="flex flex-wrap items-center gap-3 mb-3">
+          <span class="inline-flex px-2 py-0.5 rounded text-[11px] font-bold bg-primary-50 text-primary-700 uppercase tracking-wider">Published</span>
+          <span class="font-sans font-medium text-xs text-slate-400 uppercase tracking-wider">IEEE UPEC 2025</span>
+        </div>
+        <h3 class="font-display text-xl font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors leading-snug">
+          <a href="https://doi.org/10.1109/UPEC65436.2025.11279773" target="_blank" rel="noopener noreferrer" class="hover:underline">From OSINT Insights to AI-based Protection: Enhancing Cybersecurity Resilience in Power Distribution Systems</a>
+        </h3>
+        <p class="font-sans text-sm font-medium text-slate-600 mb-3">Ecevit, M. I., Biricik, M., Uğurlu, T. A., Özdemir, A., Ceylan, O., Dağ, H., Rodio, C., Lazzari, R.</p>
+        <p class="font-sans text-slate-500 leading-relaxed">An OSINT vulnerability assessment of a SCADA testbed in Milan, and a framework that combines OSINT for threat discovery with AI-based protection of power distribution systems.</p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+<section class="bg-white border-y border-slate-200 py-24">
+  <div class="container-wide">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="meta-label inline-block mb-4">CV</p>
+        <h2 class="display-2">Experience & Education</h2>
+      </div>
+      
+      <div class="relative border-l-2 border-slate-100 ml-4 md:ml-8 space-y-12 py-8">
+        
+        <div class="relative pl-8 md:pl-16 group">
+          <span class="absolute -left-[11px] top-2 h-5 w-5 rounded-full bg-white border-4 border-slate-200 group-hover:border-primary-500 transition-colors duration-300"></span>
+          
+          <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 mb-2">
+            <h3 class="font-display text-xl font-bold text-slate-900">MSc in Applied Cybersecurity (CyberMACS)</h3>
+            <span class="font-mono text-xs font-semibold text-slate-400 tracking-wider">2026 – 2028</span>
+          </div>
+          
+          <p class="font-sans font-semibold text-sm text-primary-600 mb-4">Erasmus Mundus Joint MSc</p>
+          <div class="clean-card bg-slate-50/50 p-6 text-slate-600 text-[15px] leading-relaxed group-hover:bg-white group-hover:border-primary-100 transition-colors">
+            Full EU scholarship. The first year is at Kadir Has University in Istanbul and SRH Berlin, the second at UKIM in Skopje. Courses in cryptography, network security and applied cybersecurity.
+          </div>
+        </div>
+        
+        <div class="relative pl-8 md:pl-16 group">
+          <span class="absolute -left-[11px] top-2 h-5 w-5 rounded-full bg-white border-4 border-slate-200 group-hover:border-primary-500 transition-colors duration-300"></span>
+          
+          <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 mb-2">
+            <h3 class="font-display text-xl font-bold text-slate-900">Graduate Researcher</h3>
+            <span class="font-mono text-xs font-semibold text-slate-400 tracking-wider">2025 – Present</span>
+          </div>
+          
+          <p class="font-sans font-semibold text-sm text-primary-600 mb-4">Kadir Has University BCI-Feast</p>
+          <div class="clean-card bg-slate-50/50 p-6 text-slate-600 text-[15px] leading-relaxed group-hover:bg-white group-hover:border-primary-100 transition-colors">
+            Research on EEG-based brain–computer interfaces. I also teach the lab sessions of undergraduate MIS courses on algorithms and operating systems.
+          </div>
+        </div>
+        
+        <div class="relative pl-8 md:pl-16 group">
+          <span class="absolute -left-[11px] top-2 h-5 w-5 rounded-full bg-white border-4 border-slate-200 group-hover:border-primary-500 transition-colors duration-300"></span>
+          
+          <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 mb-2">
+            <h3 class="font-display text-xl font-bold text-slate-900">Undergraduate Researcher &amp; Admin</h3>
+            <span class="font-mono text-xs font-semibold text-slate-400 tracking-wider">2023 – 2025</span>
+          </div>
+          
+          <p class="font-sans font-semibold text-sm text-primary-600 mb-4">Kadir Has University CCIP</p>
+          <div class="clean-card bg-slate-50/50 p-6 text-slate-600 text-[15px] leading-relaxed group-hover:bg-white group-hover:border-primary-100 transition-colors">
+            Ran the network and servers of the Center for Cybersecurity and Critical Infrastructure Protection, and kept the GPU machines going for the lab&#39;s machine learning projects.
+          </div>
+        </div>
+        
+        <div class="relative pl-8 md:pl-16 group">
+          <span class="absolute -left-[11px] top-2 h-5 w-5 rounded-full bg-white border-4 border-slate-200 group-hover:border-primary-500 transition-colors duration-300"></span>
+          
+          <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 mb-2">
+            <h3 class="font-display text-xl font-bold text-slate-900">Search &amp; Rescue Operator and Instructor</h3>
+            <span class="font-mono text-xs font-semibold text-slate-400 tracking-wider">2025 – Present</span>
+          </div>
+          
+          <p class="font-sans font-semibold text-sm text-primary-600 mb-4">AFAD</p>
+          <div class="clean-card bg-slate-50/50 p-6 text-slate-600 text-[15px] leading-relaxed group-hover:bg-white group-hover:border-primary-100 transition-colors">
+            Urban and mountain search and rescue under AFAD and INSARAG standards. As a certified AFAD instructor I also teach disaster preparedness and USAR courses.
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="container-wide section text-center relative">
+  <div class="max-w-3xl mx-auto">
+    <p class="meta-label inline-block mb-6">Contact</p>
+    <h2 class="display-2 mb-6">Contact</h2>
+    <p class="font-sans text-lg text-slate-500 mb-16 max-w-2xl mx-auto">
+      If you&#39;re working on something in security, infrastructure or research data and want to talk, send me an email.
+    </p>
+
+    <div class="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto text-left">
+      <div class="clean-card flex items-start gap-5 hover:border-primary-200 group">
+        <div class="h-12 w-12 rounded-full bg-primary-50 flex items-center justify-center text-primary-600 text-xl shrink-0 group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+
+        </div>
+        <div class="pt-1">
+          <p class="font-sans text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">Email</p>
+          <a href="mailto:mert@biricik.de" class="font-sans font-medium text-slate-900 hover:text-primary-600 transition-colors">mert@biricik.de</a>
+        </div>
+      </div>
+      <div class="clean-card flex items-start gap-5 hover:border-primary-200 group">
+        <div class="h-12 w-12 rounded-full bg-primary-50 flex items-center justify-center text-primary-600 text-xl shrink-0 group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+
+        </div>
+        <div class="pt-1">
+          <p class="font-sans text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">Location</p>
+          <p class="font-sans font-medium text-slate-900">Istanbul, Turkey</p>
+          <p class="font-sans text-xs text-slate-500 mt-1">Mon–Fri, 09:00–18:00 (TRT)</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+  </main>
+
+  <footer class="mt-auto border-t border-slate-200 bg-white">
+    <div class="container-wide py-12 md:py-16">
+      <div class="grid gap-8 md:gap-12 md:grid-cols-12">
+        <div class="md:col-span-5">
+          <p class="font-display font-semibold text-slate-900 mb-4">Mert Biricik</p>
+          <p class="font-sans text-sm leading-relaxed text-slate-500 max-w-sm">
+            Security research, infrastructure and the occasional side project. Built with Eleventy and Tailwind CSS.
+          </p>
+        </div>
+
+        <div class="md:col-span-3">
+          <p class="font-sans text-sm font-semibold text-slate-900 mb-4 uppercase tracking-wider">Connect</p>
+          <ul class="space-y-3 font-sans text-sm text-slate-500">
+            <li><a href="mailto:mert@biricik.de" class="hover:text-primary-600 transition-colors duration-200">mert@biricik.de</a></li>
+            <li><a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" class="hover:text-primary-600 transition-colors duration-200">LinkedIn</a></li>
+            <li><a href="https://wa.me/mertbiricik" target="_blank" rel="noopener noreferrer" class="hover:text-primary-600 transition-colors duration-200">WhatsApp</a></li>
+            <li><a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hover:text-primary-600 transition-colors duration-200">GitHub</a></li>
+            <li><a href="https://scholar.google.com/citations?user=MgyR0RMAAAAJ" target="_blank" rel="noopener noreferrer" class="hover:text-primary-600 transition-colors duration-200">Google Scholar</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4">
+          <p class="font-sans text-sm font-semibold text-slate-900 mb-4 uppercase tracking-wider">Navigation</p>
+          <ul class="grid grid-cols-2 gap-y-3 font-sans text-sm text-slate-500">
+            
+            <li><a href="/" class="hover:text-primary-600 transition-colors duration-200">Home</a></li>
+            
+            <li><a href="/about/" class="hover:text-primary-600 transition-colors duration-200">About</a></li>
+            
+            <li><a href="/projects/" class="hover:text-primary-600 transition-colors duration-200">Projects</a></li>
+            
+            <li><a href="/publications/" class="hover:text-primary-600 transition-colors duration-200">Publications</a></li>
+            
+            <li><a href="/blog/" class="hover:text-primary-600 transition-colors duration-200">Blog</a></li>
+            
+            <li><a href="/contact/" class="hover:text-primary-600 transition-colors duration-200">Contact</a></li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-sm text-slate-500">
+        <p>© 2026 Mert Biricik.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

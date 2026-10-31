@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EnerjiVeri Demo · Mert Biricik</title>
+  <meta name="description" content="Embedded view of the EnerjiVeri portal built for TÜBİTAK 1001 project No. 323K520, Energy Strategies in the Second Century of the Republic.">
+
+  <meta name="google-site-verification" content="0b64d5c9758fafd9">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mert.biricik.de/demos/enerdata-primary-energy/">
+  <meta property="og:title" content="EnerjiVeri Demo · Mert Biricik">
+  <meta property="og:description" content="Embedded view of the EnerjiVeri portal built for TÜBİTAK 1001 project No. 323K520, Energy Strategies in the Second Century of the Republic.">
+  <meta property="og:site_name" content="Mert Biricik">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="EnerjiVeri Demo · Mert Biricik">
+  <meta name="twitter:description" content="Embedded view of the EnerjiVeri portal built for TÜBİTAK 1001 project No. 323K520, Energy Strategies in the Second Century of the Republic.">
+
+  <link rel="canonical" href="https://mert.biricik.de/demos/enerdata-primary-energy/">
+  
+
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/icon.svg">
+  <link rel="manifest" href="/assets/icons/site.webmanifest">
+  <meta name="theme-color" content="#f8fafc">
+  <link rel="alternate" href="/rss.xml" type="application/atom+xml" title="Mert Biricik — Feed">
+
+  <link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="min-h-screen flex flex-col bg-slate-50 text-slate-700 selection:bg-primary-500 selection:text-white">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-primary-600 focus:text-white focus:px-4 focus:py-2 focus:no-underline focus:rounded-lg">Skip to content</a>
+
+  <header id="site-header" class="border-b border-slate-200 bg-white/80 backdrop-blur-md sticky top-0 z-40 transition-colors duration-300">
+    <div class="container-wide">
+      <div class="flex items-center justify-between gap-4 py-4">
+        <a href="/" class="flex items-center gap-3 no-underline group">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary-50 text-primary-600 transition-colors duration-200 group-hover:bg-primary-100">
+            <span class="font-display font-bold text-sm leading-none">MB</span>
+          </span>
+          <span class="font-display font-semibold text-lg text-slate-900 tracking-tight transition-colors duration-200">Mert Biricik</span>
+        </a>
+
+        <ul id="nav-menu" class="hidden md:flex items-center gap-8">
+          
+          <li>
+            <a href="/" class="nav-link " >Home</a>
+          </li>
+          
+          <li>
+            <a href="/about/" class="nav-link " >About</a>
+          </li>
+          
+          <li>
+            <a href="/projects/" class="nav-link " >Projects</a>
+          </li>
+          
+          <li>
+            <a href="/publications/" class="nav-link " >Publications</a>
+          </li>
+          
+          <li>
+            <a href="/blog/" class="nav-link " >Blog</a>
+          </li>
+          
+          <li>
+            <a href="/contact/" class="nav-link " >Contact</a>
+          </li>
+          
+        </ul>
+
+        <div class="flex items-center gap-3">
+          <a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-500 hover:text-primary-600 hover:bg-primary-50 transition-colors duration-200 text-xl" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+
+          </a>
+          <button id="menu-toggle" type="button" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-slate-500 hover:text-primary-600 hover:bg-primary-50 transition-colors duration-200 text-xl" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="icon-open inline-flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+</span>
+            <span class="icon-close hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>
+</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white">
+        <ul class="py-4 space-y-2 px-4">
+          
+          <li>
+            <a href="/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-slate-600" >Home</a>
+          </li>
+          
+          <li>
+            <a href="/about/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-slate-600" >About</a>
+          </li>
+          
+          <li>
+            <a href="/projects/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-slate-600" >Projects</a>
+          </li>
+          
+          <li>
+            <a href="/publications/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-slate-600" >Publications</a>
+          </li>
+          
+          <li>
+            <a href="/blog/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-slate-600" >Blog</a>
+          </li>
+          
+          <li>
+            <a href="/contact/" class="block px-4 py-2 rounded-lg font-sans text-sm font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors text-slate-600" >Contact</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="flex-1">
+    
+<section class="container-wide pt-20 pb-10 md:pt-28">
+  <div class="max-w-3xl">
+    <p class="meta-label mb-6">Demo</p>
+    <h1 class="display-2 mb-6">EnerjiVeri: primary energy by source</h1>
+    <p class="font-sans text-lg text-slate-600 leading-relaxed">
+      One page of the EnerjiVeri portal, embedded as it is on the live site. I built the portal for TÜBİTAK 1001 project No. 323K520.
+    </p>
+  </div>
+</section>
+
+<section class="container-wide pb-24">
+  <div class="clean-card p-0 overflow-hidden">
+    <div class="px-5 py-3 border-b border-slate-200 bg-slate-50 flex items-center justify-between font-mono text-xs text-slate-500">
+      <span>enerjiveri.khas.edu.tr</span>
+      <span>Live</span>
+    </div>
+    <iframe
+      src="https://enerjiveri.khas.edu.tr/birincil-enerjinin-kaynaklara-gore-uretimi-ve-tuketimi/"
+      class="block w-full h-[80vh] bg-white"
+      loading="lazy"
+      title="EnerjiVeri primary energy dashboard"></iframe>
+  </div>
+
+  <div class="mt-8 flex flex-wrap items-center justify-between gap-4">
+    <a href="/projects/" class="font-sans text-sm text-slate-500 hover:text-primary-600 no-underline">← Back to projects</a>
+    <a href="https://enerjiveri.khas.edu.tr/birincil-enerjinin-kaynaklara-gore-uretimi-ve-tuketimi/" target="_blank" rel="noopener noreferrer" class="btn-secondary">Open the original page</a>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="mt-auto border-t border-slate-200 bg-white">
+    <div class="container-wide py-12 md:py-16">
+      <div class="grid gap-8 md:gap-12 md:grid-cols-12">
+        <div class="md:col-span-5">
+          <p class="font-display font-semibold text-slate-900 mb-4">Mert Biricik</p>
+          <p class="font-sans text-sm leading-relaxed text-slate-500 max-w-sm">
+            Security research, infrastructure and the occasional side project. Built with Eleventy and Tailwind CSS.
+          </p>
+        </div>
+
+        <div class="md:col-span-3">
+          <p class="font-sans text-sm font-semibold text-slate-900 mb-4 uppercase tracking-wider">Connect</p>
+          <ul class="space-y-3 font-sans text-sm text-slate-500">
+            <li><a href="mailto:mert@biricik.de" class="hover:text-primary-600 transition-colors duration-200">mert@biricik.de</a></li>
+            <li><a href="https://linkedin.com/in/mertbiricik" target="_blank" rel="noopener noreferrer" class="hover:text-primary-600 transition-colors duration-200">LinkedIn</a></li>
+            <li><a href="https://wa.me/mertbiricik" target="_blank" rel="noopener noreferrer" class="hover:text-primary-600 transition-colors duration-200">WhatsApp</a></li>
+            <li><a href="https://github.com/mertBiricik" target="_blank" rel="noopener noreferrer" class="hover:text-primary-600 transition-colors duration-200">GitHub</a></li>
+            <li><a href="https://scholar.google.com/citations?user=MgyR0RMAAAAJ" target="_blank" rel="noopener noreferrer" class="hover:text-primary-600 transition-colors duration-200">Google Scholar</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4">
+          <p class="font-sans text-sm font-semibold text-slate-900 mb-4 uppercase tracking-wider">Navigation</p>
+          <ul class="grid grid-cols-2 gap-y-3 font-sans text-sm text-slate-500">
+            
+            <li><a href="/" class="hover:text-primary-600 transition-colors duration-200">Home</a></li>
+            
+            <li><a href="/about/" class="hover:text-primary-600 transition-colors duration-200">About</a></li>
+            
+            <li><a href="/projects/" class="hover:text-primary-600 transition-colors duration-200">Projects</a></li>
+            
+            <li><a href="/publications/" class="hover:text-primary-600 transition-colors duration-200">Publications</a></li>
+            
+            <li><a href="/blog/" class="hover:text-primary-600 transition-colors duration-200">Blog</a></li>
+            
+            <li><a href="/contact/" class="hover:text-primary-600 transition-colors duration-200">Contact</a></li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-sm text-slate-500">
+        <p>© 2026 Mert Biricik.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
